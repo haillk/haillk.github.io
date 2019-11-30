@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slice on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/slice/</link>
+    <description>Recent content in Slice on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Nov 2019 01:39:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/slice/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Notes 2</title>
+      <link>https://haillk.github.io/2019/11/go-notes-2/</link>
+      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/11/go-notes-2/</guid>
+      <description>&lt;p&gt;map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Go Notes 1</title>
+      <link>https://haillk.github.io/2019/11/go-notes-1/</link>
+      <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/11/go-notes-1/</guid>
+      <description>&lt;p&gt;多重赋值，短变量声明，interface{}和interface{}指针，Slice 扩容，基于类型创建的方法&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

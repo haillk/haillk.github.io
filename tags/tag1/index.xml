@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag1 on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/tag1/</link>
+    <description>Recent content in tag1 on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Nov 2019 03:32:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Notes 3</title>
+      <link>https://haillk.github.io/2019/11/go-notes-3/</link>
+      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/11/go-notes-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://haillk.github.io/2019/11/test/</link>
+      <pubDate>Sat, 30 Nov 2019 02:00:54 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/11/test/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

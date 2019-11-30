@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/</link>
+    <description>Recent content in Categories on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Nov 2019 03:32:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>category</title>
+      <link>https://haillk.github.io/categories/category/</link>
+      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subcategory</title>
+      <link>https://haillk.github.io/categories/subcategory/</link>
+      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/subcategory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://haillk.github.io/categories/git/</link>
+      <pubDate>Fri, 29 Nov 2019 15:58:44 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://haillk.github.io/categories/go/</link>
+      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go-notes</title>
+      <link>https://haillk.github.io/categories/go-notes/</link>
+      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/go-notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gin</title>
+      <link>https://haillk.github.io/categories/gin/</link>
+      <pubDate>Fri, 29 Nov 2019 00:16:08 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/gin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>releases</title>
+      <link>https://haillk.github.io/categories/releases/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://haillk.github.io/categories/releases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tranquilpeak</title>
+      <link>https://haillk.github.io/categories/tranquilpeak/</link>
+      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://haillk.github.io/categories/tranquilpeak/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>features</title>
+      <link>https://haillk.github.io/categories/features/</link>
+      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://haillk.github.io/categories/features/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
