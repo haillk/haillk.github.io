@@ -235,7 +235,50 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <h4 id="font-colorcc33001ifont"><!-- raw HTML omitted -->1、i++是语句，不是表达式<!-- raw HTML omitted --></h4>
+<p>​		i++ 和 i&ndash; 在 Go 语言中是语句，不是表达式，因此不能赋值给另外的变量,j = 		i++是错误的</p>
+<h4 id="font-colorcc33002nil-channelchannelfont"><!-- raw HTML omitted -->2、nil channel和已经关闭的channel<!-- raw HTML omitted --></h4>
+<ol>
+<li>
+<p>在nil channel 接受或者发送数据都会造成阻塞</p>
+</li>
+<li>
+<p>给一个已经关闭的channel发送数据，引起panic ,从一个已经关闭的channel接收数据，如果缓冲区为空，返回零值。</p>
+</li>
+</ol>
+<h4 id="font-colorcc33003font"><!-- raw HTML omitted -->3、常量寻址问题<!-- raw HTML omitted --></h4>
+<p>​	1. 常量通常会被编译器在预处理阶段直接展开，作为指令数据使用，所以无法寻址。</p>
+<pre><code>2. 变量在运行期间分配内存。
+</code></pre>
+<h4 id="font-colorcc33004font"><!-- raw HTML omitted -->4、各种小的知识点<!-- raw HTML omitted --></h4>
+<ul>
+<li>
+<p>只接受的 channel 不可以被关闭，发送的channel可以被关闭。</p>
+</li>
+<li>
+<p>函数中声明的变量必须要使用，但可以有未使用的全局变量，函数的参数未使用也可以。</p>
+</li>
+<li>
+<p>自定义的string方法中，不能再用string(包括springf方法)，会造成递归。</p>
+</li>
+<li>
+<p>断言，<code>x:=interface{}(nil)  _,c:=x.(interface{})</code> 结果中，c 是false的，因为动态类型为nil,断言会失败。</p>
+</li>
+<li>
+<p>cap() 函数可以获取数组，数组指针，slice,channel,的容量，但不能获取 map.  可以用len()获取map的元素个数。</p>
+</li>
+</ul>
+<p>不能使用短变量声明设置结构体字段值，如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">Struct</span><span style="color:#75715e">//声明一个结构体
+</span><span style="color:#75715e"></span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">错误</span>
+<span style="color:#a6e22e">data</span>.<span style="color:#a6e22e">re</span>,<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">12</span>,<span style="color:#66d9ef">nil</span>
+<span style="color:#960050;background-color:#1e0010">#</span><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">正确</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>
+<span style="color:#a6e22e">date</span>.<span style="color:#a6e22e">re</span>,<span style="color:#a6e22e">err</span> = <span style="color:#ae81ff">12</span>,<span style="color:#66d9ef">nil</span>
+</code></pre></div><ul>
+<li>slice不能比较，但是可以和nil比较</li>
+<li>x[2:] ,对于[i:j]j省略的时候，默认为len而不是cap</li>
+</ul>
               
             </div>
           </div>
