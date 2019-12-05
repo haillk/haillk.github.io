@@ -17,16 +17,7 @@
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
       <guid>https://haillk.github.io/2019/11/go-notes-3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://haillk.github.io/2019/11/test/</link>
-      <pubDate>Sat, 30 Nov 2019 02:00:54 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/11/test/</guid>
-      <description></description>
+      <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,结构体属性赋值，slice&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -63,24 +54,6 @@
       
       <guid>https://haillk.github.io/2019/11/ginv1.4%E4%B8%80/</guid>
       <description>&lt;p&gt;基础形式 ，参数获取&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Welcome to Tranquilpeak 0.4.7-BETA</title>
-      <link>https://haillk.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/2015/06/welcome-to-tranquilpeak-0.4.7-beta/</guid>
-      <description>&lt;p&gt;Tranquilpeak is a gorgeous responsive theme for Hugo blog framework. It has many features and integrated services to improve user experience.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>highlighted code showcase</title>
-      <link>https://haillk.github.io/2015/03/highlighted-code-showcase/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/2015/03/highlighted-code-showcase/</guid>
-      <description>&lt;p&gt;Tranquilpeak Hugo theme have its own theme to highlight source code. It&#39;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.&lt;/p&gt;</description>
     </item>
     
   </channel>

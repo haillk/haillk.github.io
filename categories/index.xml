@@ -12,20 +12,20 @@
     
     
     <item>
-      <title>category</title>
-      <link>https://haillk.github.io/categories/category/</link>
+      <title>Go</title>
+      <link>https://haillk.github.io/categories/go/</link>
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/categories/category/</guid>
+      <guid>https://haillk.github.io/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>subcategory</title>
-      <link>https://haillk.github.io/categories/subcategory/</link>
+      <title>Go-notes</title>
+      <link>https://haillk.github.io/categories/go-notes/</link>
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/categories/subcategory/</guid>
+      <guid>https://haillk.github.io/categories/go-notes/</guid>
       <description></description>
     </item>
     
@@ -39,56 +39,11 @@
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://haillk.github.io/categories/go/</link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go-notes</title>
-      <link>https://haillk.github.io/categories/go-notes/</link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/go-notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Gin</title>
       <link>https://haillk.github.io/categories/gin/</link>
       <pubDate>Fri, 29 Nov 2019 00:16:08 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/gin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>releases</title>
-      <link>https://haillk.github.io/categories/releases/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/categories/releases/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tranquilpeak</title>
-      <link>https://haillk.github.io/categories/tranquilpeak/</link>
-      <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/categories/tranquilpeak/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>features</title>
-      <link>https://haillk.github.io/categories/features/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/categories/features/</guid>
       <description></description>
     </item>
     
