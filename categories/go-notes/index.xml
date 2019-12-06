@@ -6,10 +6,19 @@
     <description>Recent content in Go-notes on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 03:32:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 23:25:31 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/go-notes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go Notes 4</title>
+      <link>https://haillk.github.io/2019/12/go-notes-4/</link>
+      <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/go-notes-4/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Go Notes 3</title>
@@ -17,7 +26,7 @@
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
       <guid>https://haillk.github.io/2019/11/go-notes-3/</guid>
-      <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,结构体属性赋值，slice&lt;/p&gt;</description>
+      <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,不能使用短变量声明设置结构体字段值，slice&lt;/p&gt;</description>
     </item>
     
     <item>

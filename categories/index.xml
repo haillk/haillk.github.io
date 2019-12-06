@@ -6,15 +6,33 @@
     <description>Recent content in Categories on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 03:32:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 00:40:52 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Python</title>
+      <link>https://haillk.github.io/categories/python/</link>
+      <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>流畅的python学习笔记</title>
+      <link>https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Go</title>
       <link>https://haillk.github.io/categories/go/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
+      <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/go/</guid>
       <description></description>
@@ -23,7 +41,7 @@
     <item>
       <title>Go-notes</title>
       <link>https://haillk.github.io/categories/go-notes/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
+      <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/go-notes/</guid>
       <description></description>

@@ -6,10 +6,37 @@
     <description>Recent content in Posts on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 Nov 2019 03:32:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 00:40:52 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>流畅的python学习笔记 2</title>
+      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</link>
+      <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go Notes 4</title>
+      <link>https://haillk.github.io/2019/12/go-notes-4/</link>
+      <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/go-notes-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>流畅的python学习笔记 1</title>
+      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
+      <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
+      <description>&lt;p&gt;特殊方法_&lt;em&gt;xxx_&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Go Notes 3</title>
@@ -17,7 +44,7 @@
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
       <guid>https://haillk.github.io/2019/11/go-notes-3/</guid>
-      <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,结构体属性赋值，slice&lt;/p&gt;</description>
+      <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,不能使用短变量声明设置结构体字段值，slice&lt;/p&gt;</description>
     </item>
     
     <item>
