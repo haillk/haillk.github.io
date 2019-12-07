@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.61.0-DEV with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="python特殊方法, haillkdevelopment, haillk-gen">
 <meta name="description" content="特殊方法_xxx_">
@@ -242,7 +242,7 @@
 <blockquote>
 <p>魔术方法（magic method） 是特殊方法的昵称 ,特殊方法也叫双下方法（dunder method）</p>
 </blockquote>
-<h4 id="font-colorcc3300font-1"><!-- raw HTML omitted -->一个二维向量加法的例子<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc3300font1"><!-- raw HTML omitted -->一个二维向量加法的例子<!-- raw HTML omitted --></h4>
 <p>​	构建一个Vector类,实现加法，即：Vector(1,2)+Vector(1,2)=Vector(2,4),下面代码实现了更多特殊方法。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> math <span style="color:#f92672">import</span> hypot
 <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Vector</span>:
@@ -266,7 +266,7 @@
 v1 <span style="color:#f92672">=</span> Vector(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)
 <span style="color:#66d9ef">print</span>(v<span style="color:#f92672">+</span>v1)
 <span style="color:#75715e">##输出：Vector(2,4)</span>
-</code></pre></div><h4 id="font-colorcc3300font-2"><!-- raw HTML omitted -->总结<!-- raw HTML omitted --></h4>
+</code></pre></div><h4 id="font-colorcc3300font2"><!-- raw HTML omitted -->总结<!-- raw HTML omitted --></h4>
 <p>个人理解：特殊方法是系统会频繁调用的中间方法。用户使用时不会直接调用，但是在调用一些方法时，会间接调用。用户调用普通方法&mdash;&gt;系统调用特殊方法完成目标。更改特殊方法，就能更改一些普通方法的底层调用方法。</p>
 <blockquote>
 <p>通过实现特殊方法， 自定义数据类型可以表现得跟内置类型一样， 从而让我们写出更具表达力的代码</p>
