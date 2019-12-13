@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="Haillk">
+<meta name="keywords" content=", haillkdevelopment, haillk-gen">
+<meta name="description" content="title: &ldquo;Powershell美化&rdquo;
+date: 2019-12-12T21:28:50&#43;08:00
+categories:
+
+window10
+powershell
+tags:
+powershell
+windows
+keywords:
+powershell
+#thumbnailImage: //example.com/image.jpg
+
+powershell梅花">
+
+
+<meta property="og:description" content="title: &ldquo;Powershell美化&rdquo;
+date: 2019-12-12T21:28:50&#43;08:00
+categories:
+
+window10
+powershell
+tags:
+powershell
+windows
+keywords:
+powershell
+#thumbnailImage: //example.com/image.jpg
+
+powershell梅花">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Haillk-Blog">
+<meta name="twitter:title" content="Haillk-Blog">
+<meta property="og:url" content="https://haillk.github.io/1/01/">
+<meta property="twitter:url" content="https://haillk.github.io/1/01/">
+<meta property="og:site_name" content="Haillk-Blog">
+<meta property="og:description" content="title: &ldquo;Powershell美化&rdquo;
+date: 2019-12-12T21:28:50&#43;08:00
+categories:
+
+window10
+powershell
+tags:
+powershell
+windows
+keywords:
+powershell
+#thumbnailImage: //example.com/image.jpg
+
+powershell梅花">
+<meta name="twitter:description" content="title: &ldquo;Powershell美化&rdquo;
+date: 2019-12-12T21:28:50&#43;08:00
+categories:
+
+window10
+powershell
+tags:
+powershell
+windows
+keywords:
+powershell
+#thumbnailImage: //example.com/image.jpg
+
+powershell梅花">
+<meta property="og:locale" content="zh-cn">
+
+  
+  
+  
+  
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/dae5a653648524ac2bf6fa20f6624244?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/dae5a653648524ac2bf6fa20f6624244?s=640">
+
+
+    <title>Haillk-Blog</title>
+
+    <link rel="icon" href="https://haillk.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://haillk.github.io/1/01/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://haillk.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://haillk.github.io/">Haillk-Blog</a>
+  </div>
+  
+    
+      <a class="header-right-icon open-algolia-search"
+         href="https://haillk.github.io/#search">
+    
+    
+      <i class="fa fa-lg fa-search"></i>
+    
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://haillk.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/dae5a653648524ac2bf6fa20f6624244?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">Haillk</h4>
+        
+          <h5 class="sidebar-profile-bio">so far so good</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haillk.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haillk.github.io/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haillk.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://haillk.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/haillk" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://blog.csdn.net/qq_39615829" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">SCDN</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="0001-01-01T00:00:00Z">
+        
+  一月 1, 1
+
+      </time>
+    
+    
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>title: &ldquo;Powershell美化&rdquo;
+date: 2019-12-12T21:28:50+08:00
+categories:</p>
+<ul>
+<li>window10</li>
+<li>powershell
+tags:</li>
+<li>powershell</li>
+<li>windows
+keywords:</li>
+<li>powershell
+#thumbnailImage: //example.com/image.jpg</li>
+</ul>
+<p>powershell梅花</p>
+<h4 id="font-colorcc3300ohmyposhfont"><!-- raw HTML omitted -->oh-my-posh使用和主题选择<!-- raw HTML omitted --></h4>
+<p><code>oh-my-posh</code> 是一个开源、低调的 PowerShell 主题框架。</p>
+<h6 id="heading">下载安装</h6>
+<p>在powershell中执行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+Import-Module posh-git 
+Import-Module oh-my-posh
+</code></pre></div><h6 id="heading1">选择主题</h6>
+<p>oh-my-posh包含的10个主题有：sorin,agnoster,avit,darkblood,fish,honukai,paradox,powerline,robbyrussell,tehrob</p>
+<p>我喜欢的是sorin,比较简洁。</p>
+<h6 id="heading2">添加进配置文件</h6>
+<p>powershell中输入$profile，会输出一个文件的路径，这个文件就是shell的配置文件。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$profile
+C<span style="color:#960050;background-color:#1e0010">:</span>\Users\Haillk\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+</code></pre></div><h6 id="heading3">字体问题</h6>
+<p>当然是要选用伟大的黑纱字体来避免乱码问题。</p>
+<h4 id="font-colorcc3300font"><!-- raw HTML omitted -->颜色盘的隐含配置<!-- raw HTML omitted --></h4>
+<p>千万不要手贱去来回改颜色盘，系统会自动调用响应颜色的。</p>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>错误信息背景颜色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>sorin中间部分颜色</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>sorin箭头颜色1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>sorin箭头颜色3</td>
+</tr>
+<tr>
+<td>7</td>
+<td>sorin箭头颜色2</td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>&ndash;svf 类似配置颜色</td>
+</tr>
+<tr>
+<td>10 D7</td>
+<td></td>
+</tr>
+<tr>
+<td>11 D6</td>
+<td>命令高亮颜色</td>
+</tr>
+<tr>
+<td>12 D5</td>
+<td></td>
+</tr>
+<tr>
+<td>13 D4</td>
+<td>错误信息颜色</td>
+</tr>
+<tr>
+<td>14 D3</td>
+<td></td>
+</tr>
+<tr>
+<td>15 D2</td>
+<td>命令颜色</td>
+</tr>
+<tr>
+<td>16 D1</td>
+<td>文件名，数字，sorin用户名的颜色</td>
+</tr>
+</tbody>
+</table>
+<h4 id="font-colorcc3300colortoolfont"><!-- raw HTML omitted -->colortool的使用<!-- raw HTML omitted --></h4>
+<p>1、去github上下载colortool</p>
+<p>2、在下载下来的根目录下打开powershell <code>.\colortool .\ayu.itermcolors</code>，也可以选择其他主题</p>
+<p>3、打开属性，点击确认  ，这步很关键，坑了我好久。T.T</p>
+<p>4、重启</p>
+<h4 id="font-colorcc3300dircolorfont"><!-- raw HTML omitted -->dircolor的使用<!-- raw HTML omitted --></h4>
+<p>不过我没用这个，备用。。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Install-Module DirColors -Scope CurrentUser
+Import-Module DirColors
+Update-DirColors 配置文件的路径
+</code></pre></div>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haillk.github.io/2019/11/ginv1.4%E4%B8%80/" data-tooltip="Ginv1.4(一)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haillk.github.io/1/01/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haillk.github.io/1/01/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haillk.github.io/1/01/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 <a href="https://github.com/haillk">haillk</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://haillk.github.io/2019/11/ginv1.4%E4%B8%80/" data-tooltip="Ginv1.4(一)">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://haillk.github.io/1/01/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://haillk.github.io/1/01/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://haillk.github.io/1/01/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaillk.github.io%2F1%2F01%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhaillk.github.io%2F1%2F01%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhaillk.github.io%2F1%2F01%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/dae5a653648524ac2bf6fa20f6624244?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">Haillk</h4>
+    
+      <div id="about-card-bio">so far so good</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        神经程序猿
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://pic2.superbed.cn/item/5de0b3298e0e2e3ee9088442.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://haillk.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/haillk.github.io\/1\/01\/';
+          
+            this.page.identifier = '\/1\/01\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'haillk';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

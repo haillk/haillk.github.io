@@ -3,12 +3,112 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://haillk.github.io/categories/apt-get/</loc>
-    <lastmod>2019-12-07T22:37:54+08:00</lastmod>
+    <loc>https://haillk.github.io/categories/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/regedit/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/win10/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/win10/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/2019/12/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/%E6%B3%A8%E5%86%8C%E8%A1%A8/</loc>
+    <lastmod>2019-12-13T23:57:23+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/font/</loc>
+    <lastmod>2019-12-10T22:53:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2019-12-10T22:53:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/2019/12/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</loc>
+    <lastmod>2019-12-10T22:53:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/python/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/python/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/scrapy/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/scrapy/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/2019/12/windows%E9%80%9A%E8%BF%87pip%E5%AE%89%E8%A3%85scrapy/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/pip/</loc>
+    <lastmod>2019-12-10T18:01:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/pip/</loc>
+    <lastmod>2019-12-10T18:01:37+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/2019/12/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</loc>
+    <lastmod>2019-12-10T18:01:37+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/tags/apt-get/</loc>
+    <lastmod>2019-12-07T22:37:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/apt-get/</loc>
     <lastmod>2019-12-07T22:37:54+08:00</lastmod>
   </url>
   
@@ -18,27 +118,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/</loc>
-    <lastmod>2019-12-07T22:37:54+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haillk.github.io/categories/debian/</loc>
-    <lastmod>2019-12-07T22:37:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/</loc>
-    <lastmod>2019-12-07T22:37:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/post/</loc>
-    <lastmod>2019-12-07T22:37:54+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/tags/</loc>
     <lastmod>2019-12-07T22:37:54+08:00</lastmod>
   </url>
   
@@ -49,11 +129,6 @@
   
   <url>
     <loc>https://haillk.github.io/2019/12/debian%E5%AE%89%E8%A3%85python38/</loc>
-    <lastmod>2019-12-07T22:19:52+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/categories/python/</loc>
     <lastmod>2019-12-07T22:19:52+08:00</lastmod>
   </url>
   
@@ -220,6 +295,11 @@
   <url>
     <loc>https://haillk.github.io/tags/%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/</loc>
     <lastmod>2019-11-29T00:16:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/1/01/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
