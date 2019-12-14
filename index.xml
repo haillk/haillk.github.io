@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Powershell美化</title>
+      <link>https://haillk.github.io/2019/12/powershell%E7%BE%8E%E5%8C%96/</link>
+      <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/powershell%E7%BE%8E%E5%8C%96/</guid>
+      <description>&lt;p&gt;powershell美化&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>黑纱字体</title>
       <link>https://haillk.github.io/2019/12/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</link>
       <pubDate>Tue, 10 Dec 2019 22:53:59 +0800</pubDate>
@@ -135,28 +144,6 @@
       
       <guid>https://haillk.github.io/2019/11/ginv1.4%E4%B8%80/</guid>
       <description>&lt;p&gt;基础形式 ，参数获取&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://haillk.github.io/1/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/1/01/</guid>
-      <description>&lt;p&gt;title: &amp;ldquo;Powershell美化&amp;rdquo;
-date: 2019-12-12T21:28:50+08:00
-categories:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;window10&lt;/li&gt;
-&lt;li&gt;powershell
-tags:&lt;/li&gt;
-&lt;li&gt;powershell&lt;/li&gt;
-&lt;li&gt;windows
-keywords:&lt;/li&gt;
-&lt;li&gt;powershell
-#thumbnailImage: //example.com/image.jpg&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;powershell梅花&lt;/p&gt;</description>
     </item>
     
   </channel>
