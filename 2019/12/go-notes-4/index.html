@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="golang, recover, haillkdevelopment, haillk-gen">
 <meta name="description" content="">
@@ -233,42 +233,46 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h4 id="font-colorcc33001recoverfont"><!-- raw HTML omitted -->1、recover必须隔一个函数帧栈才能捕获到<!-- raw HTML omitted --></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">//错误
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+              <h4 id="font-color-cc3300-1-recover必须隔一个函数帧栈才能捕获到-font"><font color=#CC3300>1、recover必须隔一个函数帧栈才能捕获到</font></h4>
+
+<pre><code class="language-go">//错误
+func main() {
 	recover()
-	panic(<span style="color:#ae81ff">1</span>)
+	panic(1)
 }
-<span style="color:#75715e">//错误
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#66d9ef">defer</span> recover()
-	panic(<span style="color:#ae81ff">1</span>)
+//错误
+func main() {
+	defer recover()
+	panic(1)
 }
-<span style="color:#75715e">//正确
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#66d9ef">defer</span> <span style="color:#66d9ef">func</span>() {
+//正确
+func main() {
+	defer func() {
 		recover()
 	}()
-	panic(<span style="color:#ae81ff">1</span>)
+	panic(1)
 }
-<span style="color:#75715e">//错误
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-	<span style="color:#66d9ef">defer</span> <span style="color:#66d9ef">func</span>() {
-		<span style="color:#66d9ef">defer</span> <span style="color:#66d9ef">func</span>(){
+//错误
+func main() {
+	defer func() {
+		defer func(){
 			recover()
 		}
 		
 	}()
-	panic(<span style="color:#ae81ff">1</span>)
+	panic(1)
 }
-</code></pre></div><h4 id="font-colorcc33002deferdeferfont"><!-- raw HTML omitted -->2、defer函数的参数和接受者是在defer语句出现的位置做计算的<!-- raw HTML omitted --></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
-    <span style="color:#66d9ef">defer</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">2</span>)
-    <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">3</span>)
+</code></pre>
+
+<h4 id="font-color-cc3300-2-defer函数的参数和接受者是在defer语句出现的位置做计算的-font"><font color=#CC3300>2、defer函数的参数和接受者是在defer语句出现的位置做计算的</font></h4>
+
+<pre><code class="language-go">func main(){
+    defer s.Add(1).Add(2)
+    s.Add(3)
 }
-<span style="color:#75715e">//调用顺序
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>)<span style="color:#f92672">--</span>&gt;<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">3</span>)<span style="color:#f92672">--</span>&gt;<span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">2</span>)
-</code></pre></div><h4 id="heading"></h4>
+//调用顺序
+s.add(1)--&gt;s.Add(3)--&gt;s.Add(2)
+</code></pre>
               
             </div>
           </div>
@@ -357,9 +361,23 @@
 
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'haillk';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
               
             
           </div>

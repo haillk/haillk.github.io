@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="tech, haillkdevelopment, haillk-gen">
 <meta name="description" content="map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题">
@@ -242,84 +242,112 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题</p>
-<h4 id="font-colorcc33001mapvaluefont"><!-- raw HTML omitted -->1、map中value是否可寻址的问题<!-- raw HTML omitted --></h4>
+
+<h4 id="font-color-cc3300-1-map中value是否可寻址的问题-font"><font color=#CC3300>1、map中value是否可寻址的问题</font></h4>
+
 <p>Eg.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">myst</span> <span style="color:#66d9ef">struct</span>{
-    <span style="color:#a6e22e">x</span>,<span style="color:#a6e22e">t</span> <span style="color:#66d9ef">int</span>
+
+<pre><code class="language-go">type myst struct{
+    x,t int
 }
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> = <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#a6e22e">myst</span>{
-    <span style="color:#e6db74">&#34;hai&#34;</span>:<span style="color:#a6e22e">myst</span>{<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>}
+var m = map[string]myst{
+    &quot;hai&quot;:myst{1,2}
 }
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">m</span>[<span style="color:#e6db74">&#34;hai&#34;</span>].<span style="color:#a6e22e">x</span>)<span style="color:#75715e">//成功
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">m</span>[<span style="color:#e6db74">&#34;hai&#34;</span>].<span style="color:#a6e22e">x</span> = <span style="color:#ae81ff">4</span><span style="color:#75715e">//失败
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>​	对于 <code>map[string]Struct</code> 和 <code>map[string][]int</code>的问题，由于结构体struct是不可寻址的，虽然可以读取这个值，但是不能把值赋值给x。而[]int是可寻址的，不仅可以读取，也可以赋值。解决方法：使用临时变量或者使用可寻址value。</p>
-<h4 id="font-colorcc33002font"><!-- raw HTML omitted -->2、数组的比较和切片的比较<!-- raw HTML omitted --></h4>
+func main(){
+    fmt.Println(m[&quot;hai&quot;].x)//成功
+    m[&quot;hai&quot;].x = 4//失败
+}
+</code></pre>
+
+<p>​   对于 <code>map[string]Struct</code> 和 <code>map[string][]int</code>的问题，由于结构体struct是不可寻址的，虽然可以读取这个值，但是不能把值赋值给x。而[]int是可寻址的，不仅可以读取，也可以赋值。解决方法：使用临时变量或者使用可寻址value。</p>
+
+<h4 id="font-color-cc3300-2-数组的比较和切片的比较-font"><font color=#CC3300>2、数组的比较和切片的比较</font></h4>
+
 <blockquote>
 <p>1、go中不同类型不能相互比较，而数组长度是数组类型的一部分，所以不同长度的数组不能比较
-2、切片不能比较</p>
+    2、切片不能比较</p>
 </blockquote>
-<h4 id="font-colorcc33003font"><!-- raw HTML omitted -->3、存在全局变量和局部变量时，调用方法会读取全局变量<!-- raw HTML omitted --></h4>
+
+<h4 id="font-color-cc3300-3-存在全局变量和局部变量时-调用方法会读取全局变量-font"><font color=#CC3300>3、存在全局变量和局部变量时，调用方法会读取全局变量</font></h4>
+
 <p>eg.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">s</span> <span style="color:#66d9ef">int</span><span style="color:#75715e">//全局变量
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">extra</span>(){
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;extra&#34;</span>,<span style="color:#a6e22e">s</span>)
+
+<pre><code class="language-go">var s int//全局变量
+func extra(){
+    fmt.Println(&quot;extra&quot;,s)
 }
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
-    <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span><span style="color:#ae81ff">3</span> <span style="color:#75715e">//局部变量
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">extra</span>()
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;main&#34;</span>,<span style="color:#a6e22e">s</span>)
+func main(){
+    s :=3 //局部变量
+    extra()
+    fmt.Println(&quot;main&quot;,s)
 }
-</code></pre></div><p>会输出 <code>extra 0 , main 3</code>，则调用的方法会使用全局变量</p>
-<h4 id="font-colorcc33004for-rangefont"><!-- raw HTML omitted -->4、for range的次数和副本问题<!-- raw HTML omitted --></h4>
+</code></pre>
+
+<p>会输出 <code>extra 0 , main 3</code>，则调用的方法会使用全局变量</p>
+
+<h4 id="font-color-cc3300-4-for-range的次数和副本问题-font"><font color=#CC3300>4、for range的次数和副本问题</font></h4>
+
 <p>Eg. for rang的次数问题</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
-    <span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span>[]<span style="color:#66d9ef">int</span>{<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>}
-    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span><span style="color:#f92672">:=</span><span style="color:#66d9ef">range</span> <span style="color:#a6e22e">v</span> {
-        <span style="color:#a6e22e">v</span> = append(<span style="color:#a6e22e">v</span>,<span style="color:#a6e22e">i</span>)
+
+<pre><code class="language-go">func main(){
+    v :=[]int{1,2,3}
+    for i:=range v {
+        v = append(v,i)
     }
 }
-</code></pre></div><blockquote>
+</code></pre>
+
+<blockquote>
 <p>不会出现死循环，循环次数在开始前就确定了</p>
 </blockquote>
-<p>Eg. 副本问题</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">//实际上是a的副本参与循环，不会输出999
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>,<span style="color:#a6e22e">v</span><span style="color:#f92672">:=</span><span style="color:#66d9ef">range</span> <span style="color:#a6e22e">a</span>{
-    <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>] = <span style="color:#ae81ff">999</span>
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v</span>)
-}
-<span style="color:#75715e">//这才会让a亲自参与，输出999
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>,<span style="color:#a6e22e">v</span> <span style="color:#f92672">:=</span><span style="color:#a6e22e">rang</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">a</span>{
-    <span style="color:#a6e22e">a</span>[<span style="color:#ae81ff">1</span>] = <span style="color:#ae81ff">999</span>
-    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">v</span>)
-}
-</code></pre></div><h4 id="font-colorcc33005font"><!-- raw HTML omitted -->5、方法的值接受者和指针接受者<!-- raw HTML omitted --></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">People</span> <span style="color:#66d9ef">struct</span>{
-    <span style="color:#a6e22e">Name</span> <span style="color:#66d9ef">string</span>
-}
-<span style="color:#75715e">//值方法
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#a6e22e">People</span>)<span style="color:#a6e22e">getName</span>() <span style="color:#66d9ef">string</span>{
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Name</span>
-}
-<span style="color:#75715e">//指针方法
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">p</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">People</span>)<span style="color:#a6e22e">SetName</span>(<span style="color:#a6e22e">name</span> <span style="color:#66d9ef">string</span>){
-    <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">Name</span> = <span style="color:#a6e22e">name</span>
-}
-</code></pre></div><blockquote>
-<p>值类型只能调用值方法，指针类型既能调用值方法，也能调用指针方法。但是<strong><!-- raw HTML omitted -->有时<!-- raw HTML omitted --></strong>编译器会帮我们自动转义，所以下列语句都是可用的，不会报错。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  <span style="color:#a6e22e">p</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">People</span>{<span style="color:#e6db74">&#34;xiaoming&#34;</span>}
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">getName</span>())
-  <span style="color:#75715e">//值类型只能调用值方法，此处是编译器自动转义，但是有特殊情况
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">SetName</span>(<span style="color:#e6db74">&#34;xiaohong&#34;</span>)
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">getName</span>())
 
-  <span style="color:#75715e">//指针类型既能调用值方法，也能调用指针方法
-</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">pp</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">p</span>
-  <span style="color:#a6e22e">pp</span>.<span style="color:#a6e22e">SetName</span>(<span style="color:#e6db74">&#34;xiaolv&#34;</span>)
-  <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">pp</span>.<span style="color:#a6e22e">getName</span>())
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a6e22e">emmmmm</span> <span style="color:#a6e22e">我也有点疑惑</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">问题待定</span>
-</code></pre></div></blockquote>
+<p>Eg. 副本问题</p>
+
+<pre><code class="language-go">//实际上是a的副本参与循环，不会输出999
+for i,v:=range a{
+    a[1] = 999
+    fmt.Println(v)
+}
+//这才会让a亲自参与，输出999
+for i,v :=rang &amp;a{
+    a[1] = 999
+    fmt.Println(v)
+}
+</code></pre>
+
+<h4 id="font-color-cc3300-5-方法的值接受者和指针接受者-font"><font color=#CC3300>5、方法的值接受者和指针接受者</font></h4>
+
+<pre><code class="language-go">type People struct{
+    Name string
+}
+//值方法
+func (p People)getName() string{
+    return d.Name
+}
+//指针方法
+func (p *People)SetName(name string){
+    d.Name = name
+}
+</code></pre>
+
+<blockquote>
+<p>值类型只能调用值方法，指针类型既能调用值方法，也能调用指针方法。但是<strong><u>有时</u></strong>编译器会帮我们自动转义，所以下列语句都是可用的，不会报错。</p>
+
+<pre><code class="language-go">  p := People{&quot;xiaoming&quot;}
+  fmt.Println(p.getName())
+  //值类型只能调用值方法，此处是编译器自动转义，但是有特殊情况
+  p.SetName(&quot;xiaohong&quot;)
+  fmt.Println(p.getName())
+
+  //指针类型既能调用值方法，也能调用指针方法
+  pp := &amp;p
+  pp.SetName(&quot;xiaolv&quot;)
+  fmt.Println(pp.getName())
+</code></pre>
+
+<pre><code class="language-go">emmmmm 我也有点疑惑，问题待定
+</code></pre>
+</blockquote>
               
             </div>
           </div>
@@ -416,9 +444,23 @@
 
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'haillk';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
               
             
           </div>

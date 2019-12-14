@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="Scrapy, haillkdevelopment, haillk-gen">
 <meta name="description" content="Windows通过pip安装scrapy">
@@ -236,24 +236,41 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Windows通过pip安装scrapy</p>
+
 <p>Scrapy需要超多的依赖，而<code>pip instarll scrapy</code>并不会下载好全部依赖。我在安装twisted时出现问题。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">error: Microsoft Visual C++ 14.0 is required. Get it with <span style="color:#e6db74">&#34;Microsoft Visual C++ Build Tools&#34;</span>: https://visualstudio.microsoft.com/downloads/
-</code></pre></div><p>这是因为twisted安装依赖pywin32和visual build tools.</p>
-<h4 id="build-tools">安装build tools</h4>
+
+<pre><code class="language-shell">error: Microsoft Visual C++ 14.0 is required. Get it with &quot;Microsoft Visual C++ Build Tools&quot;: https://visualstudio.microsoft.com/downloads/
+</code></pre>
+
+<p>这是因为twisted安装依赖pywin32和visual build tools.</p>
+
+<h4 id="安装build-tools">安装build tools</h4>
+
 <p>下载Visual C++ Build Tools  <a href="https://go.microsoft.com/fwlink/?LinkId=691126">Visual C++ Build Tools 下载链接</a></p>
+
 <p>选择默认配置，安装即刻。</p>
-<h4 id="pywin32">安装pywin32</h4>
+
+<h4 id="安装pywin32">安装pywin32</h4>
+
 <p>emmmm 不过呢，现在是2019/12/10 ,目前还没有python3.8版本的pywin32。</p>
+
 <p>所以说啊，还是要用老版本的python,默默安装python3.7&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.</p>
+
 <p><a href="https://sourceforge.net/projects/pywin32/files/pywin32/Build%20221/"> python3.7之前的pywin32 下载链接</a></p>
+
 <p>选择好了对应版本之后，下载下来一直下一步就可以了。</p>
-<h4 id="scrapy">安装scrapy</h4>
+
+<h4 id="安装scrapy">安装scrapy</h4>
+
 <p>最后安装scrapy就好了。<code>pip install scrapy</code></p>
-<h4 id="cannot-import-name-etree-from-lxml">创建新项目时出现问题：cannot import name &lsquo;etree&rsquo; from &lsquo;lxml&rsquo;</h4>
+
+<h4 id="创建新项目时出现问题-cannot-import-name-etree-from-lxml">创建新项目时出现问题：cannot import name &lsquo;etree&rsquo; from &lsquo;lxml&rsquo;</h4>
+
 <p>emmmm卸载原来的再安装lxml</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip uninstall lxml
+
+<pre><code class="language-shell">pip uninstall lxml
 pip install lxml
-</code></pre></div>
+</code></pre>
               
             </div>
           </div>
@@ -344,9 +361,23 @@ pip install lxml
 
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'haillk';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
               
             
           </div>

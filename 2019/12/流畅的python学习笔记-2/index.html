@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="tech, haillkdevelopment, haillk-gen">
 <meta name="description" content="">
@@ -233,39 +233,61 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h4 id="font-colorcc33001font"><!-- raw HTML omitted -->1、列表推导<!-- raw HTML omitted --></h4>
+              <h4 id="font-color-cc3300-1-列表推导-font"><font color=#CC3300>1、列表推导</font></h4>
+
 <p>列表循环：<code>dummy = [ord(symbol) for symbol in symbols]</code></p>
+
 <p>传统for循环：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> symbol <span style="color:#f92672">in</span> symbols:
-<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span> codes<span style="color:#f92672">.</span>append(ord(symbol))
-</code></pre></div><p>带条件的列表推导：<code>beyond_ascii = [ord(s) for s in symbols if ord(s) &gt; 127] </code></p>
-<p>笛卡尔积：<code>tshirts = [(color, size) for color in colors for size in sizes] </code></p>
+
+<pre><code class="language-python">for symbol in symbols:
+... codes.append(ord(symbol))
+</code></pre>
+
+<p>带条件的列表推导：<code>beyond_ascii = [ord(s) for s in symbols if ord(s) &gt; 127]</code></p>
+
+<p>笛卡尔积：<code>tshirts = [(color, size) for color in colors for size in sizes]</code></p>
+
 <blockquote>
 <p>列表推导的作用只有一个： 生成列表。</p>
 </blockquote>
-<h4 id="font-colorcc33002font"><!-- raw HTML omitted -->2、生成器表达式<!-- raw HTML omitted --></h4>
+
+<h4 id="font-color-cc3300-2-生成器表达式-font"><font color=#CC3300>2、生成器表达式</font></h4>
+
 <blockquote>
 <p>生成器表达式的语法跟列表推导差不多， 只不过把方括号换成圆括号而已</p>
+
 <p>生成器表达式背后遵守了迭代器协议， 可以逐个地产出元素， 而不是先建立一个完整的列表， 然后再把这
 个列表传递到某个构造函数里</p>
 </blockquote>
-<p>初始化数组：<code>tuple(ord(symbol) for symbol in symbols)  </code></p>
-<p>笛卡尔积：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">for</span> tshirt <span style="color:#f92672">in</span> (<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">%s</span><span style="color:#e6db74"> </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> (c, s) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> colors <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> sizes): <span style="color:#960050;background-color:#1e0010">➊</span>
-<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span> <span style="color:#66d9ef">print</span>(tshirt)
-</code></pre></div><h4 id="font-colorcc33003tuplefont"><!-- raw HTML omitted -->3、元组tuple<!-- raw HTML omitted --></h4>
-<p>具名元组</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> namedtuple
-City <span style="color:#f92672">=</span> namedtuple(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">City</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">name country population coordinates</span><span style="color:#e6db74">&#39;</span>) <span style="color:#960050;background-color:#1e0010">➊</span>
-tokyo <span style="color:#f92672">=</span> City(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Tokyo</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">JP</span><span style="color:#e6db74">&#39;</span>, <span style="color:#ae81ff">36.933</span>, (<span style="color:#ae81ff">35.689722</span>, <span style="color:#ae81ff">139.691667</span>)) <span style="color:#960050;background-color:#1e0010">➋</span>
 
-</code></pre></div><h4 id="font-colorcc33004font"><!-- raw HTML omitted -->4、切片<!-- raw HTML omitted --></h4>
-<p><code>seq[start:stop:step]  </code></p>
-<h4 id="font-colorcc33005font"><!-- raw HTML omitted -->5、对序列使用+和*<!-- raw HTML omitted --></h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">l<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
-<span style="color:#66d9ef">print</span>(l<span style="color:#f92672">*</span><span style="color:#ae81ff">3</span>)
-<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span>[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
-</code></pre></div>
+<p>初始化数组：<code>tuple(ord(symbol) for symbol in symbols)</code></p>
+
+<p>笛卡尔积：</p>
+
+<pre><code class="language-python">for tshirt in ('%s %s' % (c, s) for c in colors for s in sizes): ➊
+... print(tshirt)
+</code></pre>
+
+<h4 id="font-color-cc3300-3-元组tuple-font"><font color=#CC3300>3、元组tuple</font></h4>
+
+<p>具名元组</p>
+
+<pre><code class="language-python">from collections import namedtuple
+City = namedtuple('City', 'name country population coordinates') ➊
+tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667)) ➋
+
+</code></pre>
+
+<h4 id="font-color-cc3300-4-切片-font"><font color=#CC3300>4、切片</font></h4>
+
+<p><code>seq[start:stop:step]</code></p>
+
+<h4 id="font-color-cc3300-5-对序列使用-和-font"><font color=#CC3300>5、对序列使用+和*</font></h4>
+
+<pre><code class="language-python">l=[1,2,3]
+print(l*3)
+&gt;&gt;&gt;[1,2,3,1,2,3,1,2,3]
+</code></pre>
               
             </div>
           </div>
@@ -354,9 +376,23 @@ tokyo <span style="color:#f92672">=</span> City(<span style="color:#e6db74"></sp
 
             
               
-                <div id="disqus_thread">
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'haillk';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
               
             
           </div>
