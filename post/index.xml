@@ -173,5 +173,14 @@
       <description>&lt;p&gt;基础形式 ，参数获取&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>highlighted code showcase</title>
+      <link>https://haillk.github.io/2015/03/highlighted-code-showcase/</link>
+      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://haillk.github.io/2015/03/highlighted-code-showcase/</guid>
+      <description>&lt;p&gt;Tranquilpeak Hugo theme have its own theme to highlight source code. It&#39;s based on GitHub theme: simple and elegant. Check out how it sublimate source codes.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
