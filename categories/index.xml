@@ -6,13 +6,49 @@
     <description>Recent content in Categories on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Dec 2019 23:57:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>win10</title>
+      <title>Python</title>
+      <link>https://haillk.github.io/categories/python/</link>
+      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>https://haillk.github.io/categories/selenium/</link>
+      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scrapy</title>
+      <link>https://haillk.github.io/categories/scrapy/</link>
+      <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/scrapy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Anaconda</title>
+      <link>https://haillk.github.io/categories/anaconda/</link>
+      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/anaconda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Win10</title>
       <link>https://haillk.github.io/categories/win10/</link>
       <pubDate>Fri, 13 Dec 2019 23:57:23 +0800</pubDate>
       
@@ -53,24 +89,6 @@
       <pubDate>Tue, 10 Dec 2019 22:53:59 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/font/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://haillk.github.io/categories/python/</link>
-      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scrapy</title>
-      <link>https://haillk.github.io/categories/scrapy/</link>
-      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/scrapy/</guid>
       <description></description>
     </item>
     

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="tech, haillkdevelopment, haillk-gen">
 <meta name="description" content="基础形式 ，参数获取">
@@ -63,7 +63,7 @@
 
     <title>Ginv1.4(一)</title>
 
-    <link rel="icon" href="https://haillk.github.io/favicon.png">
+    <link rel="icon" href="https://pic2.superbed.cn/item/5df60339a4fbc8614a8d3e71.png">
     
 
     
@@ -236,32 +236,27 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>基础形式 ，参数获取</p>
-
-<h2 id="gin基础形式的api示例">Gin基础形式的API示例</h2>
-
-<pre><code class="language-java">func main() {  
-	// 使用默认中间件创建一个gin路由器:  
-	router := gin.Default()
-	// 路由映射
-	router.GET(&quot;/someGet&quot;, getting)
-	router.POST(&quot;/somePost&quot;, posting)
-	router.PUT(&quot;/somePut&quot;, putting)
-	router.DELETE(&quot;/someDelete&quot;, deleting)
-	router.PATCH(&quot;/somePatch&quot;, patching)
-	router.HEAD(&quot;/someHead&quot;, head)
-	router.OPTIONS(&quot;/someOptions&quot;, options)
-	// 启动，可设置端口
-	router.Run()
-	// router.Run(&quot;:3000&quot;) for a hard coded port
-}
-</code></pre>
-
-<h2 id="字符串参数">字符串参数</h2>
-
+<h2 id="ginapi">Gin基础形式的API示例</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">func <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>  
+	<span style="color:#75715e">// 使用默认中间件创建一个gin路由器:  
+</span><span style="color:#75715e"></span>	router <span style="color:#f92672">:</span><span style="color:#f92672">=</span> gin<span style="color:#f92672">.</span><span style="color:#a6e22e">Default</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+	<span style="color:#75715e">// 路由映射
+</span><span style="color:#75715e"></span>	router<span style="color:#f92672">.</span><span style="color:#a6e22e">GET</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/someGet&#34;</span><span style="color:#f92672">,</span> getting<span style="color:#f92672">)</span>
+	router<span style="color:#f92672">.</span><span style="color:#a6e22e">POST</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/somePost&#34;</span><span style="color:#f92672">,</span> posting<span style="color:#f92672">)</span>
+	router<span style="color:#f92672">.</span><span style="color:#a6e22e">PUT</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/somePut&#34;</span><span style="color:#f92672">,</span> putting<span style="color:#f92672">)</span>
+	router<span style="color:#f92672">.</span><span style="color:#a6e22e">DELETE</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/someDelete&#34;</span><span style="color:#f92672">,</span> deleting<span style="color:#f92672">)</span>
+	router<span style="color:#f92672">.</span><span style="color:#a6e22e">PATCH</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/somePatch&#34;</span><span style="color:#f92672">,</span> patching<span style="color:#f92672">)</span>
+	router<span style="color:#f92672">.</span><span style="color:#a6e22e">HEAD</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/someHead&#34;</span><span style="color:#f92672">,</span> head<span style="color:#f92672">)</span>
+	router<span style="color:#f92672">.</span><span style="color:#a6e22e">OPTIONS</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/someOptions&#34;</span><span style="color:#f92672">,</span> options<span style="color:#f92672">)</span>
+	<span style="color:#75715e">// 启动，可设置端口
+</span><span style="color:#75715e"></span>	router<span style="color:#f92672">.</span><span style="color:#a6e22e">Run</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+	<span style="color:#75715e">// router.Run(&#34;:3000&#34;) for a hard coded port
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><h2 id="heading">字符串参数</h2>
 <ol>
-<li><strong>url : www.xxx.com/user?firstname=haillk</strong><br />
-获取方式：<br />
-c.DefaultQuery(&ldquo;firstname&rdquo;,&ldquo;guest&rdquo;) &mdash;&ndash;&gt;获取并设置默认值<br />
+<li><strong>url : <a href="http://www.xxx.com/user?firstname=haillk">www.xxx.com/user?firstname=haillk</a></strong><br>
+获取方式：<br>
+c.DefaultQuery(&ldquo;firstname&rdquo;,&ldquo;guest&rdquo;) &mdash;&ndash;&gt;获取并设置默认值<br>
 c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
 <li></li>
 </ol>
@@ -355,23 +350,9 @@ c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
 
             
               
-                <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'haillk';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
               
             
           </div>

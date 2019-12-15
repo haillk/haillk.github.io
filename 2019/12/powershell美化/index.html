@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="powershell美化, haillkdevelopment, haillk-gen">
 <meta name="description" content="powershell美化">
@@ -63,7 +63,7 @@
 
     <title>Powershell美化</title>
 
-    <link rel="icon" href="https://haillk.github.io/favicon.png">
+    <link rel="icon" href="https://pic2.superbed.cn/item/5df60339a4fbc8614a8d3e71.png">
     
 
     
@@ -236,43 +236,25 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>powershell美化</p>
-
-<h4 id="font-color-cc3300-oh-my-posh使用和主题选择-font"><font color=#CC3300>oh-my-posh使用和主题选择</font></h4>
-
+<h4 id="font-colorcc3300ohmyposhfont"><!-- raw HTML omitted -->oh-my-posh使用和主题选择<!-- raw HTML omitted --></h4>
 <p><code>oh-my-posh</code> 是一个开源、低调的 PowerShell 主题框架。</p>
-
-<h6 id="下载安装">下载安装</h6>
-
+<h6 id="heading">下载安装</h6>
 <p>在powershell中执行</p>
-
-<pre><code class="language-powershell">Install-Module posh-git -Scope CurrentUser
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
 Import-Module posh-git 
 Import-Module oh-my-posh
-</code></pre>
-
-<h6 id="选择主题">选择主题</h6>
-
+</code></pre></div><h6 id="heading1">选择主题</h6>
 <p>oh-my-posh包含的10个主题有：sorin,agnoster,avit,darkblood,fish,honukai,paradox,powerline,robbyrussell,tehrob</p>
-
 <p>我喜欢的是sorin,比较简洁。</p>
-
-<h6 id="添加进配置文件">添加进配置文件</h6>
-
+<h6 id="heading2">添加进配置文件</h6>
 <p>powershell中输入$profile，会输出一个文件的路径，这个文件就是shell的配置文件。</p>
-
-<pre><code class="language-powershell">$profile
-C:\Users\Haillk\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-</code></pre>
-
-<h6 id="字体问题">字体问题</h6>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">$profile
+C<span style="color:#960050;background-color:#1e0010">:</span>\Users\Haillk\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+</code></pre></div><h6 id="heading3">字体问题</h6>
 <p>当然是要选用伟大的黑纱字体来避免乱码问题。</p>
-
-<h4 id="font-color-cc3300-颜色盘的隐含配置-font"><font color=#CC3300>颜色盘的隐含配置</font></h4>
-
+<h4 id="font-colorcc3300font"><!-- raw HTML omitted -->颜色盘的隐含配置<!-- raw HTML omitted --></h4>
 <p>千万不要手贱去来回改颜色盘，系统会自动调用响应颜色的。</p>
-
 <table>
 <thead>
 <tr>
@@ -280,103 +262,80 @@ C:\Users\Haillk\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 <th>错误信息背景颜色</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>2</td>
 <td>sorin中间部分颜色</td>
 </tr>
-
 <tr>
 <td>3</td>
 <td></td>
 </tr>
-
 <tr>
 <td>4</td>
 <td>双引号中的字体颜色</td>
 </tr>
-
 <tr>
 <td>5</td>
 <td>sorin箭头颜色1</td>
 </tr>
-
 <tr>
 <td>6</td>
 <td>sorin箭头颜色3</td>
 </tr>
-
 <tr>
 <td>7</td>
 <td>sorin箭头颜色2</td>
 </tr>
-
 <tr>
 <td>8</td>
 <td></td>
 </tr>
-
 <tr>
 <td>9</td>
 <td>&ndash;svf 类似配置颜色</td>
 </tr>
-
 <tr>
 <td>10 D7</td>
 <td></td>
 </tr>
-
 <tr>
 <td>11 D6</td>
 <td>命令高亮颜色</td>
 </tr>
-
 <tr>
 <td>12 D5</td>
 <td></td>
 </tr>
-
 <tr>
 <td>13 D4</td>
 <td>错误信息颜色</td>
 </tr>
-
 <tr>
 <td>14 D3</td>
 <td></td>
 </tr>
-
 <tr>
 <td>15 D2</td>
 <td>命令颜色</td>
 </tr>
-
 <tr>
 <td>16 D1</td>
-<td>文件名，数字，sorin用户名的颜色</td>
+<td>powerline中conda的环境名称部分的颜色,文件名的颜色</td>
 </tr>
 </tbody>
 </table>
-
-<h4 id="font-color-cc3300-colortool的使用-font"><font color=#CC3300>colortool的使用</font></h4>
-
+<h4 id="font-colorcc3300colortoolfont"><!-- raw HTML omitted -->colortool的使用<!-- raw HTML omitted --></h4>
 <p>1、去github上下载colortool</p>
-
 <p>2、在下载下来的根目录下打开powershell <code>.\colortool .\ayu.itermcolors</code>，也可以选择其他主题</p>
-
 <p>3、打开属性，点击确认  ，这步很关键，坑了我好久。T.T</p>
-
 <p>4、重启</p>
-
-<h4 id="font-color-cc3300-dircolor的使用-font"><font color=#CC3300>dircolor的使用</font></h4>
-
+<h4 id="font-colorcc3300dircolorfont"><!-- raw HTML omitted -->dircolor的使用<!-- raw HTML omitted --></h4>
 <p>不过我没用这个，备用。。</p>
-
-<pre><code class="language-powershell">Install-Module DirColors -Scope CurrentUser
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Install-Module DirColors -Scope CurrentUser
 Import-Module DirColors
 Update-DirColors 配置文件的路径
-</code></pre>
+</code></pre></div>
               
             </div>
           </div>
@@ -467,23 +426,9 @@ Update-DirColors 配置文件的路径
 
             
               
-                <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'haillk';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
               
             
           </div>

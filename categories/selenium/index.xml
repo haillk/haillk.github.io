@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>selenium on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/selenium/</link>
+    <description>Recent content in selenium on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/selenium/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium安装使用</title>
+      <link>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;selenium安装与使用&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

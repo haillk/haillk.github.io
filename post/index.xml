@@ -6,10 +6,37 @@
     <description>Recent content in Posts on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Dec 2019 23:57:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Selenium安装使用</title>
+      <link>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;selenium安装与使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scrapy常用命令</title>
+      <link>https://haillk.github.io/2019/12/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;scrapy常用命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Anaconda常用命令</title>
+      <link>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;Anaconda常用命令&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Win10隐藏资源管理器中的额外文件夹</title>

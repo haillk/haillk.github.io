@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.60.1 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Haillk">
 <meta name="keywords" content="python, haillkdevelopment, haillk-gen">
 <meta name="description" content="debian9安装python3.8">
@@ -63,7 +63,7 @@
 
     <title>Debian安装python38</title>
 
-    <link rel="icon" href="https://haillk.github.io/favicon.png">
+    <link rel="icon" href="https://pic2.superbed.cn/item/5df60339a4fbc8614a8d3e71.png">
     
 
     
@@ -236,55 +236,35 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>debian9安装python3.8</p>
-
-<h4 id="font-color-cc3300-源码安装-font"><font color=#CC3300>源码安装</font></h4>
-
-<h5 id="1-安装依赖包">1、安装依赖包</h5>
-
-<pre><code class="language-shell">sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev  libssl-dev openssl  libffi-dev
-</code></pre>
-
-<h5 id="2-下载python3-8源码">2、下载python3.8源码</h5>
-
-<pre><code class="language-shell">##更新
+<h4 id="font-colorcc3300font"><!-- raw HTML omitted -->源码安装<!-- raw HTML omitted --></h4>
+<h5 id="1">1、安装依赖包</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev  libssl-dev openssl  libffi-dev
+</code></pre></div><h5 id="2python38">2、下载python3.8源码</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">##更新</span>
 sudo apt-get update
-##下载
+<span style="color:#75715e">##下载</span>
 wget https://www.python.org/downloads/release/python-380/
-##解压
+<span style="color:#75715e">##解压</span>
 tar -xvf Python-3.8.0.tar.xz
 cd  Python-3.8.0/
-</code></pre>
-
-<h5 id="3-配置-编译-安装">3、配置，编译，安装</h5>
-
+</code></pre></div><h5 id="3">3、配置，编译，安装</h5>
 <blockquote>
 <p>源码安装的3个步骤，配置（configure），编译(make)，安装(make install)</p>
-
-<p>Configure是一个可执行脚本，它有很多选项，在待安装的源码路径下使用命令./configure –help输出详细的选项列表。其中<strong>&ndash;prefix选项是配置安装的路径。</strong></p>
-
+<p>Configure是一个可执行脚本，它有很多选项，在待安装的源码路径下使用命令./configure –help输出详细的选项列表。其中**&ndash;prefix选项是配置安装的路径。**</p>
 <p>如果不配置 &ndash;prefix 选项，安装后：</p>
-
 <p>可执行文件默认放在/usr /local/bin，</p>
-
 <p>库文件默认放在/usr/local/lib，</p>
-
 <p>配置文件默认放在/usr/local/etc，</p>
-
 <p>其它的资源文件放在/usr /local/share，</p>
-
 <p><code>--enable-optimizations</code> 是优化选项（LTO，PGO 等）加上这个 flag 编译后，性能有 10% 左右的优化（如果没记错的话），但是这会明显的增加编译时间</p>
 </blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure --prefix<span style="color:#f92672">=</span>/usr/local/python38 --enable-optimizations
+make <span style="color:#f92672">&amp;&amp;</span> make install
+</code></pre></div><h5 id="4">4、创建软链</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ln <span style="color:#f92672">-</span>s <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>local<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>python38
 
-<pre><code class="language-shell">./configure --prefix=/usr/local/python38 --enable-optimizations
-make &amp;&amp; make install
-</code></pre>
-
-<h5 id="4-创建软链">4、创建软链</h5>
-
-<pre><code class="language-python">ln -s /usr/local/python3.8/bin/python3.8 /usr/bin/python38
-
-ln -s /usr/local/python3.8/bin/pip3.8 /usr/bin/pip38
-</code></pre>
+ln <span style="color:#f92672">-</span>s <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>local<span style="color:#f92672">/</span>python3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span><span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>pip3<span style="color:#f92672">.</span><span style="color:#ae81ff">8</span> <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>pip38
+</code></pre></div>
               
             </div>
           </div>
@@ -375,23 +355,9 @@ ln -s /usr/local/python3.8/bin/pip3.8 /usr/bin/pip38
 
             
               
-                <div id="disqus_thread"></div>
-<script type="text/javascript">
-
-(function() {
-    
-    
-    if (window.location.hostname == "localhost")
-        return;
-
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    var disqus_shortname = 'haillk';
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
               
             
           </div>

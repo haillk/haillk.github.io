@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anaconda on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/anaconda/</link>
+    <description>Recent content in Anaconda on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Dec 2019 22:02:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/anaconda/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Anaconda常用命令</title>
+      <link>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;Anaconda常用命令&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
