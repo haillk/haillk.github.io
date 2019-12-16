@@ -1,204 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Haillk-Blog</title>
-    <link>https://haillk.github.io/</link>
-    <description>Recent content on Haillk-Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
-    
-	<atom:link href="https://haillk.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Selenium安装使用</title>
-      <link>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
-      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动</description>
-    </item>
-    
-    <item>
-      <title>Scrapy常用命令</title>
-      <link>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>新建一个工程 scrapy startproject spider_name 构建爬虫 scrapy genspider name domain 运行爬虫 scrapy runspider 爬虫名称 启动项目 scrapy crawl xxx</description>
-    </item>
-    
-    <item>
-      <title>Anaconda常用命令</title>
-      <link>https://haillk.github.io/post/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>查看虚拟环境 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list 包管理 ##查看安装了那些包 conda</description>
-    </item>
-    
-    <item>
-      <title>Anaconda常用命令</title>
-      <link>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>查看虚拟环境 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list 包管理 ##查看安装了那些包 conda</description>
-    </item>
-    
-    <item>
-      <title>Win10隐藏资源管理器中的额外文件夹</title>
-      <link>https://haillk.github.io/post/Windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</link>
-      <pubDate>Fri, 13 Dec 2019 23:57:23 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
-      <description>打开注册表编辑器 方法：【win+R】打开运行框，输入“regedit”进入 目标文件夹 该路径下由很多文件夹，找到相应的文件夹。 HKEY_LOCAL_MACHINE</description>
-    </item>
-    
-    <item>
-      <title>Powershell美化</title>
-      <link>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</link>
-      <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</guid>
-      <description>oh-my-posh使用和主题选择 oh-my-posh 是一个开源、低调的 PowerShell 主题框架。 下载安装 在powershell中执行 Install-Module posh-git -Scope CurrentUser Install-Module oh-my-posh -Scope CurrentUser Import-Module posh-git Import-Module oh-my-posh 选择主题 oh-my-posh包含的</description>
-    </item>
-    
-    <item>
-      <title>黑纱字体</title>
-      <link>https://haillk.github.io/post/Windows/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</link>
-      <pubDate>Tue, 10 Dec 2019 22:53:59 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Windows/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</guid>
-      <description>黑纱字体下载链接</description>
-    </item>
-    
-    <item>
-      <title>Windows通过pip安装scrapy</title>
-      <link>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</link>
-      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</guid>
-      <description>Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 error: Microsoft Visual C++ 14.0 is required.</description>
-    </item>
-    
-    <item>
-      <title>安装更新pip</title>
-      <link>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</link>
-      <pubDate>Tue, 10 Dec 2019 18:01:37 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</guid>
-      <description>ModuleNotFoundError: No module named &amp;lsquo;pip&amp;rsquo; 可以首先执行 python -m ensurepip 然后执行 python -m pip install --upgrade pip 即可更新完毕。</description>
-    </item>
-    
-    <item>
-      <title>apt-get update和upgrade和dist-upgrade的区别</title>
-      <link>https://haillk.github.io/post/apt-getupdategrade/</link>
-      <pubDate>Sat, 07 Dec 2019 22:37:54 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/apt-getupdategrade/</guid>
-      <description>update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be incorrect as the size of the package files</description>
-    </item>
-    
-    <item>
-      <title>Debian安装python38</title>
-      <link>https://haillk.github.io/post/debian%E5%AE%89%E8%A3%85python38/</link>
-      <pubDate>Sat, 07 Dec 2019 22:19:52 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/debian%E5%AE%89%E8%A3%85python38/</guid>
-      <description>源码安装 1、安装依赖包 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编译，安装 源码安装</description>
-    </item>
-    
-    <item>
-      <title>流畅的python学习笔记 2</title>
-      <link>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</link>
-      <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
-      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛卡尔积：tshirts =</description>
-    </item>
-    
-    <item>
-      <title>Go Notes 4</title>
-      <link>https://haillk.github.io/post/Go/Go-notes-4/</link>
-      <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go/Go-notes-4/</guid>
-      <description>1、recover必须隔一个函数帧栈才能捕获到 //错误 func main() { recover() panic(1) } //错误 func main() { defer recover() panic(1) } //正确 func main() { defer func() { recover() }() panic(1) } //错误 func main() { defer func() { defer func(){ recover() } }() panic(1) } 2、def</description>
-    </item>
-    
-    <item>
-      <title>流畅的python学习笔记 1</title>
-      <link>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
-      <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
-      <description>特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_col</description>
-    </item>
-    
-    <item>
-      <title>Go Notes 3</title>
-      <link>https://haillk.github.io/post/Go/Go-notes-3/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go/Go-notes-3/</guid>
-      <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,不能使用短变量声明设置结构体字段值，slice&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Git 常见问题</title>
-      <link>https://haillk.github.io/post/Go/Git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</link>
-      <pubDate>Fri, 29 Nov 2019 15:58:44 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go/Git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go Notes 2</title>
-      <link>https://haillk.github.io/post/Go/Go-notes-2/</link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go/Go-notes-2/</guid>
-      <description>&lt;p&gt;map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Go Notes 1</title>
-      <link>https://haillk.github.io/post/Go/Go-notes-1/</link>
-      <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go/Go-notes-1/</guid>
-      <description>&lt;p&gt;多重赋值，短变量声明，interface{}和interface{}指针，Slice 扩容，基于类型创建的方法&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Ginv1.4(一)</title>
-      <link>https://haillk.github.io/post/Go/Ginv1.4%E4%B8%80/</link>
-      <pubDate>Fri, 29 Nov 2019 00:16:08 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go/Ginv1.4%E4%B8%80/</guid>
-      <description>&lt;p&gt;基础形式 ，参数获取&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>归档</title>
-      <link>https://haillk.github.io/archives/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/archives/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>搜索</title>
-      <link>https://haillk.github.io/search/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/search/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Haillk on Haillk</title>
+        <link>https://haillk.github.io/</link>
+        <description>Recent content in Haillk on Haillk</description>
+        <generator>Hugo -- gohugo.io</generator>
+        
+            <language>en</language>
+        
+        
+        
+            <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+        
+        
+            <lastBuildDate>Mon, 16 Dec 2019 17:19:48 +0800</lastBuildDate>
+        
+        <atom:link href="https://haillk.github.io/" rel="self" type="application/rss+xml" />
+        
+            <item>
+                <title>About</title>
+                <link>https://haillk.github.io/about/</link>
+                <pubDate>Mon, 16 Dec 2019 17:19:48 +0800</pubDate>
+                
+                <guid>https://haillk.github.io/about/</guid>
+                <description>&lt;p&gt;is me&lt;/p&gt;
+</description>
+            </item>
+        
+            <item>
+                <title>Posts</title>
+                <link>https://haillk.github.io/posts/</link>
+                <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
+                
+                <guid>https://haillk.github.io/posts/</guid>
+                <description></description>
+            </item>
+        
+    </channel>
 </rss>

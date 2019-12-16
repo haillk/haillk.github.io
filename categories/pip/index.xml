@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pip on Haillk-Blog</title>
+    <title>pip on Haillk</title>
     <link>https://haillk.github.io/categories/pip/</link>
-    <description>Recent content in pip on Haillk-Blog</description>
+    <description>Recent content in pip on Haillk</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Tue, 10 Dec 2019 18:01:37 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/pip/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +14,10 @@
     
     <item>
       <title>安装更新pip</title>
-      <link>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</link>
+      <link>https://haillk.github.io/2019/12/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</link>
       <pubDate>Tue, 10 Dec 2019 18:01:37 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</guid>
+      <guid>https://haillk.github.io/2019/12/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</guid>
       <description>ModuleNotFoundError: No module named &amp;lsquo;pip&amp;rsquo; 可以首先执行 python -m ensurepip 然后执行 python -m pip install --upgrade pip 即可更新完毕。</description>
     </item>
     

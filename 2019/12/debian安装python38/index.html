@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Debian安装python38 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="haillk-Blog">
+<link rel="prev" href="https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" />
+<link rel="next" href="https://haillk.github.io/2019/12/apt-getupdategrade/" />
+<link rel="canonical" href="https://haillk.github.io/2019/12/debian%E5%AE%89%E8%A3%85python38/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Debian安装python38"/>
+<meta name="twitter:description" content="源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar"/>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Debian安装python38",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/haillk.github.io\/2019\/12\/debian%E5%AE%89%E8%A3%85python38\/"
+    },
+    
+        "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/cover.png",
+            "width":  800 ,
+            "height":  600 
+        },
+    
+    "genre": "posts",
+    
+        "keywords": "python安装, debian",
+    
+    "wordcount":  411 ,
+    "url": "https:\/\/haillk.github.io\/2019\/12\/debian%E5%AE%89%E8%A3%85python38\/",
+    
+        "datePublished": "2019-12-07T22:19:52\x2b08:00",
+    
+    
+        "dateModified": "2019-12-07T22:19:52\x2b08:00",
+    
+    
+        "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    
+    
+        "publisher": {
+            "@type": "Organization",
+            "name": "XXXX",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/logo.png",
+            "width":  127 ,
+            "height":  40 
+            }
+        },
+    
+    
+    "description": ""
+    }
+    </script>
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.min.css">
+
+<link rel="stylesheet" href="/css/lib/animate/animate.min.min.css">
+
+    </head>
+    <body>
+        <script>
+            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            window.isDark && document.body.classList.add('dark-theme');
+        </script>
+        <div class="wrapper">
+            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://haillk.github.io">Haillk</a>
+        </div>
+        <div class="navbar-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+                <a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title=""><i class="fas fa-language fa-fw"></i></a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile">
+     <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://haillk.github.io">Haillk</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+                <a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title=""><i class="fas fa-language fa-fw"></i></a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav><main class="main">
+                <div class="container">
+                    
+    
+    
+    
+
+    <article class="post-warp">
+        <h1 class="post-title animated flipInX">Debian安装python38</h1>
+
+        <div class="post-meta">
+            <div class="post-meta-main">
+                <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
+                <span class="post-category">
+                        included in
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/python/">Python</a>
+                            <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/debian/">Debian</a>
+                            
+                    </span>
+            </div>
+            <div class="post-meta-other">
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-07>2019-12-07</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 411 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+        </div>
+
+        
+
+        
+
+        <div class="post-content">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <a class="post-dummy-target" id="font-colorcc3300font"></a><h4><!-- raw HTML omitted -->源码安装<!-- raw HTML omitted --></h4>
+<a class="post-dummy-target" id="1"></a><h5>1、安装依赖包</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev  libssl-dev openssl  libffi-dev
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="2python38"></a><h5>2、下载python3.8源码</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">##更新</span>
+sudo apt-get update
+<span class="c1">##下载</span>
+wget https://www.python.org/downloads/release/python-380/
+<span class="c1">##解压</span>
+tar -xvf Python-3.8.0.tar.xz
+<span class="nb">cd</span>  Python-3.8.0/
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="3"></a><h5>3、配置，编译，安装</h5>
+<blockquote>
+<p>源码安装的3个步骤，配置（configure），编译(make)，安装(make install)</p>
+<p>Configure是一个可执行脚本，它有很多选项，在待安装的源码路径下使用命令./configure –help输出详细的选项列表。其中**&ndash;prefix选项是配置安装的路径。**</p>
+<p>如果不配置 &ndash;prefix 选项，安装后：</p>
+<p>可执行文件默认放在/usr /local/bin，</p>
+<p>库文件默认放在/usr/local/lib，</p>
+<p>配置文件默认放在/usr/local/etc，</p>
+<p>其它的资源文件放在/usr /local/share，</p>
+<p><code>--enable-optimizations</code> 是优化选项（LTO，PGO 等）加上这个 flag 编译后，性能有 10% 左右的优化（如果没记错的话），但是这会明显的增加编译时间</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">./configure --prefix<span class="o">=</span>/usr/local/python38 --enable-optimizations
+make <span class="o">&amp;&amp;</span> make install
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="4"></a><h5>4、创建软链</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python38</span>
+
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">8</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip3</span><span class="o">.</span><span class="mi">8</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">pip38</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+        </div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>This article is updated with 2019-12-07</span>
+            </div>
+            <div class="post-info-license">
+                
+            </div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md">
+                
+                    
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/12/debian%E5%AE%89%E8%A3%85python38/index.md" target="_blank"></a></span>
+                    
+                
+            </div>
+            <div class="post-info-share">
+                
+                    <span>
+    
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fdebian%25E5%25AE%2589%25E8%25A3%2585python38%2f&amp;text=Debian%e5%ae%89%e8%a3%85python38&amp;via=" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a>
+    
+    
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fdebian%25E5%25AE%2589%25E8%25A3%2585python38%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/"><i class="fas fa-tag fa-fw"></i>python安装</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/debian/"><i class="fas fa-tag fa-fw"></i>debian</a>
+                    </span>
+                
+            
+        </section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://haillk.github.io">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+            <a href="https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" class="prev" rel="prev" title="流畅的python学习笔记 2"><i class="fas fa-angle-left fa-fw"></i>流畅的python学习笔记 2</a>
+        
+        
+            <a href="https://haillk.github.io/2019/12/apt-getupdategrade/" class="next" rel="next" title="apt-get update和upgrade和dist-upgrade的区别">apt-get update和upgrade和dist-upgrade的区别<i class="fas fa-angle-right fa-fw"></i></a>
+        
+    </div>
+</div>
+
+        <div class="post-comment">
+            
+            
+
+            
+        </div>
+    </article></div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line">
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+        <div class="copyright-line">
+            <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://haillk.github.io">Haillk</a></span><span class="license">&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+<script src="/js/lib/jquery/jquery.slim.min.min.js"></script>
+<script src="/js/lib/lazysizes/lazysizes.min.min.js"></script>
+<script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script>
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+<script src="/js/blog.min.js"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</div>
+        <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
+    </body>
+</html>

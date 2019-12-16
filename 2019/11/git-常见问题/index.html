@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Git 常见问题 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="haillk-Blog">
+<link rel="prev" href="https://haillk.github.io/2019/11/go-notes-2/" />
+<link rel="next" href="https://haillk.github.io/2019/11/go-notes-3/" />
+<link rel="canonical" href="https://haillk.github.io/2019/11/git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git 常见问题"/>
+<meta name="twitter:description" content=""/>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Git 常见问题",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/haillk.github.io\/2019\/11\/git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98\/"
+    },
+    
+        "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/cover.png",
+            "width":  800 ,
+            "height":  600 
+        },
+    
+    "genre": "posts",
+    
+        "keywords": "Git, CRLF",
+    
+    "wordcount":  373 ,
+    "url": "https:\/\/haillk.github.io\/2019\/11\/git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98\/",
+    
+        "datePublished": "2019-11-29T15:58:44\x2b08:00",
+    
+    
+        "dateModified": "2019-11-29T15:58:44\x2b08:00",
+    
+    
+        "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    
+    
+        "publisher": {
+            "@type": "Organization",
+            "name": "XXXX",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/logo.png",
+            "width":  127 ,
+            "height":  40 
+            }
+        },
+    
+    
+    "description": ""
+    }
+    </script>
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.min.css">
+
+<link rel="stylesheet" href="/css/lib/animate/animate.min.min.css">
+
+    </head>
+    <body>
+        <script>
+            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            window.isDark && document.body.classList.add('dark-theme');
+        </script>
+        <div class="wrapper">
+            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://haillk.github.io">Haillk</a>
+        </div>
+        <div class="navbar-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+                <a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title=""><i class="fas fa-language fa-fw"></i></a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile">
+     <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://haillk.github.io">Haillk</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+                <a class="menu-item" href="https://hugo-loveit-zh.netlify.com" title=""><i class="fas fa-language fa-fw"></i></a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav><main class="main">
+                <div class="container">
+                    
+    
+    
+    
+
+    <article class="post-warp">
+        <h1 class="post-title animated flipInX">Git 常见问题</h1>
+
+        <div class="post-meta">
+            <div class="post-meta-main">
+                <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
+                <span class="post-category">
+                        included in
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/git/">Git</a>
+                            
+                    </span>
+            </div>
+            <div class="post-meta-other">
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-11-29>2019-11-29</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 373 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+        </div>
+
+        
+
+        
+
+        <div class="post-content">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <a class="post-dummy-target" id="font-colorcc33001git-add-the-file-will-have-its-original-line-endings-in-your-working-directoryfont"></a><h4><!-- raw HTML omitted -->1、git add 时提示 The file will have its original line endings in your working directory.<!-- raw HTML omitted --></h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell">git add -A
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory.
+</code></pre></td></tr></table>
+</div>
+</div><p>问题原因：由于linux使用的是(0x0A)LF,windows使用的是(0x0D0A)CRLF,而git 提供了autocrlf配置项，默认配置替换回车换行成统一的CRLF</p>
+<p>解决办法: 根据需要更改此配置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 提交时转换为LF，</span>
+git config --global core.autocrlf <span class="nb">true</span>
+
+<span class="c1"># 提交时转换为LF</span>
+git config --global core.autocrlf input
+
+<span class="c1"># 提交检出均不转换</span>
+git config --global core.autocrlf <span class="nb">false</span>
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>如果把 autocrlf 设置为 false 时，那另一个配置项 <code>safecrlf</code> 最好设置为 <strong>ture</strong>。该选项用于检查文件是否包含混合换行符，其有三个可选项：</p>
+<ul>
+<li><strong>true:</strong> 拒绝提交包含混合换行符的文件</li>
+<li><strong>false:</strong> 允许提交包含混合换行符的文件</li>
+<li><strong>warn:</strong> 提交包含混合换行符的文件时给出警告</li>
+</ul>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 拒绝提交包含混合换行符的文件</span>
+git config --global core.safecrlf <span class="nb">true</span>
+
+<span class="c1"># 允许提交包含混合换行符的文件</span>
+git config --global core.safecrlf <span class="nb">false</span>
+
+<span class="c1"># 提交包含混合换行符的文件时给出警告</span>
+git config --global core.safecrlf warn
+</code></pre></td></tr></table>
+</div>
+</div>
+        </div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>This article is updated with 2019-11-29</span>
+            </div>
+            <div class="post-info-license">
+                
+            </div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md">
+                
+                    
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/11/git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/index.md" target="_blank"></a></span>
+                    
+                
+            </div>
+            <div class="post-info-share">
+                
+                    <span>
+    
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f11%2fgit-%25E5%25B8%25B8%25E8%25A7%2581%25E9%2597%25AE%25E9%25A2%2598%2f&amp;text=Git%20%e5%b8%b8%e8%a7%81%e9%97%ae%e9%a2%98&amp;via=" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a>
+    
+    
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f11%2fgit-%25E5%25B8%25B8%25E8%25A7%2581%25E9%2597%25AE%25E9%25A2%2598%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/git/"><i class="fas fa-tag fa-fw"></i>Git</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/crlf/"><i class="fas fa-tag fa-fw"></i>CRLF</a>
+                    </span>
+                
+            
+        </section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://haillk.github.io">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+            <a href="https://haillk.github.io/2019/11/go-notes-2/" class="prev" rel="prev" title="Go Notes 2"><i class="fas fa-angle-left fa-fw"></i>Go Notes 2</a>
+        
+        
+            <a href="https://haillk.github.io/2019/11/go-notes-3/" class="next" rel="next" title="Go Notes 3">Go Notes 3<i class="fas fa-angle-right fa-fw"></i></a>
+        
+    </div>
+</div>
+
+        <div class="post-comment">
+            
+            
+
+            
+        </div>
+    </article></div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line">
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+        <div class="copyright-line">
+            <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://haillk.github.io">Haillk</a></span><span class="license">&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+<script src="/js/lib/jquery/jquery.slim.min.min.js"></script>
+<script src="/js/lib/lazysizes/lazysizes.min.min.js"></script>
+<script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script>
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+<script src="/js/blog.min.js"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</div>
+        <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
+    </body>
+</html>
