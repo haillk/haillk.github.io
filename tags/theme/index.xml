@@ -21,15 +21,5 @@
       <description>&lt;p&gt;This is a &lt;a href=&#34;https://github.com/dillonzq/LoveIt&#34;&gt;LoveIt&lt;/a&gt; theme preview and documentation page.&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://haillk.github.io/2014/09/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/2014/09/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&#39;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&#39;t cover using CSS to style your theme.
-We&#39;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
   </channel>
 </rss>
