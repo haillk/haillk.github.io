@@ -1,86 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on Haillk-Blog</title>
+    <title>python on Haillk-Blog</title>
     <link>https://haillk.github.io/categories/python/</link>
-    <description>Recent content in Python on Haillk-Blog</description>
+    <description>Recent content in python on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 14 Dec 2019 22:21:47 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Selenium安装使用</title>
-      <link>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
-      <description>&lt;p&gt;selenium安装与使用&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Scrapy常用命令</title>
-      <link>https://haillk.github.io/2019/12/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/12/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>&lt;p&gt;scrapy常用命令&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Anaconda常用命令</title>
-      <link>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>&lt;p&gt;Anaconda常用命令&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Windows通过pip安装scrapy</title>
-      <link>https://haillk.github.io/2019/12/windows%E9%80%9A%E8%BF%87pip%E5%AE%89%E8%A3%85scrapy/</link>
-      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/windows%E9%80%9A%E8%BF%87pip%E5%AE%89%E8%A3%85scrapy/</guid>
-      <description>&lt;p&gt;Windows通过pip安装scrapy&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>安装更新pip</title>
-      <link>https://haillk.github.io/2019/12/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</link>
-      <pubDate>Tue, 10 Dec 2019 18:01:37 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</guid>
-      <description>&lt;p&gt;安装更新pip&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Debian安装python38</title>
-      <link>https://haillk.github.io/2019/12/debian%E5%AE%89%E8%A3%85python38/</link>
-      <pubDate>Sat, 07 Dec 2019 22:19:52 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/debian%E5%AE%89%E8%A3%85python38/</guid>
-      <description>&lt;p&gt;debian9安装python3.8&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>流畅的python学习笔记 2</title>
-      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</link>
-      <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>流畅的python学习笔记 1</title>
-      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
-      <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
-      <description>&lt;p&gt;特殊方法_&lt;em&gt;xxx_&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>新建一个工程 scrapy startproject spider_name 构建爬虫 scrapy genspider name domain 运行爬虫 scrapy runspider 爬虫名称 启动项目 scrapy crawl xxx</description>
     </item>
     
   </channel>

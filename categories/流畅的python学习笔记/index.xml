@@ -5,7 +5,7 @@
     <link>https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 流畅的python学习笔记 on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sat, 07 Dec 2019 00:40:52 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
@@ -13,20 +13,20 @@
     
     <item>
       <title>流畅的python学习笔记 2</title>
-      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</link>
+      <link>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</link>
       <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
-      <description></description>
+      <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
+      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛卡尔积：tshirts =</description>
     </item>
     
     <item>
       <title>流畅的python学习笔记 1</title>
-      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
+      <link>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
       <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
-      <description>&lt;p&gt;特殊方法_&lt;em&gt;xxx_&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
+      <description>特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_col</description>
     </item>
     
   </channel>

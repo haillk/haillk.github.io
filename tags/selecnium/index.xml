@@ -5,7 +5,7 @@
     <link>https://haillk.github.io/tags/selecnium/</link>
     <description>Recent content in selecnium on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/selecnium/index.xml" rel="self" type="application/rss+xml" />
@@ -13,11 +13,11 @@
     
     <item>
       <title>Selenium安装使用</title>
-      <link>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+      <link>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
-      <description>&lt;p&gt;selenium安装与使用&lt;/p&gt;</description>
+      <guid>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动</description>
     </item>
     
   </channel>

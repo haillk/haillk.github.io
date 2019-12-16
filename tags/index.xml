@@ -5,7 +5,7 @@
     <link>https://haillk.github.io/tags/</link>
     <description>Recent content in Tags on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Sun, 15 Dec 2019 00:49:02 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -22,10 +22,10 @@
     
     <item>
       <title>python</title>
-      <link>https://haillk.github.io/tags/python/</link>
+      <link></link>
       <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/python/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -89,6 +89,24 @@
       <pubDate>Tue, 10 Dec 2019 22:53:59 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://haillk.github.io/tags/Python/</link>
+      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/tags/Python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scrapy</title>
+      <link></link>
+      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
+      
+      <guid></guid>
       <description></description>
     </item>
     
@@ -165,11 +183,11 @@
     </item>
     
     <item>
-      <title>Slice</title>
-      <link>https://haillk.github.io/tags/slice/</link>
+      <title>slice</title>
+      <link></link>
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/slice/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -193,19 +211,19 @@
     
     <item>
       <title>CRLF</title>
-      <link>https://haillk.github.io/tags/crlf/</link>
+      <link>https://haillk.github.io/tags/CRLF/</link>
       <pubDate>Fri, 29 Nov 2019 15:58:44 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/crlf/</guid>
+      <guid>https://haillk.github.io/tags/CRLF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Git</title>
-      <link>https://haillk.github.io/tags/git/</link>
+      <link>https://haillk.github.io/tags/Git/</link>
       <pubDate>Fri, 29 Nov 2019 15:58:44 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/git/</guid>
+      <guid>https://haillk.github.io/tags/Git/</guid>
       <description></description>
     </item>
     
@@ -224,6 +242,15 @@
       <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Slice</title>
+      <link>https://haillk.github.io/tags/Slice/</link>
+      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/tags/Slice/</guid>
       <description></description>
     </item>
     
@@ -283,10 +310,10 @@
     
     <item>
       <title>Router</title>
-      <link>https://haillk.github.io/tags/router/</link>
+      <link>https://haillk.github.io/tags/Router/</link>
       <pubDate>Fri, 29 Nov 2019 00:16:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/router/</guid>
+      <guid>https://haillk.github.io/tags/Router/</guid>
       <description></description>
     </item>
     
@@ -296,42 +323,6 @@
       <pubDate>Fri, 29 Nov 2019 00:16:08 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>github theme</title>
-      <link>https://haillk.github.io/tags/github-theme/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/tags/github-theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>highlight code</title>
-      <link>https://haillk.github.io/tags/highlight-code/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/tags/highlight-code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>test</title>
-      <link>https://haillk.github.io/tags/test/</link>
-      <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/tags/test/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag plugins</title>
-      <link>https://haillk.github.io/tags/tag-plugins/</link>
-      <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://haillk.github.io/tags/tag-plugins/</guid>
       <description></description>
     </item>
     

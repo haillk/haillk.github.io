@@ -5,7 +5,7 @@
     <link>https://haillk.github.io/tags/recover/</link>
     <description>Recent content in recover on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 06 Dec 2019 23:25:31 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/recover/index.xml" rel="self" type="application/rss+xml" />
@@ -13,11 +13,11 @@
     
     <item>
       <title>Go Notes 4</title>
-      <link>https://haillk.github.io/2019/12/go-notes-4/</link>
+      <link>https://haillk.github.io/post/Go/Go-notes-4/</link>
       <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/12/go-notes-4/</guid>
-      <description></description>
+      <guid>https://haillk.github.io/post/Go/Go-notes-4/</guid>
+      <description>1、recover必须隔一个函数帧栈才能捕获到 //错误 func main() { recover() panic(1) } //错误 func main() { defer recover() panic(1) } //正确 func main() { defer func() { recover() }() panic(1) } //错误 func main() { defer func() { defer func(){ recover() } }() panic(1) } 2、def</description>
     </item>
     
   </channel>

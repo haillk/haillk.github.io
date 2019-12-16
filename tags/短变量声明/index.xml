@@ -5,7 +5,7 @@
     <link>https://haillk.github.io/tags/%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/</link>
     <description>Recent content in 短变量声明 on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 29 Nov 2019 00:16:19 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>Go Notes 1</title>
-      <link>https://haillk.github.io/2019/11/go-notes-1/</link>
+      <link>https://haillk.github.io/post/Go/Go-notes-1/</link>
       <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/11/go-notes-1/</guid>
+      <guid>https://haillk.github.io/post/Go/Go-notes-1/</guid>
       <description>&lt;p&gt;多重赋值，短变量声明，interface{}和interface{}指针，Slice 扩容，基于类型创建的方法&lt;/p&gt;</description>
     </item>
     

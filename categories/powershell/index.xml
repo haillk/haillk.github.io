@@ -5,7 +5,7 @@
     <link>https://haillk.github.io/categories/powershell/</link>
     <description>Recent content in powershell on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Thu, 12 Dec 2019 21:28:50 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/powershell/index.xml" rel="self" type="application/rss+xml" />
@@ -13,11 +13,11 @@
     
     <item>
       <title>Powershell美化</title>
-      <link>https://haillk.github.io/2019/12/powershell%E7%BE%8E%E5%8C%96/</link>
+      <link>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</link>
       <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
       
-      <guid>https://haillk.github.io/2019/12/powershell%E7%BE%8E%E5%8C%96/</guid>
-      <description>&lt;p&gt;powershell美化&lt;/p&gt;</description>
+      <guid>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</guid>
+      <description>oh-my-posh使用和主题选择 oh-my-posh 是一个开源、低调的 PowerShell 主题框架。 下载安装 在powershell中执行 Install-Module posh-git -Scope CurrentUser Install-Module oh-my-posh -Scope CurrentUser Import-Module posh-git Import-Module oh-my-posh 选择主题 oh-my-posh包含的</description>
     </item>
     
   </channel>
