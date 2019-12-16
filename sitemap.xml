@@ -1,37 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
         <url>
-            <loc>https://haillk.github.io/about/</loc>
-            
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/categories/</loc>
             
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/category/</loc>
-            
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
+                <lastmod>2019-12-15T00:49:02+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -45,63 +17,7 @@
         <url>
             <loc>https://haillk.github.io/</loc>
             
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/subcategory/</loc>
-            
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/tag1/</loc>
-            
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/tag2/</loc>
-            
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/</loc>
-            
-                <lastmod>2019-12-16T17:19:48+08:00</lastmod>
+                <lastmod>2019-12-15T00:49:02+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -155,20 +71,6 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/selenium/</loc>
-            
-                <lastmod>2019-12-15T00:49:02+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/2019/12/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
             
                 <lastmod>2019-12-15T00:49:02+08:00</lastmod>
@@ -183,9 +85,9 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/tags/python/</loc>
+            <loc>https://haillk.github.io/tags/</loc>
             
-                <lastmod>2019-12-14T22:21:47+08:00</lastmod>
+                <lastmod>2019-12-15T00:49:02+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -197,7 +99,7 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/scrapy/</loc>
+            <loc>https://haillk.github.io/tags/python/</loc>
             
                 <lastmod>2019-12-14T22:21:47+08:00</lastmod>
             
@@ -239,35 +141,7 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/anaconda/</loc>
-            
-                <lastmod>2019-12-14T22:02:22+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/tags/anaconda/</loc>
-            
-                <lastmod>2019-12-14T22:02:22+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
             
                 <lastmod>2019-12-14T22:02:22+08:00</lastmod>
             
@@ -323,20 +197,6 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/tags/win10/</loc>
-            
-                <lastmod>2019-12-13T23:57:23+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/2019/12/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</loc>
             
                 <lastmod>2019-12-13T23:57:23+08:00</lastmod>
@@ -351,23 +211,9 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/%E6%B3%A8%E5%86%8C%E8%A1%A8/</loc>
+            <loc>https://haillk.github.io/tags/%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</loc>
             
                 <lastmod>2019-12-13T23:57:23+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/powershell/</loc>
-            
-                <lastmod>2019-12-12T21:28:50+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -407,37 +253,9 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/window10/</loc>
-            
-                <lastmod>2019-12-12T21:28:50+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/tags/windows/</loc>
             
                 <lastmod>2019-12-12T21:28:50+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/font/</loc>
-            
-                <lastmod>2019-12-10T22:53:59+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -491,20 +309,6 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/pip/</loc>
-            
-                <lastmod>2019-12-10T18:01:37+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/tags/pip/</loc>
             
                 <lastmod>2019-12-10T18:01:37+08:00</lastmod>
@@ -534,20 +338,6 @@
     
         <url>
             <loc>https://haillk.github.io/tags/apt-get/</loc>
-            
-                <lastmod>2019-12-07T22:37:54+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/apt-get/</loc>
             
                 <lastmod>2019-12-07T22:37:54+08:00</lastmod>
             
@@ -591,7 +381,7 @@
         <url>
             <loc>https://haillk.github.io/tags/debian/</loc>
             
-                <lastmod>2019-12-07T22:19:52+08:00</lastmod>
+                <lastmod>2019-12-07T22:37:54+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -662,20 +452,6 @@
             <loc>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</loc>
             
                 <lastmod>2019-12-07T00:40:52+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/go/</loc>
-            
-                <lastmod>2019-12-06T23:25:31+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -816,62 +592,6 @@
             <loc>https://haillk.github.io/tags/%E6%96%AD%E8%A8%80/</loc>
             
                 <lastmod>2019-11-30T03:32:08+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/crlf/</loc>
-            
-                <lastmod>2019-11-29T15:58:44+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/git/</loc>
-            
-                <lastmod>2019-11-29T15:58:44+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/git/</loc>
-            
-                <lastmod>2019-11-29T15:58:44+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/2019/11/git-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</loc>
-            
-                <lastmod>2019-11-29T15:58:44+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -1037,6 +757,34 @@
         </url>
     
         <url>
+            <loc>https://haillk.github.io/tags/gin-router/</loc>
+            
+                <lastmod>2019-11-29T00:16:08+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://haillk.github.io/tags/gin-%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/</loc>
+            
+                <lastmod>2019-11-29T00:16:08+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
             <loc>https://haillk.github.io/2019/11/ginv1.4%E4%B8%80/</loc>
             
                 <lastmod>2019-11-29T00:16:08+08:00</lastmod>
@@ -1051,79 +799,7 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/tags/router/</loc>
-            
-                <lastmod>2019-11-29T00:16:08+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/</loc>
-            
-                <lastmod>2019-11-29T00:16:08+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/categories/documentation/</loc>
-            
-                <lastmod>2019-08-25T16:22:42+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/hugo/</loc>
-            
-                <lastmod>2019-08-25T16:22:42+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/2019/08/loveit-preview/</loc>
-            
-                <lastmod>2019-08-25T16:22:42+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/theme/</loc>
-            
-                <lastmod>2019-08-25T16:22:42+08:00</lastmod>
+            <loc>https://haillk.github.io/about/</loc>
             
             
                 <changefreq>weekly</changefreq>

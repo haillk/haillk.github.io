@@ -54,7 +54,7 @@ C:\Users\Haillk\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 | 5     | sorin箭头颜色1                                    |
 | 6     | sorin箭头颜色3                                    |
 | 7     | sorin箭头颜色2                                    |
-| 8     |                                                   |
+| 8     | anaconda的环境信息                                |
 | 9     | --svf 类似配置颜色                                |
 | 10 D7 | ls 时的其中一种文件颜色                           |
 | 11 D6 | ls 时的其中一种文件颜色                           |

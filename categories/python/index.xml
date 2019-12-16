@@ -40,15 +40,6 @@
     </item>
     
     <item>
-      <title>Anaconda常用命令</title>
-      <link>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看</description>
-    </item>
-    
-    <item>
       <title>Windows通过pip安装scrapy</title>
       <link>https://haillk.github.io/2019/12/windows%E5%AE%89%E8%A3%85scrapy/</link>
       <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
@@ -73,24 +64,6 @@
       
       <guid>https://haillk.github.io/2019/12/debian%E5%AE%89%E8%A3%85python38/</guid>
       <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar</description>
-    </item>
-    
-    <item>
-      <title>流畅的python学习笔记 2</title>
-      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</link>
-      <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
-      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛</description>
-    </item>
-    
-    <item>
-      <title>流畅的python学习笔记 1</title>
-      <link>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</link>
-      <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
-      <description>特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际</description>
     </item>
     
   </channel>

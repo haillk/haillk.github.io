@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>debian on Haillk</title>
+    <title>Debian on Haillk</title>
     <link>https://haillk.github.io/categories/debian/</link>
-    <description>Recent content in debian on Haillk</description>
+    <description>Recent content in Debian on Haillk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
