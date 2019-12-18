@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>跟着无闻学Go Web应用开发-初窥http服务器 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="haillk-Blog">
+<link rel="prev" href="https://haillk.github.io/2019/12/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" />
+<link rel="next" href="https://haillk.github.io/2019/12/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/" />
+<link rel="canonical" href="https://haillk.github.io/2019/12/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="跟着无闻学Go Web应用开发-初窥http服务器"/>
+<meta name="twitter:description" content=""/>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "跟着无闻学Go Web应用开发-初窥http服务器",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/haillk.github.io\/2019\/12\/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8\/"
+    },
+    
+        "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/cover.png",
+            "width":  800 ,
+            "height":  600 
+        },
+    
+    "genre": "posts",
+    
+        "keywords": "go, web应用开发",
+    
+    "wordcount":  1638 ,
+    "url": "https:\/\/haillk.github.io\/2019\/12\/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8\/",
+    
+        "datePublished": "2019-12-18T21:45:23\x2b08:00",
+    
+    
+        "dateModified": "2019-12-18T21:45:23\x2b08:00",
+    
+    
+        "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    
+    
+        "publisher": {
+            "@type": "Organization",
+            "name": "XXXX",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/logo.png",
+            "width":  127 ,
+            "height":  40 
+            }
+        },
+    
+    
+    "description": ""
+    }
+    </script>
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.min.css">
+
+<link rel="stylesheet" href="/css/lib/animate/animate.min.min.css">
+
+    </head>
+    <body>
+        <script>
+            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            window.isDark && document.body.classList.add('dark-theme');
+        </script>
+        <div class="wrapper">
+            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://haillk.github.io">Haillk</a>
+        </div>
+        <div class="navbar-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile">
+     <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://haillk.github.io">Haillk</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav><main class="main">
+                <div class="container">
+                    
+    
+    
+    
+
+    <article class="post-warp">
+        <h1 class="post-title animated flipInX">跟着无闻学Go Web应用开发-初窥http服务器</h1>
+
+        <div class="post-meta">
+            <div class="post-meta-main">
+                <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
+                <span class="post-category">
+                        included in
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发</a>
+                            
+                    </span>
+            </div>
+            <div class="post-meta-other">
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-18>2019-12-18</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 1638 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>4 min&nbsp;</div>
+        </div>
+
+        
+
+        <div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title">Table of Contents</h2>
+                <div class="post-toc-content">
+                    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#font-colorcc3300font">三个主要函数的简单分析</a></li>
+        <li><a href="#font-colorcc3300httphandlefunc-font">http.handlefunc() 函数分析</a></li>
+      </ul>
+    </li>
+    <li><a href="#font-colorcc3300httplistrenandserve4000nilfont">Http.ListrenAndServe(":4000,nil)函数分析</a></li>
+    <li><a href="#font-colorcc3300httpservemuxfonthttphandle">http.ServeMux函数分析对http.Handle剖析</a></li>
+    <li><a href="#font-colorcc3300listenandservedefaultservemuxfont">ListenAndServe是否也是对DefaultServeMux对象的封装呢</a></li>
+  </ul>
+</nav>
+                </div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary><div class="post-toc-title"><span>Table of Contents</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary>
+                    <div class="post-toc-content">
+                        
+                        
+                        <nav id="TableOfContentsMobile">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#font-colorcc3300font">三个主要函数的简单分析</a></li>
+        <li><a href="#font-colorcc3300httphandlefunc-font">http.handlefunc() 函数分析</a></li>
+      </ul>
+    </li>
+    <li><a href="#font-colorcc3300httplistrenandserve4000nilfont">Http.ListrenAndServe(":4000,nil)函数分析</a></li>
+    <li><a href="#font-colorcc3300httpservemuxfonthttphandle">http.ServeMux函数分析对http.Handle剖析</a></li>
+    <li><a href="#font-colorcc3300listenandservedefaultservemuxfont">ListenAndServe是否也是对DefaultServeMux对象的封装呢</a></li>
+  </ul>
+</nav>
+                    </div>
+                </details>
+            </div>
+
+        <div class="post-content">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <a class="post-dummy-target" id="hello-world"></a><h1>Hello world!</h1>
+<p>第一步，用go语言搭建一个http版的‘hello world’程序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;log&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">http</span><span class="p">.</span><span class="nf">HandleFunc</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="kd">func</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">w</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="p">[</span><span class="p">]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span><span class="p">)</span>
+	<span class="p">}</span><span class="p">)</span>
+
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Starting HTTP server...&#34;</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;localhost:4000&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="font-colorcc3300font"></a><h3><!-- raw HTML omitted -->三个主要函数的简单分析<!-- raw HTML omitted --></h3>
+<ol>
+<li>
+<p><!-- raw HTML omitted --><strong>http.handleFunc()</strong> <!-- raw HTML omitted -->函数的作用是建立路由映射。包含两个参数，第一个参数是指定的路由规则。第二个参数是，要调用的响应函数（这个函数必须符合函数签名<code>func(http.ResponseWriter, *http.Request)</code>）。</p>
+</li>
+<li>
+<p><strong><!-- raw HTML omitted --><code>func(w http.ResponseWriter, r *http.Request) {}</code><!-- raw HTML omitted --></strong> 这个函数同样有两个参数，第一个参数是请求所对应的响应对象<code>http.ResponseWriter</code> ,包括响应码，响应头，响应体等。第二个对象就是请求对应的请求对象 <code>*http.Request</code>,包括http请求的所有信息。
+1. <code>http.ResponseWriter</code> 我们就是通过调用这个对象的write方法来向响应体写入字符的。</p>
+</li>
+<li>
+<p><strong><!-- raw HTML omitted --><code>http.ListenAndServe</code><!-- raw HTML omitted --></strong>的作用是启动http服务器，并监听发送到指定地址和端口号的http请求。包含两个参数，第一个参数就是地址和端口号。第二个参数</p>
+</li>
+</ol>
+<a class="post-dummy-target" id="font-colorcc3300httphandlefunc-font"></a><h3><!-- raw HTML omitted -->http.handlefunc() 函数分析<!-- raw HTML omitted --></h3>
+<p>​	实际上<code>http.HandleFunc</code>是标准库提供的一种简便写法，他的第二个参数必须为指定格式，是因为在<code>http.HandleFunc</code>函数内部会将传入的绑定函数转化为类型<!-- raw HTML omitted --><code>http.Handler</code>,<!-- raw HTML omitted --></p>
+<p>​	而这个对象是go标准中的http请求处理器对象，该对象实现了<code>http.Handler</code>接口：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">Handler</span> <span class="kd">interface</span> <span class="p">{</span>
+    <span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="o">*</span><span class="nx">Request</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>结论</strong>：<strong>http.HandleFunc的根本作用就是将一个函数转化为实现了<code>http.Handler</code>接口的类型（<code>http.Handler</code>）。  那么我们就可以自己创建一个类型并实现<code>http.Handler</code>接口。这样就可以替代handleFunc函数</strong></p>
+<p>实现代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;log&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">http</span><span class="p">.</span><span class="nf">Handle</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">helloHandler</span><span class="p">{</span><span class="p">}</span><span class="p">)</span>
+
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Starting HTTP server...&#34;</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;:4000&#34;</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">helloHandler</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">_</span> <span class="o">*</span><span class="nx">helloHandler</span><span class="p">)</span> <span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">w</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="p">[</span><span class="p">]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="font-colorcc3300httplistrenandserve4000nilfont"></a><h2><!-- raw HTML omitted -->Http.ListrenAndServe(&quot;:4000&rdquo;,nil)<!-- raw HTML omitted -->函数分析</h2>
+<p>​	首先来分析一下第二个参数nil，根据函数声明表示，nil代替的是一个实现了<code>http.Handler</code>接口的对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">ListenAndServe</span><span class="p">(</span><span class="nx">addr</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">handler</span> <span class="nx">Handler</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>​	没错，这个handler就是跟上面一样，实现了handler接口的类型。我们可以直接使用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;log&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Starting HTTP server...&#34;</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;localhost:4000&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">helloHandler</span><span class="p">{</span><span class="p">}</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">helloHandler</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">_</span> <span class="o">*</span><span class="nx">helloHandler</span><span class="p">)</span> <span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">w</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="p">[</span><span class="p">]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这个代码运行起来跟前面的是一样的，不过<strong>不能方便的将路由规则和函数进行绑定。</strong></p>
+<p><strong>结论一</strong>： <strong>ListenAndServe（）的第二个参数就是一个handler,能直接用但是不能提供路由绑定。</strong></p>
+<a class="post-dummy-target" id="font-colorcc3300httpservemuxfonthttphandle"></a><h2><!-- raw HTML omitted -->http.ServeMux函数分析<!-- raw HTML omitted -->&mdash;对http.Handle剖析</h2>
+<p>通过对Hande的源码分析，Handle 是对<code>http.ServeMux</code>对象(<code>http.DefaultServeMux</code>)封装了一层。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">Handle</span><span class="p">(</span><span class="nx">pattern</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">handler</span> <span class="nx">Handler</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">DefaultServeMux</span><span class="p">.</span><span class="nf">Handle</span><span class="p">(</span><span class="nx">pattern</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>而这个<code>http,serveMux</code>是go语言的带有基本路由功能的服务复用器。除了用<code>http.HandleFunc</code>或<code>http.Handle</code>这类方法操作<code>http.DefaultServeMux</code>之外，也可以用<code>http.NewServeMux</code>来创建一个新的<code>http.ServeMux</code>对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;log&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">mux</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewServeMux</span><span class="p">(</span><span class="p">)</span>
+	<span class="nx">mux</span><span class="p">.</span><span class="nf">Handle</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">helloHandler</span><span class="p">{</span><span class="p">}</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Starting HTTP server...&#34;</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="s">&#34;localhost:4000&#34;</span><span class="p">,</span> <span class="nx">mux</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">helloHandler</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">_</span> <span class="o">*</span><span class="nx">helloHandler</span><span class="p">)</span> <span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">w</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="p">[</span><span class="p">]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>结论</strong>：<strong><code>http.Handle</code>方法，本质上是对<code>DefaultServeMux</code>这个对象的操作。</strong></p>
+<p><strong>那么我们就可以，自己创建一个<code>http.NewServeMux</code>方法来对<code>DefaultServeMux</code>操作。</strong></p>
+<a class="post-dummy-target" id="font-colorcc3300listenandservedefaultservemuxfont"></a><h2><!-- raw HTML omitted -->ListenAndServe是否也是对DefaultServeMux对象的封装呢<!-- raw HTML omitted --></h2>
+<p>源码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">ListenAndServe</span><span class="p">(</span><span class="nx">addr</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">handler</span> <span class="nx">Handler</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+    <span class="nx">server</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">Server</span><span class="p">{</span><span class="nx">Addr</span><span class="p">:</span> <span class="nx">addr</span><span class="p">,</span> <span class="nx">Handler</span><span class="p">:</span> <span class="nx">handler</span><span class="p">}</span>
+    <span class="k">return</span> <span class="nx">server</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>虽然不是全局的封装，但也是用了http.server的对象。</p>
+<p><strong>结论：我们可以使用server写一个自定义程度较高的程序。</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;log&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">mux</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">NewServeMux</span><span class="p">(</span><span class="p">)</span>
+	<span class="nx">mux</span><span class="p">.</span><span class="nf">Handle</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">helloHandler</span><span class="p">{</span><span class="p">}</span><span class="p">)</span>
+
+	<span class="nx">server</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Server</span><span class="p">{</span>
+		<span class="nx">Addr</span><span class="p">:</span>    <span class="s">&#34;:4000&#34;</span><span class="p">,</span>
+		<span class="nx">Handler</span><span class="p">:</span> <span class="nx">mux</span><span class="p">,</span>
+	<span class="p">}</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Starting HTTP server...&#34;</span><span class="p">)</span>
+	<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">server</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">helloHandler</span> <span class="kd">struct</span><span class="p">{</span><span class="p">}</span>
+
+<span class="kd">func</span> <span class="p">(</span><span class="nx">_</span> <span class="o">*</span><span class="nx">helloHandler</span><span class="p">)</span> <span class="nf">ServeHTTP</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">w</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="p">[</span><span class="p">]</span><span class="nb">byte</span><span class="p">(</span><span class="s">&#34;Hello world!&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+        </div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>This article is updated with 2019-12-18</span>
+            </div>
+            <div class="post-info-license">
+                
+            </div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md">
+                
+                    
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/12/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/index.md" target="_blank"></a></span>
+                    
+                
+            </div>
+            <div class="post-info-share">
+                
+                    <span>
+    
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E8%25B7%259F%25E7%259D%2580%25E6%2597%25A0%25E9%2597%25BB%25E5%25AD%25A6go-web%25E5%25BA%2594%25E7%2594%25A8%25E5%25BC%2580%25E5%258F%2591-%25E5%2588%259D%25E7%25AA%25A5http%25E6%259C%258D%25E5%258A%25A1%25E5%2599%25A8%2f&amp;text=%e8%b7%9f%e7%9d%80%e6%97%a0%e9%97%bb%e5%ad%a6Go%20Web%e5%ba%94%e7%94%a8%e5%bc%80%e5%8f%91-%e5%88%9d%e7%aa%a5http%e6%9c%8d%e5%8a%a1%e5%99%a8&amp;via=" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a>
+    
+    
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E8%25B7%259F%25E7%259D%2580%25E6%2597%25A0%25E9%2597%25BB%25E5%25AD%25A6go-web%25E5%25BA%2594%25E7%2594%25A8%25E5%25BC%2580%25E5%258F%2591-%25E5%2588%259D%25E7%25AA%25A5http%25E6%259C%258D%25E5%258A%25A1%25E5%2599%25A8%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E8%25B7%259F%25E7%259D%2580%25E6%2597%25A0%25E9%2597%25BB%25E5%25AD%25A6go-web%25E5%25BA%2594%25E7%2594%25A8%25E5%25BC%2580%25E5%258F%2591-%25E5%2588%259D%25E7%25AA%25A5http%25E6%259C%258D%25E5%258A%25A1%25E5%2599%25A8%2f&amp;appkey=&amp;title=%e8%b7%9f%e7%9d%80%e6%97%a0%e9%97%bb%e5%ad%a6Go%20Web%e5%ba%94%e7%94%a8%e5%bc%80%e5%8f%91-%e5%88%9d%e7%aa%a5http%e6%9c%8d%e5%8a%a1%e5%99%a8" target="_blank" title="Share on Weibo">
+            <i class="fab fa-weibo fa-fw"></i>
+        </a>
+    
+</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/go/"><i class="fas fa-tag fa-fw"></i>go</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"><i class="fas fa-tag fa-fw"></i>web应用开发</a>
+                    </span>
+                
+            
+        </section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://haillk.github.io">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+            <a href="https://haillk.github.io/2019/12/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" class="prev" rel="prev" title="跟着无闻学Go Web应用开发-初窥http服务器"><i class="fas fa-angle-left fa-fw"></i>跟着无闻学Go Web应用开发-初窥http服务器</a>
+        
+        
+            <a href="https://haillk.github.io/2019/12/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/" class="next" rel="next" title="跟着无闻学Go Web应用开发 简单模板">跟着无闻学Go Web应用开发 简单模板<i class="fas fa-angle-right fa-fw"></i></a>
+        
+    </div>
+</div>
+
+        <div class="post-comment">
+            
+            
+    <div id="disqus_thread">567</div>
+        <script type="text/javascript">
+            (function() {
+                
+                
+                if (window.location.hostname == "localhosts")
+                    return;
+
+                var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                var disqus_shortname = "haillk";
+                dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+        </div>
+    </article></div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line">
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+        <div class="copyright-line">
+            <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://haillk.github.io">Haillk</a></span><span class="license">&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+<script src="/js/lib/jquery/jquery.slim.min.min.js"></script>
+<script src="/js/lib/lazysizes/lazysizes.min.min.js"></script>
+<script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script>
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+<script src="/js/blog.min.js"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</div>
+        <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
+    </body>
+</html>
