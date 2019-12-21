@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>右键菜单优化powershell和cmd目录结构 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="haillk-Blog">
+<link rel="prev" href="https://haillk.github.io/2019/12/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
+<link rel="canonical" href="https://haillk.github.io/2019/12/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="右键菜单优化powershell和cmd目录结构"/>
+<meta name="twitter:description" content="实现在空白处直接右键打开powshell和cmd &mdash;&mdash;&mdash;-和shift&#43;右键打开管理员权限"/>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "右键菜单优化powershell和cmd目录结构",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/haillk.github.io\/2019\/12\/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84\/"
+    },
+    
+        "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/cover.png",
+            "width":  800 ,
+            "height":  600 
+        },
+    
+    "genre": "posts",
+    
+        "keywords": "注册表, 右键菜单, powershell",
+    
+    "wordcount":  758 ,
+    "url": "https:\/\/haillk.github.io\/2019\/12\/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84\/",
+    
+        "datePublished": "2019-12-21T23:35:47\x2b08:00",
+    
+    
+        "dateModified": "2019-12-21T23:35:47\x2b08:00",
+    
+    
+        "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    
+    
+        "publisher": {
+            "@type": "Organization",
+            "name": "XXXX",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/logo.png",
+            "width":  127 ,
+            "height":  40 
+            }
+        },
+    
+    
+    "description": ""
+    }
+    </script>
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.min.css">
+
+<link rel="stylesheet" href="/css/lib/animate/animate.min.min.css">
+
+    </head>
+    <body>
+        <script>
+            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            window.isDark && document.body.classList.add('dark-theme');
+        </script>
+        <div class="wrapper">
+            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://haillk.github.io">Haillk</a>
+        </div>
+        <div class="navbar-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile">
+     <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://haillk.github.io">Haillk</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav><main class="main">
+                <div class="container">
+                    
+    
+    
+    
+
+    <article class="post-warp">
+        <h1 class="post-title animated flipInX">右键菜单优化powershell和cmd目录结构</h1>
+
+        <div class="post-meta">
+            <div class="post-meta-main">
+                <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
+                <span class="post-category">
+                        included in
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/win10/">Win10</a>
+                            
+                    </span>
+            </div>
+            <div class="post-meta-other">
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-21>2019-12-21</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 758 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+        </div>
+
+        
+
+        
+
+        <div class="post-content">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <p>实现在空白处直接右键打开powshell和cmd &mdash;&mdash;&mdash;-和shift+右键打开管理员权限</p>
+<a class="post-dummy-target" id="font-colorcc3300font"></a><h3><!-- raw HTML omitted -->实现效果<!-- raw HTML omitted --></h3>
+<ul>
+<li>右键</li>
+</ul>
+<blockquote>
+<p>在此处打开 Cmd窗口</p>
+<p>在此处打开powershell窗口</p>
+</blockquote>
+<ul>
+<li>shift+右键</li>
+</ul>
+<blockquote>
+<p>在此处打开Cmd窗口(admin)</p>
+<p>在此处打开powershell窗口(admin)</p>
+</blockquote>
+<a class="post-dummy-target" id="font-colorcc3300font1"></a><h3><!-- raw HTML omitted -->打开注册表编辑器<!-- raw HTML omitted --></h3>
+<p>编辑右键菜单肯定是要用注册表编辑器</p>
+<p>​	<strong>win+R 打开运行&ndash;&gt;regedit打开注册表编辑器</strong></p>
+<p>在该目录下编辑注册表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">计算机</span><span class="p">\</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="font-colorcc3300cmdpowershellfont"></a><h3><!-- raw HTML omitted -->右键菜单添加cmd和powershell<!-- raw HTML omitted --></h3>
+<a class="post-dummy-target" id="cmd"></a><h4>添加cmd</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">[</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span><span class="p">\</span><span class="n">OpenCmdHere</span><span class="p">]</span>
+<span class="p">@</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">在此处打开命令行窗口</span><span class="s2">&#34;</span>
+ 
+<span class="p">[</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span><span class="p">\</span><span class="n">OpenCmdHere</span><span class="p">\</span><span class="n">command</span><span class="p">]</span>
+<span class="p">@</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">cmd.exe -noexit -command Set-Location -literalPath \</span><span class="s2">&#34;</span><span class="k">%</span><span class="n">V</span><span class="p">\</span><span class="s2">&#34;</span><span class="s2">&#34;</span> 
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>上述代码的含义是在响应目录下创建项，并设置默认值</p>
+</blockquote>
+<a class="post-dummy-target" id="powershell"></a><h4>移动powershell到右键菜单</h4>
+<p>​	<strong>删除<code>计算机\HKEY_CLASSES_ROOT\Directory\Background\shell\Powershell</code>下的Extended字符串值</strong></p>
+<blockquote>
+<p>Extended 就是控制是否在右键还是在shift+右键下的。</p>
+</blockquote>
+<p><strong>没有权限不要紧，文后有获取权限的方法。</strong></p>
+<a class="post-dummy-target" id="font-colorcc3300shiftcmdpowershellfont"></a><h3><!-- raw HTML omitted -->Shift+右键菜单添加管理员权限的cmd和powershell<!-- raw HTML omitted --></h3>
+<a class="post-dummy-target" id="cmdadmin"></a><h4>添加cmd(admin)</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">[</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span><span class="p">\</span><span class="n">runas</span><span class="p">]</span>
+<span class="p">@</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">在此处打开命令行窗口(管理员)</span><span class="s2">&#34;</span>
+<span class="s2">&#34;</span><span class="s2">ShowBasedOnVelocityId</span><span class="s2">&#34;</span><span class="p">=</span><span class="n">dword</span><span class="err">:</span><span class="n">00639bc8</span>
+ <span class="s2">&#34;</span><span class="s2">Extended</span><span class="s2">&#34;</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">&#34;</span>
+<span class="p">[</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span><span class="p">\</span><span class="n">runas</span><span class="p">\</span><span class="n">command</span><span class="p">]</span>
+<span class="p">@</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">cmd.exe /s /k pushd \</span><span class="s2">&#34;</span><span class="k">%</span><span class="n">V</span><span class="p">\</span><span class="s2">&#34;</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="powershelladmin"></a><h4>添加powershell(admin)</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="p">[</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span><span class="p">\</span><span class="n">PowershellAdmin</span><span class="p">]</span>
+<span class="p">@</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">在此处打开 Powershell 窗口(管理员)</span><span class="s2">&#34;</span>
+<span class="s2">&#34;</span><span class="s2">Extended</span><span class="s2">&#34;</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">&#34;</span>
+ 
+<span class="p">[</span><span class="n">HKEY_CLASSES_ROOT</span><span class="p">\</span><span class="n">Directory</span><span class="p">\</span><span class="n">Background</span><span class="p">\</span><span class="n">shell</span><span class="p">\</span><span class="n">PowershellAdmin</span><span class="p">\</span><span class="n">command</span><span class="p">]</span>
+<span class="p">@</span><span class="p">=</span><span class="s2">&#34;</span><span class="s2">\</span><span class="s2">&#34;</span><span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="p">\</span><span class="n">Windows</span><span class="p">\</span><span class="p">\</span><span class="n">System32</span><span class="p">\</span><span class="p">\</span><span class="n">WindowsPowerShell</span><span class="p">\</span><span class="p">\</span><span class="n">v1</span><span class="p">.</span><span class="n">0</span><span class="p">\</span><span class="p">\</span><span class="n">powershell</span><span class="p">.</span><span class="n">exe</span><span class="p">\</span><span class="s2">&#34;</span><span class="s2"> -windowstyle hidden -Command </span><span class="s2">$</span><span class="s2">stpath = pwd; Start-Process PowerShell -ArgumentList \\\</span><span class="s2">&#34;</span><span class="n">-NoExit</span><span class="p">\</span><span class="p">\</span><span class="p">\</span><span class="s2">&#34;</span><span class="s2">, \\\</span><span class="s2">&#34;</span><span class="n">-Command</span> <span class="nb">Set-Location</span> <span class="n">-literalPath</span> <span class="s1">&#39;%V&#39;</span><span class="p">\</span><span class="p">\</span><span class="p">\</span><span class="s2">&#34;</span><span class="s2"> -verb RunAs</span><span class="s2">&#34;</span>
+ 
+</code></pre></td></tr></table>
+</div>
+</div><a class="post-dummy-target" id="font-colorcc3300font2"></a><h3><!-- raw HTML omitted -->获取权限的方法<!-- raw HTML omitted --></h3>
+<p>参考 <a href="https://blog.csdn.net/yongshi6/article/details/50607493">scdn链接</a></p>
+<ol>
+<li>在项上右键&mdash;&ndash;&gt;选择权限&mdash;&ndash;&gt;高级</li>
+<li>更改所有者&mdash;&ndash;&gt;设置为管理员或者自己账号（并对目录下文件都生效）</li>
+<li>为自己账号添加完全控制权限</li>
+<li>ok</li>
+</ol>
+        </div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>This article is updated with 2019-12-21</span>
+            </div>
+            <div class="post-info-license">
+                
+            </div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md">
+                
+                    
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/12/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/index.md" target="_blank"></a></span>
+                    
+                
+            </div>
+            <div class="post-info-share">
+                
+                    <span>
+    
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E5%258F%25B3%25E9%2594%25AE%25E4%25BC%2598%25E5%258C%2596powershell%25E5%2592%258Ccmd%25E7%259B%25AE%25E5%25BD%2595%25E7%25BB%2593%25E6%259E%2584%2f&amp;text=%e5%8f%b3%e9%94%ae%e8%8f%9c%e5%8d%95%e4%bc%98%e5%8c%96powershell%e5%92%8ccmd%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84&amp;via=" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a>
+    
+    
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E5%258F%25B3%25E9%2594%25AE%25E4%25BC%2598%25E5%258C%2596powershell%25E5%2592%258Ccmd%25E7%259B%25AE%25E5%25BD%2595%25E7%25BB%2593%25E6%259E%2584%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E5%258F%25B3%25E9%2594%25AE%25E4%25BC%2598%25E5%258C%2596powershell%25E5%2592%258Ccmd%25E7%259B%25AE%25E5%25BD%2595%25E7%25BB%2593%25E6%259E%2584%2f&amp;appkey=&amp;title=%e5%8f%b3%e9%94%ae%e8%8f%9c%e5%8d%95%e4%bc%98%e5%8c%96powershell%e5%92%8ccmd%e7%9b%ae%e5%bd%95%e7%bb%93%e6%9e%84" target="_blank" title="Share on Weibo">
+            <i class="fab fa-weibo fa-fw"></i>
+        </a>
+    
+</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"><i class="fas fa-tag fa-fw"></i>注册表</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/"><i class="fas fa-tag fa-fw"></i>右键菜单</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/powershell/"><i class="fas fa-tag fa-fw"></i>powershell</a>
+                    </span>
+                
+            
+        </section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://haillk.github.io">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+            <a href="https://haillk.github.io/2019/12/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="prev" rel="prev" title="Git常用命令"><i class="fas fa-angle-left fa-fw"></i>Git常用命令</a>
+        
+        
+    </div>
+</div>
+
+        <div class="post-comment">
+            
+            
+    <div id="disqus_thread">567</div>
+        <script type="text/javascript">
+            (function() {
+                
+                
+                if (window.location.hostname == "localhosts")
+                    return;
+
+                var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                var disqus_shortname = "haillk";
+                dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+        </div>
+    </article></div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line">
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+        <div class="copyright-line">
+            <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://haillk.github.io">Haillk</a></span></div>
+    </div>
+</footer>
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+<script src="/js/lib/jquery/jquery.slim.min.min.js"></script>
+<script src="/js/lib/lazysizes/lazysizes.min.min.js"></script>
+<script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script>
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+<script src="/js/blog.min.js"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</div>
+        <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
+    </body>
+</html>

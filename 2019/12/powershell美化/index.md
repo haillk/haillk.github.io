@@ -49,7 +49,7 @@ C:\Users\Haillk\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 | 1     | 错误信息背景颜色                                  |
 | ----- | ------------------------------------------------- |
 | 2     | sorin中间部分颜色                                 |
-| 3     |                                                   |
+| 3     | git信息                                           |
 | 4     | 双引号中的字体颜色                                |
 | 5     | sorin箭头颜色1                                    |
 | 6     | sorin箭头颜色3                                    |
