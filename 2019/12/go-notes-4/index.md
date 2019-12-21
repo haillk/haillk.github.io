@@ -1,7 +1,9 @@
 # Go Notes 4
 
 
+recover的扑捉，defer函数的接受者和参数
 
+<!-- more -->
 
 #### <font color=#CC3300>1、recover必须隔一个函数帧栈才能捕获到</font>
 

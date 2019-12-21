@@ -18,7 +18,7 @@
       <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
       
       <guid>https://haillk.github.io/2019/12/go-notes-4/</guid>
-      <description>1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 //错误 func main() { recover() panic(1) } //错误 func main() { defer recover() panic(1)</description>
+      <description>recover的扑捉，defer函数的接受者和参数 1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22</description>
     </item>
     
     <item>
