@@ -27,3 +27,4 @@ func main() {
     c.DefaultQuery("firstname","guest") ----->获取并设置默认值  
     c.Query("firstname")----->获取参数
 2. 
+

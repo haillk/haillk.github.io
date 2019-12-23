@@ -6,6 +6,7 @@
         <title>Go Notes 5 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="haillk-Blog">
+<meta name="google-site-verification" content="QCDJDMw1zJvYCUvJ2LiOki5TrRTHd-aFhTIBSaQHkIE" />
 <link rel="prev" href="https://haillk.github.io/2019/12/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/" />
 <link rel="next" href="https://haillk.github.io/2019/12/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" />
 <link rel="canonical" href="https://haillk.github.io/2019/12/go-notes-5/" />
@@ -39,7 +40,9 @@
     
     "genre": "posts",
     
-    "wordcount":  68 ,
+        "keywords": "8进制表示",
+    
+    "wordcount":  798 ,
     "url": "https:\/\/haillk.github.io\/2019\/12\/go-notes-5\/",
     
         "datePublished": "2019-12-21T17:37:28\x2b08:00",
@@ -143,8 +146,8 @@
             </div>
             <div class="post-meta-other">
                 <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-21>2019-12-21</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 68 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+                <i class="fas fa-pencil-alt fa-fw"></i>about 798 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div>
 
         
@@ -155,6 +158,12 @@
                     <nav id="TableOfContents">
   <ul>
     <li><a href="#font-colorcc33008font">进制数，零开头的数字会被识别为8进制</a></li>
+    <li><a href="#font-colorcc3300error-errnilerrorfont">返回error类型时 err==nil?吗error也属于接口值的判断</a></li>
+    <li><a href="#font-colorcc3300named-type-unnamed-typefont">Named type 和 UnNamed Type(具名类型和非具名类型)</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
                 </div>
@@ -168,6 +177,12 @@
                         <nav id="TableOfContentsMobile">
   <ul>
     <li><a href="#font-colorcc33008font">进制数，零开头的数字会被识别为8进制</a></li>
+    <li><a href="#font-colorcc3300error-errnilerrorfont">返回error类型时 err==nil?吗error也属于接口值的判断</a></li>
+    <li><a href="#font-colorcc3300named-type-unnamed-typefont">Named type 和 UnNamed Type(具名类型和非具名类型)</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
   </ul>
 </nav>
                     </div>
@@ -231,6 +246,156 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>结果是 8    虽然十个小知识点，有时候还是会记不住。</p>
+<a class="post-dummy-target" id="font-colorcc3300error-errnilerrorfont"></a><h2><!-- raw HTML omitted -->返回error类型时 err==nil?吗&mdash;error也属于接口值的判断<!-- raw HTML omitted --></h2>
+<p>问题：下列代码输出什么？</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">Foo</span><span class="p">(</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">err</span> <span class="o">*</span><span class="nx">os</span><span class="p">.</span><span class="nx">PathError</span> <span class="p">=</span> <span class="kc">nil</span>
+	<span class="k">return</span> <span class="nx">err</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">err</span> <span class="o">:=</span> <span class="nf">Foo</span><span class="p">(</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>输出结果竟然是</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">H</span><span class="p">:</span><span class="o">/</span><span class="nx">GoProgramming</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">src</span><span class="p">.</span><span class="nx">exe</span>  <span class="p">[</span><span class="nx">H</span><span class="p">:</span><span class="o">/</span><span class="nx">GoProgramming</span><span class="o">/</span><span class="nx">src</span><span class="p">]</span>
+<span class="p">&lt;</span><span class="kc">nil</span><span class="p">&gt;</span>
+<span class="kc">false</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>原因：只有在值和动态类型都是nil的时候，接口值才为nil。Foo函数返回的err动态类型为*os.PathError,值为nil。所以err!=nil</strong></p>
+<p>解决方法：如果就是想判断返回的err的值是否为nil呢。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="nf">Foo</span><span class="p">(</span><span class="p">)</span> <span class="p">(</span><span class="nx">err</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+
+	<span class="k">return</span> <span class="nx">err</span>
+<span class="p">}</span>
+<span class="err">·</span><span class="err">·</span><span class="err">·</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>直接声明返回值的类型为errror就能直接判断了</p>
+<a class="post-dummy-target" id="font-colorcc3300named-type-unnamed-typefont"></a><h2><!-- raw HTML omitted -->Named type 和 UnNamed Type(具名类型和非具名类型)<!-- raw HTML omitted --></h2>
+<p>先看一个现象：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">T</span> <span class="kt">int</span>
+<span class="kd">func</span> <span class="nf">F</span><span class="p">(</span><span class="nx">t</span> <span class="nx">T</span><span class="p">)</span><span class="p">{</span><span class="p">}</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">q</span> <span class="kt">int</span>
+    <span class="nf">F</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">T</span> <span class="p">[</span><span class="p">]</span><span class="kt">int</span>
+<span class="kd">func</span> <span class="nf">F</span><span class="p">(</span><span class="nx">t</span> <span class="nx">T</span><span class="p">)</span><span class="p">{</span><span class="p">}</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">q</span> <span class="p">[</span><span class="p">]</span><span class="kt">int</span>
+    <span class="nf">F</span><span class="p">(</span><span class="nx">q</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>结果：第一个编译错误，而第二个能编译通过</strong></p>
+<blockquote>
+<p>我们知道，不同类型的值是不能相互赋值的，即使底层类型相同，所以第一个编译不能通过</p>
+<p>还有，对于<strong>底层类型相同的变量可以相互赋值还有一个条件，即至少有一个不是具名变量</strong>。</p>
+</blockquote>
+<p>所以只要有一个不是具名变量，那么底层类型相同的变量就能相互赋值了。</p>
+<p>所以在第二个程序中  虽然T是具名类型的变量，但是[]int不是，这才能相互赋值。</p>
+<a class="post-dummy-target" id="heading"></a><h4>那么哪些才是具名类型呢。</h4>
+<blockquote>
+<ul>
+<li>内置类型，比如int int64 float string bool等</li>
+<li>使用type声明的类型</li>
+</ul>
+</blockquote>
+<a class="post-dummy-target" id="unnamed-type"></a><h4>什么有是UnNamed Type呢</h4>
+<blockquote>
+<p>基于已有的Named type组合在一起的类型，比如strcut{}, []string ,interface{} ,map等</p>
+</blockquote>
+<hr>
+<a class="post-dummy-target" id="heading1"></a><h4>类型添加方法</h4>
+<p>再思考一个问题，在为类型添加方法的时候，Unnamed Type和Named Type有什么区别吗。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span><span class="nf">Set</span><span class="p">(</span><span class="nx">key</span> <span class="kt">string</span><span class="p">,</span><span class="nx">value</span> <span class="kt">string</span><span class="p">)</span><span class="p">{</span>
+    <span class="kd">map</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span><span class="p">{</span>
+    <span class="nx">m</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span><span class="p">)</span>
+    <span class="nx">m</span><span class="p">.</span><span class="nf">Set</span><span class="p">(</span><span class="s">&#34;A&#34;</span><span class="p">,</span><span class="s">&#34;one&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>上面代码编译是通不过的，就是因为map是UnNamed Type所以不能添加方法。</p>
+<p>解决方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kd">type</span> <span class="nx">T</span> <span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">string</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>通过type关键字，把map转换为具名类型。</p>
         </div>
 
         <div class="post-footer" id="post-footer">
@@ -284,6 +449,12 @@
 
     <div class="post-info-more">
         <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/8%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/"><i class="fas fa-tag fa-fw"></i>8进制表示</a>
+                    </span>
+                
             
         </section>
         <section>
