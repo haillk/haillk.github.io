@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>流畅的python学习笔记 1 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Select作用 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="haillk-Blog">
 <meta name="google-site-verification" content="QCDJDMw1zJvYCUvJ2LiOki5TrRTHd-aFhTIBSaQHkIE" />
 <meta name=”baidu-site-verification” content="q23vIgN1xf" />
-<link rel="prev" href="https://haillk.github.io/2019/11/go-notes-3/" />
-<link rel="next" href="https://haillk.github.io/2019/12/go-notes-4/" />
-<link rel="canonical" href="https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/" />
+<link rel="prev" href="https://haillk.github.io/2019/12/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" />
+<link rel="canonical" href="https://haillk.github.io/2019/12/select%E4%BD%9C%E7%94%A8/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,16 +20,16 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="流畅的python学习笔记 1"/>
-<meta name="twitter:description" content="特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际"/>
+<meta name="twitter:title" content="Select作用"/>
+<meta name="twitter:description" content=""/>
 <script type="application/ld+json">
     {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "流畅的python学习笔记 1",
+    "headline": "Select作用",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/haillk.github.io\/2019\/12\/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1\/"
+        "@id": "https:\/\/haillk.github.io\/2019\/12\/select%E4%BD%9C%E7%94%A8\/"
     },
     
         "image": {
@@ -42,15 +41,15 @@
     
     "genre": "posts",
     
-        "keywords": "特殊方法",
+        "keywords": "Go, Select作用",
     
-    "wordcount":  492 ,
-    "url": "https:\/\/haillk.github.io\/2019\/12\/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1\/",
+    "wordcount":  329 ,
+    "url": "https:\/\/haillk.github.io\/2019\/12\/select%E4%BD%9C%E7%94%A8\/",
     
-        "datePublished": "2019-12-06T01:43:47\x2b08:00",
+        "datePublished": "2019-12-24T17:26:06\x2b08:00",
     
     
-        "dateModified": "2019-12-06T01:43:47\x2b08:00",
+        "dateModified": "2019-12-24T17:26:06\x2b08:00",
     
     
         "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
@@ -165,20 +164,20 @@ autocomplete('#aa-search-input',
     
 
     <article class="post-warp">
-        <h1 class="post-title animated flipInX">流畅的python学习笔记 1</h1>
+        <h1 class="post-title animated flipInX">Select作用</h1>
 
         <div class="post-meta">
             <div class="post-meta-main">
                 <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
                 <span class="post-category">
                         included in
-                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记</a>
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/go-notes/">Go-Notes</a>
                             
                     </span>
             </div>
             <div class="post-meta-other">
-                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-06>2019-12-06</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 492 words&nbsp;
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-24>2019-12-24</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 329 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div>
 
@@ -212,16 +211,10 @@ autocomplete('#aa-search-input',
             
             
             
-            <a class="post-dummy-target" id="font-colorcc3300font"></a><h4><!-- raw HTML omitted -->特殊方法的格式<!-- raw HTML omitted --></h4>
-<blockquote>
-<p>特殊方法的名字以两个下划线开头,两个下划线结尾(例如_<em>getitem_</em>)。比如 obj[key]
-的背后就是 <strong>getitem</strong> 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_collection.<strong>getitem</strong>(key)。</p>
-</blockquote>
-<blockquote>
-<p>魔术方法（magic method） 是特殊方法的昵称 ,特殊方法也叫双下方法（dunder method）</p>
-</blockquote>
-<a class="post-dummy-target" id="font-colorcc3300font1"></a><h4><!-- raw HTML omitted -->一个二维向量加法的例子<!-- raw HTML omitted --></h4>
-<p>​	构建一个Vector类,实现加法，即：Vector(1,2)+Vector(1,2)=Vector(2,4),下面代码实现了更多特殊方法。</p>
+            <a class="post-dummy-target" id="select"></a><h2>select</h2>
+<pre><code>&gt;select会从多个发送或者接收信道进行选择，语句会阻塞到其中有信道可以操作，如果有多个信道可以操作，会随机选择其中一个case执行。
+</code></pre>
+<p>示例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -241,41 +234,77 @@ autocomplete('#aa-search-input',
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">hypot</span>
-<span class="k">class</span> <span class="nc">Vector</span><span class="p">:</span>
-	<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="p">:</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
-		<span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
-	<span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
-		<span class="k">return</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">Vector(</span><span class="si">%r</span><span class="s1">, </span><span class="si">%r</span><span class="s1">)</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
-	<span class="k">def</span> <span class="fm">__abs__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
-		<span class="k">return</span> <span class="n">hypot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
-	<span class="k">def</span> <span class="nf">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">:</span>
-		<span class="k">return</span> <span class="nb">bool</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span><span class="p">)</span>
-	<span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span><span class="p">:</span>
-		<span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">x</span>
-		<span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">y</span>
-		<span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-	<span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalar</span><span class="p">)</span><span class="p">:</span>
-		<span class="k">return</span> <span class="n">Vector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">*</span> <span class="n">scalar</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">*</span> <span class="n">scalar</span><span class="p">)</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// main
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;time&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">service1</span><span class="p">(</span><span class="nx">ch</span> <span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+	<span class="nx">ch</span> <span class="o">&lt;-</span> <span class="s">&#34;from service1&#34;</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nf">service2</span><span class="p">(</span><span class="nx">ch</span> <span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">time</span><span class="p">.</span><span class="nf">Sleep</span><span class="p">(</span><span class="mi">1</span> <span class="o">*</span> <span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+	<span class="nx">ch</span> <span class="o">&lt;-</span> <span class="s">&#34;from servie2&#34;</span>
+<span class="p">}</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">ch1</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span>
+	<span class="nx">ch2</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">chan</span> <span class="kt">string</span><span class="p">)</span>
+	<span class="k">go</span> <span class="nf">service1</span><span class="p">(</span><span class="nx">ch1</span><span class="p">)</span>
+	<span class="k">go</span> <span class="nf">service2</span><span class="p">(</span><span class="nx">ch2</span><span class="p">)</span>
+	<span class="k">select</span> <span class="p">{</span>
+	<span class="k">case</span> <span class="nx">s1</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">ch1</span><span class="p">:</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span>
+	<span class="k">case</span> <span class="nx">s2</span> <span class="o">:=</span> <span class="o">&lt;-</span><span class="nx">ch2</span><span class="p">:</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">s2</span><span class="p">)</span>
+	<span class="k">default</span><span class="p">:</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;default&#34;</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
 </code></pre></td></tr></table>
 </div>
-</div><p>​	下面是调用结果,repr特殊方法规定了字符串的表达形式。</p>
-<a class="post-dummy-target" id="font-colorcc3300font2"></a><h4><!-- raw HTML omitted -->总结<!-- raw HTML omitted --></h4>
-<p>个人理解：特殊方法是系统会频繁调用的中间方法。用户使用时不会直接调用，但是在调用一些方法时，会间接调用。用户调用普通方法&mdash;&gt;系统调用特殊方法完成目标。更改特殊方法，就能更改一些普通方法的底层调用方法。</p>
-<blockquote>
-<p>通过实现特殊方法， 自定义数据类型可以表现得跟内置类型一样， 从而让我们写出更具表达力的代码</p>
-</blockquote>
-
+</div><p>同时监听三个信道，哪个先准备好就执行哪一个。上例中，1,2都有准备时间，所以default不需要准备就先输出。</p>
+<p>notes1.  如果监听的信道为nil，select就会忽略这个信道。而空的select会造成阻塞。</p>
+<p>notes2. 有时候不希望立即执行default语句，而是希望等待一段时间，那么可以在case后面设置超时时间。</p>
+<p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="k">case</span> <span class="o">&lt;-</span><span class="nx">time</span><span class="p">.</span><span class="nf">After</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span><span class="p">:</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;replace default&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
 
         <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>This article is updated with 2019-12-06</span>
+                <span>This article is updated with 2019-12-24</span>
             </div>
             <div class="post-info-license">
                 
@@ -285,7 +314,7 @@ autocomplete('#aa-search-input',
             <div class="post-info-md">
                 
                     
-                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/12/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/index.md" target="_blank"></a></span>
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/12/select%E4%BD%9C%E7%94%A8/index.md" target="_blank"></a></span>
                     
                 
             </div>
@@ -293,12 +322,12 @@ autocomplete('#aa-search-input',
                 
                     <span>
     
-        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E6%25B5%2581%25E7%2595%2585%25E7%259A%2584python%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0-1%2f&amp;text=%e6%b5%81%e7%95%85%e7%9a%84python%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%201&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fselect%25E4%25BD%259C%25E7%2594%25A8%2f&amp;text=Select%e4%bd%9c%e7%94%a8&amp;via=" target="_blank" title="Share on Twitter">
             <i class="fab fa-twitter fa-fw"></i>
         </a>
     
     
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E6%25B5%2581%25E7%2595%2585%25E7%259A%2584python%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0-1%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fselect%25E4%25BD%259C%25E7%2594%25A8%2f" target="_blank" title="Share on Facebook">
             <i class="fab fa-facebook-square fa-fw"></i>
         </a>
     
@@ -310,7 +339,7 @@ autocomplete('#aa-search-input',
     
     
     
-        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2f%25E6%25B5%2581%25E7%2595%2585%25E7%259A%2584python%25E5%25AD%25A6%25E4%25B9%25A0%25E7%25AC%2594%25E8%25AE%25B0-1%2f&amp;appkey=&amp;title=%e6%b5%81%e7%95%85%e7%9a%84python%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%201" target="_blank" title="Share on Weibo">
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fselect%25E4%25BD%259C%25E7%2594%25A8%2f&amp;appkey=&amp;title=Select%e4%bd%9c%e7%94%a8" target="_blank" title="Share on Weibo">
             <i class="fab fa-weibo fa-fw"></i>
         </a>
     
@@ -325,7 +354,11 @@ autocomplete('#aa-search-input',
             
                 
                     <span class="tag">
-                        <a href="https://haillk.github.io/tags/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/"><i class="fas fa-tag fa-fw"></i>特殊方法</a>
+                        <a href="https://haillk.github.io/tags/go/"><i class="fas fa-tag fa-fw"></i>Go</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/select%E4%BD%9C%E7%94%A8/"><i class="fas fa-tag fa-fw"></i>Select作用</a>
                     </span>
                 
             
@@ -337,10 +370,8 @@ autocomplete('#aa-search-input',
 
     <div class="post-nav">
         
-            <a href="https://haillk.github.io/2019/11/go-notes-3/" class="prev" rel="prev" title="Go Notes 3"><i class="fas fa-angle-left fa-fw"></i>Go Notes 3</a>
+            <a href="https://haillk.github.io/2019/12/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/" class="prev" rel="prev" title="右键菜单优化powershell和cmd目录结构"><i class="fas fa-angle-left fa-fw"></i>右键菜单优化powershell和cmd目录结构</a>
         
-        
-            <a href="https://haillk.github.io/2019/12/go-notes-4/" class="next" rel="next" title="Go Notes 4">Go Notes 4<i class="fas fa-angle-right fa-fw"></i></a>
         
     </div>
 </div>
