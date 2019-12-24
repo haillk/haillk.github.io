@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="stylesheet" href="https://haillk.github.io/css/search/search.css" />
+
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <link rel="alternate" href="/tags/recover/index.xml" type="application/rss+xml" title="Haillk">
@@ -42,32 +42,7 @@
         </div>
 		
 
-<div class="navbar-Search" >
-  
-            <div class="aa-input-container" id="aa-input-container">
-    <input type="search" id="aa-search-input" class="aa-input-search" placeholder="请输入你要搜索的内容 " name="search" autocomplete="off" />
-    
-</div>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/algoliasearch.min.js"></script>
-<script src="https://res.cloudinary.com/jimmysong/raw/upload/rootsongjc-hugo/autocomplete.min.js"></script>
-<script>
-var client = algoliasearch("XN4KX9XNIB", "43439aaf79e1954ffd40b3fd0470ca2d");
-var index = client.initIndex('For-haillk-Blog');
-autocomplete('#aa-search-input',
-{ hint: false}, {
-    source: autocomplete.sources.hits(index, {hitsPerPage: 8}),
-    displayKey: 'name',
-    templates: {
-        suggestion: function(suggestion) {
-            console.log(suggestion);
-            return '<span>' + '<a href="/post/' + suggestion.slug + '">' +
-            suggestion._highlightResult.title.value + '</a></span>';
-        }
-    }
-});
-</script>
-  
-</div>
+
 
 		
         <div class="navbar-menu">
