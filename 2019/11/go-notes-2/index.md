@@ -112,3 +112,4 @@ func (p *People)SetName(name string){
 >
 >
 
+Notes：值方法操作的是接受者的副本。
