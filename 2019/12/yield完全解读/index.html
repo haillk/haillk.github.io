@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Yield完全解读 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="haillk-Blog">
+<meta name="google-site-verification" content="QCDJDMw1zJvYCUvJ2LiOki5TrRTHd-aFhTIBSaQHkIE" />
+<meta name=”baidu-site-verification” content="q23vIgN1xf" />
+<link rel="prev" href="https://haillk.github.io/2019/12/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/" />
+<link rel="canonical" href="https://haillk.github.io/2019/12/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Yield完全解读"/>
+<meta name="twitter:description" content=""/>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Yield完全解读",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/haillk.github.io\/2019\/12\/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB\/"
+    },
+    
+        "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/cover.png",
+            "width":  800 ,
+            "height":  600 
+        },
+    
+    "genre": "posts",
+    
+        "keywords": "python, Yield",
+    
+    "wordcount":  736 ,
+    "url": "https:\/\/haillk.github.io\/2019\/12\/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB\/",
+    
+        "datePublished": "2019-12-27T02:15:34\x2b08:00",
+    
+    
+        "dateModified": "2019-12-27T02:15:34\x2b08:00",
+    
+    
+        "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    
+    
+        "publisher": {
+            "@type": "Organization",
+            "name": "XXXX",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/haillk.github.io\/logo.png",
+            "width":  127 ,
+            "height":  40 
+            }
+        },
+    
+    
+    "description": ""
+    }
+    </script>
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.min.css">
+
+<link rel="stylesheet" href="/css/lib/animate/animate.min.min.css">
+
+    </head>
+    <body>
+        <script>
+            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            window.isDark && document.body.classList.add('dark-theme');
+        </script>
+        <div class="wrapper">
+            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header animated bounceIn">
+            <a href="https://haillk.github.io">Haillk</a>
+        </div>
+		
+
+
+
+		
+        <div class="navbar-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile">
+     <div class="navbar-container">
+        <div class="navbar-header">
+            <div class="navbar-header-title animated bounceIn">
+                <a href="https://haillk.github.io">Haillk</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu">
+            
+            
+                <a class="menu-item" href="https://haillk.github.io/posts" title="">Posts</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/tags" title="">Tags</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/categories" title="">Categories</a>
+            
+                <a class="menu-item" href="https://haillk.github.io/about" title="">About</a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav><main class="main">
+                <div class="container">
+                    
+    
+    
+    
+
+    <article class="post-warp">
+        <h1 class="post-title animated flipInX">Yield完全解读</h1>
+
+        <div class="post-meta">
+            <div class="post-meta-main">
+                <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
+                <span class="post-category">
+                        included in
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/python/">Python</a>
+                            
+                    </span>
+            </div>
+            <div class="post-meta-other">
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-12-27>2019-12-27</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 736 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+        </div>
+
+        
+
+        <div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title">Table of Contents</h2>
+                <div class="post-toc-content">
+                    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#---httpsliampage20170630understandingyieldinpython">迭代   参考-较详细</a></li>
+    <li><a href="#heading">迭代器</a></li>
+    <li><a href="#heading1">生成器</a></li>
+    <li><a href="#yield">yield表达式</a></li>
+  </ul>
+</nav>
+                </div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary><div class="post-toc-title"><span>Table of Contents</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary>
+                    <div class="post-toc-content">
+                        
+                        
+                        <nav id="TableOfContentsMobile">
+  <ul>
+    <li><a href="#---httpsliampage20170630understandingyieldinpython">迭代   参考-较详细</a></li>
+    <li><a href="#heading">迭代器</a></li>
+    <li><a href="#heading1">生成器</a></li>
+    <li><a href="#yield">yield表达式</a></li>
+  </ul>
+</nav>
+                    </div>
+                </details>
+            </div>
+
+        <div class="post-content">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <a class="post-dummy-target" id="---httpsliampage20170630understandingyieldinpython"></a><h2>迭代   <a href="https://liam.page/2017/06/30/understanding-yield-in-python/">参考-较详细</a></h2>
+<p>在实际使用list,tuple等容器时，容器中会保存容器中所有的数据。</p>
+<p>以list为例，如果list在内存中加载全部的数据会造成大量的 消耗，但是我们并不会同时使用全部的数据，这就需要一种更聪明的方法，类似sql底层的B+树，随取随用。</p>
+<p>这就是迭代要实现的功能： <strong>逐个获取元素</strong></p>
+<a class="post-dummy-target" id="heading"></a><h2>迭代器</h2>
+<p>我们常用的list,tuple等都实现了迭代，我们自定义的类只要实现了_<em>iter_</em>()方法也是可以迭代的。</p>
+<p>迭代器和for循环的联系：</p>
+<p>​	Python 中的迭代器协议和 Python 中的 <code>for</code> 循环是紧密相连的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">something</span><span class="p">:</span>  
+	<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Python 处理 <code>for</code> 循环时，首先会调用内建函数 <code>iter(something)</code>，它实际上会调用 <code>something.__iter__()</code>，返回 <code>something</code> 对应的迭代器。而后，<code>for</code> 循环会调用内建函数 <code>next()</code>，作用在迭代器上，获取迭代器的下一个元素，并赋值给 <code>x</code>。此后，Python 才开始执行循环体。</p>
+<a class="post-dummy-target" id="heading1"></a><h2>生成器</h2>
+<p>生成器是特殊的迭代器。</p>
+<a class="post-dummy-target" id="yield"></a><h2>yield表达式</h2>
+<p><a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/index.html">廖雪峰-利用斐波那契函数举例</a></p>
+<blockquote>
+<p>yield 的作用就是把一个函数变成一个 generator，带有 yield 的函数不再是一个普通函数，Python 解释器会将其视为一个 generator，调用 fab(5) 不会执行 fab 函数，而是返回一个 iterable 对象！在 for 循环执行时，每次循环都会执行 fab 函数内部的代码，执行到 yield b 时，fab 函数就返回一个迭代值，下次迭代时，代码从 yield b 的下一条语句继续执行，而函数的本地变量看起来和上次中断执行前是完全一样的，于是函数继续执行，直到再次遇到 yield。</p>
+</blockquote>
+<p>实例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="p">)</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">x</span> <span class="o">*</span><span class="o">*</span> <span class="mi">2</span>
+<span class="n">square_gen</span> <span class="o">=</span> <span class="n">square</span><span class="p">(</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">square_gen</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>前面说到，<code>for</code> 循环会调用 <code>iter()</code> 函数，获取一个生成器；而后调用 <code>next()</code> 函数，将生成器中的下一个值赋值给 <code>x</code>；再执行循环体。因此，上述 <code>for</code> 循环基本等价于：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">genitor</span> <span class="o">=</span> <span class="n">square_gen</span><span class="o">.</span><span class="fm">__iter__</span><span class="p">(</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">geniter</span><span class="o">.</span><span class="n">next</span><span class="p">(</span><span class="p">)</span> <span class="c1"># Python 3 是 __next__()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://www.jianshu.com/p/d09778f4e055">参考-简书</a></p>
+        </div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>This article is updated with 2019-12-27</span>
+            </div>
+            <div class="post-info-license">
+                
+            </div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md">
+                
+                    
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2019/12/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/index.md" target="_blank"></a></span>
+                    
+                
+            </div>
+            <div class="post-info-share">
+                
+                    <span>
+    
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fyield%25E5%25AE%258C%25E5%2585%25A8%25E8%25A7%25A3%25E8%25AF%25BB%2f&amp;text=Yield%e5%ae%8c%e5%85%a8%e8%a7%a3%e8%af%bb&amp;via=" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a>
+    
+    
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fyield%25E5%25AE%258C%25E5%2585%25A8%25E8%25A7%25A3%25E8%25AF%25BB%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2019%2f12%2fyield%25E5%25AE%258C%25E5%2585%25A8%25E8%25A7%25A3%25E8%25AF%25BB%2f&amp;appkey=&amp;title=Yield%e5%ae%8c%e5%85%a8%e8%a7%a3%e8%af%bb" target="_blank" title="Share on Weibo">
+            <i class="fab fa-weibo fa-fw"></i>
+        </a>
+    
+</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/python/"><i class="fas fa-tag fa-fw"></i>python</a>
+                    </span>
+                
+                    <span class="tag">
+                        <a href="https://haillk.github.io/tags/yield/"><i class="fas fa-tag fa-fw"></i>Yield</a>
+                    </span>
+                
+            
+        </section>
+        <section>
+            <span><a href="javascript:window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="https://haillk.github.io">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+            <a href="https://haillk.github.io/2019/12/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/" class="prev" rel="prev" title="Python3里gbk的encode错误"><i class="fas fa-angle-left fa-fw"></i>Python3里gbk的encode错误</a>
+        
+        
+    </div>
+</div>
+
+        <div class="post-comment">
+            
+            
+    <div id="disqus_thread">567</div>
+        <script type="text/javascript">
+            (function() {
+                
+                
+                if (window.location.hostname == "localhosts")
+                    return;
+
+                var dsq = document.createElement("script"); dsq.type = "text/javascript"; dsq.async = true;
+                var disqus_shortname = "haillk";
+                dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+                (document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="https://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+        </div>
+    </article></div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line">
+            Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a>&nbsp;|&nbsp;Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+        <div class="copyright-line">
+            <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://haillk.github.io">Haillk</a></span></div>
+    </div>
+</footer>
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+<script src="/js/lib/jquery/jquery.slim.min.min.js"></script>
+<script src="/js/lib/lazysizes/lazysizes.min.min.js"></script>
+<script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script>
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+<script src="/js/blog.min.js"></script>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</div>
+        <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
+    </body>
+</html>

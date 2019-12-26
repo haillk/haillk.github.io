@@ -12,14 +12,14 @@
             <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
         
         
-            <lastBuildDate>Wed, 25 Dec 2019 17:46:22 +0800</lastBuildDate>
+            <lastBuildDate>Fri, 27 Dec 2019 02:15:34 +0800</lastBuildDate>
         
         <atom:link href="https://haillk.github.io/" rel="self" type="application/rss+xml" />
         
             <item>
                 <title>Posts</title>
                 <link>https://haillk.github.io/posts/</link>
-                <pubDate>Wed, 25 Dec 2019 17:46:22 +0800</pubDate>
+                <pubDate>Fri, 27 Dec 2019 02:15:34 +0800</pubDate>
                 
                 <guid>https://haillk.github.io/posts/</guid>
                 <description></description>
@@ -32,6 +32,12 @@
                 
                 <guid>https://haillk.github.io/about/</guid>
                 <description>&lt;p&gt;it&#39;s me&lt;/p&gt;
+&lt;h2 id=&#34;font-colorcc3300font&#34;&gt;&lt;!-- raw HTML omitted --&gt;收藏链接：&lt;!-- raw HTML omitted --&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ffhelicopter/Go42/blob/master/SUMMARY.md&#34;&gt;go语言42章经&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://studygolang.com/pkgdoc&#34;&gt;go标准库文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://golang-sizeof.tips/&#34;&gt;go结构体占用内存检查&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learnku.com/go/docs&#34;&gt;go-learnku&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.yuque.com/wegoer/set/article-20191221&#34;&gt;语雀-wego专题&lt;/a&gt;&lt;/p&gt;
 </description>
             </item>
         
