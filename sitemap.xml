@@ -1,9 +1,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
         <url>
+            <loc>https://haillk.github.io/2019/12/2020%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</loc>
+            
+                <lastmod>2019-12-31T23:48:20+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
             <loc>https://haillk.github.io/categories/</loc>
             
-                <lastmod>2019-12-28T01:01:55+08:00</lastmod>
+                <lastmod>2019-12-31T23:48:20+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -17,21 +31,7 @@
         <url>
             <loc>https://haillk.github.io/</loc>
             
-                <lastmod>2019-12-28T01:01:55+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://haillk.github.io/tags/microsoft-doc/</loc>
-            
-                <lastmod>2019-12-28T01:01:55+08:00</lastmod>
+                <lastmod>2019-12-31T23:48:20+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -45,7 +45,7 @@
         <url>
             <loc>https://haillk.github.io/posts/</loc>
             
-                <lastmod>2019-12-28T01:01:55+08:00</lastmod>
+                <lastmod>2019-12-31T23:48:20+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -58,6 +58,76 @@
     
         <url>
             <loc>https://haillk.github.io/tags/</loc>
+            
+                <lastmod>2019-12-31T23:48:20+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
+            
+                <lastmod>2019-12-31T23:48:20+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://haillk.github.io/categories/windows/</loc>
+            
+                <lastmod>2019-12-31T20:45:42+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://haillk.github.io/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9/</loc>
+            
+                <lastmod>2019-12-31T20:45:42+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://haillk.github.io/2019/12/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5m%E9%80%9F20191231/</loc>
+            
+                <lastmod>2019-12-31T20:45:42+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://haillk.github.io/tags/microsoft-doc/</loc>
             
                 <lastmod>2019-12-28T01:01:55+08:00</lastmod>
             
@@ -85,20 +155,6 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/windows/</loc>
-            
-                <lastmod>2019-12-28T01:01:55+08:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://haillk.github.io/tags/windows%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
             
                 <lastmod>2019-12-28T01:01:55+08:00</lastmod>
@@ -113,7 +169,7 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/tags/python/</loc>
+            <loc>https://haillk.github.io/categories/python/</loc>
             
                 <lastmod>2019-12-27T02:15:34+08:00</lastmod>
             
@@ -127,7 +183,7 @@
         </url>
     
         <url>
-            <loc>https://haillk.github.io/categories/python/</loc>
+            <loc>https://haillk.github.io/tags/python/</loc>
             
                 <lastmod>2019-12-27T02:15:34+08:00</lastmod>
             

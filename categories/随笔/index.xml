@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔 on Haillk</title>
+    <link>https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
+    <description>Recent content in 随笔 on Haillk</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 31 Dec 2019 23:48:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2020新年快乐</title>
+      <link>https://haillk.github.io/2019/12/2020%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</link>
+      <pubDate>Tue, 31 Dec 2019 23:48:20 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/2020%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

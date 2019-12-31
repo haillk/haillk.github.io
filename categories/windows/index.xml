@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Sat, 28 Dec 2019 01:01:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 20:45:42 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>百度云不限速第三方实测5M速20191231</title>
+      <link>https://haillk.github.io/2019/12/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5m%E9%80%9F20191231/</link>
+      <pubDate>Tue, 31 Dec 2019 20:45:42 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2019/12/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5m%E9%80%9F20191231/</guid>
+      <description>&lt;p&gt;亿寻&amp;mdash;百度云不限速第三方软件&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Taskkill关闭进程</title>
