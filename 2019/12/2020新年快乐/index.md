@@ -2,8 +2,7 @@
 
 
 <!--more-->
-
-## <font color=#3BA4A6>2019</font>
+# <font color=3BA4A6>2019</font>
 
 找实习
 
@@ -17,6 +16,6 @@
 
 
 
-## <font color=#FC7970>2020</font>
+# <font color=FC7970>2020</font>
 
 so far , so good
