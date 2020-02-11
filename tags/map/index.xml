@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Wed, 25 Dec 2019 16:40:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 20:18:46 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/map/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>sync.Map的相关方法</title>
+      <link>https://haillk.github.io/2020/02/map/</link>
+      <pubDate>Tue, 11 Feb 2020 20:18:46 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/2020/02/map/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Map不是引用而是指针</title>

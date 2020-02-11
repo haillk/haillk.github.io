@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>复制变量恢复至锁状态 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>sync.Map的相关方法 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="haillk-Blog">
 <meta name="google-site-verification" content="QCDJDMw1zJvYCUvJ2LiOki5TrRTHd-aFhTIBSaQHkIE" />
 <meta name=”baidu-site-verification” content="q23vIgN1xf" />
-<link rel="prev" href="https://haillk.github.io/2020/02/%E6%96%B0%E5%B9%B4%E5%BC%80%E5%A7%8B%E6%B5%AA/" />
-<link rel="next" href="https://haillk.github.io/2020/02/map/" />
-<link rel="canonical" href="https://haillk.github.io/2020/02/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" />
+<link rel="prev" href="https://haillk.github.io/2020/02/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" />
+<link rel="canonical" href="https://haillk.github.io/2020/02/map/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,16 +20,16 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="复制变量恢复至锁状态"/>
+<meta name="twitter:title" content="sync.Map的相关方法"/>
 <meta name="twitter:description" content=""/>
 <script type="application/ld+json">
     {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "复制变量恢复至锁状态",
+    "headline": "sync.Map的相关方法",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/haillk.github.io\/2020\/02\/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81\/"
+        "@id": "https:\/\/haillk.github.io\/2020\/02\/map\/"
     },
     
         "image": {
@@ -42,15 +41,15 @@
     
     "genre": "posts",
     
-        "keywords": "锁, 变量复制",
+        "keywords": "sync, map",
     
-    "wordcount":  118 ,
-    "url": "https:\/\/haillk.github.io\/2020\/02\/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81\/",
+    "wordcount":  631 ,
+    "url": "https:\/\/haillk.github.io\/2020\/02\/map\/",
     
-        "datePublished": "2020-02-02T21:36:42\x2b08:00",
+        "datePublished": "2020-02-11T20:18:46\x2b08:00",
     
     
-        "dateModified": "2020-02-02T21:36:42\x2b08:00",
+        "dateModified": "2020-02-11T20:18:46\x2b08:00",
     
     
         "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
@@ -140,21 +139,21 @@
     
 
     <article class="post-warp">
-        <h1 class="post-title animated flipInX">复制变量恢复至锁状态</h1>
+        <h1 class="post-title animated flipInX">sync.Map的相关方法</h1>
 
         <div class="post-meta">
             <div class="post-meta-main">
                 <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
                 <span class="post-category">
                         included in
-                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/go-notes/">Go-Notes</a>
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/go-notes/">GO-Notes</a>
                             
                     </span>
             </div>
             <div class="post-meta-other">
-                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-02>2020-02-02</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 118 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-11>2020-02-11</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 631 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
         </div>
 
         
@@ -187,8 +186,7 @@
             
             
             
-            <a class="post-dummy-target" id="-"></a><h3>## 已经加锁的变量复制后，会将锁的状态一起复制</h3>
-<p>例子：</p>
+            <a class="post-dummy-target" id="heading"></a><h3>核心源码：</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -207,34 +205,79 @@
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"> <span class="mi">1</span><span class="kd">type</span> <span class="nx">MyMutex</span> <span class="kd">struct</span> <span class="p">{</span>
- <span class="mi">2</span>    <span class="nx">count</span> <span class="kt">int</span>
- <span class="mi">3</span>    <span class="nx">sync</span><span class="p">.</span><span class="nx">Mutex</span>
- <span class="mi">4</span><span class="p">}</span>
- <span class="mi">5</span>
- <span class="mi">6</span><span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
- <span class="mi">7</span>    <span class="kd">var</span> <span class="nx">mu</span> <span class="nx">MyMutex</span>
- <span class="mi">8</span>    <span class="nx">mu</span><span class="p">.</span><span class="nf">Lock</span><span class="p">(</span><span class="p">)</span>
- <span class="mi">9</span>    <span class="kd">var</span> <span class="nx">mu1</span> <span class="p">=</span> <span class="nx">mu</span>
-<span class="mi">10</span>    <span class="nx">mu</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span>
-<span class="mi">11</span>    <span class="nx">mu</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">(</span><span class="p">)</span>
-<span class="mi">12</span>    <span class="nx">mu1</span><span class="p">.</span><span class="nf">Lock</span><span class="p">(</span><span class="p">)</span>
-<span class="mi">13</span>    <span class="nx">mu1</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span>
-<span class="mi">14</span>    <span class="nx">mu1</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">(</span><span class="p">)</span>
-<span class="mi">15</span>    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">mu</span><span class="p">.</span><span class="nx">count</span><span class="p">,</span> <span class="nx">mu1</span><span class="p">.</span><span class="nx">count</span><span class="p">)</span>
-<span class="mi">16</span><span class="p">}</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">import</span><span class="p">(</span>
+	<span class="s">&#34;sync/atomic&#34;</span>
+    <span class="s">&#34;unsafe&#34;</span>
+<span class="p">)</span>
+<span class="c1">//核心数据结构
+</span><span class="c1"></span><span class="c1">//删除不是直接删除，而是直接打标记，是有在晋升dirty的时候才清理删除的数据。
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Map</span> <span class="kd">struct</span><span class="p">{</span>
+    <span class="nx">mu</span> <span class="nx">mutex</span>
+    <span class="c1">//read包含map中可以被安全并发访问的内容，read总是可以被安全load，但是只能和mu一起store
+</span><span class="c1"></span>    <span class="c1">//read中的数据可以不用mu锁就并发更新，但是要修改之前expunged的数据就需要将数据复制dirty区，
+</span><span class="c1"></span>    <span class="nx">read</span> <span class="nx">atomic</span><span class="p">.</span><span class="nx">Value</span>
+    <span class="c1">//dirty  包含map中需要持有mu锁的数据。
+</span><span class="c1"></span>    <span class="c1">//它包含所有read中expunged和unexpunged的数据。新增加的entries会加入到dirty.
+</span><span class="c1"></span>    <span class="c1">//删除的entries 没有储存在dirty map 中。
+</span><span class="c1"></span>    <span class="nx">dirty</span> <span class="kd">map</span><span class="p">[</span><span class="kd">interface</span><span class="p">{</span><span class="p">}</span><span class="p">]</span><span class="o">*</span> <span class="nx">entry</span><span class="c1">//包含最新写入的数据，当，misses计数达到一定值，将其值赋给read
+</span><span class="c1"></span>    <span class="nx">misser</span> <span class="kt">int</span><span class="c1">// 计数作用，每次从read中读取失败，则计数加1
+</span><span class="c1"></span><span class="p">}</span>
+<span class="c1">//readonly
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">readonly</span> <span class="kd">struct</span><span class="p">{</span>
+    <span class="nx">m</span> <span class="kd">map</span><span class="p">[</span><span class="kd">interface</span><span class="p">{</span><span class="p">}</span><span class="p">]</span><span class="o">*</span> <span class="nx">entry</span> 
+    <span class="nx">amended</span> <span class="kt">bool</span> <span class="c1">//map.dirty的数据和这里的m中的数据不一样的时候，为true
+</span><span class="c1"></span>    <span class="c1">//如果read找不到数据的时候会在dirty中找。
+</span><span class="c1"></span><span class="p">}</span>
+<span class="c1">//entry 这里map.dirty和readonly.m中的数据是冗余的，但是他们储存的指针，指向了同一个数据，所以并没有占用太多的空间。
+</span><span class="c1"></span><span class="kd">type</span> <span class="nx">entry</span> <span class="kd">struct</span><span class="p">{</span>
+    <span class="nx">p</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span>
+    <span class="c1">//p 有三种值，nil ：entry已经被删除了，并且dirty为nil
+</span><span class="c1"></span>    <span class="c1">// expunged ：entry已经被删除了，并且dirty不为nil，而且这个entry不存在于dirty中
+</span><span class="c1"></span>    <span class="c1">//正常值
+</span><span class="c1"></span><span class="p">}</span>
+
 </code></pre></td></tr></table>
 </div>
-</div><p>例子中，mu1将mu的锁状态一起复制了，所以不能再次加锁。最终会fatal error</p>
+</div><a class="post-dummy-target" id="heading1"></a><h3>使用方法：</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//Load 查找
+</span><span class="c1"></span><span class="c1">//store 
+</span><span class="c1"></span><span class="c1">//delete
+</span><span class="c1"></span><span class="c1">//range
+</span></code></pre></td></tr></table>
+</div>
+</div><p>//append不是安全方法</p>
         </div>
 
         <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>This article is updated with 2020-02-02</span>
+                <span>This article is updated with 2020-02-11</span>
             </div>
             <div class="post-info-license">
                 
@@ -244,7 +287,7 @@
             <div class="post-info-md">
                 
                     
-                        <span><a class="link-to-markdown" href="https://haillk.github.io/2020/02/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/index.md" target="_blank"></a></span>
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2020/02/map/index.md" target="_blank"></a></span>
                     
                 
             </div>
@@ -252,12 +295,12 @@
                 
                     <span>
     
-        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2f%25E5%25A4%258D%25E5%2588%25B6%25E5%258F%2598%25E9%2587%258F%25E6%2581%25A2%25E5%25A4%258D%25E8%2587%25B3%25E9%2594%2581%25E7%258A%25B6%25E6%2580%2581%2f&amp;text=%e5%a4%8d%e5%88%b6%e5%8f%98%e9%87%8f%e6%81%a2%e5%a4%8d%e8%87%b3%e9%94%81%e7%8a%b6%e6%80%81&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fmap%2f&amp;text=sync.Map%e7%9a%84%e7%9b%b8%e5%85%b3%e6%96%b9%e6%b3%95&amp;via=" target="_blank" title="Share on Twitter">
             <i class="fab fa-twitter fa-fw"></i>
         </a>
     
     
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2f%25E5%25A4%258D%25E5%2588%25B6%25E5%258F%2598%25E9%2587%258F%25E6%2581%25A2%25E5%25A4%258D%25E8%2587%25B3%25E9%2594%2581%25E7%258A%25B6%25E6%2580%2581%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fmap%2f" target="_blank" title="Share on Facebook">
             <i class="fab fa-facebook-square fa-fw"></i>
         </a>
     
@@ -269,7 +312,7 @@
     
     
     
-        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2f%25E5%25A4%258D%25E5%2588%25B6%25E5%258F%2598%25E9%2587%258F%25E6%2581%25A2%25E5%25A4%258D%25E8%2587%25B3%25E9%2594%2581%25E7%258A%25B6%25E6%2580%2581%2f&amp;appkey=&amp;title=%e5%a4%8d%e5%88%b6%e5%8f%98%e9%87%8f%e6%81%a2%e5%a4%8d%e8%87%b3%e9%94%81%e7%8a%b6%e6%80%81" target="_blank" title="Share on Weibo">
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fmap%2f&amp;appkey=&amp;title=sync.Map%e7%9a%84%e7%9b%b8%e5%85%b3%e6%96%b9%e6%b3%95" target="_blank" title="Share on Weibo">
             <i class="fab fa-weibo fa-fw"></i>
         </a>
     
@@ -284,11 +327,11 @@
             
                 
                     <span class="tag">
-                        <a href="https://haillk.github.io/tags/%E9%94%81/"><i class="fas fa-tag fa-fw"></i>锁</a>
+                        <a href="https://haillk.github.io/tags/sync/"><i class="fas fa-tag fa-fw"></i>sync</a>
                     </span>
                 
                     <span class="tag">
-                        <a href="https://haillk.github.io/tags/%E5%8F%98%E9%87%8F%E5%A4%8D%E5%88%B6/"><i class="fas fa-tag fa-fw"></i>变量复制</a>
+                        <a href="https://haillk.github.io/tags/map/"><i class="fas fa-tag fa-fw"></i>map</a>
                     </span>
                 
             
@@ -300,10 +343,8 @@
 
     <div class="post-nav">
         
-            <a href="https://haillk.github.io/2020/02/%E6%96%B0%E5%B9%B4%E5%BC%80%E5%A7%8B%E6%B5%AA/" class="prev" rel="prev" title="新年开始浪"><i class="fas fa-angle-left fa-fw"></i>新年开始浪</a>
+            <a href="https://haillk.github.io/2020/02/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" class="prev" rel="prev" title="复制变量恢复至锁状态"><i class="fas fa-angle-left fa-fw"></i>复制变量恢复至锁状态</a>
         
-        
-            <a href="https://haillk.github.io/2020/02/map/" class="next" rel="next" title="sync.Map的相关方法">sync.Map的相关方法<i class="fas fa-angle-right fa-fw"></i></a>
         
     </div>
 </div>
