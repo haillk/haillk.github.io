@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>sync.Map的相关方法 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leetcode 最不常用单词 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="haillk-Blog">
 <meta name="google-site-verification" content="QCDJDMw1zJvYCUvJ2LiOki5TrRTHd-aFhTIBSaQHkIE" />
 <meta name=”baidu-site-verification” content="q23vIgN1xf" />
-<link rel="prev" href="https://haillk.github.io/2020/02/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" />
-<link rel="next" href="https://haillk.github.io/2020/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" />
-<link rel="canonical" href="https://haillk.github.io/2020/02/map/" />
+<link rel="prev" href="https://haillk.github.io/2020/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" />
+<link rel="next" href="https://haillk.github.io/2020/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" />
+<link rel="canonical" href="https://haillk.github.io/2020/02/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,16 +21,16 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="sync.Map的相关方法"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Leetcode 最不常用单词"/>
+<meta name="twitter:description" content="python可以获取列表中单词出现的次数。words.count(word)"/>
 <script type="application/ld+json">
     {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "sync.Map的相关方法",
+    "headline": "Leetcode 最不常用单词",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/haillk.github.io\/2020\/02\/map\/"
+        "@id": "https:\/\/haillk.github.io\/2020\/02\/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D\/"
     },
     
         "image": {
@@ -42,15 +42,15 @@
     
     "genre": "posts",
     
-        "keywords": "sync, map",
+        "keywords": "string, leetcode",
     
-    "wordcount":  631 ,
-    "url": "https:\/\/haillk.github.io\/2020\/02\/map\/",
+    "wordcount":  431 ,
+    "url": "https:\/\/haillk.github.io\/2020\/02\/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D\/",
     
-        "datePublished": "2020-02-11T20:18:46\x2b08:00",
+        "datePublished": "2020-02-15T19:11:16\x2b08:00",
     
     
-        "dateModified": "2020-02-11T20:18:46\x2b08:00",
+        "dateModified": "2020-02-15T19:11:16\x2b08:00",
     
     
         "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
@@ -140,21 +140,21 @@
     
 
     <article class="post-warp">
-        <h1 class="post-title animated flipInX">sync.Map的相关方法</h1>
+        <h1 class="post-title animated flipInX">Leetcode 最不常用单词</h1>
 
         <div class="post-meta">
             <div class="post-meta-main">
                 <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
                 <span class="post-category">
                         included in
-                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/go-notes/">GO-Notes</a>
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/python/">Python</a>
                             
                     </span>
             </div>
             <div class="post-meta-other">
-                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-11>2020-02-11</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 631 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>2 min&nbsp;</div>
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-15>2020-02-15</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 431 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div>
 
         
@@ -187,76 +187,28 @@
             
             
             
-            <a class="post-dummy-target" id="heading"></a><h3>核心源码：</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">import</span><span class="p">(</span>
-	<span class="s">&#34;sync/atomic&#34;</span>
-    <span class="s">&#34;unsafe&#34;</span>
-<span class="p">)</span>
-<span class="c1">//核心数据结构
-</span><span class="c1"></span><span class="c1">//删除不是直接删除，而是直接打标记，是有在晋升dirty的时候才清理删除的数据。
-</span><span class="c1"></span><span class="kd">type</span> <span class="nx">Map</span> <span class="kd">struct</span><span class="p">{</span>
-    <span class="nx">mu</span> <span class="nx">mutex</span>
-    <span class="c1">//read包含map中可以被安全并发访问的内容，read总是可以被安全load，但是只能和mu一起store
-</span><span class="c1"></span>    <span class="c1">//read中的数据可以不用mu锁就并发更新，但是要修改之前expunged的数据就需要将数据复制dirty区，
-</span><span class="c1"></span>    <span class="nx">read</span> <span class="nx">atomic</span><span class="p">.</span><span class="nx">Value</span>
-    <span class="c1">//dirty  包含map中需要持有mu锁的数据。
-</span><span class="c1"></span>    <span class="c1">//它包含所有read中expunged和unexpunged的数据。新增加的entries会加入到dirty.
-</span><span class="c1"></span>    <span class="c1">//删除的entries 没有储存在dirty map 中。
-</span><span class="c1"></span>    <span class="nx">dirty</span> <span class="kd">map</span><span class="p">[</span><span class="kd">interface</span><span class="p">{</span><span class="p">}</span><span class="p">]</span><span class="o">*</span> <span class="nx">entry</span><span class="c1">//包含最新写入的数据，当，misses计数达到一定值，将其值赋给read
-</span><span class="c1"></span>    <span class="nx">misser</span> <span class="kt">int</span><span class="c1">// 计数作用，每次从read中读取失败，则计数加1
-</span><span class="c1"></span><span class="p">}</span>
-<span class="c1">//readonly
-</span><span class="c1"></span><span class="kd">type</span> <span class="nx">readonly</span> <span class="kd">struct</span><span class="p">{</span>
-    <span class="nx">m</span> <span class="kd">map</span><span class="p">[</span><span class="kd">interface</span><span class="p">{</span><span class="p">}</span><span class="p">]</span><span class="o">*</span> <span class="nx">entry</span> 
-    <span class="nx">amended</span> <span class="kt">bool</span> <span class="c1">//map.dirty的数据和这里的m中的数据不一样的时候，为true
-</span><span class="c1"></span>    <span class="c1">//如果read找不到数据的时候会在dirty中找。
-</span><span class="c1"></span><span class="p">}</span>
-<span class="c1">//entry 这里map.dirty和readonly.m中的数据是冗余的，但是他们储存的指针，指向了同一个数据，所以并没有占用太多的空间。
-</span><span class="c1"></span><span class="kd">type</span> <span class="nx">entry</span> <span class="kd">struct</span><span class="p">{</span>
-    <span class="nx">p</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span>
-    <span class="c1">//p 有三种值，nil ：entry已经被删除了，并且dirty为nil
-</span><span class="c1"></span>    <span class="c1">// expunged ：entry已经被删除了，并且dirty不为nil，而且这个entry不存在于dirty中
-</span><span class="c1"></span>    <span class="c1">//正常值
-</span><span class="c1"></span><span class="p">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div><a class="post-dummy-target" id="heading1"></a><h3>使用方法：</h3>
+            <p>python可以获取列表中单词出现的次数。<code>words.count(word)</code></p>
+<a class="post-dummy-target" id="heading"></a><h3>题目描述：</h3>
+<blockquote>
+<p>给定两个句子 A 和 B 。 （句子是一串由空格分隔的单词。每个单词仅由小写字母组成。）</p>
+<p>如果一个单词在其中一个句子中只出现一次，在另一个句子中却没有出现，那么这个单词就是不常见的。</p>
+<p>返回所有不常用单词的列表。</p>
+<p>您可以按任何顺序返回列表。</p>
+<p>示例 1：</p>
+<p>输入：A = &ldquo;this apple is sweet&rdquo;, B = &ldquo;this apple is sour&rdquo;
+输出：[&ldquo;sweet&rdquo;,&ldquo;sour&rdquo;]
+示例 2：</p>
+<p>输入：A = &ldquo;apple apple&rdquo;, B = &ldquo;banana&rdquo;
+输出：[&ldquo;banana&rdquo;]</p>
+<p>提示：</p>
+<p>0 &lt;= A.length &lt;= 200
+0 &lt;= B.length &lt;= 200
+A 和 B 都只包含空格和小写字母。</p>
+<p>来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/uncommon-words-from-two-sentences
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+</blockquote>
+<a class="post-dummy-target" id="heading1"></a><h3>题解：</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -265,20 +217,20 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">//Load 查找
-</span><span class="c1"></span><span class="c1">//store 
-</span><span class="c1"></span><span class="c1">//delete
-</span><span class="c1"></span><span class="c1">//range
-</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">class</span> <span class="nx">Solution</span><span class="p">:</span>
+    <span class="nx">def</span> <span class="nf">uncommonFromSentences</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">A</span><span class="p">:</span> <span class="nx">str</span><span class="p">,</span> <span class="nx">B</span><span class="p">:</span> <span class="nx">str</span><span class="p">)</span> <span class="o">-</span><span class="p">&gt;</span> <span class="nx">List</span><span class="p">[</span><span class="nx">str</span><span class="p">]</span><span class="p">:</span>
+        <span class="nx">words</span> <span class="p">=</span> <span class="nx">A</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">)</span><span class="o">+</span><span class="nx">B</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="s">&#34; &#34;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[</span><span class="nx">i</span> <span class="k">for</span> <span class="nx">i</span> <span class="nx">in</span> <span class="nx">words</span> <span class="k">if</span> <span class="nx">words</span><span class="p">.</span><span class="nf">count</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></td></tr></table>
 </div>
-</div><p>//append不是安全方法</p>
+</div>
         </div>
 
         <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>This article is updated with 2020-02-11</span>
+                <span>This article is updated with 2020-02-15</span>
             </div>
             <div class="post-info-license">
                 
@@ -288,7 +240,7 @@
             <div class="post-info-md">
                 
                     
-                        <span><a class="link-to-markdown" href="https://haillk.github.io/2020/02/map/index.md" target="_blank"></a></span>
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2020/02/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/index.md" target="_blank"></a></span>
                     
                 
             </div>
@@ -296,12 +248,12 @@
                 
                     <span>
     
-        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fmap%2f&amp;text=sync.Map%e7%9a%84%e7%9b%b8%e5%85%b3%e6%96%b9%e6%b3%95&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fleetcode-%25E6%259C%2580%25E4%25B8%258D%25E5%25B8%25B8%25E7%2594%25A8%25E5%258D%2595%25E8%25AF%258D%2f&amp;text=Leetcode%20%e6%9c%80%e4%b8%8d%e5%b8%b8%e7%94%a8%e5%8d%95%e8%af%8d&amp;via=" target="_blank" title="Share on Twitter">
             <i class="fab fa-twitter fa-fw"></i>
         </a>
     
     
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fmap%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fleetcode-%25E6%259C%2580%25E4%25B8%258D%25E5%25B8%25B8%25E7%2594%25A8%25E5%258D%2595%25E8%25AF%258D%2f" target="_blank" title="Share on Facebook">
             <i class="fab fa-facebook-square fa-fw"></i>
         </a>
     
@@ -313,7 +265,7 @@
     
     
     
-        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fmap%2f&amp;appkey=&amp;title=sync.Map%e7%9a%84%e7%9b%b8%e5%85%b3%e6%96%b9%e6%b3%95" target="_blank" title="Share on Weibo">
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2fleetcode-%25E6%259C%2580%25E4%25B8%258D%25E5%25B8%25B8%25E7%2594%25A8%25E5%258D%2595%25E8%25AF%258D%2f&amp;appkey=&amp;title=Leetcode%20%e6%9c%80%e4%b8%8d%e5%b8%b8%e7%94%a8%e5%8d%95%e8%af%8d" target="_blank" title="Share on Weibo">
             <i class="fab fa-weibo fa-fw"></i>
         </a>
     
@@ -328,11 +280,11 @@
             
                 
                     <span class="tag">
-                        <a href="https://haillk.github.io/tags/sync/"><i class="fas fa-tag fa-fw"></i>sync</a>
+                        <a href="https://haillk.github.io/tags/string/"><i class="fas fa-tag fa-fw"></i>string</a>
                     </span>
                 
                     <span class="tag">
-                        <a href="https://haillk.github.io/tags/map/"><i class="fas fa-tag fa-fw"></i>map</a>
+                        <a href="https://haillk.github.io/tags/leetcode/"><i class="fas fa-tag fa-fw"></i>leetcode</a>
                     </span>
                 
             
@@ -344,10 +296,10 @@
 
     <div class="post-nav">
         
-            <a href="https://haillk.github.io/2020/02/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" class="prev" rel="prev" title="复制变量恢复至锁状态"><i class="fas fa-angle-left fa-fw"></i>复制变量恢复至锁状态</a>
+            <a href="https://haillk.github.io/2020/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="prev" rel="prev" title="数据结构和算法"><i class="fas fa-angle-left fa-fw"></i>数据结构和算法</a>
         
         
-            <a href="https://haillk.github.io/2020/02/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="next" rel="next" title="数据结构和算法">数据结构和算法<i class="fas fa-angle-right fa-fw"></i></a>
+            <a href="https://haillk.github.io/2020/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="next" rel="next" title="线性代数基本概念">线性代数基本概念<i class="fas fa-angle-right fa-fw"></i></a>
         
     </div>
 </div>
