@@ -3,14 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>双冒号和zip函数 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curl命令 | Haillk</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="haillk-Blog">
 <meta name="google-site-verification" content="QCDJDMw1zJvYCUvJ2LiOki5TrRTHd-aFhTIBSaQHkIE" />
 <meta name=”baidu-site-verification” content="q23vIgN1xf" />
-<link rel="prev" href="https://haillk.github.io/2020/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" />
-<link rel="next" href="https://haillk.github.io/2020/02/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/" />
-<link rel="canonical" href="https://haillk.github.io/2020/02/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/" />
+<link rel="prev" href="https://haillk.github.io/2020/02/gan%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/" />
+<link rel="canonical" href="https://haillk.github.io/2020/03/curl%E5%91%BD%E4%BB%A4/" />
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -21,16 +20,16 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="双冒号和zip函数"/>
+<meta name="twitter:title" content="Curl命令"/>
 <meta name="twitter:description" content=""/>
 <script type="application/ld+json">
     {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
-    "headline": "双冒号和zip函数",
+    "headline": "Curl命令",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https:\/\/haillk.github.io\/2020\/02\/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0\/"
+        "@id": "https:\/\/haillk.github.io\/2020\/03\/curl%E5%91%BD%E4%BB%A4\/"
     },
     
         "image": {
@@ -42,15 +41,15 @@
     
     "genre": "posts",
     
-        "keywords": "Python基础",
+        "keywords": "linux 命令",
     
-    "wordcount":  104 ,
-    "url": "https:\/\/haillk.github.io\/2020\/02\/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0\/",
+    "wordcount":  34 ,
+    "url": "https:\/\/haillk.github.io\/2020\/03\/curl%E5%91%BD%E4%BB%A4\/",
     
-        "datePublished": "2020-02-17T20:05:10\x2b08:00",
+        "datePublished": "2020-03-01T13:36:22\x2b08:00",
     
     
-        "dateModified": "2020-02-17T20:05:10\x2b08:00",
+        "dateModified": "2020-03-01T13:36:22\x2b08:00",
     
     
         "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
@@ -140,20 +139,20 @@
     
 
     <article class="post-warp">
-        <h1 class="post-title animated flipInX">双冒号和zip函数</h1>
+        <h1 class="post-title animated flipInX">Curl命令</h1>
 
         <div class="post-meta">
             <div class="post-meta-main">
                 <a class="author" href="https://haillk.github.io" rel="author"><i class="fas fa-user-circle fa-fw"></i>Haillk&nbsp;</a>
                 <span class="post-category">
                         included in
-                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/python/">Python</a>
+                        <i class="far fa-folder fa-fw"></i><a href="https://haillk.github.io/categories/linux/">linux</a>
                             
                     </span>
             </div>
             <div class="post-meta-other">
-                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-02-17>2020-02-17</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>about 104 words&nbsp;
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-03-01>2020-03-01</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>about 34 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>1 min&nbsp;</div>
         </div>
 
@@ -187,41 +186,20 @@
             
             
             
-            <a class="post-dummy-target" id="heading"></a><h3>双冒号表示有间隔的取列表中的值：</h3>
-<p>示例：</p>
-<div class="highlight"><div class="chroma">
+            <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="p">:</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="p">)</span>
-<span class="c1">#############</span>
-<span class="c1">#output</span>
-<span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">curl https://www.example.com   //发出get请求
 </code></pre></td></tr></table>
 </div>
-</div><a class="post-dummy-target" id="zipfor-in-range"></a><h3>zip函数，返回两个列表中相对应元素组成的元组的列表对象。注意直接返回的是对象，用for in range可以遍历输出。</h3>
-<div class="highlight"><div class="chroma">
+</div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="p">)</span>
-<span class="c1">#############</span>
-<span class="n">output</span>
-<span class="p">[</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="p">,</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span><span class="p">,</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span><span class="p">]</span>
+<pre class="chroma"><code class="language-bash" data-lang="bash">-o 将服务器的回应保存成文件，等同于wget
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -231,7 +209,7 @@
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>This article is updated with 2020-02-17</span>
+                <span>This article is updated with 2020-03-01</span>
             </div>
             <div class="post-info-license">
                 
@@ -241,7 +219,7 @@
             <div class="post-info-md">
                 
                     
-                        <span><a class="link-to-markdown" href="https://haillk.github.io/2020/02/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/index.md" target="_blank"></a></span>
+                        <span><a class="link-to-markdown" href="https://haillk.github.io/2020/03/curl%E5%91%BD%E4%BB%A4/index.md" target="_blank"></a></span>
                     
                 
             </div>
@@ -249,12 +227,12 @@
                 
                     <span>
     
-        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2f%25E5%258F%258C%25E5%2586%2592%25E5%258F%25B7%25E5%2592%258Czip%25E5%2587%25BD%25E6%2595%25B0%2f&amp;text=%e5%8f%8c%e5%86%92%e5%8f%b7%e5%92%8czip%e5%87%bd%e6%95%b0&amp;via=" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fhaillk.github.io%2f2020%2f03%2fcurl%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;text=Curl%e5%91%bd%e4%bb%a4&amp;via=" target="_blank" title="Share on Twitter">
             <i class="fab fa-twitter fa-fw"></i>
         </a>
     
     
-        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2f%25E5%258F%258C%25E5%2586%2592%25E5%258F%25B7%25E5%2592%258Czip%25E5%2587%25BD%25E6%2595%25B0%2f" target="_blank" title="Share on Facebook">
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhaillk.github.io%2f2020%2f03%2fcurl%25E5%2591%25BD%25E4%25BB%25A4%2f" target="_blank" title="Share on Facebook">
             <i class="fab fa-facebook-square fa-fw"></i>
         </a>
     
@@ -266,7 +244,7 @@
     
     
     
-        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2020%2f02%2f%25E5%258F%258C%25E5%2586%2592%25E5%258F%25B7%25E5%2592%258Czip%25E5%2587%25BD%25E6%2595%25B0%2f&amp;appkey=&amp;title=%e5%8f%8c%e5%86%92%e5%8f%b7%e5%92%8czip%e5%87%bd%e6%95%b0" target="_blank" title="Share on Weibo">
+        <a href="//service.weibo.com/share/share.php?url=https%3a%2f%2fhaillk.github.io%2f2020%2f03%2fcurl%25E5%2591%25BD%25E4%25BB%25A4%2f&amp;appkey=&amp;title=Curl%e5%91%bd%e4%bb%a4" target="_blank" title="Share on Weibo">
             <i class="fab fa-weibo fa-fw"></i>
         </a>
     
@@ -281,7 +259,7 @@
             
                 
                     <span class="tag">
-                        <a href="https://haillk.github.io/tags/python%E5%9F%BA%E7%A1%80/"><i class="fas fa-tag fa-fw"></i>Python基础</a>
+                        <a href="https://haillk.github.io/tags/linux-%E5%91%BD%E4%BB%A4/"><i class="fas fa-tag fa-fw"></i>linux 命令</a>
                     </span>
                 
             
@@ -293,10 +271,8 @@
 
     <div class="post-nav">
         
-            <a href="https://haillk.github.io/2020/02/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="prev" rel="prev" title="线性代数基本概念"><i class="fas fa-angle-left fa-fw"></i>线性代数基本概念</a>
+            <a href="https://haillk.github.io/2020/02/gan%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/" class="prev" rel="prev" title="GAN发展时间轴"><i class="fas fa-angle-left fa-fw"></i>GAN发展时间轴</a>
         
-        
-            <a href="https://haillk.github.io/2020/02/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/" class="next" rel="next" title="命令行flag包">命令行flag包<i class="fas fa-angle-right fa-fw"></i></a>
         
     </div>
 </div>
