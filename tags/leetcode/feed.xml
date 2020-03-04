@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>leetcode on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/leetcode/</link>
+    <description>Recent content in leetcode on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 15 Feb 2020 19:11:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/leetcode/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Leetcode 最不常用单词</title>
+      <link>https://haillk.github.io/post/python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/</link>
+      <pubDate>Sat, 15 Feb 2020 19:11:16 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/</guid>
+      <description>&lt;p&gt;python可以获取列表中单词出现的次数。&lt;code&gt;words.count(word)&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

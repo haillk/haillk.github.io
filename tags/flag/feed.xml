@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flag on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/flag/</link>
+    <description>Recent content in flag on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Feb 2020 22:35:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/flag/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>命令行flag包</title>
+      <link>https://haillk.github.io/post/go-notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</link>
+      <pubDate>Wed, 19 Feb 2020 22:35:53 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/go-notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

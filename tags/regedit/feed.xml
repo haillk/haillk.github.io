@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regedit on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/regedit/</link>
+    <description>Recent content in regedit on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 13 Dec 2019 23:57:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/regedit/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Win10隐藏资源管理器中的额外文件夹</title>
+      <link>https://haillk.github.io/post/windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</link>
+      <pubDate>Fri, 13 Dec 2019 23:57:23 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
+      <description>打开注册表编辑器 方法：【win+R】打开运行框，输入“regedit”进入 目标文件夹 该路径下由很多文件夹，找到相应的文件夹。 HKEY_LOC</description>
+    </item>
+    
+  </channel>
+</rss>
