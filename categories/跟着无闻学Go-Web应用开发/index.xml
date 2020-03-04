@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>跟着无闻学Go Web应用开发 on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 跟着无闻学Go Web应用开发 on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 18 Dec 2019 23:23:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>跟着无闻学Go Web应用开发 简单模板</title>
+      <link>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</link>
+      <pubDate>Wed, 18 Dec 2019 23:23:20 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -38,12 +38,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/gan/</loc>
+    <loc>https://haillk.github.io/tags/GAN/</loc>
     <lastmod>2020-02-29T17:10:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/gan%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/</loc>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/</loc>
     <lastmod>2020-02-29T17:10:06+08:00</lastmod>
   </url>
   
@@ -58,32 +58,27 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/go-notes/</loc>
-    <lastmod>2020-02-19T22:35:53+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haillk.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
     <lastmod>2020-02-19T22:35:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</loc>
     <lastmod>2020-02-19T22:35:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/python/</loc>
+    <loc>https://haillk.github.io/categories/Python/</loc>
     <lastmod>2020-02-17T20:05:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/python%E5%9F%BA%E7%A1%80/</loc>
+    <loc>https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2020-02-17T20:05:10+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/</loc>
+    <loc>https://haillk.github.io/post/Python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2020-02-17T20:05:10+08:00</lastmod>
   </url>
   
@@ -103,7 +98,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/</loc>
+    <loc>https://haillk.github.io/post/Python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/</loc>
     <lastmod>2020-02-15T19:11:16+08:00</lastmod>
   </url>
   
@@ -118,8 +113,13 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://haillk.github.io/post/Python/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-02-13T12:38:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/GO-Notes/</loc>
+    <lastmod>2020-02-11T20:18:46+08:00</lastmod>
   </url>
   
   <url>
@@ -133,7 +133,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/sync/map/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/sync/map/</loc>
     <lastmod>2020-02-11T20:18:46+08:00</lastmod>
   </url>
   
@@ -143,7 +143,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</loc>
     <lastmod>2020-02-02T21:36:42+08:00</lastmod>
   </url>
   
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/windows/</loc>
+    <loc>https://haillk.github.io/categories/Windows/</loc>
     <lastmod>2019-12-31T20:45:42+08:00</lastmod>
   </url>
   
@@ -183,17 +183,17 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5m%E9%80%9F20191231/</loc>
+    <loc>https://haillk.github.io/post/Windows/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5M%E9%80%9F20191231/</loc>
     <lastmod>2019-12-31T20:45:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/microsoft-doc/</loc>
+    <loc>https://haillk.github.io/tags/Microsoft-doc/</loc>
     <lastmod>2019-12-28T01:01:55+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/taskkill%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/</loc>
+    <loc>https://haillk.github.io/post/Windows/taskkill%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/</loc>
     <lastmod>2019-12-28T01:01:55+08:00</lastmod>
   </url>
   
@@ -208,27 +208,27 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/yield/</loc>
+    <loc>https://haillk.github.io/tags/Yield/</loc>
     <lastmod>2019-12-27T02:15:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/</loc>
+    <loc>https://haillk.github.io/post/Python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/</loc>
     <lastmod>2019-12-27T02:15:34+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/</loc>
+    <loc>https://haillk.github.io/post/Python/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/</loc>
     <lastmod>2019-12-27T01:32:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/sync.mutex/</loc>
+    <loc>https://haillk.github.io/tags/sync.Mutex/</loc>
     <lastmod>2019-12-27T00:28:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/syncmutex%E4%BA%92%E6%96%A5%E9%94%81/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</loc>
     <lastmod>2019-12-27T00:28:48+08:00</lastmod>
   </url>
   
@@ -243,32 +243,27 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/%E7%BC%96%E8%AF%91exe%E7%94%9F%E6%88%90%E5%9B%BE%E6%A0%87/</loc>
+    <loc>https://haillk.github.io/post/Windows/%E7%BC%96%E8%AF%91exe%E7%94%9F%E6%88%90%E5%9B%BE%E6%A0%87/</loc>
     <lastmod>2019-12-26T01:22:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/%E4%BD%BF%E7%94%A8requests.get%E6%97%B6%E6%8F%90%E7%A4%BAssl%E9%94%99%E8%AF%AF/</loc>
+    <loc>https://haillk.github.io/post/Python/%E4%BD%BF%E7%94%A8requests.get%E6%97%B6%E6%8F%90%E7%A4%BAssl%E9%94%99%E8%AF%AF/</loc>
     <lastmod>2019-12-25T17:46:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</loc>
     <lastmod>2019-12-25T16:40:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/go/</loc>
+    <loc>https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/</loc>
     <lastmod>2019-12-24T17:26:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/select%E4%BD%9C%E7%94%A8/</loc>
-    <lastmod>2019-12-24T17:26:06+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/post/go-notes/select%E4%BD%9C%E7%94%A8/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/select%E4%BD%9C%E7%94%A8/</loc>
     <lastmod>2019-12-24T17:26:06+08:00</lastmod>
   </url>
   
@@ -278,7 +273,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/win10/</loc>
+    <loc>https://haillk.github.io/categories/Win10/</loc>
     <lastmod>2019-12-21T23:35:47+08:00</lastmod>
   </url>
   
@@ -288,7 +283,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://haillk.github.io/post/Windows/%E5%8F%B3%E9%94%AE%E4%BC%98%E5%8C%96powershell%E5%92%8Ccmd%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2019-12-21T23:35:47+08:00</lastmod>
   </url>
   
@@ -298,7 +293,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/git/</loc>
+    <loc>https://haillk.github.io/categories/Git/</loc>
     <lastmod>2019-12-21T19:17:53+08:00</lastmod>
   </url>
   
@@ -318,7 +313,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/go-notes-5/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-5/</loc>
     <lastmod>2019-12-21T17:37:28+08:00</lastmod>
   </url>
   
@@ -328,8 +323,13 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</loc>
+    <loc>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</loc>
     <lastmod>2019-12-20T19:38:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/go/</loc>
+    <lastmod>2019-12-20T16:55:01+08:00</lastmod>
   </url>
   
   <url>
@@ -338,17 +338,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/</loc>
+    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/</loc>
     <lastmod>2019-12-20T16:55:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2019-12-20T16:55:01+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2019-12-19T16:55:01+08:00</lastmod>
   </url>
   
@@ -358,7 +353,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</loc>
+    <loc>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2019-12-18T23:23:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2019-12-18T23:23:20+08:00</lastmod>
   </url>
   
@@ -368,7 +368,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
+    <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2019-12-18T21:45:23+08:00</lastmod>
   </url>
   
@@ -383,7 +383,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/%E4%BD%BF%E7%94%A8nssm%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</loc>
+    <loc>https://haillk.github.io/post/Windows/%E4%BD%BF%E7%94%A8nssm%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</loc>
     <lastmod>2019-12-17T18:58:41+08:00</lastmod>
   </url>
   
@@ -398,7 +398,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-12-15T00:49:02+08:00</lastmod>
   </url>
   
@@ -408,7 +408,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-12-14T22:21:47+08:00</lastmod>
   </url>
   
@@ -418,7 +418,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-12-14T22:02:22+08:00</lastmod>
   </url>
   
@@ -428,7 +428,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</loc>
+    <loc>https://haillk.github.io/post/Windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</loc>
     <lastmod>2019-12-13T23:57:23+08:00</lastmod>
   </url>
   
@@ -438,7 +438,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/powershell%E7%BE%8E%E5%8C%96/</loc>
+    <loc>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</loc>
     <lastmod>2019-12-12T21:28:50+08:00</lastmod>
   </url>
   
@@ -453,12 +453,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/windows/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</loc>
+    <loc>https://haillk.github.io/post/Windows/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</loc>
     <lastmod>2019-12-10T22:53:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/windows%E5%AE%89%E8%A3%85scrapy/</loc>
+    <loc>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</loc>
     <lastmod>2019-12-10T18:29:22+08:00</lastmod>
   </url>
   
@@ -473,7 +473,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/debian/</loc>
+    <loc>https://haillk.github.io/categories/Debian/</loc>
     <lastmod>2019-12-07T22:37:54+08:00</lastmod>
   </url>
   
@@ -503,12 +503,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</loc>
+    <loc>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</loc>
     <lastmod>2019-12-07T00:40:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/go-notes-4/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-4/</loc>
     <lastmod>2019-12-06T23:25:31+08:00</lastmod>
   </url>
   
@@ -518,7 +518,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</loc>
+    <loc>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</loc>
     <lastmod>2019-12-06T01:43:47+08:00</lastmod>
   </url>
   
@@ -533,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/go-notes-3/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-3/</loc>
     <lastmod>2019-11-30T03:32:08+08:00</lastmod>
   </url>
   
@@ -558,7 +558,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/go-notes-2/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-2/</loc>
     <lastmod>2019-11-29T01:39:30+08:00</lastmod>
   </url>
   
@@ -573,7 +573,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/go-notes/go-notes-1/</loc>
+    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-1/</loc>
     <lastmod>2019-11-29T00:16:19+08:00</lastmod>
   </url>
   
@@ -598,12 +598,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/gin/</loc>
+    <loc>https://haillk.github.io/categories/Gin/</loc>
     <lastmod>2019-11-29T00:16:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/gin-router/</loc>
+    <loc>https://haillk.github.io/tags/gin-Router/</loc>
     <lastmod>2019-11-29T00:16:08+08:00</lastmod>
   </url>
   
@@ -613,12 +613,28 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/ginv1.4/ginv1.4%E4%B8%80/</loc>
+    <loc>https://haillk.github.io/post/Ginv1.4/Ginv1.4%E4%B8%80/</loc>
     <lastmod>2019-11-29T00:16:08+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://haillk.github.io/about/about/</loc>
+  </url>
+  
+  <url>
     <loc>https://haillk.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tools/</loc>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/archives/</loc>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/search/</loc>
   </url>
   
 </urlset>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/python/</link>
+    <description>Recent content in python on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 27 Dec 2019 02:15:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yield完全解读</title>
+      <link>https://haillk.github.io/post/Python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Fri, 27 Dec 2019 02:15:34 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scrapy常用命令</title>
+      <link>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>新建一个工程 scrapy startproject spider_name 构建爬虫 scrapy genspider name domain 运行爬虫 scrapy runspider 爬虫名称 启动项目 scrapy crawl xxx</description>
+    </item>
+    
+    <item>
+      <title>Anaconda常用命令</title>
+      <link>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list 包管理 1 2 3 4 5 ##查看安装了那些包 conda list ## 在虚拟环境中安装额外的包 conda install -n env-name [package]</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/Python/</link>
+    <description>Recent content in Python on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 17 Feb 2020 20:05:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/Python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>双冒号和zip函数</title>
+      <link>https://haillk.github.io/post/Python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Mon, 17 Feb 2020 20:05:10 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leetcode 最不常用单词</title>
+      <link>https://haillk.github.io/post/Python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/</link>
+      <pubDate>Sat, 15 Feb 2020 19:11:16 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/</guid>
+      <description>&lt;p&gt;python可以获取列表中单词出现的次数。&lt;code&gt;words.count(word)&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>数据结构和算法</title>
+      <link>https://haillk.github.io/post/Python/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Thu, 13 Feb 2020 12:38:33 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Yield完全解读</title>
+      <link>https://haillk.github.io/post/Python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Fri, 27 Dec 2019 02:15:34 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python3里gbk的encode错误</title>
+      <link>https://haillk.github.io/post/Python/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Fri, 27 Dec 2019 01:32:19 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>安装更新pip</title>
+      <link>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</link>
+      <pubDate>Fri, 20 Dec 2019 19:38:40 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selenium安装使用</title>
+      <link>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
+      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动 chrome驱动地址 选择对应版本的驱动，解压得到chromedriver.exe,放到anaconda的python路径</description>
+    </item>
+    
+    <item>
+      <title>Scrapy常用命令</title>
+      <link>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>新建一个工程 scrapy startproject spider_name 构建爬虫 scrapy genspider name domain 运行爬虫 scrapy runspider 爬虫名称 启动项目 scrapy crawl xxx</description>
+    </item>
+    
+    <item>
+      <title>Anaconda常用命令</title>
+      <link>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list 包管理 1 2 3 4 5 ##查看安装了那些包 conda list ## 在虚拟环境中安装额外的包 conda install -n env-name [package]</description>
+    </item>
+    
+    <item>
+      <title>Windows通过pip安装scrapy</title>
+      <link>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</link>
+      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</guid>
+      <description>Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 1 error: Microsoft Visual C++ 14.0 is required. Get it with &amp;#34;Microsoft Visual C++ Build Tools&amp;#34;: https://visualstudio.microsoft.com/downloads/ 这是因为twisted安装依赖pywin32和visual build tools. 安装build tools 下载Visual C++ Build Tools</description>
+    </item>
+    
+    <item>
+      <title>Debian安装python38</title>
+      <link>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/</link>
+      <pubDate>Sat, 07 Dec 2019 22:19:52 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/</guid>
+      <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编译，安装 源码安装的3个步骤，配置（configure），编译(make)，安装(make install) Configure是一个可执行</description>
+    </item>
+    
+  </channel>
+</rss>

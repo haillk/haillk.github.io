@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GAN发展时间轴 | Haillk-Blog</title>
+    <meta property="og:title" content="GAN发展时间轴 - Haillk-Blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-02-29T17:10:06&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-02-29T17:10:06&#43;08:00'>
+        
+    <meta name="Keywords" content="haillk">
+    <meta name="description" content="GAN发展时间轴">
+        
+    <meta name="author" content="haillk">
+    <meta property="og:url" content="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-4031353640611810",
+        enable_page_level_ads: true
+    });
+    </script>
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://haillk.github.io">
+                        Haillk-Blog
+                    </a>
+                
+                <p class="description">so far so good </p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://haillk.github.io">首页</a>
+                    
+                    <a  href="https://haillk.github.io/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://haillk.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://haillk.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">GAN发展时间轴</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年2月29日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0'>机器学习</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>GAN发展时间轴</p>
+<p>2020年2月26日星期三</p>
+<p>下午2:57</p>
+<p>提升效果gpu要求较大重点   工具链接：https://paperswithcode.com</p>
+<h1 id="2014-gangenerative-adversarial-networks">2014 GAN:Generative Adversarial Networks</h1>
+<p>​      <a href="https://paperswithcode.com/paper/generative-adversarial-networks">https://paperswithcode.com/paper/generative-adversarial-networks</a></p>
+<h1 id="2014-cgan-conditional-generative-adversarial-network">2014 CGAN: Conditional Generative Adversarial Network</h1>
+<p>不再用噪声作为输入</p>
+<p>cGAN使用了辅助的标签信息来增强原始GAN，对生成器和判别器都使用标签数据进行训练，从而实现模型具备产生特定条件数据的能力。</p>
+<p><a href="https://paperswithcode.com/paper/conditional-generative-adversarial-nets">https://paperswithcode.com/paper/conditional-generative-adversarial-nets</a></p>
+<h1 id="2015-dcgan-deep-convolutional-generative-adversarial-network">2015 DCGAN: Deep Convolutional Generative Adversarial Network</h1>
+<p>DCGAN 的思路可以简单概括为：</p>
+<ul>
+<li>卷积神经网络=处理图像效果好</li>
+<li>生成对抗网络=生成数据效果好</li>
+<li>⟹卷积神经网络+生成对抗网络=生成图像效果好</li>
+</ul>
+<p><a href="https://paperswithcode.com/paper/unsupervised-representation-learning-with-1">https://paperswithcode.com/paper/unsupervised-representation-learning-with-1</a></p>
+<h1 id="2016-cogan-coupled-generative-adversarial-networks">2016： CoGAN: Coupled Generative Adversarial Networks</h1>
+<p>同样是两组判别器和生成器，相比 DCGAN 清晰度更高，更为真实。</p>
+<p><a href="https://paperswithcode.com/paper/coupled-generative-adversarial-networks">https://paperswithcode.com/paper/coupled-generative-adversarial-networks</a></p>
+<h1 id="2016-infoganinterpretable-representation-learning-by-information-maximizing-generative-adversarial-nets">2016 ：infoGAN:Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets</h1>
+<p>这是Generative Adversarial网络的信息理论扩展，它能够以完全无监督的方式学习解缠结的表示形式。 InfoGAN是一个生成型对抗网络，也可以最大化一小部分潜在变量和观测值之间的相互信息。 我们得出了可以有效优化的互信息目标的下限，并表明我们的训练过程可以解释为Wake-Sleep算法的一种变体。 具体而言，InfoGAN成功地将书写样式从MNIST数据集上的数字形状中解脱出来，从3D渲染图像的光照中构成姿势，并从SVHN数据集上的中心数字中解脱了背景数字。 它还可以在CelebA脸部数据集上发现视觉概念，包括发型，眼镜的有无以及情感。 实验表明，InfoGAN学习的可解释表示形式与通过现有完全监督方法学习的表示形式具有竞争性。</p>
+<p><a href="https://arxiv.org/abs/1606.03657">https://arxiv.org/abs/1606.03657</a></p>
+<h1 id="2016-sgan-semisupervised-learning-with-generative-adversarial-networks">2016: SGAN: Semi-Supervised Learning with Generative Adversarial Networks</h1>
+<p>​     SGAN的结构来利用辅助标签信息（少量标签），利用判别器或者分类器的末端重建标签信息。</p>
+<p>​    <a href="https://paperswithcode.com/paper/semi-supervised-learning-with-generative">https://paperswithcode.com/paper/semi-supervised-learning-with-generative</a></p>
+<h1 id="20162017-ebganenergybased-generative-adversarial-network">2016-2017: EBGAN:Energy-based Generative Adversarial Network</h1>
+<p>We introduce the &ldquo;Energy-based Generative Adversarial Network&rdquo; model (EBGAN) which views the discriminator as an energy function that attributes low energies to the regions near the data manifold and higher energies to other regions. Similar to the probabilistic GANs, a generator is seen as being trained to produce contrastive samples with minimal energies, while the discriminator is trained to assign high energies to these generated samples. Viewing the discriminator as an energy function allows to use a wide variety of architectures and loss functionals in addition to the usual binary classifier with logistic output. Among them, we show one instantiation of EBGAN framework as using an auto-encoder architecture, with the energy being the reconstruction error, in place of the discriminator. We show that this form of EBGAN exhibits more stable behavior than regular GANs during training. We also show that a single-scale architecture can be trained to generate high-resolution images.</p>
+<p><a href="https://arxiv.org/abs/1609.03126">https://arxiv.org/abs/1609.03126</a></p>
+<h1 id="20162017acgan-conditional-image-synthesis-with-auxiliary-classifier-gans">2016-2017：ACGAN: Conditional Image Synthesis With Auxiliary Classifier GANs</h1>
+<p>CGAN+SGAN</p>
+<p><a href="https://paperswithcode.com/paper/conditional-image-synthesis-with-auxiliary">https://paperswithcode.com/paper/conditional-image-synthesis-with-auxiliary</a></p>
+<h1 id="20162018pix2pix-imagetoimage-translation-with-conditional-adversarial-networks">2016-2018：pix2pix: Image-to-Image Translation with Conditional Adversarial Networks</h1>
+<p>​    <a href="https://paperswithcode.com/paper/image-to-image-translation-with-conditional">https://paperswithcode.com/paper/image-to-image-translation-with-conditional</a></p>
+<h1 id="2017began-boundary-equilibrium-generative-adversarial-networks">2017:BEGAN: Boundary Equilibrium Generative Adversarial Networks</h1>
+<p>我们提出了一种新的平衡执行方法，并结合了从Wasserstein距离得出的损耗，用于训练基于自动编码器的生成对抗网络。 该方法在训练过程中平衡了生成器和鉴别器。 此外，它还提供了一种新的近似收敛方法，快速稳定的训练和高视觉质量。 我们还导出了一种控制图像多样性与视觉质量之间权衡的方法。 我们专注于图像生成任务，即使在更高的分辨率下，也为视觉质量树立了新的里程碑。 这是在使用相对简单的模型架构和标准培训过程的同时实现的。</p>
+<p><a href="https://arxiv.org/abs/1703.10717">https://arxiv.org/abs/1703.10717</a></p>
+<h1 id="2017wgan-wasserstein-generative-adversarial-networks">2017：WGAN: Wasserstein Generative Adversarial Networks</h1>
+<p>提出新的代价函数，防止梯度消失，有更能好的稳定性</p>
+<p>没有解决1-Lipshcitz限制问题</p>
+<p><a href="https://paperswithcode.com/paper/wasserstein-gan">https://paperswithcode.com/paper/wasserstein-gan</a></p>
+<h1 id="20172018cycleganunpaired-imagetoimage-translation-using-cycleconsistent-adversarial-networks">2017-2018：CycleGAN：Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks</h1>
+<p>两组判别器和生成器，同样以图片作为输入而不是噪声</p>
+<p><a href="https://paperswithcode.com/paper/unpaired-image-to-image-translation-using">https://paperswithcode.com/paper/unpaired-image-to-image-translation-using</a></p>
+<h1 id="stgan-">STGAN 人脸属性编辑</h1>
+<h1 id="20172018bicyclegantoward-multimodal-imagetoimage-translation">2017-2018：BicycleGAn:Toward Multimodal Image-to-Image Translation</h1>
+<p>BicycleGAN在图像变换生成的基础上实现了多类风格的生成， 比如给出一张鞋的草图在保持确定的前提下，生成出各式各样不同纹理风格的图像。</p>
+<p><a href="https://arxiv.org/abs/1711.11586">https://arxiv.org/abs/1711.11586</a></p>
+<h1 id="20172018-attgan-facial-attribute-editing-by-only-changing-what-you-want">2017-2018: AttGAN: Facial Attribute Editing by Only Changing What You Want</h1>
+<p>面部属性编辑旨在操纵面部图像的单个或多个属性，即在保留其他细节的同时生成具有所需属性的新面部。 最近，生成对抗网络（GAN）和编码器-解码器体系结构通常被合并来处理此任务，并获得可喜的结果。 基于编码器-解码器体系结构，通过对以所需属性为条件的给定面部的潜在表示进行解码来实现面部属性编辑。 一些现有方法试图建立与属性无关的潜在表示，以进行进一步的属性编辑。 但是，这种对潜在表示的独立于属性的约束是过分的，因为它限制了潜在表示的容量，并且可能导致信息丢失，从而导致生成过程过于平滑和失真。 在这项工作中，我们没有在潜在表示上施加约束，而是将属性分类约束应用于生成的图像，以仅保证所需属性的正确更改，即“更改所需内容”。 同时，引入了重构学习来保留属性排除的细节，换句话说，就是“仅更改您想要的内容”。 此外，对抗学习用于视觉逼真的编辑。 这三个组件相互配合，形成了用于高质量面部属性编辑（称为AttGAN）的有效框架。 此外，我们的方法也直接适用于属性强度控制，并且可以自然地扩展为属性样式操作。 在CelebA数据集上进行的实验表明，在保留完备的面部细节的情况下，我们的方法在现实属性编辑方面的表现优于最新技术。</p>
+<p><a href="https://arxiv.org/abs/1711.10678">https://arxiv.org/abs/1711.10678</a></p>
+<h1 id="20172018progan-progressive-growing-of-generative-adversarial-networks">2017-2018：ProGAN: Progressive growing of Generative Adversarial Networks</h1>
+<p>我们描述了一种生成对抗网络的新训练方法。 关键思想是逐渐增加生成器和鉴别器：从低分辨率开始，我们添加新层，以随着训练的进行对越来越细的细节建模。 这既加快了训练速度，又大大稳定了训练速度，使我们能够产生前所未有的质量</p>
+<p><a href="https://paperswithcode.com/paper/progressive-growing-of-gans-for-improved">https://paperswithcode.com/paper/progressive-growing-of-gans-for-improved</a></p>
+<h1 id="20172018stargan-unified-generative-adversarial-networks-for-multidomain-imagetoimage-translation">2017-2018：StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation</h1>
+<p>可以仅使用一个模型就可以对多个域执行图像到图像的转换。 StarGAN的这种统一模型架构允许在单个网络中同时训练具有不同域的多个数据集</p>
+<p><a href="https://paperswithcode.com/paper/stargan-unified-generative-adversarial">https://paperswithcode.com/paper/stargan-unified-generative-adversarial</a></p>
+<h1 id="2018sngan-spectral-normalization-for-generative-adversarial-networks">2018：SNGAN: Spectral Normalization for Generative Adversarial Networks</h1>
+<p>频谱归一化</p>
+<p>通过对真正的解决判别器f(x)的1-Lipshcitz限制问题，方法非常朴素且巧妙。</p>
+<p>​    <a href="https://paperswithcode.com/paper/spectral-normalization-for-generative">https://paperswithcode.com/paper/spectral-normalization-for-generative</a></p>
+<h1 id="20182019-sagan-selfattention-generative-adversarial-networks">2018-2019： SAGAN: Self-Attention Generative Adversarial Networks</h1>
+<p>SAGAN论文中给出的解释是GAN擅长合成几乎没有结构约束的图像类别，例如海洋、天空和景观类别。但是无法捕获在某些类别中始终如一地出现的几何或结构模式， 例如狗的毛皮。这种原因并不是GAN自身带来的，而是以前的GAN模型在很大程度上依赖于卷积来模拟不同图像区域之间的依赖关系。</p>
+<p>效果好于ACGAN</p>
+<p>在本文中，我们提出了一种自我注意生成对抗网络（SAGAN），该网络可以为图像生成任务提供注意力驱动的远程依赖关系建模。 传统的卷积GAN生成高分辨率细节，仅作为低分辨率特征图中空间上局部点的函数。 在SAGAN中，可以使用来自所有要素位置的提示来生成细节。 此外，鉴别器可以检查图像的远处部分中的高度详细的特征是否彼此一致。 此外，最近的工作表明，发电机调节会影响GAN性能。 利用这种见解，我们将频谱归一化应用于GAN生成器，并发现这可以改善训练动态。 拟议中的SAGAN达到了最先进的结果，在具有挑战性的ImageNet数据集上，最佳已发布的Inception得分从36.8提高到52.52，Frechet Inception距离从27.62降低到18.65。 注意层的可视化显示生成器利用了与对象形状相对应的邻域，而不是固定形状的局部区</p>
+<p><a href="https://paperswithcode.com/paper/self-attention-generative-adversarial">https://paperswithcode.com/paper/self-attention-generative-adversarial</a></p>
+<h1 id="20182019bigganlarge-scale-gan-training-for-high-fidelity-natural-image-synthesis">2018-2019：BigGAN：Large Scale GAN Training for High Fidelity Natural Image Synthesis</h1>
+<p>生成效果高度逼真而被誉为「史上最强 GAN 图像生成器」。需要TPU集群</p>
+<p>需要很大的数据集效果才更好</p>
+<p>目前需要4-8块gpu,暂时不考虑了</p>
+<p>首先，DeepMind使用SAGAN作为基线，并附加了一个叫做光谱标准化的特性。</p>
+<p>从那里开始，他们将批量缩放50%，宽度(通道数)缩放20%。起初，增加层数似乎没有帮助。</p>
+<p>在其他一些一位数百分比的改进之后，作者使用“截断技巧”来提高采样图像的质量。</p>
+<p><a href="https://paperswithcode.com/paper/large-scale-gan-training-for-high-fidelity">https://paperswithcode.com/paper/large-scale-gan-training-for-high-fidelity</a></p>
+<h1 id="20182019stylegan-stylebased-generative-adversarial-networks">2018-2019：StyleGAN: Style-based Generative Adversarial Networks</h1>
+<p>StyleGAN 来自英伟达的一项研究，关注的是损失函数、稳定性、架构等。</p>
+<p>因此，StyleGAN 没有专注于生成更加逼真的图像，而是致力于提高 GAN 对生成图像的精确控制能力。</p>
+<p>如前所述，StyleGAN并不是在架构和损失函数上开发的。 取而代之的是一套可与任何GAN一起使用的技术，使您可以做各种很酷的事情，例如混合图像，在多个级别上更改细节以及执行样式转换的更高级版本。</p>
+<p>换句话说，StyleGAN就像是photoshop插件，而大多数GAN开发都是photoshop的新版本</p>
+<p><img src="" alt="GPI's  2  4  8  1024x1024  41 days 4 hours  21 days 22 hours  11 days 8 hours  6 days 14 hours  512x512  24 days 21 hours  13 days 7 hours  7 days O hours  4 days 10 hours  256x256  14 days 22 hours  9 days 5 hours  4 days 21 hours  3 days 8 hours "></p>
+<p>感觉时间还是有点长啊</p>
+<p><a href="https://paperswithcode.com/paper/a-style-based-generator-architecture-for">https://paperswithcode.com/paper/a-style-based-generator-architecture-for</a></p>
+<blockquote>
+<p><em>参考：<strong>2018</strong>、<strong>6</strong>、<strong>21</strong><a href="https://blog.floydhub.com/gans-story-so-far/">https://blog.floydhub.com/gans-story-so-far/</a></em></p>
+</blockquote>
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://haillk.github.io">haillk</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/">https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/">命令行flag包</a></li>
+        
+        <li><a href="/post/Python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/">双冒号和zip函数</a></li>
+        
+        <li><a href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">线性代数基本概念</a></li>
+        
+        <li><a href="/post/Python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/">Leetcode 最不常用单词</a></li>
+        
+        <li><a href="/post/Python/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://haillk.github.io/tags/GAN'>GAN</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haillk" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://haillk.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://haillk.github.io">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/" title="Curl命令">Curl命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/" title="GAN发展时间轴">GAN发展时间轴</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/" title="命令行flag包">命令行flag包</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/" title="双冒号和zip函数">双冒号和zip函数</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" title="线性代数基本概念">线性代数基本概念</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/leetcode-%E6%9C%80%E4%B8%8D%E5%B8%B8%E7%94%A8%E5%8D%95%E8%AF%8D/" title="Leetcode 最不常用单词">Leetcode 最不常用单词</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" title="数据结构和算法">数据结构和算法</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/sync/map/" title="sync.Map的相关方法">sync.Map的相关方法</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" title="复制变量恢复至锁状态">复制变量恢复至锁状态</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E6%96%B0%E5%B9%B4%E5%BC%80%E5%A7%8B%E6%B5%AA/" title="新年开始浪">新年开始浪</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://haillk.github.io/categories/Debian/">Debian (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/GO-Notes/">GO-Notes (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Git/">Git (1)</a></li>
+    
+    <li><a href="">Go-Notes (4)</a></li>
+    
+    <li><a href="">Go-notes (5)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Python/">Python (11)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Win10/">Win10 (5)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Windows/">Windows (3)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/linux/">linux (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go Web应用开发 (1)</a></li>
+    
+    <li><a href="">跟着无闻学Go-web应用开发 (3)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://haillk.github.io/tags/">Tags</a>
+    
+    <a href="https://haillk.github.io/tags/2020%E5%B9%B42%E6%9C%882%E5%8F%B7/">2020年2月2号</a>
+    
+    <a href="https://haillk.github.io/tags/8%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/">8进制表示</a>
+    
+    <a href="https://haillk.github.io/tags/GAN/">GAN</a>
+    
+    <a href="">Go</a>
+    
+    <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
+    
+    <a href="">Python</a>
+    
+    <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
+    
+    <a href="">Scrapy</a>
+    
+    <a href="https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/">Select作用</a>
+    
+    <a href="">Slice</a>
+    
+    <a href="https://haillk.github.io/tags/Yield/">Yield</a>
+    
+    <a href="https://haillk.github.io/tags/anaconda/">anaconda</a>
+    
+    <a href="https://haillk.github.io/tags/apt-get/">apt-get</a>
+    
+    <a href="https://haillk.github.io/tags/channel/">channel</a>
+    
+    <a href="https://haillk.github.io/tags/debian/">debian</a>
+    
+    <a href="https://haillk.github.io/tags/exe/">exe</a>
+    
+    <a href="https://haillk.github.io/tags/flag/">flag</a>
+    
+    <a href="https://haillk.github.io/tags/for-range/">for range</a>
+    
+    <a href="https://haillk.github.io/tags/gin-Router/">gin Router</a>
+    
+    <a href="https://haillk.github.io/tags/gin-%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/">gin 参数获取</a>
+    
+    <a href="https://haillk.github.io/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a>
+    
+    <a href="https://haillk.github.io/tags/go/">go</a>
+    
+    <a href="https://haillk.github.io/tags/go-%E6%A8%A1%E6%9D%BF/">go 模板</a>
+    
+    <a href="https://haillk.github.io/tags/interface/">interface{}</a>
+    
+    <a href="https://haillk.github.io/tags/leetcode/">leetcode</a>
+    
+    <a href="https://haillk.github.io/tags/linux-%E5%91%BD%E4%BB%A4/">linux 命令</a>
+    
+    <a href="https://haillk.github.io/tags/map/">map</a>
+    
+    <a href="https://haillk.github.io/tags/nssm/">nssm</a>
+    
+    <a href="https://haillk.github.io/tags/powershell/">powershell</a>
+    
+    <a href="https://haillk.github.io/tags/python/">python</a>
+    
+    <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
+    
+    <a href="https://haillk.github.io/tags/recover/">recover</a>
+    
+    <a href="https://haillk.github.io/tags/regedit/">regedit</a>
+    
+    <a href="https://haillk.github.io/tags/scrapy/">scrapy</a>
+    
+    <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
+    
+    <a href="https://haillk.github.io/tags/slice/">slice</a>
+    
+    <a href="https://haillk.github.io/tags/string/">string</a>
+    
+    <a href="https://haillk.github.io/tags/sync/">sync</a>
+    
+    <a href="https://haillk.github.io/tags/sync.Mutex/">sync.Mutex</a>
+    
+    <a href="https://haillk.github.io/tags/web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">web应用开发</a>
+    
+    <a href="https://haillk.github.io/tags/web%E5%BC%80%E5%8F%91/">web开发</a>
+    
+    <a href="https://haillk.github.io/tags/win10/">win10</a>
+    
+    <a href="https://haillk.github.io/tags/windows/">windows</a>
+    
+    <a href="https://haillk.github.io/tags/windows%E5%91%BD%E4%BB%A4%E8%A1%8C/">windows命令行</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%8F%98%E9%87%8F%E5%A4%8D%E5%88%B6/">变量复制</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/">右键菜单</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%9B%BE%E6%A0%87/">图标</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%A4%9A%E9%87%8D%E5%A4%8D%E5%88%B6/">多重复制</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/">安装更新pip</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%B8%B8%E9%87%8F/">常量</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E7%BB%84/">数组</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%96%AD%E8%A8%80/">断言</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/">方法调用</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">注册自定义服务</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/">特殊方法</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9/">百度云不限速第三方</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/">短变量声明</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/">管理器中的额外文件夹</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%B1%BB%E5%9E%8B/">类型</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+    
+    <a href="https://haillk.github.io/tags/%E9%94%81/">锁</a>
+    
+    <a href="https://haillk.github.io/tags/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/">黑纱字体</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://haillk.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

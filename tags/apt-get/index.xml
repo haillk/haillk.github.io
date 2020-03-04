@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apt-get on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/apt-get/</link>
+    <description>Recent content in apt-get on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 07 Dec 2019 22:37:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/apt-get/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>apt-get update和upgrade和dist-upgrade的区别</title>
+      <link>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/</link>
+      <pubDate>Sat, 07 Dec 2019 22:37:54 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/</guid>
+      <description>1 2 3 4 5 6 7 8 update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be incorrect as the size of the package files cannot be known in advance. upgrade upgrade is used to install the newest versions of all packages currently installed on the system from the sources enumerated in /etc/apt/sources.list. Packages currently installed with new versions available are retrieved and upgraded; under no circumstances are currently installed packages removed, or packages not already installed</description>
+    </item>
+    
+  </channel>
+</rss>
