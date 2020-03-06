@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 01 Mar 2020 13:36:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 03:14:05 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -166,10 +166,10 @@
     
     <item>
       <title>python</title>
-      <link>https://haillk.github.io/tags/python/</link>
+      <link></link>
       <pubDate>Fri, 27 Dec 2019 02:15:34 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/python/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -355,10 +355,10 @@
     
     <item>
       <title>scrapy</title>
-      <link>https://haillk.github.io/tags/scrapy/</link>
+      <link></link>
       <pubDate>Sat, 14 Dec 2019 22:21:47 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/scrapy/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -390,11 +390,11 @@
     </item>
     
     <item>
-      <title>windows</title>
-      <link>https://haillk.github.io/tags/windows/</link>
+      <title>Windows</title>
+      <link>https://haillk.github.io/tags/Windows/</link>
       <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/windows/</guid>
+      <guid>https://haillk.github.io/tags/Windows/</guid>
       <description></description>
     </item>
     
@@ -409,19 +409,19 @@
     
     <item>
       <title>Python</title>
-      <link></link>
+      <link>https://haillk.github.io/tags/Python/</link>
       <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
       
-      <guid></guid>
+      <guid>https://haillk.github.io/tags/Python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scrapy</title>
-      <link></link>
+      <link>https://haillk.github.io/tags/Scrapy/</link>
       <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
       
-      <guid></guid>
+      <guid>https://haillk.github.io/tags/Scrapy/</guid>
       <description></description>
     </item>
     
@@ -490,10 +490,10 @@
     
     <item>
       <title>slice</title>
-      <link>https://haillk.github.io/tags/slice/</link>
+      <link></link>
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/tags/slice/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -526,10 +526,10 @@
     
     <item>
       <title>Slice</title>
-      <link></link>
+      <link>https://haillk.github.io/tags/Slice/</link>
       <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
       
-      <guid></guid>
+      <guid>https://haillk.github.io/tags/Slice/</guid>
       <description></description>
     </item>
     

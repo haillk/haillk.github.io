@@ -6,10 +6,19 @@
     <description>Recent content in 机器学习 on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 29 Feb 2020 17:10:06 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2020 03:14:05 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>普归一化</title>
+      <link>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%99%AE%E5%BD%92%E4%B8%80%E5%8C%96/</link>
+      <pubDate>Sat, 07 Mar 2020 03:14:05 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%99%AE%E5%BD%92%E4%B8%80%E5%8C%96/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>GAN发展时间轴</title>

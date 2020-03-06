@@ -20,14 +20,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>SyncMutex互斥锁</title>
-      <link>https://haillk.github.io/post/Go-Notes/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</link>
-      <pubDate>Fri, 27 Dec 2019 00:28:48 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/post/Go-Notes/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
