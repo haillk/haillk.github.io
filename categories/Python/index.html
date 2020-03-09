@@ -82,6 +82,29 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://haillk.github.io/post/Python/with-as/">With As</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年3月10日
+        </date>
+        
+        <div class="post-meta meta-category">
+            |
+            
+            <a href='https://haillk.github.io/categories/Python'>Python</a>
+            
+        </div>
+        
+        <div class="post-content">
+            with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&#34;/temp&#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&#34;/tmp/fs&#34;) as file: data = file.read() with如何工作： ​ with所打开的对象必须有一个enter（）方法个exit()方法。所用共有两个阶段 ​ 1、紧跟这wi……
+            <p class="readmore"><a href="https://haillk.github.io/post/Python/with-as/">阅读全文</a></p>
+        </div>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://haillk.github.io/post/Python/%E5%8F%8C%E5%86%92%E5%8F%B7%E5%92%8Czip%E5%87%BD%E6%95%B0/">双冒号和zip函数</a>
             </h1>
         </header>
@@ -286,29 +309,6 @@
         </div>
     </article>
     
-    <article class="post">
-        <header>
-            <h1 class="post-title">
-                <a href="https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/">Windows通过pip安装scrapy</a>
-            </h1>
-        </header>
-        <date class="post-meta meta-date">
-            2019年12月10日
-        </date>
-        
-        <div class="post-meta meta-category">
-            |
-            
-            <a href='https://haillk.github.io/categories/Python'>Python</a>
-            
-        </div>
-        
-        <div class="post-content">
-            Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 1 error: Microsoft Visual C++ 14.0 is required. Get it with &#34;Microsoft Visual C++ Build Tools&#34;: https://visualstudio.microsoft.com/downloads/ 这是因为twisted安装依赖pywin32和visual build tools. 安装build tools 下载Visual C++ Build Tools……
-            <p class="readmore"><a href="https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/">阅读全文</a></p>
-        </div>
-    </article>
-    
 
     
 
@@ -355,6 +355,10 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/Python/with-as/" title="With As">With As</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%99%AE%E5%BD%92%E4%B8%80%E5%8C%96/" title="普归一化">普归一化</a>
     </li>
     
@@ -390,10 +394,6 @@
         <a href="https://haillk.github.io/post/Go-Notes/sync/map/" title="sync.Map的相关方法">sync.Map的相关方法</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/" title="复制变量恢复至锁状态">复制变量恢复至锁状态</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -411,7 +411,7 @@
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (11)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Python/">Python (11)</a></li>
+    <li><a href="https://haillk.github.io/categories/Python/">Python (12)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
@@ -501,6 +501,8 @@
     <a href="">python</a>
     
     <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
+    
+    <a href="https://haillk.github.io/tags/python%E8%AF%AD%E6%B3%95/">python语法</a>
     
     <a href="https://haillk.github.io/tags/recover/">recover</a>
     

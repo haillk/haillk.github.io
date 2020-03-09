@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python语法 on Haillk-Blog</title>
+    <link>https://haillk.github.io/tags/python%E8%AF%AD%E6%B3%95/</link>
+    <description>Recent content in python语法 on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 10 Mar 2020 00:09:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/tags/python%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>With As</title>
+      <link>https://haillk.github.io/post/Python/with-as/</link>
+      <pubDate>Tue, 10 Mar 2020 00:09:42 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/with-as/</guid>
+      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read() with如何工作： ​ with所打开的对象必须有一个enter（）方法个exit()方法。所用共有两个阶段 ​ 1、紧跟这wi</description>
+    </item>
+    
+  </channel>
+</rss>
