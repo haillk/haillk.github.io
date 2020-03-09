@@ -48,15 +48,6 @@
     </item>
     
     <item>
-      <title>GO-Notes</title>
-      <link>https://haillk.github.io/categories/GO-Notes/</link>
-      <pubDate>Tue, 11 Feb 2020 20:18:46 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/GO-Notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>随笔</title>
       <link>https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/</link>
       <pubDate>Sun, 02 Feb 2020 15:28:12 +0800</pubDate>
@@ -84,6 +75,15 @@
     </item>
     
     <item>
+      <title>技术语法深入理解</title>
+      <link>https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Fri, 20 Dec 2019 21:47:00 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>跟着无闻学Go-web应用开发</title>
       <link></link>
       <pubDate>Fri, 20 Dec 2019 16:55:01 +0800</pubDate>
@@ -93,20 +93,11 @@
     </item>
     
     <item>
-      <title>跟着无闻学Go Web应用开发</title>
+      <title>跟着无闻学Go-Web应用开发</title>
       <link>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
       <pubDate>Wed, 18 Dec 2019 23:23:20 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Win10</title>
-      <link>https://haillk.github.io/categories/Win10/</link>
-      <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/Win10/</guid>
       <description></description>
     </item>
     

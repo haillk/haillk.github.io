@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>sync.Map的相关方法</title>
+      <link>https://haillk.github.io/post/Go-Notes/sync/map/</link>
+      <pubDate>Tue, 11 Feb 2020 20:18:46 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Go-Notes/sync/map/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>复制变量恢复至锁状态</title>
       <link>https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</link>
       <pubDate>Sun, 02 Feb 2020 21:36:42 +0800</pubDate>
