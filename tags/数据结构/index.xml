@@ -17,7 +17,7 @@
       <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
-      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛卡尔积：tshirts = [(color, size) for color in colors for size in sizes] 列表推导的作用只有一个： 生成列表。 2、生成器表达式 生成器表达式的语法跟列表推导差不多， 只不过把方</description>
+      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛卡尔积：tshirt</description>
     </item>
     
   </channel>

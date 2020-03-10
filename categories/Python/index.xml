@@ -17,7 +17,7 @@
       <pubDate>Tue, 10 Mar 2020 00:09:42 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/with-as/</guid>
-      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read() with如何工作： ​ with所打开的对象必须有一个enter（）方法个exit()方法。所用共有两个阶段 ​ 1、紧跟这wi</description>
+      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read()</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
-      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动 chrome驱动地址 选择对应版本的驱动，解压得到chromedriver.exe,放到anaconda的python路径</description>
+      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list 包管理 1 2 3 4 5 ##查看安装了那些包 conda list ## 在虚拟环境中安装额外的包 conda install -n env-name [package]</description>
+      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list</description>
     </item>
     
     <item>
@@ -107,7 +107,7 @@
       <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</guid>
-      <description>Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 1 error: Microsoft Visual C++ 14.0 is required. Get it with &amp;#34;Microsoft Visual C++ Build Tools&amp;#34;: https://visualstudio.microsoft.com/downloads/ 这是因为twisted安装依赖pywin32和visual build tools. 安装build tools 下载Visual C++ Build Tools</description>
+      <description>Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 1 error: Microsoft Visual C++ 14.0 is</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@
       <pubDate>Sat, 07 Dec 2019 22:19:52 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/</guid>
-      <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编译，安装 源码安装的3个步骤，配置（configure），编译(make)，安装(make install) Configure是一个可执行</description>
+      <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编</description>
     </item>
     
   </channel>

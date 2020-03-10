@@ -17,7 +17,7 @@
       <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
-      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动 chrome驱动地址 选择对应版本的驱动，解压得到chromedriver.exe,放到anaconda的python路径</description>
+      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动</description>
     </item>
     
   </channel>

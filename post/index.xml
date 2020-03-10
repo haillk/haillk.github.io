@@ -17,7 +17,7 @@
       <pubDate>Tue, 10 Mar 2020 00:09:42 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/with-as/</guid>
-      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read() with如何工作： ​ with所打开的对象必须有一个enter（）方法个exit()方法。所用共有两个阶段 ​ 1、紧跟这wi</description>
+      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read()</description>
     </item>
     
     <item>
@@ -305,7 +305,7 @@
       <pubDate>Sun, 15 Dec 2019 00:49:02 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/selenium%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/</guid>
-      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动 chrome驱动地址 选择对应版本的驱动，解压得到chromedriver.exe,放到anaconda的python路径</description>
+      <description>selenium能真是的模拟打开一个浏览器，模拟鼠标事件，提供选择器，控制cookie等等。 安装 由于使用了conda,安装就很方便了。 conda install selenium 安装chrome驱动</description>
     </item>
     
     <item>
@@ -323,7 +323,7 @@
       <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/anaconda%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list 包管理 1 2 3 4 5 ##查看安装了那些包 conda list ## 在虚拟环境中安装额外的包 conda install -n env-name [package]</description>
+      <description>查看虚拟环境 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ##创建虚拟环境 conda create -n env-name python=X.X ##切换虚拟环境 conda activate env-name ##关闭虚拟环境 deactivate ##删除虚拟环境 conda remove -n env-name --all ##查看存在的虚拟环境 conda env list</description>
     </item>
     
     <item>
@@ -332,7 +332,7 @@
       <pubDate>Fri, 13 Dec 2019 23:57:23 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
-      <description>打开注册表编辑器 方法：【win+R】打开运行框，输入“regedit”进入 目标文件夹 该路径下由很多文件夹，找到相应的文件夹。 HKEY_LOCAL_MACHINE＼SOFTWARE＼Microsoft＼Windows＼CurrentVersion＼Explorer＼FolderDe</description>
+      <description>打开注册表编辑器 方法：【win+R】打开运行框，输入“regedit”进入 目标文件夹 该路径下由很多文件夹，找到相应的文件夹。 HKEY_LOCAL_MACHINE</description>
     </item>
     
     <item>
@@ -341,7 +341,7 @@
       <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</guid>
-      <description>oh-my-posh使用和主题选择 oh-my-posh 是一个开源、低调的 PowerShell 主题框架。 下载安装 在powershell中执行 1 2 3 4 Install-Module posh-git -Scope CurrentUser Install-Module oh-my-posh -Scope CurrentUser Import-Module posh-git Import-Module oh-my-posh 选择主题 oh-my-posh包含的10个主题有：sorin,agnoster,avit,darkblood,fish,honukai,parado</description>
+      <description>oh-my-posh使用和主题选择 oh-my-posh 是一个开源、低调的 PowerShell 主题框架。 下载安装 在powershell中执行 1 2 3 4 Install-Module posh-git -Scope CurrentUser Install-Module oh-my-posh -Scope CurrentUser Import-Module posh-git Import-Module oh-my-posh 选择主题 oh-my-pos</description>
     </item>
     
     <item>
@@ -359,7 +359,7 @@
       <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/windows%E5%AE%89%E8%A3%85scrapy/</guid>
-      <description>Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 1 error: Microsoft Visual C++ 14.0 is required. Get it with &amp;#34;Microsoft Visual C++ Build Tools&amp;#34;: https://visualstudio.microsoft.com/downloads/ 这是因为twisted安装依赖pywin32和visual build tools. 安装build tools 下载Visual C++ Build Tools</description>
+      <description>Windows通过pip安装scrapy Scrapy需要超多的依赖，而pip instarll scrapy并不会下载好全部依赖。我在安装twisted时出现问题。 1 error: Microsoft Visual C++ 14.0 is</description>
     </item>
     
     <item>
@@ -368,7 +368,7 @@
       <pubDate>Sat, 07 Dec 2019 22:37:54 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/</guid>
-      <description>1 2 3 4 5 6 7 8 update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be incorrect as the size of the package files cannot be known in advance. upgrade upgrade is used to install the newest versions of all packages currently installed on the system from the sources enumerated in /etc/apt/sources.list. Packages currently installed with new versions available are retrieved and upgraded; under no circumstances are currently installed packages removed, or packages not already installed</description>
+      <description>1 2 3 4 5 6 7 8 update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be</description>
     </item>
     
     <item>
@@ -377,7 +377,7 @@
       <pubDate>Sat, 07 Dec 2019 22:19:52 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/</guid>
-      <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编译，安装 源码安装的3个步骤，配置（configure），编译(make)，安装(make install) Configure是一个可执行</description>
+      <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编</description>
     </item>
     
     <item>
@@ -386,7 +386,7 @@
       <pubDate>Sat, 07 Dec 2019 00:40:52 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/</guid>
-      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛卡尔积：tshirts = [(color, size) for color in colors for size in sizes] 列表推导的作用只有一个： 生成列表。 2、生成器表达式 生成器表达式的语法跟列表推导差不多， 只不过把方</description>
+      <description>1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &amp;gt; 127] 笛卡尔积：tshirt</description>
     </item>
     
     <item>
@@ -395,7 +395,7 @@
       <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Go-Notes/Go-notes-4/</guid>
-      <description>recover的扑捉，defer函数的接受者和参数 1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 //错误 func main() { recover() panic(1) } //错误 func main() { defer recover() panic(1) } //正确 func main() { defer func() { recover() }() panic(1) } //错误 func main() { defer func() { defer func(){ recover() } }() panic(1) } 2、defer函数的参数和</description>
+      <description>recover的扑捉，defer函数的接受者和参数 1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 //错误 func</description>
     </item>
     
     <item>
@@ -404,7 +404,7 @@
       <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</guid>
-      <description>特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_collection.getitem(key)。 魔术方法（magic method） 是特殊方法的昵称 ,特殊方法也叫双下方法（du</description>
+      <description>特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_col</description>
     </item>
     
     <item>

@@ -17,7 +17,7 @@
       <pubDate>Tue, 10 Mar 2020 00:09:42 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Python/with-as/</guid>
-      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read() with如何工作： ​ with所打开的对象必须有一个enter（）方法个exit()方法。所用共有两个阶段 ​ 1、紧跟这wi</description>
+      <description>with语句，对于实现需要设置，事后做清理工作，with语句就能很好的处理： 在不用with语句： 1 2 3 4 5 file = open(&amp;#34;/temp&amp;#34;) try: data = file.read() finally: file.close() 使用with语句： 1 2 with open(&amp;#34;/tmp/fs&amp;#34;) as file: data = file.read()</description>
     </item>
     
   </channel>

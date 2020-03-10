@@ -62,7 +62,7 @@
       <pubDate>Fri, 13 Dec 2019 23:57:23 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Windows/win10%E9%9A%90%E8%97%8F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/</guid>
-      <description>打开注册表编辑器 方法：【win+R】打开运行框，输入“regedit”进入 目标文件夹 该路径下由很多文件夹，找到相应的文件夹。 HKEY_LOCAL_MACHINE＼SOFTWARE＼Microsoft＼Windows＼CurrentVersion＼Explorer＼FolderDe</description>
+      <description>打开注册表编辑器 方法：【win+R】打开运行框，输入“regedit”进入 目标文件夹 该路径下由很多文件夹，找到相应的文件夹。 HKEY_LOCAL_MACHINE</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Thu, 12 Dec 2019 21:28:50 +0800</pubDate>
       
       <guid>https://haillk.github.io/post/Windows/powershell%E7%BE%8E%E5%8C%96/</guid>
-      <description>oh-my-posh使用和主题选择 oh-my-posh 是一个开源、低调的 PowerShell 主题框架。 下载安装 在powershell中执行 1 2 3 4 Install-Module posh-git -Scope CurrentUser Install-Module oh-my-posh -Scope CurrentUser Import-Module posh-git Import-Module oh-my-posh 选择主题 oh-my-posh包含的10个主题有：sorin,agnoster,avit,darkblood,fish,honukai,parado</description>
+      <description>oh-my-posh使用和主题选择 oh-my-posh 是一个开源、低调的 PowerShell 主题框架。 下载安装 在powershell中执行 1 2 3 4 Install-Module posh-git -Scope CurrentUser Install-Module oh-my-posh -Scope CurrentUser Import-Module posh-git Import-Module oh-my-posh 选择主题 oh-my-pos</description>
     </item>
     
     <item>

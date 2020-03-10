@@ -92,7 +92,7 @@
         </div>
         
         <div class="post-content">
-            源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编译，安装 源码安装的3个步骤，配置（configure），编译(make)，安装(make install) Configure是一个可执行……
+            源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编……
         </div>
         <p class="readmore"><a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/">阅读全文</a></p>
     </article>
@@ -117,7 +117,7 @@
         </div>
         
         <div class="post-content">
-            1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &gt; 127] 笛卡尔积：tshirts = [(color, size) for color in colors for size in sizes] 列表推导的作用只有一个： 生成列表。 2、生成器表达式 生成器表达式的语法跟列表推导差不多， 只不过把方……
+            1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &gt; 127] 笛卡尔积：tshirt……
         </div>
         <p class="readmore"><a href="https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/">阅读全文</a></p>
     </article>
@@ -142,7 +142,7 @@
         </div>
         
         <div class="post-content">
-            recover的扑捉，defer函数的接受者和参数 1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 //错误 func main() { recover() panic(1) } //错误 func main() { defer recover() panic(1) } //正确 func main() { defer func() { recover() }() panic(1) } //错误 func main() { defer func() { defer func(){ recover() } }() panic(1) } 2、defer函数的参数和……
+            recover的扑捉，defer函数的接受者和参数 1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 //错误 func……
         </div>
         <p class="readmore"><a href="https://haillk.github.io/post/Go-Notes/Go-notes-4/">阅读全文</a></p>
     </article>
@@ -167,7 +167,7 @@
         </div>
         
         <div class="post-content">
-            特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_collection.getitem(key)。 魔术方法（magic method） 是特殊方法的昵称 ,特殊方法也叫双下方法（du……
+            特殊方法的格式 特殊方法的名字以两个下划线开头,两个下划线结尾(例如_getitem_)。比如 obj[key] 的背后就是 getitem 方法， 为了能求得 my_collection[key] 的值， 解释器实际上会调用 my_col……
         </div>
         <p class="readmore"><a href="https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/">阅读全文</a></p>
     </article>
@@ -398,9 +398,9 @@
     
     <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-Web应用开发 (1)</a></li>
+    <li><a href="">跟着无闻学Go-Web应用开发 (1)</a></li>
     
-    <li><a href="">跟着无闻学Go-web应用开发 (3)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (3)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
     
@@ -423,11 +423,11 @@
     
     <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
     
-    <a href="https://haillk.github.io/tags/Python/">Python</a>
+    <a href="">Python</a>
     
     <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
     
-    <a href="https://haillk.github.io/tags/Scrapy/">Scrapy</a>
+    <a href="">Scrapy</a>
     
     <a href="https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/">Select作用</a>
     
@@ -473,7 +473,7 @@
     
     <a href="https://haillk.github.io/tags/powershell/">powershell</a>
     
-    <a href="">python</a>
+    <a href="https://haillk.github.io/tags/python/">python</a>
     
     <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
     
@@ -483,7 +483,7 @@
     
     <a href="https://haillk.github.io/tags/regedit/">regedit</a>
     
-    <a href="">scrapy</a>
+    <a href="https://haillk.github.io/tags/scrapy/">scrapy</a>
     
     <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
     
@@ -582,7 +582,8 @@
         &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
-        
+		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+	   
     </div>
 </footer>
 
