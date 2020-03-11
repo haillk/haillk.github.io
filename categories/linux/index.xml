@@ -6,10 +6,19 @@
     <description>Recent content in linux on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 01 Mar 2020 13:36:22 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 13:35:30 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>后台运行程序</title>
+      <link>https://haillk.github.io/post/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Wed, 11 Mar 2020 13:35:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</guid>
+      <description>nohup后台运行程序，后台运行，进程查看，和终止 参考 1、不挂断的执行命令 2、&amp;amp; 后台运行 1 2 3 4 5 6 7 nohup command &amp;amp; #查看运行的后台程序,只能查看当前终端 jobs -l #</description>
+    </item>
     
     <item>
       <title>Curl命令</title>

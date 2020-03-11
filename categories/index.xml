@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Mar 2020 00:09:42 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 13:35:30 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux</title>
+      <link>https://haillk.github.io/categories/linux/</link>
+      <pubDate>Wed, 11 Mar 2020 13:35:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://haillk.github.io/categories/Golang/</link>
+      <pubDate>Wed, 11 Mar 2020 13:23:50 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/Golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Python</title>
@@ -30,20 +48,11 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://haillk.github.io/categories/linux/</link>
-      <pubDate>Sun, 01 Mar 2020 13:36:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>GoLang</title>
-      <link>https://haillk.github.io/categories/GoLang/</link>
+      <link></link>
       <pubDate>Wed, 19 Feb 2020 22:35:53 +0800</pubDate>
       
-      <guid>https://haillk.github.io/categories/GoLang/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
@@ -85,19 +94,19 @@
     
     <item>
       <title>跟着无闻学Go-web应用开发</title>
-      <link>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
+      <link></link>
       <pubDate>Fri, 20 Dec 2019 16:55:01 +0800</pubDate>
       
-      <guid>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
+      <guid></guid>
       <description></description>
     </item>
     
     <item>
       <title>跟着无闻学Go-Web应用开发</title>
-      <link></link>
+      <link>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</link>
       <pubDate>Wed, 18 Dec 2019 23:23:20 +0800</pubDate>
       
-      <guid></guid>
+      <guid>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     

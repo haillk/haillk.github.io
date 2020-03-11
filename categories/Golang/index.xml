@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/Golang/</link>
+    <description>Recent content in Golang on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Mar 2020 13:23:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/Golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go调用shell命令</title>
+      <link>https://haillk.github.io/post/Go-Notes/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 11 Mar 2020 13:23:50 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Go-Notes/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</guid>
+      <description>执行shell命令，并获取返回值 1 2 3 4 5 6 7 8 func execshell(){ cmd := exec.Command(&amp;#34;v2ray&amp;#34;,&amp;#34;url&amp;#34;,&amp;#34;**&amp;#34;) //参数要分开 //将返回值输出到缓存 var out bytes.Buffer cmd.Stdout = &amp;amp;out //执行命令 err:=cmd.Run() } 参考go调用shell命令</description>
+    </item>
+    
+  </channel>
+</rss>
