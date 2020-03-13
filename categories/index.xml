@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2020 13:35:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 01:19:56 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>常用技术</title>
+      <link>https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Fri, 13 Mar 2020 01:19:56 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>linux</title>
@@ -21,11 +30,11 @@
     </item>
     
     <item>
-      <title>Golang</title>
-      <link>https://haillk.github.io/categories/Golang/</link>
+      <title>GoLang</title>
+      <link>https://haillk.github.io/categories/GoLang/</link>
       <pubDate>Wed, 11 Mar 2020 13:23:50 +0800</pubDate>
       
-      <guid>https://haillk.github.io/categories/Golang/</guid>
+      <guid>https://haillk.github.io/categories/GoLang/</guid>
       <description></description>
     </item>
     
@@ -44,15 +53,6 @@
       <pubDate>Sat, 07 Mar 2020 03:14:05 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>GoLang</title>
-      <link></link>
-      <pubDate>Wed, 19 Feb 2020 22:35:53 +0800</pubDate>
-      
-      <guid></guid>
       <description></description>
     </item>
     

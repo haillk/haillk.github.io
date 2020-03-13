@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2020 13:35:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2020 01:19:56 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tls证书</title>
+      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/tls%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Fri, 13 Mar 2020 01:19:56 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/tls%E8%AF%81%E4%B9%A6/</guid>
+      <description>基本概念 ​ 参考HTTPS精读TLS证书校验 ​ https比http多了一层安全层（Security Layer）&amp;ndash;TLS/SSl SSL是最早的安全层协议</description>
+    </item>
     
     <item>
       <title>后台运行程序</title>
