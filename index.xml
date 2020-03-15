@@ -6,10 +6,19 @@
     <description>Recent content on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 13 Mar 2020 01:19:56 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 15:30:34 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DCGAN_tf2</title>
+      <link>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/DCGAN_tf2/</link>
+      <pubDate>Sun, 15 Mar 2020 15:30:34 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/DCGAN_tf2/</guid>
+      <description>跟着tf官网过一遍DCGAN的算法流程，源地址 导入包 1 from __future__ import absolute_import, division, print_function, unicode_literals absolute_import模块：一般情况下，程序默认是先在系统的默认目录中寻找导入的包，</description>
+    </item>
     
     <item>
       <title>Tls证书</title>

@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 13 Mar 2020 01:19:56 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 15:30:34 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>机器学习</title>
+      <link>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Sun, 15 Mar 2020 15:30:34 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>常用技术</title>
@@ -44,15 +53,6 @@
       <pubDate>Tue, 10 Mar 2020 00:09:42 +0800</pubDate>
       
       <guid>https://haillk.github.io/categories/Python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>机器学习</title>
-      <link>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
-      <pubDate>Sat, 07 Mar 2020 03:14:05 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
