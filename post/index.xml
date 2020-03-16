@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 15 Mar 2020 15:30:34 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2020 17:02:36 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tf2_用tfdata加载数据</title>
+      <link>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Mon, 16 Mar 2020 17:02:36 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/</guid>
+      <description>&lt;p&gt;使用tf.data进行图像预处理&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>DCGAN_tf2</title>
