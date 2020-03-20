@@ -100,30 +100,30 @@
             <p>map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题</p>
 <h4 id="font-colorcc33001mapvaluefont"><!-- raw HTML omitted -->1、map中value是否可寻址的问题<!-- raw HTML omitted --></h4>
 <p>Eg.</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">type</span> myst <span style="color:#fff;font-weight:bold">struct</span>{
-    x,t <span style="color:#fff;font-weight:bold">int</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">type</span> myst <span style="color:#000;font-weight:bold">struct</span>{
+    x,t <span style="color:#458;font-weight:bold">int</span>
 }
-<span style="color:#fff;font-weight:bold">var</span> m = <span style="color:#fff;font-weight:bold">map</span>[<span style="color:#fff;font-weight:bold">string</span>]myst{
-    <span style="color:#0ff;font-weight:bold">&#34;hai&#34;</span>:myst{<span style="color:#ff0;font-weight:bold">1</span>,<span style="color:#ff0;font-weight:bold">2</span>}
+<span style="color:#000;font-weight:bold">var</span> m = <span style="color:#000;font-weight:bold">map</span>[<span style="color:#458;font-weight:bold">string</span>]myst{
+    <span style="color:#d14">&#34;hai&#34;</span>:myst{<span style="color:#099">1</span>,<span style="color:#099">2</span>}
 }
-<span style="color:#fff;font-weight:bold">func</span> main(){
-    fmt.Println(m[<span style="color:#0ff;font-weight:bold">&#34;hai&#34;</span>].x)<span style="color:#007f7f">//成功
-</span><span style="color:#007f7f"></span>    m[<span style="color:#0ff;font-weight:bold">&#34;hai&#34;</span>].x = <span style="color:#ff0;font-weight:bold">4</span><span style="color:#007f7f">//失败
-</span><span style="color:#007f7f"></span>}
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>(){
+    fmt.<span style="color:#900;font-weight:bold">Println</span>(m[<span style="color:#d14">&#34;hai&#34;</span>].x)<span style="color:#998;font-style:italic">//成功
+</span><span style="color:#998;font-style:italic"></span>    m[<span style="color:#d14">&#34;hai&#34;</span>].x = <span style="color:#099">4</span><span style="color:#998;font-style:italic">//失败
+</span><span style="color:#998;font-style:italic"></span>}
 </code></pre></td></tr></table>
 </div>
 </div><p>​	对于 <code>map[string]Struct</code> 和 <code>map[string][]int</code>的问题，由于结构体struct是不可寻址的，虽然可以读取这个值，但是不能把值赋值给x。而[]int是可寻址的，不仅可以读取，也可以赋值。解决方法：使用临时变量或者使用可寻址value。</p>
@@ -134,47 +134,47 @@
 </blockquote>
 <h4 id="font-colorcc33003font"><!-- raw HTML omitted -->3、存在全局变量和局部变量时，调用方法会读取全局变量<!-- raw HTML omitted --></h4>
 <p>eg.</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">9
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">var</span> s <span style="color:#fff;font-weight:bold">int</span><span style="color:#007f7f">//全局变量
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">func</span> extra(){
-    fmt.Println(<span style="color:#0ff;font-weight:bold">&#34;extra&#34;</span>,s)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">var</span> s <span style="color:#458;font-weight:bold">int</span><span style="color:#998;font-style:italic">//全局变量
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">extra</span>(){
+    fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;extra&#34;</span>,s)
 }
-<span style="color:#fff;font-weight:bold">func</span> main(){
-    s :=<span style="color:#ff0;font-weight:bold">3</span> <span style="color:#007f7f">//局部变量
-</span><span style="color:#007f7f"></span>    extra()
-    fmt.Println(<span style="color:#0ff;font-weight:bold">&#34;main&#34;</span>,s)
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>(){
+    s <span style="color:#000;font-weight:bold">:=</span><span style="color:#099">3</span> <span style="color:#998;font-style:italic">//局部变量
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#900;font-weight:bold">extra</span>()
+    fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;main&#34;</span>,s)
 }
 </code></pre></td></tr></table>
 </div>
 </div><p>会输出 <code>extra 0 , main 3</code>，则调用的方法会使用全局变量</p>
 <h4 id="font-colorcc33004for-rangefont"><!-- raw HTML omitted -->4、for range的次数和副本问题<!-- raw HTML omitted --></h4>
 <p>Eg. for rang的次数问题</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">func</span> main(){
-    v :=[]<span style="color:#fff;font-weight:bold">int</span>{<span style="color:#ff0;font-weight:bold">1</span>,<span style="color:#ff0;font-weight:bold">2</span>,<span style="color:#ff0;font-weight:bold">3</span>}
-    <span style="color:#fff;font-weight:bold">for</span> i:=<span style="color:#fff;font-weight:bold">range</span> v {
-        v = <span style="color:#fff;font-weight:bold">append</span>(v,i)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>(){
+    v <span style="color:#000;font-weight:bold">:=</span>[]<span style="color:#458;font-weight:bold">int</span>{<span style="color:#099">1</span>,<span style="color:#099">2</span>,<span style="color:#099">3</span>}
+    <span style="color:#000;font-weight:bold">for</span> i<span style="color:#000;font-weight:bold">:=</span><span style="color:#000;font-weight:bold">range</span> v {
+        v = <span style="color:#0086b3">append</span>(v,i)
     }
 }
 </code></pre></td></tr></table>
@@ -183,95 +183,95 @@
 <p>不会出现死循环，循环次数在开始前就确定了</p>
 </blockquote>
 <p>Eg. 副本问题</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#007f7f">//实际上是a的副本参与循环，不会输出999
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">for</span> i,v:=<span style="color:#fff;font-weight:bold">range</span> a{
-    a[<span style="color:#ff0;font-weight:bold">1</span>] = <span style="color:#ff0;font-weight:bold">999</span>
-    fmt.Println(v)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#998;font-style:italic">//实际上是a的副本参与循环，不会输出999
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">for</span> i,v<span style="color:#000;font-weight:bold">:=</span><span style="color:#000;font-weight:bold">range</span> a{
+    a[<span style="color:#099">1</span>] = <span style="color:#099">999</span>
+    fmt.<span style="color:#900;font-weight:bold">Println</span>(v)
 }
-<span style="color:#007f7f">//这才会让a亲自参与，输出999
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">for</span> i,v :=rang &amp;a{
-    a[<span style="color:#ff0;font-weight:bold">1</span>] = <span style="color:#ff0;font-weight:bold">999</span>
-    fmt.Println(v)
+<span style="color:#998;font-style:italic">//这才会让a亲自参与，输出999
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">for</span> i,v <span style="color:#000;font-weight:bold">:=</span>rang <span style="color:#000;font-weight:bold">&amp;</span>a{
+    a[<span style="color:#099">1</span>] = <span style="color:#099">999</span>
+    fmt.<span style="color:#900;font-weight:bold">Println</span>(v)
 }
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="font-colorcc33005font"><!-- raw HTML omitted -->5、方法的值接受者和指针接受者<!-- raw HTML omitted --></h4>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">type</span> People <span style="color:#fff;font-weight:bold">struct</span>{
-    Name <span style="color:#fff;font-weight:bold">string</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">type</span> People <span style="color:#000;font-weight:bold">struct</span>{
+    Name <span style="color:#458;font-weight:bold">string</span>
 }
-<span style="color:#007f7f">//值方法
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">func</span> (p People)getName() <span style="color:#fff;font-weight:bold">string</span>{
-    <span style="color:#fff;font-weight:bold">return</span> d.Name
+<span style="color:#998;font-style:italic">//值方法
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">func</span> (p People)<span style="color:#900;font-weight:bold">getName</span>() <span style="color:#458;font-weight:bold">string</span>{
+    <span style="color:#000;font-weight:bold">return</span> d.Name
 }
-<span style="color:#007f7f">//指针方法
-</span><span style="color:#007f7f"></span><span style="color:#fff;font-weight:bold">func</span> (p *People)SetName(name <span style="color:#fff;font-weight:bold">string</span>){
+<span style="color:#998;font-style:italic">//指针方法
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">func</span> (p <span style="color:#000;font-weight:bold">*</span>People)<span style="color:#900;font-weight:bold">SetName</span>(name <span style="color:#458;font-weight:bold">string</span>){
     d.Name = name
 }
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>值类型只能调用值方法，指针类型既能调用值方法，也能调用指针方法。但是<strong><!-- raw HTML omitted -->有时<!-- raw HTML omitted --></strong>编译器会帮我们自动转义，所以下列语句都是可用的，不会报错。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  p := People{<span style="color:#0ff;font-weight:bold">&#34;xiaoming&#34;</span>}
-  fmt.Println(p.getName())
-  <span style="color:#007f7f">//值类型只能调用值方法，此处是编译器自动转义，但是有特殊情况
-</span><span style="color:#007f7f"></span>  p.SetName(<span style="color:#0ff;font-weight:bold">&#34;xiaohong&#34;</span>)
-  fmt.Println(p.getName())
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">  p <span style="color:#000;font-weight:bold">:=</span> People{<span style="color:#d14">&#34;xiaoming&#34;</span>}
+  fmt.<span style="color:#900;font-weight:bold">Println</span>(p.<span style="color:#900;font-weight:bold">getName</span>())
+  <span style="color:#998;font-style:italic">//值类型只能调用值方法，此处是编译器自动转义，但是有特殊情况
+</span><span style="color:#998;font-style:italic"></span>  p.<span style="color:#900;font-weight:bold">SetName</span>(<span style="color:#d14">&#34;xiaohong&#34;</span>)
+  fmt.<span style="color:#900;font-weight:bold">Println</span>(p.<span style="color:#900;font-weight:bold">getName</span>())
 
-  <span style="color:#007f7f">//指针类型既能调用值方法，也能调用指针方法
-</span><span style="color:#007f7f"></span>  pp := &amp;p
-  pp.SetName(<span style="color:#0ff;font-weight:bold">&#34;xiaolv&#34;</span>)
-  fmt.Println(pp.getName())
+  <span style="color:#998;font-style:italic">//指针类型既能调用值方法，也能调用指针方法
+</span><span style="color:#998;font-style:italic"></span>  pp <span style="color:#000;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">&amp;</span>p
+  pp.<span style="color:#900;font-weight:bold">SetName</span>(<span style="color:#d14">&#34;xiaolv&#34;</span>)
+  fmt.<span style="color:#900;font-weight:bold">Println</span>(pp.<span style="color:#900;font-weight:bold">getName</span>())
 </code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">emmmmm 我也有点疑惑<span style="color:#f00">，</span>问题待定
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">emmmmm 我也有点疑惑<span style="color:#a61717;background-color:#e3d2d2">，</span>问题待定
 </code></pre></td></tr></table>
 </div>
 </div></blockquote>
@@ -354,6 +354,18 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/Python/init_call/" title="Init_call">Init_call</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Linux常用命令">Linux常用命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tfrecord/" title="Tfrecord">Tfrecord</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/" title="Tf2_用tfdata加载数据">Tf2_用tfdata加载数据</a>
     </li>
     
@@ -381,18 +393,6 @@
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%99%AE%E5%BD%92%E4%B8%80%E5%8C%96/" title="普归一化">普归一化</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/" title="Curl命令">Curl命令</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/" title="GAN发展时间轴">GAN发展时间轴</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/" title="命令行flag包">命令行flag包</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -410,17 +410,17 @@
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (12)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Python/">Python (12)</a></li>
+    <li><a href="https://haillk.github.io/categories/Python/">Python (13)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/linux/">linux (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/linux/">linux (3)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">技术语法深入理解 (1)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (5)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (6)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
     
@@ -451,11 +451,11 @@
     
     <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
     
-    <a href="">Python</a>
+    <a href="https://haillk.github.io/tags/Python/">Python</a>
     
     <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
     
-    <a href="">Scrapy</a>
+    <a href="https://haillk.github.io/tags/Scrapy/">Scrapy</a>
     
     <a href="https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/">Select作用</a>
     
@@ -501,7 +501,7 @@
     
     <a href="https://haillk.github.io/tags/powershell/">powershell</a>
     
-    <a href="https://haillk.github.io/tags/python/">python</a>
+    <a href="">python</a>
     
     <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
     
@@ -511,7 +511,7 @@
     
     <a href="https://haillk.github.io/tags/regedit/">regedit</a>
     
-    <a href="https://haillk.github.io/tags/scrapy/">scrapy</a>
+    <a href="">scrapy</a>
     
     <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
     

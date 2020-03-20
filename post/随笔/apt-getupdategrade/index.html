@@ -97,26 +97,26 @@
         
         
         <div class="post-content">
-            <div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+            <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">8
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">update
-      update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified <span style="color:#fff;font-weight:bold">in</span> /etc/apt/sources.list. <span style="color:#fff;font-weight:bold">For</span> example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be incorrect as the size of the package files cannot be known <span style="color:#fff;font-weight:bold">in</span> advance.
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">update
+      update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified <span style="color:#000;font-weight:bold">in</span> /etc/apt/sources.list. <span style="color:#000;font-weight:bold">For</span> example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be incorrect as the size of the package files cannot be known <span style="color:#000;font-weight:bold">in</span> advance.
 
 upgrade
-      upgrade is used to install the newest versions of all packages currently installed on the system from the sources enumerated <span style="color:#fff;font-weight:bold">in</span> /etc/apt/sources.list. Packages currently installed with new versions available are retrieved and upgraded; under no circumstances are currently installed packages removed, or packages not already installed retrieved and installed. New versions of currently installed packages that cannot be upgraded without changing the install status of another package will be left at their current version. An update must be performed first so that apt-get knows that new versions of packages are available.
+      upgrade is used to install the newest versions of all packages currently installed on the system from the sources enumerated <span style="color:#000;font-weight:bold">in</span> /etc/apt/sources.list. Packages currently installed with new versions available are retrieved and upgraded; under no circumstances are currently installed packages removed, or packages not already installed retrieved and installed. New versions of currently installed packages that cannot be upgraded without changing the install status of another package will be left at their current version. An update must be performed first so that apt-get knows that new versions of packages are available.
 
 dist-upgrade
-       dist-upgrade <span style="color:#fff;font-weight:bold">in</span> addition to performing the <span style="color:#fff;font-weight:bold">function</span> of upgrade,also intelligently handles changing dependencies with new versions of packages; apt-get has a <span style="color:#0ff;font-weight:bold">&#34;</span><span style="color:#0ff;font-weight:bold">smart</span><span style="color:#0ff;font-weight:bold">&#34;</span> conflict resolution system, and it will attempt to upgrade the most important packages at the expense of less important ones <span style="color:#fff;font-weight:bold">if</span> necessary. The dist-upgrade command may therefore remove some packages. The /etc/apt/sources.list file contains a list of locations from which to retrieve desired package files. See also apt_preferences(5) <span style="color:#fff;font-weight:bold">for</span> a mechanism <span style="color:#fff;font-weight:bold">for</span> overriding the general settings <span style="color:#fff;font-weight:bold">for</span> individual packages.
+       dist-upgrade <span style="color:#000;font-weight:bold">in</span> addition to performing the <span style="color:#000;font-weight:bold">function</span> of upgrade,also intelligently handles changing dependencies with new versions of packages; apt-get has a <span style="color:#d14">&#34;</span><span style="color:#d14">smart</span><span style="color:#d14">&#34;</span> conflict resolution system, and it will attempt to upgrade the most important packages at the expense of less important ones <span style="color:#000;font-weight:bold">if</span> necessary. The dist-upgrade command may therefore remove some packages. The /etc/apt/sources.list file contains a list of locations from which to retrieve desired package files. See also apt_preferences(5) <span style="color:#000;font-weight:bold">for</span> a mechanism <span style="color:#000;font-weight:bold">for</span> overriding the general settings <span style="color:#000;font-weight:bold">for</span> individual packages.
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -203,6 +203,18 @@ dist-upgrade
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/Python/init_call/" title="Init_call">Init_call</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Linux常用命令">Linux常用命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tfrecord/" title="Tfrecord">Tfrecord</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/" title="Tf2_用tfdata加载数据">Tf2_用tfdata加载数据</a>
     </li>
     
@@ -230,18 +242,6 @@ dist-upgrade
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%99%AE%E5%BD%92%E4%B8%80%E5%8C%96/" title="普归一化">普归一化</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/" title="Curl命令">Curl命令</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/" title="GAN发展时间轴">GAN发展时间轴</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/" title="命令行flag包">命令行flag包</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -259,17 +259,17 @@ dist-upgrade
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (12)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Python/">Python (12)</a></li>
+    <li><a href="https://haillk.github.io/categories/Python/">Python (13)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/linux/">linux (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/linux/">linux (3)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">技术语法深入理解 (1)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (5)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (6)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
     
@@ -300,11 +300,11 @@ dist-upgrade
     
     <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
     
-    <a href="">Python</a>
+    <a href="https://haillk.github.io/tags/Python/">Python</a>
     
     <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
     
-    <a href="">Scrapy</a>
+    <a href="https://haillk.github.io/tags/Scrapy/">Scrapy</a>
     
     <a href="https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/">Select作用</a>
     
@@ -350,7 +350,7 @@ dist-upgrade
     
     <a href="https://haillk.github.io/tags/powershell/">powershell</a>
     
-    <a href="https://haillk.github.io/tags/python/">python</a>
+    <a href="">python</a>
     
     <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
     
@@ -360,7 +360,7 @@ dist-upgrade
     
     <a href="https://haillk.github.io/tags/regedit/">regedit</a>
     
-    <a href="https://haillk.github.io/tags/scrapy/">scrapy</a>
+    <a href="">scrapy</a>
     
     <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
     

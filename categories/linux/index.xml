@@ -6,10 +6,19 @@
     <description>Recent content in linux on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 11 Mar 2020 13:35:30 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 16:18:09 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 19 Mar 2020 16:18:09 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>查看文件大小 stat命令 1 2 3 4 5 6 7 8 9 10 (base) root@debian:~/tf_down# stat download File: download Size: 9087 Blocks: 24 IO Block: 4096 regular file Device: fe01h/65025d Inode: 410261 Links: 1 Access: (0644/-rw-r--r--) Uid: ( 0/ root) Gid: ( 0/ root) Access: 2020-03-19 16:14:06.998596373 +0800 Modify: 2020-03-19 16:14:07.102598211 +0800 Change: 2020-03-19 16:14:07.102598211 +0800 Birth: - wc命令 1 2 3 (base) root@debian:~/tf_down# wc -c download 9087</description>
+    </item>
     
     <item>
       <title>后台运行程序</title>

@@ -210,39 +210,39 @@
         <div class="post-content">
             <h1 id="hello-world">Hello world!</h1>
 <p>第一步，用go语言搭建一个http版的‘hello world’程序</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">15
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">package</span> main
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> main
 
-<span style="color:#fff;font-weight:bold">import</span> (
-	<span style="color:#0ff;font-weight:bold">&#34;log&#34;</span>
-	<span style="color:#0ff;font-weight:bold">&#34;net/http&#34;</span>
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;log&#34;</span>
+	<span style="color:#d14">&#34;net/http&#34;</span>
 )
 
-<span style="color:#fff;font-weight:bold">func</span> main() {
-	http.HandleFunc(<span style="color:#0ff;font-weight:bold">&#34;/&#34;</span>, <span style="color:#fff;font-weight:bold">func</span>(w http.ResponseWriter, r *http.Request) {
-		w.Write([]<span style="color:#fff;font-weight:bold">byte</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello world!&#34;</span>))
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	http.<span style="color:#900;font-weight:bold">HandleFunc</span>(<span style="color:#d14">&#34;/&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
+		w.<span style="color:#900;font-weight:bold">Write</span>([]<span style="color:#0086b3">byte</span>(<span style="color:#d14">&#34;Hello world!&#34;</span>))
 	})
 
-	log.Println(<span style="color:#0ff;font-weight:bold">&#34;Starting HTTP server...&#34;</span>)
-	log.Fatal(http.ListenAndServe(<span style="color:#0ff;font-weight:bold">&#34;localhost:4000&#34;</span>, <span style="color:#fff;font-weight:bold">nil</span>))
+	log.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Starting HTTP server...&#34;</span>)
+	log.<span style="color:#900;font-weight:bold">Fatal</span>(http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#d14">&#34;localhost:4000&#34;</span>, <span style="color:#000;font-weight:bold">nil</span>))
 }
 </code></pre></td></tr></table>
 </div>
@@ -262,112 +262,112 @@
 <h3 id="font-colorcc3300httphandlefunc-font"><!-- raw HTML omitted -->http.handlefunc() 函数分析<!-- raw HTML omitted --></h3>
 <p>​	实际上<code>http.HandleFunc</code>是标准库提供的一种简便写法，他的第二个参数必须为指定格式，是因为在<code>http.HandleFunc</code>函数内部会将传入的绑定函数转化为类型<!-- raw HTML omitted --><code>http.Handler</code>,<!-- raw HTML omitted --></p>
 <p>​	而这个对象是go标准中的http请求处理器对象，该对象实现了<code>http.Handler</code>接口：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">type</span> Handler <span style="color:#fff;font-weight:bold">interface</span> {
-    ServeHTTP(ResponseWriter, *Request)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">type</span> Handler <span style="color:#000;font-weight:bold">interface</span> {
+    <span style="color:#900;font-weight:bold">ServeHTTP</span>(ResponseWriter, <span style="color:#000;font-weight:bold">*</span>Request)
 }
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>结论</strong>：<strong>http.HandleFunc的根本作用就是将一个函数转化为实现了<code>http.Handler</code>接口的类型（<code>http.Handler</code>）。  那么我们就可以自己创建一个类型并实现<code>http.Handler</code>接口。这样就可以替代handleFunc函数</strong></p>
 <p>实现代码：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">19
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">package</span> main
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> main
 
-<span style="color:#fff;font-weight:bold">import</span> (
-	<span style="color:#0ff;font-weight:bold">&#34;log&#34;</span>
-	<span style="color:#0ff;font-weight:bold">&#34;net/http&#34;</span>
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;log&#34;</span>
+	<span style="color:#d14">&#34;net/http&#34;</span>
 )
 
-<span style="color:#fff;font-weight:bold">func</span> main() {
-	http.Handle(<span style="color:#0ff;font-weight:bold">&#34;/&#34;</span>, &amp;helloHandler{})
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	http.<span style="color:#900;font-weight:bold">Handle</span>(<span style="color:#d14">&#34;/&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>helloHandler{})
 
-	log.Println(<span style="color:#0ff;font-weight:bold">&#34;Starting HTTP server...&#34;</span>)
-	log.Fatal(http.ListenAndServe(<span style="color:#0ff;font-weight:bold">&#34;:4000&#34;</span>, <span style="color:#fff;font-weight:bold">nil</span>))
+	log.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Starting HTTP server...&#34;</span>)
+	log.<span style="color:#900;font-weight:bold">Fatal</span>(http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#d14">&#34;:4000&#34;</span>, <span style="color:#000;font-weight:bold">nil</span>))
 }
 
-<span style="color:#fff;font-weight:bold">type</span> helloHandler <span style="color:#fff;font-weight:bold">struct</span>{}
+<span style="color:#000;font-weight:bold">type</span> helloHandler <span style="color:#000;font-weight:bold">struct</span>{}
 
-<span style="color:#fff;font-weight:bold">func</span> (_ *helloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]<span style="color:#fff;font-weight:bold">byte</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello world!&#34;</span>))
+<span style="color:#000;font-weight:bold">func</span> (_ <span style="color:#000;font-weight:bold">*</span>helloHandler) <span style="color:#900;font-weight:bold">ServeHTTP</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
+	w.<span style="color:#900;font-weight:bold">Write</span>([]<span style="color:#0086b3">byte</span>(<span style="color:#d14">&#34;Hello world!&#34;</span>))
 }
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="font-colorcc3300httplistrenandserve4000nilfont"><!-- raw HTML omitted -->Http.ListrenAndServe(&quot;:4000&rdquo;,nil)<!-- raw HTML omitted -->函数分析</h2>
 <p>​	首先来分析一下第二个参数nil，根据函数声明表示，nil代替的是一个实现了<code>http.Handler</code>接口的对象。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">func</span> ListenAndServe(addr <span style="color:#fff;font-weight:bold">string</span>, handler Handler) <span style="color:#fff;font-weight:bold">error</span> {...}
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">ListenAndServe</span>(addr <span style="color:#458;font-weight:bold">string</span>, handler Handler) <span style="color:#458;font-weight:bold">error</span> {<span style="color:#000;font-weight:bold">...</span>}
 </code></pre></td></tr></table>
 </div>
 </div><p>​	没错，这个handler就是跟上面一样，实现了handler接口的类型。我们可以直接使用。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">17
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">package</span> main
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> main
 
-<span style="color:#fff;font-weight:bold">import</span> (
-	<span style="color:#0ff;font-weight:bold">&#34;log&#34;</span>
-	<span style="color:#0ff;font-weight:bold">&#34;net/http&#34;</span>
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;log&#34;</span>
+	<span style="color:#d14">&#34;net/http&#34;</span>
 )
 
-<span style="color:#fff;font-weight:bold">func</span> main() {
-	log.Println(<span style="color:#0ff;font-weight:bold">&#34;Starting HTTP server...&#34;</span>)
-	log.Fatal(http.ListenAndServe(<span style="color:#0ff;font-weight:bold">&#34;localhost:4000&#34;</span>, &amp;helloHandler{}))
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	log.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Starting HTTP server...&#34;</span>)
+	log.<span style="color:#900;font-weight:bold">Fatal</span>(http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#d14">&#34;localhost:4000&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>helloHandler{}))
 }
 
-<span style="color:#fff;font-weight:bold">type</span> helloHandler <span style="color:#fff;font-weight:bold">struct</span>{}
+<span style="color:#000;font-weight:bold">type</span> helloHandler <span style="color:#000;font-weight:bold">struct</span>{}
 
-<span style="color:#fff;font-weight:bold">func</span> (_ *helloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]<span style="color:#fff;font-weight:bold">byte</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello world!&#34;</span>))
+<span style="color:#000;font-weight:bold">func</span> (_ <span style="color:#000;font-weight:bold">*</span>helloHandler) <span style="color:#900;font-weight:bold">ServeHTTP</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
+	w.<span style="color:#900;font-weight:bold">Write</span>([]<span style="color:#0086b3">byte</span>(<span style="color:#d14">&#34;Hello world!&#34;</span>))
 }
 </code></pre></td></tr></table>
 </div>
@@ -375,60 +375,60 @@
 <p><strong>结论一</strong>： <strong>ListenAndServe（）的第二个参数就是一个handler,能直接用但是不能提供路由绑定。</strong></p>
 <h2 id="font-colorcc3300httpservemuxfonthttphandle"><!-- raw HTML omitted -->http.ServeMux函数分析<!-- raw HTML omitted -->&mdash;对http.Handle剖析</h2>
 <p>通过对Hande的源码分析，Handle 是对<code>http.ServeMux</code>对象(<code>http.DefaultServeMux</code>)封装了一层。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">func</span> Handle(pattern <span style="color:#fff;font-weight:bold">string</span>, handler Handler) {
-    DefaultServeMux.Handle(pattern, handler)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">Handle</span>(pattern <span style="color:#458;font-weight:bold">string</span>, handler Handler) {
+    DefaultServeMux.<span style="color:#900;font-weight:bold">Handle</span>(pattern, handler)
 }
 </code></pre></td></tr></table>
 </div>
 </div><p>而这个<code>http,serveMux</code>是go语言的带有基本路由功能的服务复用器。除了用<code>http.HandleFunc</code>或<code>http.Handle</code>这类方法操作<code>http.DefaultServeMux</code>之外，也可以用<code>http.NewServeMux</code>来创建一个新的<code>http.ServeMux</code>对象。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">19
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">package</span> main
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> main
 
-<span style="color:#fff;font-weight:bold">import</span> (
-	<span style="color:#0ff;font-weight:bold">&#34;log&#34;</span>
-	<span style="color:#0ff;font-weight:bold">&#34;net/http&#34;</span>
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;log&#34;</span>
+	<span style="color:#d14">&#34;net/http&#34;</span>
 )
 
-<span style="color:#fff;font-weight:bold">func</span> main() {
-	mux := http.NewServeMux()
-	mux.Handle(<span style="color:#0ff;font-weight:bold">&#34;/&#34;</span>, &amp;helloHandler{})
-	log.Println(<span style="color:#0ff;font-weight:bold">&#34;Starting HTTP server...&#34;</span>)
-	log.Fatal(http.ListenAndServe(<span style="color:#0ff;font-weight:bold">&#34;localhost:4000&#34;</span>, mux))
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	mux <span style="color:#000;font-weight:bold">:=</span> http.<span style="color:#900;font-weight:bold">NewServeMux</span>()
+	mux.<span style="color:#900;font-weight:bold">Handle</span>(<span style="color:#d14">&#34;/&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>helloHandler{})
+	log.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Starting HTTP server...&#34;</span>)
+	log.<span style="color:#900;font-weight:bold">Fatal</span>(http.<span style="color:#900;font-weight:bold">ListenAndServe</span>(<span style="color:#d14">&#34;localhost:4000&#34;</span>, mux))
 }
 
-<span style="color:#fff;font-weight:bold">type</span> helloHandler <span style="color:#fff;font-weight:bold">struct</span>{}
+<span style="color:#000;font-weight:bold">type</span> helloHandler <span style="color:#000;font-weight:bold">struct</span>{}
 
-<span style="color:#fff;font-weight:bold">func</span> (_ *helloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]<span style="color:#fff;font-weight:bold">byte</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello world!&#34;</span>))
+<span style="color:#000;font-weight:bold">func</span> (_ <span style="color:#000;font-weight:bold">*</span>helloHandler) <span style="color:#900;font-weight:bold">ServeHTTP</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
+	w.<span style="color:#900;font-weight:bold">Write</span>([]<span style="color:#0086b3">byte</span>(<span style="color:#d14">&#34;Hello world!&#34;</span>))
 }
 </code></pre></td></tr></table>
 </div>
@@ -436,73 +436,73 @@
 <p><strong>那么我们就可以，自己创建一个<code>http.NewServeMux</code>方法来对<code>DefaultServeMux</code>操作。</strong></p>
 <h2 id="font-colorcc3300listenandservedefaultservemuxfont"><!-- raw HTML omitted -->ListenAndServe是否也是对DefaultServeMux对象的封装呢<!-- raw HTML omitted --></h2>
 <p>源码</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">func</span> ListenAndServe(addr <span style="color:#fff;font-weight:bold">string</span>, handler Handler) <span style="color:#fff;font-weight:bold">error</span> {
-    server := &amp;Server{Addr: addr, Handler: handler}
-    <span style="color:#fff;font-weight:bold">return</span> server.ListenAndServe()
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">ListenAndServe</span>(addr <span style="color:#458;font-weight:bold">string</span>, handler Handler) <span style="color:#458;font-weight:bold">error</span> {
+    server <span style="color:#000;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">&amp;</span>Server{Addr: addr, Handler: handler}
+    <span style="color:#000;font-weight:bold">return</span> server.<span style="color:#900;font-weight:bold">ListenAndServe</span>()
 }
 </code></pre></td></tr></table>
 </div>
 </div><p>虽然不是全局的封装，但也是用了http.server的对象。</p>
 <p><strong>结论：我们可以使用server写一个自定义程度较高的程序。</strong></p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">24
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#fff;font-weight:bold">package</span> main
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> main
 
-<span style="color:#fff;font-weight:bold">import</span> (
-	<span style="color:#0ff;font-weight:bold">&#34;log&#34;</span>
-	<span style="color:#0ff;font-weight:bold">&#34;net/http&#34;</span>
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;log&#34;</span>
+	<span style="color:#d14">&#34;net/http&#34;</span>
 )
 
-<span style="color:#fff;font-weight:bold">func</span> main() {
-	mux := http.NewServeMux()
-	mux.Handle(<span style="color:#0ff;font-weight:bold">&#34;/&#34;</span>, &amp;helloHandler{})
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	mux <span style="color:#000;font-weight:bold">:=</span> http.<span style="color:#900;font-weight:bold">NewServeMux</span>()
+	mux.<span style="color:#900;font-weight:bold">Handle</span>(<span style="color:#d14">&#34;/&#34;</span>, <span style="color:#000;font-weight:bold">&amp;</span>helloHandler{})
 
-	server := &amp;http.Server{
-		Addr:    <span style="color:#0ff;font-weight:bold">&#34;:4000&#34;</span>,
+	server <span style="color:#000;font-weight:bold">:=</span> <span style="color:#000;font-weight:bold">&amp;</span>http.Server{
+		Addr:    <span style="color:#d14">&#34;:4000&#34;</span>,
 		Handler: mux,
 	}
-	log.Println(<span style="color:#0ff;font-weight:bold">&#34;Starting HTTP server...&#34;</span>)
-	log.Fatal(server.ListenAndServe())
+	log.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Starting HTTP server...&#34;</span>)
+	log.<span style="color:#900;font-weight:bold">Fatal</span>(server.<span style="color:#900;font-weight:bold">ListenAndServe</span>())
 }
 
-<span style="color:#fff;font-weight:bold">type</span> helloHandler <span style="color:#fff;font-weight:bold">struct</span>{}
+<span style="color:#000;font-weight:bold">type</span> helloHandler <span style="color:#000;font-weight:bold">struct</span>{}
 
-<span style="color:#fff;font-weight:bold">func</span> (_ *helloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]<span style="color:#fff;font-weight:bold">byte</span>(<span style="color:#0ff;font-weight:bold">&#34;Hello world!&#34;</span>))
+<span style="color:#000;font-weight:bold">func</span> (_ <span style="color:#000;font-weight:bold">*</span>helloHandler) <span style="color:#900;font-weight:bold">ServeHTTP</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
+	w.<span style="color:#900;font-weight:bold">Write</span>([]<span style="color:#0086b3">byte</span>(<span style="color:#d14">&#34;Hello world!&#34;</span>))
 }
 </code></pre></td></tr></table>
 </div>
@@ -520,9 +520,9 @@
         
         <li><a href="/post/Windows/%E4%BD%BF%E7%94%A8nssm%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">使用nssm创建自定义服务</a></li>
         
-        <li><a href="/about/">About</a></li>
-        
         <li><a href="/tools/">常用工具</a></li>
+        
+        <li><a href="/about/">About</a></li>
         
         <li><a href="/archives/">归档</a></li>
         
@@ -587,6 +587,18 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/Python/init_call/" title="Init_call">Init_call</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="Linux常用命令">Linux常用命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tfrecord/" title="Tfrecord">Tfrecord</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/" title="Tf2_用tfdata加载数据">Tf2_用tfdata加载数据</a>
     </li>
     
@@ -614,18 +626,6 @@
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%99%AE%E5%BD%92%E4%B8%80%E5%8C%96/" title="普归一化">普归一化</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/" title="Curl命令">Curl命令</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/GAN%E5%8F%91%E5%B1%95%E6%97%B6%E9%97%B4%E8%BD%B4/" title="GAN发展时间轴">GAN发展时间轴</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/" title="命令行flag包">命令行flag包</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -643,17 +643,17 @@
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (12)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Python/">Python (12)</a></li>
+    <li><a href="https://haillk.github.io/categories/Python/">Python (13)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/linux/">linux (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/linux/">linux (3)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">技术语法深入理解 (1)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (5)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (6)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
     
@@ -684,11 +684,11 @@
     
     <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
     
-    <a href="">Python</a>
+    <a href="https://haillk.github.io/tags/Python/">Python</a>
     
     <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
     
-    <a href="">Scrapy</a>
+    <a href="https://haillk.github.io/tags/Scrapy/">Scrapy</a>
     
     <a href="https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/">Select作用</a>
     
@@ -734,7 +734,7 @@
     
     <a href="https://haillk.github.io/tags/powershell/">powershell</a>
     
-    <a href="https://haillk.github.io/tags/python/">python</a>
+    <a href="">python</a>
     
     <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
     
@@ -744,7 +744,7 @@
     
     <a href="https://haillk.github.io/tags/regedit/">regedit</a>
     
-    <a href="https://haillk.github.io/tags/scrapy/">scrapy</a>
+    <a href="">scrapy</a>
     
     <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
     

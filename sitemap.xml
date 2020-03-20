@@ -4,31 +4,56 @@
   
   <url>
     <loc>https://haillk.github.io/categories/</loc>
-    <lastmod>2020-03-16T17:02:36+08:00</lastmod>
+    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/</loc>
-    <lastmod>2020-03-16T17:02:36+08:00</lastmod>
+    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/Python/init_call/</loc>
+    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/post/</loc>
-    <lastmod>2020-03-16T17:02:36+08:00</lastmod>
+    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/Python/</loc>
+    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/tags/</loc>
-    <lastmod>2020-03-16T17:02:36+08:00</lastmod>
+    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/</loc>
-    <lastmod>2020-03-16T17:02:36+08:00</lastmod>
+    <loc>https://haillk.github.io/categories/linux/</loc>
+    <lastmod>2020-03-19T16:18:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-03-19T16:18:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tfrecord/</loc>
+    <lastmod>2020-03-16T22:59:58+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-03-16T22:59:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/</loc>
     <lastmod>2020-03-16T17:02:36+08:00</lastmod>
   </url>
   
@@ -58,11 +83,6 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/linux/</loc>
-    <lastmod>2020-03-11T13:35:30+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haillk.github.io/post/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2020-03-11T13:35:30+08:00</lastmod>
   </url>
@@ -75,11 +95,6 @@
   <url>
     <loc>https://haillk.github.io/post/Go-Notes/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2020-03-11T13:23:50+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/categories/Python/</loc>
-    <lastmod>2020-03-10T00:09:42+08:00</lastmod>
   </url>
   
   <url>
@@ -255,11 +270,6 @@
   <url>
     <loc>https://haillk.github.io/tags/windows%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
     <lastmod>2019-12-28T01:01:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/tags/python/</loc>
-    <lastmod>2019-12-27T02:15:34+08:00</lastmod>
   </url>
   
   <url>
@@ -473,11 +483,6 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/scrapy/</loc>
-    <lastmod>2019-12-14T22:21:47+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haillk.github.io/post/Python/scrapy%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-12-14T22:21:47+08:00</lastmod>
   </url>
@@ -525,6 +530,16 @@
   <url>
     <loc>https://haillk.github.io/post/Windows/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</loc>
     <lastmod>2019-12-10T22:53:59+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/Python/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/Scrapy/</loc>
+    <lastmod>2019-12-10T18:29:22+08:00</lastmod>
   </url>
   
   <url>

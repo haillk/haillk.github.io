@@ -6,10 +6,19 @@
     <description>Recent content in Python on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 10 Mar 2020 00:09:42 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2020 22:44:20 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/Python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Init_call</title>
+      <link>https://haillk.github.io/post/Python/init_call/</link>
+      <pubDate>Fri, 20 Mar 2020 22:44:20 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/init_call/</guid>
+      <description>_init_()和_call_() _init_()相当于类的构造器 _call_()： ​ Python中的函数是一级对象，也就是说函数的引用可以作为输入传递到其他函</description>
+    </item>
     
     <item>
       <title>With As</title>
