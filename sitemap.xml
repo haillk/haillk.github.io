@@ -4,12 +4,47 @@
   
   <url>
     <loc>https://haillk.github.io/categories/</loc>
-    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
+    <lastmod>2020-03-23T19:39:57+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/</loc>
-    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
+    <lastmod>2020-03-23T19:39:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/</loc>
+    <lastmod>2020-03-23T19:39:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/SPA-GAN%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/</loc>
+    <lastmod>2020-03-23T19:39:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/tags/</loc>
+    <lastmod>2020-03-23T19:39:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-03-23T19:39:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/SAGAN%E7%94%9F%E6%88%90%E5%99%A8%E5%92%8C%E5%88%A4%E5%88%AB%E5%99%A8/</loc>
+    <lastmod>2020-03-23T15:30:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/SA_NET/</loc>
+    <lastmod>2020-03-22T18:14:38+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%B7%E7%A7%AFconv2d/</loc>
+    <lastmod>2020-03-20T23:18:48+08:00</lastmod>
   </url>
   
   <url>
@@ -18,17 +53,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/</loc>
-    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haillk.github.io/categories/Python/</loc>
-    <lastmod>2020-03-20T22:44:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/tags/</loc>
     <lastmod>2020-03-20T22:44:20+08:00</lastmod>
   </url>
   
@@ -44,11 +69,6 @@
   
   <url>
     <loc>https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tfrecord/</loc>
-    <lastmod>2020-03-16T22:59:58+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-03-16T22:59:58+08:00</lastmod>
   </url>
   
@@ -413,7 +433,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/web%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://haillk.github.io/tags/web/</loc>
     <lastmod>2019-12-20T16:55:01+08:00</lastmod>
   </url>
   
@@ -423,28 +443,18 @@
   </url>
   
   <url>
+    <loc>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2019-12-20T16:55:01+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2019-12-19T16:55:01+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/tags/go-%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2019-12-18T23:23:20+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2019-12-18T23:23:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-Web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2019-12-18T23:23:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/tags/web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2019-12-18T21:45:23+08:00</lastmod>
   </url>
   
   <url>
