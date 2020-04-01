@@ -6,10 +6,19 @@
     <description>Recent content in linux on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 19 Mar 2020 16:18:09 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 15:32:14 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>页表存在哪里</title>
+      <link>https://haillk.github.io/post/linux/%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E5%93%AA%E9%87%8C/</link>
+      <pubDate>Mon, 30 Mar 2020 15:32:14 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E5%93%AA%E9%87%8C/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Linux常用命令</title>
