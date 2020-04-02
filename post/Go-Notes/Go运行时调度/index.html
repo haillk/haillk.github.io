@@ -140,6 +140,21 @@
 <blockquote>
 <p>go通过将他们包装在运行时中来优化系统调用。从字面上看，某些逻辑在进入系统调用之前被执行，而某些逻辑在系统调用返回之后执行。<strong>进行阻塞的系统调用时</strong>，此包装器将自动将P与线程M(即将执行阻塞系统调用的线程)解绑，并允许另一个线程在其上运行</p>
 </blockquote>
+<p><!-- raw HTML omitted --></p>
+<h3 id="heading3">流程：</h3>
+<p>（1）创建一个<strong>goroutine</strong>，它会放在<strong>全局运行队列</strong>中，等待调度器调度</p>
+<p>（2）<strong>调度器</strong>将这个goroutine 分配给一个<strong>逻辑处理器A</strong>，将它放到了这个逻辑处理器的<strong>本地队列</strong>中，这个goroutine就会<strong>等待</strong>逻辑处理器A<strong>执行</strong>它</p>
+<p>（3）每个逻辑处理器默认<strong>绑定了一个线程</strong>，它是在线程中去<strong>执行自己本地队列</strong>中的goroutine。</p>
+<ul>
+<li>如果逻辑处理器目前运行的goroutine是阻塞的，比如打开文件操作。</li>
+</ul>
+<p>（4）逻辑处理器和原来的<strong>线程分离</strong>，调度器重新<strong>创建一个线程</strong>和这个逻辑处理器<strong>绑定</strong>。这时候逻辑处理器在新的线程上继续执行本地运行队列的其他goroutine。 同时，阻塞的goroutine随着线程分离，从本地队列移除。</p>
+<p>（5）那个阻塞的goroutine和分离的线程会继续阻塞，等待系统调用的返回。一旦执行完成并返回，这个goroutine就会<strong>重新放回</strong>到原来逻辑处理器的本地队列。</p>
+<p>（6）之前的线程目前没有goroutine了，但是它会被保存，以备之后使用。</p>
+<p><strong>Note</strong>:第（4）（5）步，如果goroutine 是在执行网络io的操作，这个goroutine就不一定就回到这个逻辑处理器了。它实际上会先从逻辑处理器分离，移到集成了网络轮询器的运行时 ，一旦该轮询器指示某个网络读或者写操作已经就绪，对应的 goroutine 就会<strong>重新分配</strong>到逻辑处理器上来完成操作 。</p>
+<h3 id="heading4">并发和并行：</h3>
+<p>go语言实现并发，创建多个goroutine，调度器会将goroutine分配到逻辑处理器的本地运行队列，逻辑处理器去运行goroutine。如果只有一个逻辑处理器，只会实现并发，不会实现并行。</p>
+<p>要实现并行，就需要多个逻辑处理器，在不同的cpu上，然后调度器会平等的将goroutine分配到每个逻辑处理器，这样多个线程多个goroutine就实现了并行和并发。 至于这些算法怎么调度，我们根本不需要关心，我们只要记住goroutine是我们进行并发编程的一个独立单元就可以了。</p>
         </div>
 
         
@@ -218,6 +233,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/" title="PCB包含的内容">PCB包含的内容</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/Go-Notes/Go_Channel%E8%AF%A6%E8%A7%A3/" title="Go_Channel详解">Go_Channel详解</a>
     </li>
     
@@ -249,14 +272,6 @@
         <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/SA_NET/" title="SA_NET">SA_NET</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%B7%E7%A7%AFconv2d/" title="卷积conv2d">卷积conv2d</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/Python/init_call/" title="Init_call">Init_call</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -276,7 +291,7 @@
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (13)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Python/">Python (13)</a></li>
+    <li><a href="https://haillk.github.io/categories/Python/">Python (14)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
@@ -285,6 +300,8 @@
     <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">技术语法深入理解 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (11)</a></li>
     
