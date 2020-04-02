@@ -6,10 +6,28 @@
     <description>Recent content on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 Apr 2020 17:02:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Apr 2020 22:10:12 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关键字参数</title>
+      <link>https://haillk.github.io/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/</link>
+      <pubDate>Thu, 02 Apr 2020 22:10:12 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>偏函数</title>
+      <link>https://haillk.github.io/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Thu, 02 Apr 2020 21:59:53 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/</guid>
+      <description>&lt;p&gt;*每天都有新体验  偏函数&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>位运算</title>

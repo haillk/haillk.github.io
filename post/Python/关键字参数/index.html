@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>About | Haillk-Blog</title>
-    <meta property="og:title" content="About - Haillk-Blog">
+    <title>关键字参数 | Haillk-Blog</title>
+    <meta property="og:title" content="关键字参数 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2019-10-10T00:09:42&#43;08:00'>
+    <meta property="article:published_time" content='2020-04-02T22:10:12&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2019-10-10T00:09:42&#43;08:00'>
+    <meta property="article:modified_time" content='2020-04-02T22:10:12&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="About">
+    <meta name="description" content="关键字参数">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/about/">
+    <meta property="og:url" content="https://haillk.github.io/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -52,13 +52,13 @@
             </div>
             <div>
                 <nav id="nav-menu" class="clearfix">
-                    <a class="" href="https://haillk.github.io">首页</a>
+                    <a class="current" href="https://haillk.github.io">首页</a>
                     
                     <a  href="https://haillk.github.io/tools/" title="工具">工具</a>
                     
                     <a  href="https://haillk.github.io/archives/" title="归档">归档</a>
                     
-                    <a class="current" href="https://haillk.github.io/about/" title="关于">关于</a>
+                    <a  href="https://haillk.github.io/about/" title="关于">关于</a>
                     
                 </nav>
             </div>
@@ -76,11 +76,18 @@
     
     <article class="post">
         <header>
-            <h1 class="post-title">About</h1>
+            <h1 class="post-title">关键字参数</h1>
         </header>
         <date class="post-meta meta-date">
-            2019年10月10日
+            2020年4月2日
         </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Python'>Python</a></span>
+            
+        </div>
         
         
         <div class="post-meta">
@@ -90,10 +97,80 @@
         
         
         <div class="post-content">
-            <p><img src="https://pic.downk.cc/item/5df60339a4fbc8614a8d3e71.png" alt=""></p>
-<h3 id="so-far--so-good-">so far , so good !</h3>
-<p>个人邮箱：haillk@sina.cn</p>
-
+            <p>*每天都有新体验</p>
+<h3 id="heading">可变参数和关键字参数</h3>
+<h4 id="heading1">可变参数：</h4>
+<p>对于需要多个参数的函数，可以使用可变参数</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">calc</span>(<span style="color:#000;font-weight:bold">*</span>number):
+    <span style="color:#0086b3">sum</span> <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">0</span>
+    <span style="color:#000;font-weight:bold">for</span> n <span style="color:#000;font-weight:bold">in</span> number:
+        <span style="color:#0086b3">sum</span><span style="color:#000;font-weight:bold">=</span><span style="color:#0086b3">sum</span><span style="color:#000;font-weight:bold">+</span>n
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#0086b3">sum</span>
+calc(<span style="color:#099">2</span>,<span style="color:#099">3</span>,<span style="color:#099">4</span>)
+<span style="color:#000;font-weight:bold">or</span>
+list_test<span style="color:#000;font-weight:bold">=</span>[<span style="color:#099">1</span>,<span style="color:#099">2</span>,<span style="color:#099">3</span>]
+clac(<span style="color:#000;font-weight:bold">*</span>list_test)
+</code></pre></td></tr></table>
+</div>
+</div><p>可变参数还是很好理解的，这些参数在函数调用时自动组装成了一个元组。</p>
+<h4 id="heading2">关键字参数</h4>
+<p>关键字参数允许你传入任意个含有参数名的参数。这些参数自动组装为一个字典。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">person</span>(name,age,<span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span>kw):
+    <span style="color:#000;font-weight:bold">print</span>(name,age,kw)
+person(<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">bob</span><span style="color:#d14">&#39;</span>,<span style="color:#099">14</span>,city<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">beijing</span><span style="color:#d14">&#39;</span>)
+<span style="color:#998;font-style:italic">#out</span>
+name: Bob age: <span style="color:#099">14</span> other: {<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">city</span><span style="color:#d14">&#39;</span>: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Beijing</span><span style="color:#d14">&#39;</span>}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading3">命名关键字参数</h3>
+<p>如果要限制关键字参数的名字，可以用命名关键字参数。如</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">person</span>(name,age,<span style="color:#000;font-weight:bold">*</span>,city,job):
+    <span style="color:#000;font-weight:bold">print</span>(name,age,city,job)
+</code></pre></td></tr></table>
+</div>
+</div><p>命名关键字是要用一个特殊分隔符的。</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">&gt;&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> person(<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Jack</span><span style="color:#d14">&#39;</span>, <span style="color:#099">24</span>, city<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Beijing</span><span style="color:#d14">&#39;</span>, job<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Engineer</span><span style="color:#d14">&#39;</span>)
+Jack <span style="color:#099">24</span> Beijing Engineer
+</code></pre></td></tr></table>
+</div>
+</div><p>命名关键字必须传入。</p>
+<h3 id="heading4">参数顺序</h3>
+<p>必选参数，默认参数，可变参数，关键字参数，明明关键字参数可以组合使用，但是要遵循一定的规律</p>
+<p>顺序就是如上的顺序。</p>
         </div>
 
         
@@ -105,11 +182,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/tools/">常用工具</a></li>
+        <li><a href="/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/">偏函数</a></li>
         
-        <li><a href="/archives/">归档</a></li>
+        <li><a href="/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a></li>
         
-        <li><a href="/search/">搜索</a></li>
+        <li><a href="/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/">PCB包含的内容</a></li>
+        
+        <li><a href="/post/Go-Notes/Go_Channel%E8%AF%A6%E8%A7%A3/">Go_Channel详解</a></li>
+        
+        <li><a href="/post/Go-Notes/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/">Go运行时调度</a></li>
         
     </ul>
 </div>
@@ -117,7 +198,11 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='https://haillk.github.io/tags/'></a></li>
+                
+            </ul>
             
         </div>
     </article>
