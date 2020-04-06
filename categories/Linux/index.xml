@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/Linux/</link>
+    <description>Recent content in Linux on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 04 Apr 2020 18:00:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/Linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Uptime命令</title>
+      <link>https://haillk.github.io/post/linux/uptime%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 04 Apr 2020 18:00:14 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/uptime%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Find命令</title>
+      <link>https://haillk.github.io/post/linux/find%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Fri, 03 Apr 2020 15:26:48 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/find%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Top指令</title>
+      <link>https://haillk.github.io/post/linux/top%E6%8C%87%E4%BB%A4/</link>
+      <pubDate>Fri, 03 Apr 2020 15:07:11 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/top%E6%8C%87%E4%BB%A4/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用户态和内核态</title>
+      <link>https://haillk.github.io/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/</link>
+      <pubDate>Fri, 03 Apr 2020 14:43:37 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>页表存在哪里</title>
+      <link>https://haillk.github.io/post/linux/%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E5%93%AA%E9%87%8C/</link>
+      <pubDate>Mon, 30 Mar 2020 15:32:14 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E5%93%AA%E9%87%8C/</guid>
+      <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux常用命令</title>
+      <link>https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 19 Mar 2020 16:18:09 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>查看文件大小 stat命令 1 2 3 4 5 6 7 8 9 10 (base) root@debian:~/tf_down# stat download File: download Size: 9087 Blocks: 24 IO Block: 4096 regular file Device: fe01h/65025d Inode: 410261 Links: 1 Access: (0644/-rw-r--r--) Uid: ( 0/ root) Gid: ( 0/ root) Access: 2020-03-19 16:14:06.998596373 +0800 Modify: 2020-03-19 16:14:07.102598211 +0800 Change: 2020-03-19 16:14:07.102598211 +0800 Birth: - wc命令 1 2 3 (base) root@debian:~/tf_down# wc -c download 9087</description>
+    </item>
+    
+    <item>
+      <title>后台运行程序</title>
+      <link>https://haillk.github.io/post/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Wed, 11 Mar 2020 13:35:30 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/</guid>
+      <description>nohup后台运行程序，后台运行，进程查看，和终止 参考 1、不挂断的执行命令 2、&amp;amp; 后台运行 1 2 3 4 5 6 7 nohup command &amp;amp; #查看运行的后台程序,只能查看当前终端 jobs -l #</description>
+    </item>
+    
+    <item>
+      <title>Curl命令</title>
+      <link>https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sun, 01 Mar 2020 13:36:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

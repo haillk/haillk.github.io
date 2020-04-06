@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Top指令 | Haillk-Blog</title>
+    <meta property="og:title" content="Top指令 - Haillk-Blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-04-03T15:07:11&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-04-03T15:07:11&#43;08:00'>
+        
+    <meta name="Keywords" content="haillk">
+    <meta name="description" content="Top指令">
+        
+    <meta name="author" content="haillk">
+    <meta property="og:url" content="https://haillk.github.io/post/linux/top%E6%8C%87%E4%BB%A4/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://haillk.github.io">
+                        Haillk-Blog
+                    </a>
+                
+                <p class="description">so far so good </p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://haillk.github.io">首页</a>
+                    
+                    <a  href="https://haillk.github.io/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://haillk.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://haillk.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Top指令</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月3日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Linux'>Linux</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>*每天都有新体验</p>
+<h3 id="top">解释一下top命令</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#998;font-style:italic">#第一行 系统时间，运行时间，登陆的用户数量</span>
+top - 15:09:55 up <span style="color:#099">45</span> days,  1:43,  <span style="color:#099">2</span> users,  load average: 0.00, 0.00, 0.00
+<span style="color:#998;font-style:italic">#第二行，进程状态，</span>
+Tasks:  <span style="color:#099">68</span> total,   <span style="color:#099">2</span> running,  <span style="color:#099">66</span> sleeping,   <span style="color:#099">0</span> stopped,   <span style="color:#099">0</span> zombie
+<span style="color:#998;font-style:italic">#第三行，cpu状态5.9%us — 用户空间占用CPU的百分比。</span>
+<span style="color:#998;font-style:italic">#3.4% sy — 内核空间占用CPU的百分比。</span>
+<span style="color:#998;font-style:italic">#0.0% ni — 改变过优先级的进程占用CPU的百分比</span>
+<span style="color:#998;font-style:italic">#90.4% id — 空闲CPU百分比</span>
+<span style="color:#998;font-style:italic">#0.0% wa — IO等待占用CPU的百分比</span>
+<span style="color:#998;font-style:italic">#0.0% hi — 硬中断（Hardware IRQ）占用CPU的百分比</span>
+<span style="color:#998;font-style:italic">#0.2% si — 软中断（Software Interrupts）占用CPU的百分比</span>
+%Cpu<span style="color:#000;font-weight:bold">(</span>s<span style="color:#000;font-weight:bold">)</span>:  0.7 us,  0.0 sy,  0.0 ni, 98.3 id,  0.0 wa,  0.0 hi,  0.0 si,  1.0 st
+<span style="color:#998;font-style:italic">#内存状态..计算公式：第四行的free + 第四行的buffers + 第五行的cached</span>
+MiB Mem :    987.4 total,     90.1 free,    143.1 used,    754.2 buff/cache
+MiB Swap:   1022.0 total,   1001.7 free,     20.2 used.    733.9 avail Mem 
+<span style="color:#998;font-style:italic">#PID — 进程id</span>
+<span style="color:#998;font-style:italic">#USER — 进程所有者</span>
+<span style="color:#998;font-style:italic">#PR — 进程优先级</span>
+<span style="color:#998;font-style:italic">#NI — nice值。负值表示高优先级，正值表示低优先级</span>
+<span style="color:#998;font-style:italic">#VIRT — 进程使用的虚拟内存总量，单位kb。VIRT=SWAP+RES</span>
+<span style="color:#998;font-style:italic">#RES — 进程使用的、未被换出的物理内存大小，单位kb。RES=CODE+DATA</span>
+<span style="color:#998;font-style:italic">#SHR — 共享内存大小，单位kb</span>
+<span style="color:#998;font-style:italic">#S — 进程状态。D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程</span>
+<span style="color:#998;font-style:italic">#%CPU — 上次更新到现在的CPU时间占用百分比</span>
+<span style="color:#998;font-style:italic">#%MEM — 进程使用的物理内存百分比</span>
+<span style="color:#998;font-style:italic">#TIME+ — 进程使用的CPU时间总计，单位1/100秒</span>
+<span style="color:#998;font-style:italic">#COMMAND — 进程名称（命令名/命令行）</span>
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND               
+<span style="color:#099">22830</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>   <span style="color:#099">10960</span>   <span style="color:#099">3480</span>   <span style="color:#099">3072</span> R   0.3   0.3   0:00.01 top                   
+<span style="color:#099">22831</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>   <span style="color:#099">16500</span>   <span style="color:#099">7596</span>   <span style="color:#099">6572</span> S   0.3   0.8   0:00.01 sshd                  
+    <span style="color:#099">1</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>  <span style="color:#099">170524</span>   <span style="color:#099">6768</span>   <span style="color:#099">5288</span> S   0.0   0.7   2:20.77 systemd               
+    <span style="color:#099">2</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> S   0.0   0.0   0:00.97 kthreadd              
+    <span style="color:#099">3</span> root       <span style="color:#099">0</span> -20       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> I   0.0   0.0   0:00.00 rcu_gp                
+    <span style="color:#099">4</span> root       <span style="color:#099">0</span> -20       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> I   0.0   0.0   0:00.00 rcu_par_gp            
+    <span style="color:#099">6</span> root       <span style="color:#099">0</span> -20       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> I   0.0   0.0   0:00.00 kworker/0:0H-kblockd  
+    <span style="color:#099">8</span> root       <span style="color:#099">0</span> -20       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> I   0.0   0.0   0:00.00 mm_percpu_wq          
+    <span style="color:#099">9</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> S   0.0   0.0   4:22.78 ksoftirqd/0           
+   <span style="color:#099">10</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> R   0.0   0.0  93:31.86 rcu_sched             
+   <span style="color:#099">11</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> I   0.0   0.0   0:00.00 rcu_bh                
+   <span style="color:#099">12</span> root      rt   <span style="color:#099">0</span>       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> S   0.0   0.0   0:09.87 migration/0           
+   <span style="color:#099">14</span> root      <span style="color:#099">20</span>   <span style="color:#099">0</span>       <span style="color:#099">0</span>      <span style="color:#099">0</span>      <span style="color:#099">0</span> S   0.0   0.0   0:00.00 cpuhp/0              
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按数字1,2,3可以查看多cpu情况</li>
+<li>b 可以高亮显示当前进程</li>
+<li>x 可以高亮显示顺序的依据列，默认依据内存使用大小。</li>
+<li>shift + &gt; &lt;可以更改依据的排序列。</li>
+</ul>
+<h3 id="top1"><strong>top交互命令</strong></h3>
+<p>在top 命令执行过程中可以使用的一些交互命令。这些命令都是单字母的，如果在命令行中使用了s 选项， 其中一些命令可能会被屏蔽。</p>
+<p>h 显示帮助画面，给出一些简短的命令总结说明</p>
+<p>k 终止一个进程。</p>
+<p><strong>i 忽略闲置和僵死进程。这是一个开关式命令。</strong></p>
+<p>q 退出程序</p>
+<p>r 重新安排一个进程的优先级别</p>
+<p>S 切换到累计模式</p>
+<p>s 改变两次刷新之间的延迟时间（单位为s），如果有小数，就换算成m s。输入0值则系统将不断刷新，默认值是5 s</p>
+<p>f或者F 从当前显示中添加或者删除项目</p>
+<p>o或者O 改变显示项目的顺序</p>
+<p>l 切换显示平均负载和启动时间信息</p>
+<p><strong>m 切换显示内存信息</strong></p>
+<p>t 切换显示进程和CPU状态信息</p>
+<p>c 切换显示命令名称和完整命令行</p>
+<p>M 根据驻留内存大小进行排序</p>
+<p>P 根据CPU使用百分比大小进行排序</p>
+<p>T 根据时间/累计时间进行排序</p>
+<p>​	W 将当前设置写入~/.toprc文件中</p>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/">用户态和内核态</a></li>
+        
+        <li><a href="/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/">关键字参数</a></li>
+        
+        <li><a href="/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/">偏函数</a></li>
+        
+        <li><a href="/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a></li>
+        
+        <li><a href="/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/">PCB包含的内容</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://haillk.github.io/tags/'></a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haillk" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://haillk.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://haillk.github.io">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E7%BD%91%E7%BB%9C/TCp%E4%B8%AD%E7%9A%84nagle%E7%AE%97%E6%B3%95/" title="TCp中的nagle算法">TCp中的nagle算法</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/" title="Golang的参数传递是传值还是传引用">Golang的参数传递是传值还是传引用</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/" title="Go逃逸分析">Go逃逸分析</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/uptime%E5%91%BD%E4%BB%A4/" title="Uptime命令">Uptime命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/find%E5%91%BD%E4%BB%A4/" title="Find命令">Find命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/top%E6%8C%87%E4%BB%A4/" title="Top指令">Top指令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/" title="用户态和内核态">用户态和内核态</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/" title="关键字参数">关键字参数</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/" title="偏函数">偏函数</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://haillk.github.io/categories/">Categories (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Debian/">Debian (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Git/">Git (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (15)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Linux/">Linux (8)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Python/">Python (16)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">技术语法深入理解 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (11)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://haillk.github.io/tags/">Tags</a>
+    
+    <a href="https://haillk.github.io/tags/2020%E5%B9%B42%E6%9C%882%E5%8F%B7/">2020年2月2号</a>
+    
+    <a href="https://haillk.github.io/tags/DCGAN/">DCGAN</a>
+    
+    <a href="https://haillk.github.io/tags/GAN/">GAN</a>
+    
+    <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
+    
+    <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
+    
+    <a href="https://haillk.github.io/tags/Scrapy/">Scrapy</a>
+    
+    <a href="https://haillk.github.io/tags/TCP/">TCP</a>
+    
+    <a href="https://haillk.github.io/tags/Windows/">Windows</a>
+    
+    <a href="https://haillk.github.io/tags/Yield/">Yield</a>
+    
+    <a href="https://haillk.github.io/tags/anaconda/">anaconda</a>
+    
+    <a href="https://haillk.github.io/tags/apt-get/">apt-get</a>
+    
+    <a href="https://haillk.github.io/tags/debian/">debian</a>
+    
+    <a href="https://haillk.github.io/tags/exe/">exe</a>
+    
+    <a href="https://haillk.github.io/tags/gin-Router/">gin Router</a>
+    
+    <a href="https://haillk.github.io/tags/gin-%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/">gin 参数获取</a>
+    
+    <a href="https://haillk.github.io/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a>
+    
+    <a href="https://haillk.github.io/tags/go/">go</a>
+    
+    <a href="https://haillk.github.io/tags/leetcode/">leetcode&#39;</a>
+    
+    <a href="https://haillk.github.io/tags/nssm/">nssm</a>
+    
+    <a href="https://haillk.github.io/tags/powershell/">powershell</a>
+    
+    <a href="https://haillk.github.io/tags/python/">python</a>
+    
+    <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
+    
+    <a href="https://haillk.github.io/tags/regedit/">regedit</a>
+    
+    <a href="">scrapy</a>
+    
+    <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
+    
+    <a href="https://haillk.github.io/tags/web/">web</a>
+    
+    <a href="https://haillk.github.io/tags/win10/">win10</a>
+    
+    <a href="https://haillk.github.io/tags/windows%E5%91%BD%E4%BB%A4%E8%A1%8C/">windows命令行</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/">右键菜单</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%9B%BE%E6%A0%87/">图标</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/">安装更新pip</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%8A%80%E6%9C%AF%E7%90%86%E8%A7%A3/">技术理解</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">注册自定义服务</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/">特殊方法</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9/">百度云不限速第三方</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/">管理器中的额外文件夹</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%BD%91%E7%BB%9C/">网络</a>
+    
+    <a href="https://haillk.github.io/tags/%E9%97%AD%E5%8C%85/">闭包</a>
+    
+    <a href="https://haillk.github.io/tags/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/">黑纱字体</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://haillk.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+	   
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

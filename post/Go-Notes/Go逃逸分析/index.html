@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Go逃逸分析 | Haillk-Blog</title>
+    <meta property="og:title" content="Go逃逸分析 - Haillk-Blog">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2020-04-04T18:17:41&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2020-04-04T18:17:41&#43;08:00'>
+        
+    <meta name="Keywords" content="haillk">
+    <meta name="description" content="Go逃逸分析">
+        
+    <meta name="author" content="haillk">
+    <meta property="og:url" content="https://haillk.github.io/post/Go-Notes/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://haillk.github.io">
+                        Haillk-Blog
+                    </a>
+                
+                <p class="description">so far so good </p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://haillk.github.io">首页</a>
+                    
+                    <a  href="https://haillk.github.io/tools/" title="工具">工具</a>
+                    
+                    <a  href="https://haillk.github.io/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://haillk.github.io/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">Go逃逸分析</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年4月4日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/GoLang'>GoLang</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p>前进！前进！！不择手段的前进！</p>
+<h3 id="heading">堆栈：</h3>
+<p>栈的分配内存秩序呀两个cpu指令，<code>push 和release</code> 分配和释放。</p>
+<p>堆的分配内存需要先找到一块大小合适的内存块，之后要通过垃圾回收才能释放。</p>
+<h3 id="heading1">逃逸分析：</h3>
+<p><!-- raw HTML omitted -->Go是通过在编译器里做<strong>逃逸分析</strong>，不逃逸的对象放在栈上，可能逃逸的放在堆上。<!-- raw HTML omitted --></p>
+<p>即发现<strong>变量</strong>在退出函数后没有用了就放在栈上（栈上内存分配和回收都比堆上快的多）。</p>
+<p>反之如果函数内的普通变量经过逃逸分析后，发现函数在退出后，<strong>变量</strong>还在其他地方有引用，<strong>就将变量</strong></p>
+<p>分配在堆上。</p>
+<p><strong>为什么要逃逸分析</strong></p>
+<ol>
+<li>减少gc的压力，栈上的变量，随着函数退出后系统直接回收。不需要gc标记回收</li>
+<li>减少内存碎片的压力</li>
+<li>减轻分配堆内存的开销，提高程序的运行速度。</li>
+</ol>
+<h3 id="heading2">如何确定是否逃逸</h3>
+<p><code>go run -gcflags '-m -l' main</code></p>
+<p><code>-m</code>打印逃逸分析的优化策略，实际上可一用4个，</p>
+<p><code>-l</code>会禁用函数内联，</p>
+<p>实例 <strong>取地址发生逃逸。</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">ff</span>() <span style="color:#000;font-weight:bold">*</span><span style="color:#458;font-weight:bold">string</span> {
+	name <span style="color:#000;font-weight:bold">:=</span> <span style="color:#d14">&#34;haillk_iii&#34;</span>
+	<span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">&amp;</span>name
+}
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">ffq</span>() <span style="color:#458;font-weight:bold">string</span> {
+	name <span style="color:#000;font-weight:bold">:=</span> <span style="color:#d14">&#34;haillk_name&#34;</span>
+	<span style="color:#000;font-weight:bold">return</span> name
+}
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	<span style="color:#998;font-style:italic">//tset := &#34;faf&#34;
+</span><span style="color:#998;font-style:italic"></span>	fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#000;font-weight:bold">*</span><span style="color:#900;font-weight:bold">ff</span>())
+	fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#900;font-weight:bold">ffq</span>())
+
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a61717;background-color:#e3d2d2">#</span>output
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>:<span style="color:#099">2</span>: moved to heap: name
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">17</span>:<span style="color:#099">13</span>: main <span style="color:#000;font-weight:bold">...</span> argument does not escape
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">17</span>:<span style="color:#099">14</span>: <span style="color:#000;font-weight:bold">*</span><span style="color:#900;font-weight:bold">ff</span>() escapes to heap
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">18</span>:<span style="color:#099">13</span>: main <span style="color:#000;font-weight:bold">...</span> argument does not escape
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">18</span>:<span style="color:#099">17</span>: <span style="color:#900;font-weight:bold">ffq</span>() escapes to heap
+haillk_iii
+haillk_name
+</code></pre></td></tr></table>
+</div>
+</div><p>函数ff() 的返回值是个指针，可能在函数外使用，所以就逃逸了。</p>
+<p><strong>那问题来了，编译器是通过函数返回值判断是否逃逸的嘛？</strong></p>
+<p>还是不知道</p>
+<h3 id="-">返回泛型 逃逸：</h3>
+<p>栗子1：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">ffq</span>(nameq <span style="color:#000;font-weight:bold">interface</span>{}) {
+	tset <span style="color:#000;font-weight:bold">:=</span> nameq
+	_ = tset
+}
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	<span style="color:#998;font-style:italic">//tset := &#34;faf&#34;
+</span><span style="color:#998;font-style:italic"></span>	namem <span style="color:#000;font-weight:bold">:=</span> <span style="color:#d14">&#34;haillk&#34;</span>
+	<span style="color:#900;font-weight:bold">ffq</span>(namem)
+
+}
+
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a61717;background-color:#e3d2d2">#</span>output
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">7</span>:<span style="color:#099">10</span>: ffq nameq does not escape
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">14</span>:<span style="color:#099">5</span>: main namem does not escape
+</code></pre></td></tr></table>
+</div>
+</div><p>并没有逃逸呀，返回试试看</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">ffq</span>(nameq <span style="color:#000;font-weight:bold">interface</span>{}) <span style="color:#000;font-weight:bold">interface</span>{} {
+	tset <span style="color:#000;font-weight:bold">:=</span> nameq
+	<span style="color:#000;font-weight:bold">return</span> tset
+}
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	<span style="color:#998;font-style:italic">//tset := &#34;faf&#34;
+</span><span style="color:#998;font-style:italic"></span>	namem <span style="color:#000;font-weight:bold">:=</span> <span style="color:#d14">&#34;haillk&#34;</span>
+	<span style="color:#900;font-weight:bold">ffq</span>(namem)
+
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">7</span>:<span style="color:#099">10</span>: leaking param: nameq to result <span style="color:#a61717;background-color:#e3d2d2">~</span>r1 level=<span style="color:#099">0</span>
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">14</span>:<span style="color:#099">5</span>: main namem does not escape
+</code></pre></td></tr></table>
+</div>
+</div><p>这就逃逸了。emmmm 当<strong>然只有返回泛型才会逃逸。</strong></p>
+<h3 id="heading3">结构体中涉及的逃逸</h3>
+<p>例子：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">type</span> TT <span style="color:#000;font-weight:bold">struct</span> {
+	name <span style="color:#458;font-weight:bold">string</span>
+	age  <span style="color:#458;font-weight:bold">int</span>
+}
+
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+
+	<span style="color:#000;font-weight:bold">var</span> t1 = <span style="color:#0086b3">new</span>(TT)
+	t1.age = <span style="color:#099">12</span>
+	t1.name = <span style="color:#d14">&#34;hia&#34;</span>
+
+}
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">14</span>:<span style="color:#099">14</span>: main <span style="color:#0086b3">new</span>(TT) does not escape
+</code></pre></td></tr></table>
+</div>
+</div><p>这说明结构体中没有引用时，不会发生逃逸</p>
+<p>但如果包含了引用，</p>
+<p>例子：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">type</span> TT <span style="color:#000;font-weight:bold">struct</span> {
+	name <span style="color:#458;font-weight:bold">string</span>
+	age  <span style="color:#000;font-weight:bold">*</span><span style="color:#458;font-weight:bold">int</span>
+}
+
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	<span style="color:#998;font-style:italic">//tset := &#34;faf&#34;
+</span><span style="color:#998;font-style:italic"></span>	<span style="color:#000;font-weight:bold">var</span> t1 = <span style="color:#000;font-weight:bold">&amp;</span>TT{}
+	t1.age = <span style="color:#0086b3">new</span>(<span style="color:#458;font-weight:bold">int</span>)
+	t1.name = <span style="color:#d14">&#34;hia&#34;</span>
+
+}
+<span style="color:#a61717;background-color:#e3d2d2">#</span>outpput
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">14</span>:<span style="color:#099">11</span>: main <span style="color:#000;font-weight:bold">&amp;</span>TT literal does not escape
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">15</span>:<span style="color:#099">14</span>: <span style="color:#0086b3">new</span>(<span style="color:#458;font-weight:bold">int</span>) escapes to heap
+</code></pre></td></tr></table>
+</div>
+</div><p>这是因为编译器分析，对象<code>t1</code>可能分配在堆上，为了防止栈回收后，导致成员变量也被回收，就要把<code>age</code>也逃逸到堆上。</p>
+<h3 id="mapchan-slice">map,chan slice中存在引用，逃逸</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+	c <span style="color:#000;font-weight:bold">:=</span> <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">map</span>[<span style="color:#000;font-weight:bold">*</span><span style="color:#458;font-weight:bold">int</span>]<span style="color:#458;font-weight:bold">int</span>)
+	b <span style="color:#000;font-weight:bold">:=</span> <span style="color:#099">12</span>
+	c[<span style="color:#000;font-weight:bold">&amp;</span>b] = <span style="color:#099">2</span>
+	_ = c
+
+}
+<span style="color:#a61717;background-color:#e3d2d2">#</span>output
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>:<span style="color:#099">2</span>: moved to heap: b
+.<span style="color:#a61717;background-color:#e3d2d2">\</span>main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>:<span style="color:#099">11</span>: main <span style="color:#0086b3">make</span>(<span style="color:#000;font-weight:bold">map</span>[<span style="color:#000;font-weight:bold">*</span><span style="color:#458;font-weight:bold">int</span>]<span style="color:#458;font-weight:bold">int</span>) does not escape
+</code></pre></td></tr></table>
+</div>
+</div><p>应用了<code>b`,`b</code>就逃逸了</p>
+        </div>
+
+        
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/post/linux/uptime%E5%91%BD%E4%BB%A4/">Uptime命令</a></li>
+        
+        <li><a href="/post/linux/find%E5%91%BD%E4%BB%A4/">Find命令</a></li>
+        
+        <li><a href="/post/linux/top%E6%8C%87%E4%BB%A4/">Top指令</a></li>
+        
+        <li><a href="/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/">用户态和内核态</a></li>
+        
+        <li><a href="/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/">关键字参数</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://haillk.github.io/tags/'></a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "haillk" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://haillk.github.io/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://haillk.github.io">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E7%BD%91%E7%BB%9C/TCp%E4%B8%AD%E7%9A%84nagle%E7%AE%97%E6%B3%95/" title="TCp中的nagle算法">TCp中的nagle算法</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/" title="Golang的参数传递是传值还是传引用">Golang的参数传递是传值还是传引用</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/" title="Go逃逸分析">Go逃逸分析</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/uptime%E5%91%BD%E4%BB%A4/" title="Uptime命令">Uptime命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/find%E5%91%BD%E4%BB%A4/" title="Find命令">Find命令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/top%E6%8C%87%E4%BB%A4/" title="Top指令">Top指令</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/" title="用户态和内核态">用户态和内核态</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/" title="关键字参数">关键字参数</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/" title="偏函数">偏函数</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/" title="位运算">位运算</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://haillk.github.io/categories/">Categories (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Debian/">Debian (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Git/">Git (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (15)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Linux/">Linux (8)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Python/">Python (16)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%8A%80%E6%9C%AF%E8%AF%AD%E6%B3%95%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3/">技术语法深入理解 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (11)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (1)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://haillk.github.io/tags/">Tags</a>
+    
+    <a href="https://haillk.github.io/tags/2020%E5%B9%B42%E6%9C%882%E5%8F%B7/">2020年2月2号</a>
+    
+    <a href="https://haillk.github.io/tags/DCGAN/">DCGAN</a>
+    
+    <a href="https://haillk.github.io/tags/GAN/">GAN</a>
+    
+    <a href="https://haillk.github.io/tags/Microsoft-doc/">Microsoft-doc</a>
+    
+    <a href="https://haillk.github.io/tags/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
+    
+    <a href="https://haillk.github.io/tags/Scrapy/">Scrapy</a>
+    
+    <a href="https://haillk.github.io/tags/TCP/">TCP</a>
+    
+    <a href="https://haillk.github.io/tags/Windows/">Windows</a>
+    
+    <a href="https://haillk.github.io/tags/Yield/">Yield</a>
+    
+    <a href="https://haillk.github.io/tags/anaconda/">anaconda</a>
+    
+    <a href="https://haillk.github.io/tags/apt-get/">apt-get</a>
+    
+    <a href="https://haillk.github.io/tags/debian/">debian</a>
+    
+    <a href="https://haillk.github.io/tags/exe/">exe</a>
+    
+    <a href="https://haillk.github.io/tags/gin-Router/">gin Router</a>
+    
+    <a href="https://haillk.github.io/tags/gin-%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96/">gin 参数获取</a>
+    
+    <a href="https://haillk.github.io/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git常用命令</a>
+    
+    <a href="https://haillk.github.io/tags/go/">go</a>
+    
+    <a href="https://haillk.github.io/tags/leetcode/">leetcode&#39;</a>
+    
+    <a href="https://haillk.github.io/tags/nssm/">nssm</a>
+    
+    <a href="https://haillk.github.io/tags/powershell/">powershell</a>
+    
+    <a href="https://haillk.github.io/tags/python/">python</a>
+    
+    <a href="https://haillk.github.io/tags/python%E5%AE%89%E8%A3%85/">python安装</a>
+    
+    <a href="https://haillk.github.io/tags/regedit/">regedit</a>
+    
+    <a href="">scrapy</a>
+    
+    <a href="https://haillk.github.io/tags/selecnium/">selecnium</a>
+    
+    <a href="https://haillk.github.io/tags/web/">web</a>
+    
+    <a href="https://haillk.github.io/tags/win10/">win10</a>
+    
+    <a href="https://haillk.github.io/tags/windows%E5%91%BD%E4%BB%A4%E8%A1%8C/">windows命令行</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95/">右键菜单</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%9B%BE%E6%A0%87/">图标</a>
+    
+    <a href="https://haillk.github.io/tags/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/">安装更新pip</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%8A%80%E6%9C%AF%E7%90%86%E8%A7%A3/">技术理解</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">数据结构和算法</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">注册自定义服务</a>
+    
+    <a href="https://haillk.github.io/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/">注册表</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/">特殊方法</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9/">百度云不限速第三方</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%AD%E7%9A%84%E9%A2%9D%E5%A4%96%E6%96%87%E4%BB%B6%E5%A4%B9/">管理器中的额外文件夹</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">线性代数</a>
+    
+    <a href="https://haillk.github.io/tags/%E7%BD%91%E7%BB%9C/">网络</a>
+    
+    <a href="https://haillk.github.io/tags/%E9%97%AD%E5%8C%85/">闭包</a>
+    
+    <a href="https://haillk.github.io/tags/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/">黑纱字体</a>
+    
+</div>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://haillk.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+	   
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-154564055-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

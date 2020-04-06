@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 02 Apr 2020 22:10:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2020 14:21:02 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TCP</title>
+      <link>https://haillk.github.io/tags/TCP/</link>
+      <pubDate>Mon, 06 Apr 2020 14:21:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/tags/TCP/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>DCGAN</title>
@@ -30,38 +39,11 @@
     </item>
     
     <item>
-      <title>python语法</title>
-      <link>https://haillk.github.io/tags/python%E8%AF%AD%E6%B3%95/</link>
-      <pubDate>Tue, 10 Mar 2020 00:09:42 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/python%E8%AF%AD%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux 命令</title>
-      <link>https://haillk.github.io/tags/linux-%E5%91%BD%E4%BB%A4/</link>
-      <pubDate>Sun, 01 Mar 2020 13:36:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/linux-%E5%91%BD%E4%BB%A4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>GAN</title>
       <link>https://haillk.github.io/tags/GAN/</link>
       <pubDate>Sat, 29 Feb 2020 17:10:06 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/GAN/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>flag</title>
-      <link>https://haillk.github.io/tags/flag/</link>
-      <pubDate>Wed, 19 Feb 2020 22:35:53 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/flag/</guid>
       <description></description>
     </item>
     
@@ -93,20 +75,11 @@
     </item>
     
     <item>
-      <title>leetcode</title>
+      <title>leetcode&#39;</title>
       <link>https://haillk.github.io/tags/leetcode/</link>
       <pubDate>Sat, 15 Feb 2020 19:11:16 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/leetcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>string</title>
-      <link>https://haillk.github.io/tags/string/</link>
-      <pubDate>Sat, 15 Feb 2020 19:11:16 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/string/</guid>
       <description></description>
     </item>
     
@@ -116,42 +89,6 @@
       <pubDate>Thu, 13 Feb 2020 12:38:33 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>map</title>
-      <link>https://haillk.github.io/tags/map/</link>
-      <pubDate>Tue, 11 Feb 2020 20:18:46 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/map/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sync</title>
-      <link>https://haillk.github.io/tags/sync/</link>
-      <pubDate>Tue, 11 Feb 2020 20:18:46 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/sync/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>变量复制</title>
-      <link>https://haillk.github.io/tags/%E5%8F%98%E9%87%8F%E5%A4%8D%E5%88%B6/</link>
-      <pubDate>Sun, 02 Feb 2020 21:36:42 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E5%8F%98%E9%87%8F%E5%A4%8D%E5%88%B6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>锁</title>
-      <link>https://haillk.github.io/tags/%E9%94%81/</link>
-      <pubDate>Sun, 02 Feb 2020 21:36:42 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E9%94%81/</guid>
       <description></description>
     </item>
     
@@ -192,29 +129,11 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link></link>
-      <pubDate>Fri, 27 Dec 2019 02:15:34 +0800</pubDate>
-      
-      <guid></guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Yield</title>
       <link>https://haillk.github.io/tags/Yield/</link>
       <pubDate>Fri, 27 Dec 2019 02:15:34 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/Yield/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sync.Mutex</title>
-      <link>https://haillk.github.io/tags/sync.Mutex/</link>
-      <pubDate>Fri, 27 Dec 2019 00:28:48 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/sync.Mutex/</guid>
       <description></description>
     </item>
     
@@ -233,24 +152,6 @@
       <pubDate>Thu, 26 Dec 2019 01:22:25 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/%E5%9B%BE%E6%A0%87/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link></link>
-      <pubDate>Tue, 24 Dec 2019 17:26:06 +0800</pubDate>
-      
-      <guid></guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Select作用</title>
-      <link>https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/</link>
-      <pubDate>Tue, 24 Dec 2019 17:26:06 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/Select%E4%BD%9C%E7%94%A8/</guid>
       <description></description>
     </item>
     
@@ -287,15 +188,6 @@
       <pubDate>Sat, 21 Dec 2019 19:17:53 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>8进制表示</title>
-      <link>https://haillk.github.io/tags/8%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</link>
-      <pubDate>Sat, 21 Dec 2019 17:37:28 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/8%E8%BF%9B%E5%88%B6%E8%A1%A8%E7%A4%BA/</guid>
       <description></description>
     </item>
     
@@ -399,6 +291,15 @@
     </item>
     
     <item>
+      <title>python</title>
+      <link>https://haillk.github.io/tags/python/</link>
+      <pubDate>Sat, 14 Dec 2019 22:02:22 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>regedit</title>
       <link>https://haillk.github.io/tags/regedit/</link>
       <pubDate>Fri, 13 Dec 2019 23:57:23 +0800</pubDate>
@@ -431,15 +332,6 @@
       <pubDate>Tue, 10 Dec 2019 22:53:59 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/%E9%BB%91%E7%BA%B1%E5%AD%97%E4%BD%93/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://haillk.github.io/tags/Python/</link>
-      <pubDate>Tue, 10 Dec 2019 18:29:22 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/Python/</guid>
       <description></description>
     </item>
     
@@ -489,128 +381,11 @@
     </item>
     
     <item>
-      <title>recover</title>
-      <link>https://haillk.github.io/tags/recover/</link>
-      <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/recover/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>特殊方法</title>
       <link>https://haillk.github.io/tags/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/</link>
       <pubDate>Fri, 06 Dec 2019 01:43:47 +0800</pubDate>
       
       <guid>https://haillk.github.io/tags/%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>channel</title>
-      <link>https://haillk.github.io/tags/channel/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/channel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>slice</title>
-      <link>https://haillk.github.io/tags/slice/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/slice/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>常量</title>
-      <link>https://haillk.github.io/tags/%E5%B8%B8%E9%87%8F/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E5%B8%B8%E9%87%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>断言</title>
-      <link>https://haillk.github.io/tags/%E6%96%AD%E8%A8%80/</link>
-      <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E6%96%AD%E8%A8%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>for range</title>
-      <link>https://haillk.github.io/tags/for-range/</link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/for-range/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Slice</title>
-      <link></link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid></guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>数组</title>
-      <link>https://haillk.github.io/tags/%E6%95%B0%E7%BB%84/</link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E6%95%B0%E7%BB%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>方法调用</title>
-      <link>https://haillk.github.io/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</link>
-      <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>interface{}</title>
-      <link>https://haillk.github.io/tags/interface/</link>
-      <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/interface/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>多重复制</title>
-      <link>https://haillk.github.io/tags/%E5%A4%9A%E9%87%8D%E5%A4%8D%E5%88%B6/</link>
-      <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E5%A4%9A%E9%87%8D%E5%A4%8D%E5%88%B6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>短变量声明</title>
-      <link>https://haillk.github.io/tags/%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/</link>
-      <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>类型</title>
-      <link>https://haillk.github.io/tags/%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
-      
-      <guid>https://haillk.github.io/tags/%E7%B1%BB%E5%9E%8B/</guid>
       <description></description>
     </item>
     
