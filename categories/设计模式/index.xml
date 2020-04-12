@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计模式 on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 10 Apr 2020 15:58:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>生产者消费者</title>
+      <link>https://haillk.github.io/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85/</link>
+      <pubDate>Fri, 10 Apr 2020 15:58:39 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85/</guid>
+      <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
