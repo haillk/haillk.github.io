@@ -6,10 +6,28 @@
     <description>Recent content on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 13 Apr 2020 15:16:08 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2020 18:51:01 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gdb多线程调试</title>
+      <link>https://haillk.github.io/post/linux/gdb%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Thu, 07 May 2020 18:51:01 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/gdb%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%B0%83%E8%AF%95/</guid>
+      <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>设置别名</title>
+      <link>https://haillk.github.io/post/linux/%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</link>
+      <pubDate>Thu, 07 May 2020 15:51:02 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/%E8%AE%BE%E7%BD%AE%E5%88%AB%E5%90%8D/</guid>
+      <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>双线程循环唤醒</title>
