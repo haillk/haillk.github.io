@@ -75,6 +75,83 @@
     <article class="post">
         <header>
             <h1 class="post-title">
+                <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/" title="apt-get update和upgrade和dist-upgrade的区别">apt-get update和upgrade和dist-upgrade的区别</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月7日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Debian'>Debian</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1 2 3 4 5 6 7 8 update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be……
+        </div>
+        <p class="readmore"><a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/" title="Debian安装python38">Debian安装python38</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月7日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Python'>Python</a></span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Debian'>Debian</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编……
+        </div>
+        <p class="readmore"><a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/" title="流畅的python学习笔记 2">流畅的python学习笔记 2</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2019年12月7日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0'>流畅的python学习笔记</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            1、列表推导 列表循环：dummy = [ord(symbol) for symbol in symbols] 传统for循环： 1 2 for symbol in symbols: ... codes.append(ord(symbol)) 带条件的列表推导：beyond_ascii = [ord(s) for s in symbols if ord(s) &gt; 127] 笛卡尔积：tshirt……
+        </div>
+        <p class="readmore"><a href="https://haillk.github.io/post/Python/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2/">阅读全文</a></p>
+    </article>
+    
+    
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
                 <a href="https://haillk.github.io/post/Go-Notes/Go-notes-4/" title="Go Notes 4">Go Notes 4</a>
             </h1>
         </header>
@@ -309,6 +386,18 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/Go-Notes/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/" title="内存对齐">内存对齐</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/Go-Notes/unsafePointer/" title="UnsafePointer">UnsafePointer</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/linux/gdb%E8%B0%83%E8%AF%95coredump%E6%96%87%E4%BB%B6/" title="Gdb调试coredump文件">Gdb调试coredump文件</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/linux/gdb%E5%A4%9A%E7%BA%BF%E7%A8%8B%E8%B0%83%E8%AF%95/" title="Gdb多线程调试">Gdb多线程调试</a>
     </li>
     
@@ -336,18 +425,6 @@
         <a href="https://haillk.github.io/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85/" title="生产者消费者">生产者消费者</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/Go-Notes/sort%E6%8E%92%E5%BA%8F/" title="Sort排序">Sort排序</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/gdb%E5%AD%A6%E4%B9%A0/" title="Gdb学习">Gdb学习</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/git%E4%B8%8D%E8%83%BD%E9%94%81%E5%AE%9Aref/" title="Git不能锁定ref">Git不能锁定ref</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -365,17 +442,17 @@
     
     <li><a href="https://haillk.github.io/categories/Git/">Git (1)</a></li>
     
-    <li><a href="">GoLang (17)</a></li>
+    <li><a href="">GoLang (19)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Golang/">Golang (2)</a></li>
     
-    <li><a href="">Linux (8)</a></li>
+    <li><a href="https://haillk.github.io/categories/Linux/">Linux (8)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Python/">Python (16)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/linux/">linux (2)</a></li>
+    <li><a href="">linux (3)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
