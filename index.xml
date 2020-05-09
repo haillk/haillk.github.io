@@ -6,10 +6,37 @@
     <description>Recent content on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 08 May 2020 21:18:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 17:38:51 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Panic原理</title>
+      <link>https://haillk.github.io/post/Go-Notes/panic%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Sat, 09 May 2020 17:38:51 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Go-Notes/panic%E5%8E%9F%E7%90%86/</guid>
+      <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Golang生成汇编代码</title>
+      <link>https://haillk.github.io/post/Go-Notes/golang%E7%94%9F%E6%88%90%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Sat, 09 May 2020 16:15:35 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Go-Notes/golang%E7%94%9F%E6%88%90%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/</guid>
+      <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Defer原理</title>
+      <link>https://haillk.github.io/post/Go-Notes/defer%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Sat, 09 May 2020 15:38:03 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/Go-Notes/defer%E5%8E%9F%E7%90%86/</guid>
+      <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>内存对齐</title>
