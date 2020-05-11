@@ -4,27 +4,42 @@
   
   <url>
     <loc>https://haillk.github.io/categories/</loc>
-    <lastmod>2020-05-09T23:53:04+08:00</lastmod>
+    <lastmod>2020-05-11T21:52:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/</loc>
+    <lastmod>2020-05-11T21:52:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/categories/GoLang/</loc>
+    <lastmod>2020-05-11T21:52:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/</loc>
-    <lastmod>2020-05-09T23:53:04+08:00</lastmod>
+    <lastmod>2020-05-11T21:52:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/post/</loc>
-    <lastmod>2020-05-09T23:53:04+08:00</lastmod>
+    <lastmod>2020-05-11T21:52:44+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/tags/</loc>
-    <lastmod>2020-05-09T23:53:04+08:00</lastmod>
+    <lastmod>2020-05-11T21:52:44+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/</loc>
+    <lastmod>2020-05-11T16:43:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://haillk.github.io/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2020-05-09T23:53:04+08:00</lastmod>
+    <lastmod>2020-05-11T16:43:25+08:00</lastmod>
   </url>
   
   <url>
@@ -33,17 +48,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/categories/GoLang/</loc>
+    <loc>https://haillk.github.io/post/GoLang/panic%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2020-05-09T17:38:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/panic%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2020-05-09T17:38:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haillk.github.io/post/Go-Notes/golang%E7%94%9F%E6%88%90%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/</loc>
+    <loc>https://haillk.github.io/post/GoLang/golang%E7%94%9F%E6%88%90%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2020-05-09T16:15:35+08:00</lastmod>
   </url>
   
@@ -53,17 +63,17 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/defer%E5%8E%9F%E7%90%86/</loc>
+    <loc>https://haillk.github.io/post/GoLang/defer%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2020-05-09T15:38:03+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</loc>
+    <loc>https://haillk.github.io/post/GoLang/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</loc>
     <lastmod>2020-05-08T21:18:55+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/unsafePointer/</loc>
+    <loc>https://haillk.github.io/post/GoLang/unsafePointer/</loc>
     <lastmod>2020-05-08T19:58:52+08:00</lastmod>
   </url>
   
@@ -88,17 +98,17 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/</loc>
+    <loc>https://haillk.github.io/post/GoLang/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/</loc>
     <lastmod>2020-04-13T15:16:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Slice%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Slice%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2020-04-12T15:22:35+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://haillk.github.io/post/GoLang/%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-04-12T14:56:57+08:00</lastmod>
   </url>
   
@@ -123,7 +133,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/sort%E6%8E%92%E5%BA%8F/</loc>
+    <loc>https://haillk.github.io/post/GoLang/sort%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2020-04-09T15:19:35+08:00</lastmod>
   </url>
   
@@ -158,12 +168,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</loc>
+    <loc>https://haillk.github.io/post/GoLang/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</loc>
     <lastmod>2020-04-05T15:11:56+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</loc>
     <lastmod>2020-04-04T18:17:41+08:00</lastmod>
   </url>
   
@@ -218,12 +228,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go_Channel%E8%AF%A6%E8%A7%A3/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go_Channel%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2020-04-01T14:58:14+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/</loc>
     <lastmod>2020-03-31T15:39:51+08:00</lastmod>
   </url>
   
@@ -313,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</loc>
+    <loc>https://haillk.github.io/post/GoLang/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2020-03-11T13:23:50+08:00</lastmod>
   </url>
   
@@ -348,7 +358,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</loc>
+    <loc>https://haillk.github.io/post/GoLang/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</loc>
     <lastmod>2020-02-19T22:35:53+08:00</lastmod>
   </url>
   
@@ -393,12 +403,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/sync/map/</loc>
+    <loc>https://haillk.github.io/post/GoLang/sync/map/</loc>
     <lastmod>2020-02-11T20:18:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</loc>
+    <loc>https://haillk.github.io/post/GoLang/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</loc>
     <lastmod>2020-02-02T21:36:42+08:00</lastmod>
   </url>
   
@@ -468,7 +478,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</loc>
+    <loc>https://haillk.github.io/post/GoLang/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</loc>
     <lastmod>2019-12-27T00:28:48+08:00</lastmod>
   </url>
   
@@ -493,12 +503,12 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</loc>
+    <loc>https://haillk.github.io/post/GoLang/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</loc>
     <lastmod>2019-12-25T16:40:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/select%E4%BD%9C%E7%94%A8/</loc>
+    <loc>https://haillk.github.io/post/GoLang/select%E4%BD%9C%E7%94%A8/</loc>
     <lastmod>2019-12-24T17:26:06+08:00</lastmod>
   </url>
   
@@ -533,7 +543,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-5/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go-notes-5/</loc>
     <lastmod>2019-12-21T17:37:28+08:00</lastmod>
   </url>
   
@@ -738,7 +748,7 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-4/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go-notes-4/</loc>
     <lastmod>2019-12-06T23:25:31+08:00</lastmod>
   </url>
   
@@ -753,17 +763,17 @@
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-3/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go-notes-3/</loc>
     <lastmod>2019-11-30T03:32:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-2/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go-notes-2/</loc>
     <lastmod>2019-11-29T01:39:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://haillk.github.io/post/Go-Notes/Go-notes-1/</loc>
+    <loc>https://haillk.github.io/post/GoLang/Go-notes-1/</loc>
     <lastmod>2019-11-29T00:16:19+08:00</lastmod>
   </url>
   

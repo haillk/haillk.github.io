@@ -6,224 +6,233 @@
     <description>Recent content in GoLang on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 09 May 2020 17:38:51 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 21:52:44 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/GoLang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Go_Context上下文</title>
+      <link>https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/</link>
+      <pubDate>Mon, 11 May 2020 21:52:44 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/</guid>
+      <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Panic原理</title>
-      <link>https://haillk.github.io/post/Go-Notes/panic%E5%8E%9F%E7%90%86/</link>
+      <link>https://haillk.github.io/post/GoLang/panic%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sat, 09 May 2020 17:38:51 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/panic%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://haillk.github.io/post/GoLang/panic%E5%8E%9F%E7%90%86/</guid>
       <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Defer原理</title>
-      <link>https://haillk.github.io/post/Go-Notes/defer%E5%8E%9F%E7%90%86/</link>
+      <link>https://haillk.github.io/post/GoLang/defer%E5%8E%9F%E7%90%86/</link>
       <pubDate>Sat, 09 May 2020 15:38:03 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/defer%E5%8E%9F%E7%90%86/</guid>
+      <guid>https://haillk.github.io/post/GoLang/defer%E5%8E%9F%E7%90%86/</guid>
       <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>内存对齐</title>
-      <link>https://haillk.github.io/post/Go-Notes/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</link>
+      <link>https://haillk.github.io/post/GoLang/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</link>
       <pubDate>Fri, 08 May 2020 21:18:55 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</guid>
+      <guid>https://haillk.github.io/post/GoLang/%E5%86%85%E5%AD%98%E5%AF%B9%E9%BD%90/</guid>
       <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>UnsafePointer</title>
-      <link>https://haillk.github.io/post/Go-Notes/unsafePointer/</link>
+      <link>https://haillk.github.io/post/GoLang/unsafePointer/</link>
       <pubDate>Fri, 08 May 2020 19:58:52 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/unsafePointer/</guid>
+      <guid>https://haillk.github.io/post/GoLang/unsafePointer/</guid>
       <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>双线程循环唤醒</title>
-      <link>https://haillk.github.io/post/Go-Notes/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/</link>
+      <link>https://haillk.github.io/post/GoLang/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/</link>
       <pubDate>Mon, 13 Apr 2020 15:16:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/</guid>
+      <guid>https://haillk.github.io/post/GoLang/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Slice结构</title>
-      <link>https://haillk.github.io/post/Go-Notes/Slice%E7%BB%93%E6%9E%84/</link>
+      <link>https://haillk.github.io/post/GoLang/Slice%E7%BB%93%E6%9E%84/</link>
       <pubDate>Sun, 12 Apr 2020 15:22:35 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Slice%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Slice%E7%BB%93%E6%9E%84/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>基准测试</title>
-      <link>https://haillk.github.io/post/Go-Notes/%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95/</link>
+      <link>https://haillk.github.io/post/GoLang/%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Sun, 12 Apr 2020 14:56:57 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95/</guid>
+      <guid>https://haillk.github.io/post/GoLang/%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Sort排序</title>
-      <link>https://haillk.github.io/post/Go-Notes/sort%E6%8E%92%E5%BA%8F/</link>
+      <link>https://haillk.github.io/post/GoLang/sort%E6%8E%92%E5%BA%8F/</link>
       <pubDate>Thu, 09 Apr 2020 15:19:35 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/sort%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://haillk.github.io/post/GoLang/sort%E6%8E%92%E5%BA%8F/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Golang的参数传递是传值还是传引用</title>
-      <link>https://haillk.github.io/post/Go-Notes/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</link>
+      <link>https://haillk.github.io/post/GoLang/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</link>
       <pubDate>Sun, 05 Apr 2020 15:11:56 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</guid>
+      <guid>https://haillk.github.io/post/GoLang/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go逃逸分析</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</link>
+      <link>https://haillk.github.io/post/GoLang/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</link>
       <pubDate>Sat, 04 Apr 2020 18:17:41 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go_Channel详解</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go_Channel%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://haillk.github.io/post/GoLang/Go_Channel%E8%AF%A6%E8%A7%A3/</link>
       <pubDate>Wed, 01 Apr 2020 14:58:14 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go_Channel%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go_Channel%E8%AF%A6%E8%A7%A3/</guid>
       <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go运行时调度</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/</link>
+      <link>https://haillk.github.io/post/GoLang/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/</link>
       <pubDate>Tue, 31 Mar 2020 15:39:51 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/</guid>
       <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go调用shell命令</title>
-      <link>https://haillk.github.io/post/Go-Notes/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</link>
+      <link>https://haillk.github.io/post/GoLang/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Wed, 11 Mar 2020 13:23:50 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://haillk.github.io/post/GoLang/go%E8%B0%83%E7%94%A8shell%E5%91%BD%E4%BB%A4/</guid>
       <description>执行shell命令，并获取返回值 1 2 3 4 5 6 7 8 func execshell(){ cmd := exec.Command(&amp;#34;v2ray&amp;#34;,&amp;#34;url&amp;#34;,&amp;#34;**&amp;#34;) //参数要分开 //将返回值输出到缓存 var out bytes.Buffer cmd.Stdout = &amp;amp;out //执行命令 err:=cmd.Run() } 参考go调用shell命令</description>
     </item>
     
     <item>
       <title>命令行flag包</title>
-      <link>https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</link>
+      <link>https://haillk.github.io/post/GoLang/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</link>
       <pubDate>Wed, 19 Feb 2020 22:35:53 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</guid>
+      <guid>https://haillk.github.io/post/GoLang/%E5%91%BD%E4%BB%A4%E8%A1%8Cflag%E5%8C%85/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sync.Map的相关方法</title>
-      <link>https://haillk.github.io/post/Go-Notes/sync/map/</link>
+      <link>https://haillk.github.io/post/GoLang/sync/map/</link>
       <pubDate>Tue, 11 Feb 2020 20:18:46 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/sync/map/</guid>
+      <guid>https://haillk.github.io/post/GoLang/sync/map/</guid>
       <description></description>
     </item>
     
     <item>
       <title>复制变量恢复至锁状态</title>
-      <link>https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</link>
+      <link>https://haillk.github.io/post/GoLang/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</link>
       <pubDate>Sun, 02 Feb 2020 21:36:42 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</guid>
+      <guid>https://haillk.github.io/post/GoLang/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SyncMutex互斥锁</title>
-      <link>https://haillk.github.io/post/Go-Notes/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</link>
+      <link>https://haillk.github.io/post/GoLang/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</link>
       <pubDate>Fri, 27 Dec 2019 00:28:48 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</guid>
+      <guid>https://haillk.github.io/post/GoLang/syncMutex%E4%BA%92%E6%96%A5%E9%94%81/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Map不是引用而是指针</title>
-      <link>https://haillk.github.io/post/Go-Notes/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</link>
+      <link>https://haillk.github.io/post/GoLang/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</link>
       <pubDate>Wed, 25 Dec 2019 16:40:51 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</guid>
+      <guid>https://haillk.github.io/post/GoLang/map%E4%B8%8D%E6%98%AF%E5%BC%95%E7%94%A8%E8%80%8C%E6%98%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Select作用</title>
-      <link>https://haillk.github.io/post/Go-Notes/select%E4%BD%9C%E7%94%A8/</link>
+      <link>https://haillk.github.io/post/GoLang/select%E4%BD%9C%E7%94%A8/</link>
       <pubDate>Tue, 24 Dec 2019 17:26:06 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/select%E4%BD%9C%E7%94%A8/</guid>
+      <guid>https://haillk.github.io/post/GoLang/select%E4%BD%9C%E7%94%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go Notes 5</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go-notes-5/</link>
+      <link>https://haillk.github.io/post/GoLang/Go-notes-5/</link>
       <pubDate>Sat, 21 Dec 2019 17:37:28 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go-notes-5/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go-notes-5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go Notes 4</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go-notes-4/</link>
+      <link>https://haillk.github.io/post/GoLang/Go-notes-4/</link>
       <pubDate>Fri, 06 Dec 2019 23:25:31 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go-notes-4/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go-notes-4/</guid>
       <description>recover的扑捉，defer函数的接受者和参数 1、recover必须隔一个函数帧栈才能捕获到 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 //错误 func</description>
     </item>
     
     <item>
       <title>Go Notes 3</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go-notes-3/</link>
+      <link>https://haillk.github.io/post/GoLang/Go-notes-3/</link>
       <pubDate>Sat, 30 Nov 2019 03:32:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go-notes-3/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go-notes-3/</guid>
       <description>&lt;p&gt;nil channel和已经关闭的channel,常量寻址，断言，cap,不能使用短变量声明设置结构体字段值，slice&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go Notes 2</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go-notes-2/</link>
+      <link>https://haillk.github.io/post/GoLang/Go-notes-2/</link>
       <pubDate>Fri, 29 Nov 2019 01:39:30 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go-notes-2/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go-notes-2/</guid>
       <description>&lt;p&gt;map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Go Notes 1</title>
-      <link>https://haillk.github.io/post/Go-Notes/Go-notes-1/</link>
+      <link>https://haillk.github.io/post/GoLang/Go-notes-1/</link>
       <pubDate>Fri, 29 Nov 2019 00:16:19 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Go-Notes/Go-notes-1/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Go-notes-1/</guid>
       <description>&lt;p&gt;多重赋值，短变量声明，interface{}和interface{}指针，Slice 扩容，基于类型创建的方法&lt;/p&gt;</description>
     </item>
     
