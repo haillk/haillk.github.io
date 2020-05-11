@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on Haillk-Blog</title>
+    <link>https://haillk.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on Haillk-Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 09 May 2020 23:53:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://haillk.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>红黑树</title>
+      <link>https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/</link>
+      <pubDate>Sat, 09 May 2020 23:53:04 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/</guid>
+      <description>&lt;p&gt;佛门广大，岂不容一癫僧！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

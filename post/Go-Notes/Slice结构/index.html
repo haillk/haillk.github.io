@@ -118,7 +118,7 @@
 </div><p>整体的结构是这样的</p>
 <p><img src="https://pic.downk.cc/item/5e92c26ec2a9a83be513a679.jpg" alt=""></p>
 <p>这个还比较好理解：如图所示。。</p>
-<h3 id="heading">使用数组指针:</h3>
+<h3 id="slice">Slice指针:</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -126,10 +126,29 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">s<span style="color:#000;font-weight:bold">:=</span><span style="color:#0086b3">make</span>([]<span style="color:#458;font-weight:bold">byte</span>, <span style="color:#099">200</span>)
-ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.
+ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:#900;font-weight:bold">Pointer</span>(<span style="color:#000;font-weight:bold">&amp;</span>s)
 </code></pre></td></tr></table>
 </div>
-</div>
+</div><p>&amp;s取到的是Slice结构体的指针。使用uintptr操作的话，下一个取到的是cap和len</p>
+<p>&amp;s[0]取道德是s[0]的指针。使用uintptr取到的是s[1]</p>
+<h3 id="cap">cap函数</h3>
+<p>对切片使用cap函数，取到的是从切片头开始到原始数组的末尾</p>
+<h3 id="heading">扩容</h3>
+<p>如果slice的容量小于1024,则直接翻倍</p>
+<p>如果超过1024个元素，增长因子编程1.25</p>
+<p>如果新的容量在旧的容量两个以上，则会直接扩容到新容量大小</p>
+<h3 id="heading1">修改</h3>
+<p>对slice的修改会直接作用在原始数组上。</p>
+<h3 id="heading2">函数传参和赋值</h3>
+<p>函数传参和赋值都是浅拷贝</p>
+<p>公用一个底层数组，但是len和cap是各自独立的。</p>
+<p>问题，如果多个slice对同时对底层数组进行操作，只有最后一个会生效。</p>
+<h3 id="heading3">空切片</h3>
+<p><code>s:=make([]int ,0,0)</code></p>
+<p>空切片中指针指向了一个zerobase的特殊指针。</p>
+<h3 id="nil">nil切片</h3>
+<p><code>var s []int</code></p>
+<p>指针指向了nil</p>
         </div>
 
         
@@ -223,6 +242,10 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/Go-Notes/panic%E5%8E%9F%E7%90%86/" title="Panic原理">Panic原理</a>
     </li>
     
@@ -258,10 +281,6 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.
         <a href="https://haillk.github.io/post/Go-Notes/%E5%8F%8C%E7%BA%BF%E7%A8%8B%E5%BE%AA%E7%8E%AF%E5%94%A4%E9%86%92/" title="双线程循环唤醒">双线程循环唤醒</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/Go-Notes/Slice%E7%BB%93%E6%9E%84/" title="Slice结构">Slice结构</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -271,7 +290,7 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
     
-    <li><a href="https://haillk.github.io/categories/">Categories (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Debian/">Debian (2)</a></li>
     
@@ -279,7 +298,7 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.
     
     <li><a href="https://haillk.github.io/categories/Git/">Git (2)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (23)</a></li>
+    <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (24)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Linux/">Linux (12)</a></li>
     
@@ -296,6 +315,8 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.
     <li><a href="https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习 (12)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%B5%81%E7%95%85%E7%9A%84python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">流畅的python学习笔记 (2)</a></li>
+    
+    <li><a href="https://haillk.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (1)</a></li>
     
