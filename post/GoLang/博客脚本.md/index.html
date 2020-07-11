@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>sync.Map的相关方法 | Haillk-Blog</title>
-    <meta property="og:title" content="sync.Map的相关方法 - Haillk-Blog">
+    <title>博客脚本 | Haillk-Blog</title>
+    <meta property="og:title" content="博客脚本 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-02-11T20:18:46&#43;08:00'>
+    <meta property="article:published_time" content='2020-07-11T17:48:46&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-02-11T20:18:46&#43;08:00'>
+    <meta property="article:modified_time" content='2020-07-11T17:48:46&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="sync.Map的相关方法">
+    <meta name="description" content="博客脚本">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/GoLang/sync/map/">
+    <meta property="og:url" content="https://haillk.github.io/post/GoLang/%E5%8D%9A%E5%AE%A2%E8%84%9A%E6%9C%AC.md/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -73,13 +73,106 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents"></nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
     <article class="post">
         <header>
-            <h1 class="post-title">sync.Map的相关方法</h1>
+            <h1 class="post-title">博客脚本</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年2月11日
+            2020年7月11日
         </date>
         
         <div class="post-meta">
@@ -97,7 +190,10 @@
         
         
         <div class="post-content">
-            <h3 id="heading">核心源码：</h3>
+            <p>与你常在</p>
+<ul>
+<li>用来自动添加post,并打开文件的脚本</li>
+</ul>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -131,57 +227,60 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">import</span>(
-	<span style="color:#d14">&#34;sync/atomic&#34;</span>
-    <span style="color:#d14">&#34;unsafe&#34;</span>
-)
-<span style="color:#998;font-style:italic">//核心数据结构
-</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">//删除不是直接删除，而是直接打标记，是有在晋升dirty的时候才清理删除的数据。
-</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">type</span> Map <span style="color:#000;font-weight:bold">struct</span>{
-    mu mutex
-    <span style="color:#998;font-style:italic">//read包含map中可以被安全并发访问的内容，read总是可以被安全load，但是只能和mu一起store
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">//read中的数据可以不用mu锁就并发更新，但是要修改之前expunged的数据就需要将数据复制dirty区，
-</span><span style="color:#998;font-style:italic"></span>    read atomic.Value
-    <span style="color:#998;font-style:italic">//dirty  包含map中需要持有mu锁的数据。
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">//它包含所有read中expunged和unexpunged的数据。新增加的entries会加入到dirty.
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">//删除的entries 没有储存在dirty map 中。
-</span><span style="color:#998;font-style:italic"></span>    dirty <span style="color:#000;font-weight:bold">map</span>[<span style="color:#000;font-weight:bold">interface</span>{}]<span style="color:#000;font-weight:bold">*</span> entry<span style="color:#998;font-style:italic">//包含最新写入的数据，当，misses计数达到一定值，将其值赋给read
-</span><span style="color:#998;font-style:italic"></span>    misser <span style="color:#458;font-weight:bold">int</span><span style="color:#998;font-style:italic">// 计数作用，每次从read中读取失败，则计数加1
-</span><span style="color:#998;font-style:italic"></span>}
-<span style="color:#998;font-style:italic">//readonly
-</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">type</span> readonly <span style="color:#000;font-weight:bold">struct</span>{
-    m <span style="color:#000;font-weight:bold">map</span>[<span style="color:#000;font-weight:bold">interface</span>{}]<span style="color:#000;font-weight:bold">*</span> entry 
-    amended <span style="color:#458;font-weight:bold">bool</span> <span style="color:#998;font-style:italic">//map.dirty的数据和这里的m中的数据不一样的时候，为true
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">//如果read找不到数据的时候会在dirty中找。
-</span><span style="color:#998;font-style:italic"></span>}
-<span style="color:#998;font-style:italic">//entry 这里map.dirty和readonly.m中的数据是冗余的，但是他们储存的指针，指向了同一个数据，所以并没有占用太多的空间。
-</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">type</span> entry <span style="color:#000;font-weight:bold">struct</span>{
-    p unsafe.Pointer
-    <span style="color:#998;font-style:italic">//p 有三种值，nil ：entry已经被删除了，并且dirty为nil
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">// expunged ：entry已经被删除了，并且dirty不为nil，而且这个entry不存在于dirty中
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#998;font-style:italic">//正常值
-</span><span style="color:#998;font-style:italic"></span>}
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">package</span> main
 
+<span style="color:#000;font-weight:bold">import</span> (
+	<span style="color:#d14">&#34;fmt&#34;</span>
+	<span style="color:#d14">&#34;io/ioutil&#34;</span>
+	<span style="color:#d14">&#34;log&#34;</span>
+	_ <span style="color:#d14">&#34;os&#34;</span>
+	<span style="color:#d14">&#34;os/exec&#34;</span>
+)
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>(){
+<span style="color:#998;font-style:italic">//使用ioutil读取目录
+</span><span style="color:#998;font-style:italic"></span>	fileInfoList ,err<span style="color:#000;font-weight:bold">:=</span>ioutil.<span style="color:#900;font-weight:bold">ReadDir</span>(<span style="color:#d14">&#34;D:\\go-work\\src\\hugo_hk_blog\\content\\post&#34;</span>)
+	<span style="color:#000;font-weight:bold">if</span> err<span style="color:#000;font-weight:bold">!=</span><span style="color:#000;font-weight:bold">nil</span>{
+		log.<span style="color:#900;font-weight:bold">Fatal</span>(err)
+	}
+	<span style="color:#000;font-weight:bold">for</span> i<span style="color:#000;font-weight:bold">:=</span><span style="color:#000;font-weight:bold">range</span> fileInfoList{
+		fmt.<span style="color:#900;font-weight:bold">Printf</span>(<span style="color:#d14">&#34;%-2d--%s\n&#34;</span>,i,fileInfoList[i].<span style="color:#900;font-weight:bold">Name</span>())
+	}
+<span style="color:#998;font-style:italic">//读取输入
+</span><span style="color:#998;font-style:italic"></span>	num<span style="color:#000;font-weight:bold">:=</span><span style="color:#099">0</span>
+	name<span style="color:#000;font-weight:bold">:=</span><span style="color:#d14">&#34;未命名&#34;</span>
+	fmt.<span style="color:#900;font-weight:bold">Scanln</span>(<span style="color:#000;font-weight:bold">&amp;</span>num,<span style="color:#000;font-weight:bold">&amp;</span>name)
+	nameFile<span style="color:#000;font-weight:bold">:=</span><span style="color:#d14">&#34;post/&#34;</span><span style="color:#000;font-weight:bold">+</span>fileInfoList[num].<span style="color:#900;font-weight:bold">Name</span>()<span style="color:#000;font-weight:bold">+</span><span style="color:#d14">&#34;/&#34;</span><span style="color:#000;font-weight:bold">+</span>name<span style="color:#000;font-weight:bold">+</span><span style="color:#d14">&#34;.md&#34;</span>
+<span style="color:#998;font-style:italic">//执行shell命令
+</span><span style="color:#998;font-style:italic"></span>	cmd<span style="color:#000;font-weight:bold">:=</span>exec.<span style="color:#900;font-weight:bold">Command</span>(<span style="color:#d14">&#34;hugo&#34;</span>,<span style="color:#d14">&#34;new&#34;</span>,nameFile)
+	err1<span style="color:#000;font-weight:bold">:=</span>cmd.<span style="color:#900;font-weight:bold">Run</span>()
+	<span style="color:#000;font-weight:bold">if</span> err1<span style="color:#000;font-weight:bold">!=</span><span style="color:#000;font-weight:bold">nil</span>{
+		fmt.<span style="color:#900;font-weight:bold">Println</span>(err1)
+	}
+
+
+	nameFile2<span style="color:#000;font-weight:bold">:=</span><span style="color:#d14">&#34;content/&#34;</span><span style="color:#000;font-weight:bold">+</span>nameFile
+	cmd2<span style="color:#000;font-weight:bold">:=</span>exec.<span style="color:#900;font-weight:bold">Command</span>(<span style="color:#d14">&#34;cmd&#34;</span>,<span style="color:#d14">&#34;/c&#34;</span>,<span style="color:#d14">&#34;start&#34;</span>,nameFile2)
+	fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;test&#34;</span>)
+	err2<span style="color:#000;font-weight:bold">:=</span>cmd2.<span style="color:#900;font-weight:bold">Run</span>()
+	<span style="color:#000;font-weight:bold">if</span> err2<span style="color:#000;font-weight:bold">!=</span><span style="color:#000;font-weight:bold">nil</span>{
+		fmt.<span style="color:#900;font-weight:bold">Println</span>(err2)
+	}
+
+}
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="heading1">使用方法：</h3>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#998;font-style:italic">//Load 查找
-</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">//store 
-</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">//delete
-</span><span style="color:#998;font-style:italic"></span><span style="color:#998;font-style:italic">//range
-</span></code></pre></td></tr></table>
 </div>
-</div><p>//append不是安全方法</p>
         </div>
 
         
@@ -193,15 +292,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/GoLang/%E5%A4%8D%E5%88%B6%E5%8F%98%E9%87%8F%E6%81%A2%E5%A4%8D%E8%87%B3%E9%94%81%E7%8A%B6%E6%80%81/">复制变量恢复至锁状态</a></li>
+        <li><a href="/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/">Go_Context上下文</a></li>
         
-        <li><a href="/post/%E9%9A%8F%E7%AC%94/%E6%96%B0%E5%B9%B4%E5%BC%80%E5%A7%8B%E6%B5%AA/">新年开始浪</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/">一致性hash</a></li>
         
-        <li><a href="/post/%E9%9A%8F%E7%AC%94/2020%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">2020新年快乐</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
         
-        <li><a href="/post/Windows/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5M%E9%80%9F20191231/">百度云不限速第三方实测5M速20191231</a></li>
+        <li><a href="/post/GoLang/panic%E5%8E%9F%E7%90%86/">Panic原理</a></li>
         
-        <li><a href="/post/Windows/taskkill%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/">Taskkill关闭进程</a></li>
+        <li><a href="/post/GoLang/golang%E7%94%9F%E6%88%90%E6%B1%87%E7%BC%96%E4%BB%A3%E7%A0%81/">Golang生成汇编代码</a></li>
         
     </ul>
 </div>
@@ -209,7 +308,11 @@
 
         <div class="post-meta meta-tags">
             
-            没有标签
+            <ul class="clearfix">
+                
+                <li><a href='https://haillk.github.io/tags/'></a></li>
+                
+            </ul>
             
         </div>
     </article>

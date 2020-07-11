@@ -6,10 +6,19 @@
     <description>Recent content in GoLang on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 11 May 2020 21:52:44 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jul 2020 17:48:46 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/GoLang/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>博客脚本</title>
+      <link>https://haillk.github.io/post/GoLang/%E5%8D%9A%E5%AE%A2%E8%84%9A%E6%9C%AC.md/</link>
+      <pubDate>Sat, 11 Jul 2020 17:48:46 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/GoLang/%E5%8D%9A%E5%AE%A2%E8%84%9A%E6%9C%AC.md/</guid>
+      <description>&lt;p&gt;与你常在&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Go_Context上下文</title>
