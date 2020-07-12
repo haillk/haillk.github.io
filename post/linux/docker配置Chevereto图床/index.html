@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Find命令 | Haillk-Blog</title>
-    <meta property="og:title" content="Find命令 - Haillk-Blog">
+    <title>Docker配置Chevereto图床 | Haillk-Blog</title>
+    <meta property="og:title" content="Docker配置Chevereto图床 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-04-03T15:26:48&#43;08:00'>
+    <meta property="article:published_time" content='2020-07-12T13:12:16&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-04-03T15:26:48&#43;08:00'>
+    <meta property="article:modified_time" content='2020-07-12T13:12:16&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="Find命令">
+    <meta name="description" content="Docker配置Chevereto图床">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/linux/find%E5%91%BD%E4%BB%A4/">
+    <meta property="og:url" content="https://haillk.github.io/post/linux/docker%E9%85%8D%E7%BD%AEChevereto%E5%9B%BE%E5%BA%8A/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -141,7 +141,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#find">find命令</a></li>
+        <li><a href="#heading">环境配置</a></li>
+        <li><a href="#dockercomposeyamldocker">新建docker-compose.yaml文件用来构建docker</a></li>
+        <li><a href="#heading1">启动服务</a></li>
       </ul>
     </li>
   </ul>
@@ -177,10 +179,10 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">Find命令</h1>
+            <h1 class="post-title">Docker配置Chevereto图床</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年4月3日
+            2020年7月12日
         </date>
         
         <div class="post-meta">
@@ -198,11 +200,17 @@
         
         
         <div class="post-content">
-            <p>*每天都有新体验</p>
-<h3 id="find">find命令</h3>
-<p>基本语法：</p>
-<p><code>find   path   -option   [   -print ]   [ -exec   -ok   command ]   {} \;</code></p>
-<p>但是option有几十个。</p>
+            <p>与你常在</p>
+<h3 id="heading">环境配置</h3>
+<p>debian服务器安装docker-ce和dockers-Compose</p>
+<h5 id="dockerdockercomposehttpsdocsdockercomengineinstalldebian">安装docker和docker-Compose<a href="https://docs.docker.com/engine/install/debian/">官方文档</a></h5>
+<blockquote>
+<p>包括设置docker储存库</p>
+<p>添加docker官方gpg密钥</p>
+<p>设置存储库</p>
+</blockquote>
+<h3 id="dockercomposeyamldocker">新建docker-compose.yaml文件用来构建docker</h3>
+<p>参考<a href="https://hub.docker.com/r/nmtan/chevereto/">dockerhub</a></p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -223,85 +231,74 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">-amin n       :在过去几分钟读过
--anewer file  :比文件file更晚被读过的文件
--atime n      : 在过去几天被读过
-
--cmin n        :在过去几分钟修改
--cnewer file   :比文件file更晚被修改的文件
--ctime n       : 在过去几天被修改过
-
--perm <span style="color:#099">755</span>      :按照权限条件来查找
--maxdepth <span style="color:#099">3</span>    :设置最大路径深度
--mindepth <span style="color:#099">2</span>    :设置最小路径深度
-
--size :按文件大小来搜索  
-	find . <span style="color:#0086b3">type</span> f -size +10k  大于10k的文件
-	
--ok
--exec  与执行操作相结合
-	find . -name <span style="color:#d14">&#39;*.test&#39;</span> -ok rm <span style="color:#000;font-weight:bold">{</span><span style="color:#000;font-weight:bold">}</span> <span style="color:#d14">\;</span>
-</code></pre></td></tr></table>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version:<span style="color:#bbb"> </span><span style="color:#d14">&#39;3&#39;</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>services:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>db:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>image:<span style="color:#bbb"> </span>mariadb<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>volumes:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>database:/var/lib/mysql:rw<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>restart:<span style="color:#bbb"> </span>always<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>networks:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>private<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>environment:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>MYSQL_ROOT_PASSWORD:<span style="color:#bbb"> </span>chevereto_root<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>MYSQL_DATABASE:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>MYSQL_USER:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>MYSQL_PASSWORD:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span>chevereto:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>depends_on:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>db<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>image:<span style="color:#bbb"> </span>nmtan/chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>restart:<span style="color:#bbb"> </span>always<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>networks:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>private<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>environment:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>CHEVERETO_DB_HOST:<span style="color:#bbb"> </span>db<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>CHEVERETO_DB_USERNAME:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>CHEVERETO_DB_PASSWORD:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>CHEVERETO_DB_NAME:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>CHEVERETO_DB_PREFIX:<span style="color:#bbb"> </span>chv_<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>volumes:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>chevereto_images:/var/www/html/images:rw<span style="color:#bbb">
+</span><span style="color:#bbb">    </span>ports:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span><span style="color:#099">8080</span>:<span style="color:#099">80</span><span style="color:#bbb">
+</span><span style="color:#bbb">
+</span><span style="color:#bbb"></span>networks:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>private:<span style="color:#bbb">
+</span><span style="color:#bbb"></span>volumes:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>database:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span>chevereto_images:<span style="color:#bbb">
+</span></code></pre></td></tr></table>
 </div>
-</div><blockquote>
-<pre><code>-amin&lt;分钟&gt;：查找在指定时间曾被存取过的文件或目录，单位以分钟计算；
--anewer&lt;参考文件或目录&gt;：查找其存取时间较指定文件或目录的存取时间更接近现在的文件或目录；
--atime&lt;24小时数&gt;：查找在指定时间曾被存取过的文件或目录，单位以24小时计算；
--cmin&lt;分钟&gt;：查找在指定时间之时被更改过的文件或目录；
--cnewer&lt;参考文件或目录&gt;查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；
--ctime&lt;24小时数&gt;：查找在指定时间之时被更改的文件或目录，单位以24小时计算；
--daystart：从本日开始计算时间；
--depth：从指定目录下最深层的子目录开始查找；
--empty：寻找文件大小为0 Byte的文件，或目录下没有任何子目录或文件的空目录；
--exec&lt;执行指令&gt;：假设find指令的回传值为True，就执行该指令；
--false：将find指令的回传值皆设为False；
--fls&lt;列表文件&gt;：此参数的效果和指定“-ls”参数类似，但会把结果保存为指定的列表文件；
--follow：排除符号连接；
--fprint&lt;列表文件&gt;：此参数的效果和指定“-print”参数类似，但会把结果保存成指定的列表文件；
--fprint0&lt;列表文件&gt;：此参数的效果和指定“-print0”参数类似，但会把结果保存成指定的列表文件；
--fprintf&lt;列表文件&gt;&lt;输出格式&gt;：此参数的效果和指定“-printf”参数类似，但会把结果保存成指定的列表文件；
--fstype&lt;文件系统类型&gt;：只寻找该文件系统类型下的文件或目录；
--gid&lt;群组识别码&gt;：查找符合指定之群组识别码的文件或目录；
--group&lt;群组名称&gt;：查找符合指定之群组名称的文件或目录；
--help或——help：在线帮助；
--ilname&lt;范本样式&gt;：此参数的效果和指定“-lname”参数类似，但忽略字符大小写的差别；
--iname&lt;范本样式&gt;：此参数的效果和指定“-name”参数类似，但忽略字符大小写的差别；
--inum&lt;inode编号&gt;：查找符合指定的inode编号的文件或目录；
--ipath&lt;范本样式&gt;：此参数的效果和指定“-path”参数类似，但忽略字符大小写的差别；
--iregex&lt;范本样式&gt;：此参数的效果和指定“-regexe”参数类似，但忽略字符大小写的差别；
--links&lt;连接数目&gt;：查找符合指定的硬连接数目的文件或目录；
--iname&lt;范本样式&gt;：指定字符串作为寻找符号连接的范本样式；
--ls：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出；
--maxdepth&lt;目录层级&gt;：设置最大目录层级；
--mindepth&lt;目录层级&gt;：设置最小目录层级；
--mmin&lt;分钟&gt;：查找在指定时间曾被更改过的文件或目录，单位以分钟计算；
--mount：此参数的效果和指定“-xdev”相同；
--mtime&lt;24小时数&gt;：查找在指定时间曾被更改过的文件或目录，单位以24小时计算；
--name&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；
--newer&lt;参考文件或目录&gt;：查找其更改时间较指定文件或目录的更改时间更接近现在的文件或目录；
--nogroup：找出不属于本地主机群组识别码的文件或目录；
--noleaf：不去考虑目录至少需拥有两个硬连接存在；
--nouser：找出不属于本地主机用户识别码的文件或目录；
--ok&lt;执行指令&gt;：此参数的效果和指定“-exec”类似，但在执行指令之前会先询问用户，若回答“y”或“Y”，则放弃执行命令；
--path&lt;范本样式&gt;：指定字符串作为寻找目录的范本样式；
--perm&lt;权限数值&gt;：查找符合指定的权限数值的文件或目录；
--print：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为每列一个名称，每个名称前皆有“./”字符串；
--print0：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式为全部的名称皆在同一行；
--printf&lt;输出格式&gt;：假设find指令的回传值为Ture，就将文件或目录名称列出到标准输出。格式可以自行指定；
--prune：不寻找字符串作为寻找文件或目录的范本样式;
--regex&lt;范本样式&gt;：指定字符串作为寻找文件或目录的范本样式；
--size&lt;文件大小&gt;：查找符合指定的文件大小的文件；
--true：将find指令的回传值皆设为True；
--type&lt;文件类型&gt;：只寻找符合指定的文件类型的文件；
--uid&lt;用户识别码&gt;：查找符合指定的用户识别码的文件或目录；
--used&lt;日数&gt;：查找文件或目录被更改之后在指定时间曾被存取过的文件或目录，单位以日计算；
--user&lt;拥有者名称&gt;：查找符和指定的拥有者名称的文件或目录；
--version或——version：显示版本信息；
--xdev：将范围局限在先行的文件系统中；
--xtype&lt;文件类型&gt;：此参数的效果和指定“-type”参数类似，差别在于它针对符号连接检查
-</code></pre></blockquote>
+</div><p>ps:端口设置（主机端口：docker端口）</p>
+<p>volumes:图片存储位置</p>
+<h3 id="heading1">启动服务</h3>
+<p><code>docker-compose up -d</code></p>
         </div>
 
         
@@ -313,15 +310,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/linux/top%E6%8C%87%E4%BB%A4/">Top指令</a></li>
+        <li><a href="/post/GoLang/%E5%8D%9A%E5%AE%A2%E8%84%9A%E6%9C%AC.md/">博客脚本</a></li>
         
-        <li><a href="/post/linux/%E7%94%A8%E6%88%B7%E6%80%81%E5%92%8C%E5%86%85%E6%A0%B8%E6%80%81/">用户态和内核态</a></li>
+        <li><a href="/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/">Go_Context上下文</a></li>
         
-        <li><a href="/post/Python/%E5%85%B3%E9%94%AE%E5%AD%97%E5%8F%82%E6%95%B0/">关键字参数</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/">一致性hash</a></li>
         
-        <li><a href="/post/Python/%E5%81%8F%E5%87%BD%E6%95%B0/">偏函数</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
         
-        <li><a href="/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/">位运算</a></li>
+        <li><a href="/post/GoLang/panic%E5%8E%9F%E7%90%86/">Panic原理</a></li>
         
     </ul>
 </div>
