@@ -6,10 +6,19 @@
     <description>Recent content in Linux on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 12 Jul 2020 13:12:16 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2020 22:12:20 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/Linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ext2文件系统</title>
+      <link>https://haillk.github.io/post/linux/ext2%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Tue, 14 Jul 2020 22:12:20 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/ext2%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/</guid>
+      <description>&lt;p&gt;与你常在&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Docker配置Chevereto图床</title>

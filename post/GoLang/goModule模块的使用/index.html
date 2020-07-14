@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>卷积conv2d | Haillk-Blog</title>
-    <meta property="og:title" content="卷积conv2d - Haillk-Blog">
+    <title>GoModule模块的使用 | Haillk-Blog</title>
+    <meta property="og:title" content="GoModule模块的使用 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-03-20T23:18:48&#43;08:00'>
+    <meta property="article:published_time" content='2020-07-12T19:52:40&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-03-20T23:18:48&#43;08:00'>
+    <meta property="article:modified_time" content='2020-07-12T19:52:40&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="卷积conv2d">
+    <meta name="description" content="GoModule模块的使用">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%B7%E7%A7%AFconv2d/">
+    <meta property="og:url" content="https://haillk.github.io/post/GoLang/goModule%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -141,8 +141,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#conv2d">Conv2d</a></li>
-        <li><a href="#conv2dtranspose">Conv2DTranspose</a></li>
+        <li><a href="#heading">创建模块</a></li>
+        <li><a href="#heading1">使用模块</a></li>
+        <li><a href="#heading2">更新版本</a></li>
       </ul>
     </li>
   </ul>
@@ -178,16 +179,16 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">卷积conv2d</h1>
+            <h1 class="post-title">GoModule模块的使用</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年3月20日
+            2020年7月12日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://haillk.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0'>机器学习</a></span>
+            <span class="meta-category"><a href='https://haillk.github.io/categories/GoLang'>GoLang</a></span>
             
         </div>
         
@@ -199,81 +200,109 @@
         
         
         <div class="post-content">
-            <h3 id="conv2d">Conv2d</h3>
-<p><a href="https://blog.csdn.net/lujiandong1/article/details/53728053">conv2d参考,看这个足够了</a></p>
-<p><a href="https://stackoverflow.com/questions/37674306/what-is-the-difference-between-same-and-valid-padding-in-tf-nn-max-pool-of-t">参考原文</a></p>
-<p>函数定义：</p>
+            <p>与你常在</p>
+<p><a href="https://learnku.com/go/t/38809">参考</a></p>
+<h3 id="heading">创建模块</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">keras<span style="color:#000;font-weight:bold">.</span>layers<span style="color:#000;font-weight:bold">.</span>Conv2D(filters, kernel_size, strides<span style="color:#000;font-weight:bold">=</span>(<span style="color:#099">1</span>, <span style="color:#099">1</span>), padding<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">valid</span><span style="color:#d14">&#39;</span>, data_format<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, dilation_rate<span style="color:#000;font-weight:bold">=</span>(<span style="color:#099">1</span>, <span style="color:#099">1</span>), activation<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, use_bias<span style="color:#000;font-weight:bold">=</span><span style="color:#999">True</span>, kernel_initializer<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">glorot_uniform</span><span style="color:#d14">&#39;</span>, bias_initializer<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">zeros</span><span style="color:#d14">&#39;</span>, kernel_regularizer<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, bias_regularizer<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, activity_regularizer<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, kernel_constraint<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, bias_constraint<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>)
-
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#998;font-style:italic">#首先在src路径下创建一个模块的文件夹，编写模块内容</span>
+<span style="color:#998;font-style:italic">#之后使用gomod初始化</span>
+<span style="color:#008080">$go</span> mod init github.com/haillk/testmod
+go<span style="color:#a61717;background-color:#e3d2d2">:</span> creating new go.mod<span style="color:#a61717;background-color:#e3d2d2">:</span> module github.com/haillk/testmod
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>该层创建一个卷积核，对层输入惊醒卷积以生成张量。如果user_bias为true，则回创建一个偏置向量添加到输出中。并应用activation.</li>
-</ul>
-<p>参数：</p>
-<blockquote>
-<ul>
-<li><strong>filters</strong>: 整数，输出空间的维度 （即卷积中滤波器的输出数量）。</li>
-<li><strong>kernel_size</strong>: 一个整数，或者 2 个整数表示的元组或列表， 指明 2D 卷积窗口的宽度和高度。 可以是一个整数，为所有空间维度指定相同的值。</li>
-<li><strong>strides</strong>: 一个整数，或者 2 个整数表示的元组或列表， 指明卷积沿宽度和高度方向的步长。 可以是一个整数，为所有空间维度指定相同的值。 指定任何 stride 值 != 1 与指定 <code>dilation_rate</code> 值 != 1 两者不兼容。</li>
-<li><strong>padding</strong>: <code>&quot;valid&quot;</code> 或 <code>&quot;same&quot;</code> (大小写敏感)。</li>
-<li><strong>data_format</strong>: 字符串， <code>channels_last</code> (默认) 或 <code>channels_first</code> 之一，表示输入中维度的顺序。 <code>channels_last</code> 对应输入尺寸为 <code>(batch, height, width, channels)</code>， <code>channels_first</code> 对应输入尺寸为 <code>(batch, channels, height, width)</code>。 它默认为从 Keras 配置文件 <code>~/.keras/keras.json</code> 中 找到的 <code>image_data_format</code> 值。 如果你从未设置它，将使用 <code>channels_last</code>。</li>
-<li><strong>dilation_rate</strong>: 一个整数或 2 个整数的元组或列表， 指定膨胀卷积的膨胀率。 可以是一个整数，为所有空间维度指定相同的值。 当前，指定任何 <code>dilation_rate</code> 值 != 1 与 指定 stride 值 != 1 两者不兼容。</li>
-<li><strong>activation</strong>: 要使用的激活函数 (详见 <a href="https://keras.io/zh/activations/">activations</a>)。 如果你不指定，则不使用激活函数 (即线性激活： <code>a(x) = x</code>)。</li>
-<li><strong>use_bias</strong>: 布尔值，该层是否使用偏置向量。</li>
-<li><strong>kernel_initializer</strong>: <code>kernel</code> 权值矩阵的初始化器 (详见 <a href="https://keras.io/zh/initializers/">initializers</a>)。</li>
-<li><strong>bias_initializer</strong>: 偏置向量的初始化器 (详见 <a href="https://keras.io/zh/initializers/">initializers</a>)。</li>
-<li><strong>kernel_regularizer</strong>: 运用到 <code>kernel</code> 权值矩阵的正则化函数 (详见 <a href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
-<li><strong>bias_regularizer</strong>: 运用到偏置向量的正则化函数 (详见 <a href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
-<li><strong>activity_regularizer</strong>: 运用到层输出（它的激活值）的正则化函数 (详见 <a href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
-<li><strong>kernel_constraint</strong>: 运用到 <code>kernel</code> 权值矩阵的约束函数 (详见 <a href="https://keras.io/zh/constraints/">constraints</a>)。</li>
-<li><strong>bias_constraint</strong>: 运用到偏置向量的约束函数 (详见 <a href="https://keras.io/zh/constraints/">constraints</a>)</li>
-</ul>
-</blockquote>
-<h3 id="conv2dtranspose">Conv2DTranspose</h3>
-<p>函数定义</p>
+</div><p>这会在该包目录西安创建一个名为go.mod的文件，内容如下</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">module github.com<span style="color:#000;font-weight:bold">/</span>haillk<span style="color:#000;font-weight:bold">/</span>testmod
+</code></pre></td></tr></table>
+</div>
+</div><p>之后将该包上传到github即可。这就使我们的包变成了一个模块。</p>
+<h5 id="tag">上传和tag操作</h5>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git init
+git add *
+git commit -am <span style="color:#d14">&#34;first commit&#34;</span>
+git push -u origin master
+
+git tag v1.0.0
+git push --tags
+
+git checkout -b v1
+git push -u origin v1
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="heading1">使用模块</h3>
+<p>在文件中引用刚刚上传的包</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">keras<span style="color:#000;font-weight:bold">.</span>layers<span style="color:#000;font-weight:bold">.</span>Conv2DTranspose(filters, kernel_size, strides<span style="color:#000;font-weight:bold">=</span>(<span style="color:#099">1</span>, <span style="color:#099">1</span>), padding<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">valid</span><span style="color:#d14">&#39;</span>, output_padding<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, data_format<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, dilation_rate<span style="color:#000;font-weight:bold">=</span>(<span style="color:#099">1</span>, <span style="color:#099">1</span>), activation<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, use_bias<span style="color:#000;font-weight:bold">=</span><span style="color:#999">True</span>, kernel_initializer<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">glorot_uniform</span><span style="color:#d14">&#39;</span>, bias_initializer<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">zeros</span><span style="color:#d14">&#39;</span>, kernel_regularizer<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, bias_regularizer<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, activity_regularizer<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, kernel_constraint<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>, bias_constraint<span style="color:#000;font-weight:bold">=</span><span style="color:#999">None</span>)
-
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">...</span>
+<span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;github.com/haillk/testmod&#34;</span>
+<span style="color:#000;font-weight:bold">...</span>
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>转置卷积层</li>
-<li>将具有卷积输出尺寸的东西转换成具有卷积输入尺寸的东西。</li>
-</ul>
-<p>参数</p>
-<blockquote>
-<ul>
-<li><strong>filters</strong>: 整数，输出空间的维度 （即卷积中滤波器的输出数量）。</li>
-<li><strong>kernel_size</strong>: 一个整数，或者 2 个整数表示的元组或列表， 指明 2D 卷积窗口的高度和宽度。 可以是一个整数，为所有空间维度指定相同的值。</li>
-<li><strong>strides</strong>: 一个整数，或者 2 个整数表示的元组或列表， 指明卷积沿高度和宽度方向的步长。 可以是一个整数，为所有空间维度指定相同的值。 指定任何 stride 值 != 1 与指定 <code>dilation_rate</code> 值 != 1 两者不兼容。</li>
-<li><strong>padding</strong>: <code>&quot;valid&quot;</code> 或 <code>&quot;same&quot;</code> (大小写敏感)。</li>
-<li><strong>output_padding</strong>: 一个整数，或者 2 个整数表示的元组或列表， 指定沿输出张量的高度和宽度的填充量。 可以是单个整数，以指定所有空间维度的相同值。 沿给定维度的输出填充量必须低于沿同一维度的步长。 如果设置为 <code>None</code> (默认), 输出尺寸将自动推理出来。</li>
-<li><strong>data_format</strong>: 字符串， <code>channels_last</code> (默认) 或 <code>channels_first</code> 之一，表示输入中维度的顺序。 <code>channels_last</code> 对应输入尺寸为 <code>(batch, height, width, channels)</code>， <code>channels_first</code> 对应输入尺寸为 <code>(batch, channels, height, width)</code>。 它默认为从 Keras 配置文件 <code>~/.keras/keras.json</code> 中 找到的 <code>image_data_format</code> 值。 如果你从未设置它，将使用 &ldquo;channels_last&rdquo;。</li>
-<li><strong>dilation_rate</strong>: 一个整数或 2 个整数的元组或列表， 指定膨胀卷积的膨胀率。 可以是一个整数，为所有空间维度指定相同的值。 当前，指定任何 <code>dilation_rate</code> 值 != 1 与 指定 stride 值 != 1 两者不兼容。</li>
-<li><strong>activation</strong>: 要使用的激活函数 (详见 <a href="https://keras.io/zh/activations/">activations</a>)。 如果你不指定，则不使用激活函数 (即线性激活： <code>a(x) = x</code>)。</li>
-<li><strong>use_bias</strong>: 布尔值，该层是否使用偏置向量。</li>
-<li><strong>kernel_initializer</strong>: <code>kernel</code> 权值矩阵的初始化器 (详见 <a href="https://keras.io/zh/initializers/">initializers</a>)。</li>
-<li><strong>bias_initializer</strong>: 偏置向量的初始化器 (详见 <a href="https://keras.io/zh/initializers/">initializers</a>)。</li>
-<li><strong>kernel_regularizer</strong>: 运用到 <code>kernel</code> 权值矩阵的正则化函数 (详见 <a href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
-<li><strong>bias_regularizer</strong>: 运用到偏置向量的正则化函数 (详见 <a href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
-<li><strong>activity_regularizer</strong>: 运用到层输出（它的激活值）的正则化函数 (详见 <a href="https://keras.io/zh/regularizers/">regularizer</a>)。</li>
-<li><strong>kernel_constraint</strong>: 运用到 <code>kernel</code> 权值矩阵的约束函数 (详见 <a href="https://keras.io/zh/constraints/">constraints</a>)。</li>
-<li><strong>bias_constraint</strong>: 运用到偏置向量的约束函数 (详见 <a href="https://keras.io/zh/constraints/">constraints</a>)。</li>
-</ul>
-</blockquote>
-
+</div><p>使用时也要先初始化</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go mod init test2
+</code></pre></td></tr></table>
+</div>
+</div><p>该步会创建go.mod文件</p>
+<p>之后使用build命令构建</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go build
+go: finding github.com/haillk/testmod v1.0.0
+go: downloading github.com/haillk/testmod v1.0.0
+</code></pre></td></tr></table>
+</div>
+</div><p>包会被下载到pkg/mod/github.com/haillk文件夹中去。</p>
+<p>同时项目中出现新的文件go.sum</p>
+<h3 id="heading2">更新版本</h3>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">go get github.com/haillk/testmod@v1.0.1
+</code></pre></td></tr></table>
+</div>
+</div>
         </div>
 
         
@@ -285,15 +314,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/Python/init_call/">Init_call</a></li>
+        <li><a href="/post/linux/docker%E9%85%8D%E7%BD%AEChevereto%E5%9B%BE%E5%BA%8A/">Docker配置Chevereto图床</a></li>
         
-        <li><a href="/post/linux/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Linux常用命令</a></li>
+        <li><a href="/post/GoLang/%E5%8D%9A%E5%AE%A2%E8%84%9A%E6%9C%AC.md/">博客脚本</a></li>
         
-        <li><a href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tfrecord/">Tfrecord</a></li>
+        <li><a href="/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/">Go_Context上下文</a></li>
         
-        <li><a href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/tf2_%E7%94%A8tfdata%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE/">Tf2_用tfdata加载数据</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/">一致性hash</a></li>
         
-        <li><a href="/post/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F/">后台运行程序</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/">红黑树</a></li>
         
     </ul>
 </div>

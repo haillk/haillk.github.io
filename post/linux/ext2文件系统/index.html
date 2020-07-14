@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>新年开始浪 | Haillk-Blog</title>
-    <meta property="og:title" content="新年开始浪 - Haillk-Blog">
+    <title>Ext2文件系统 | Haillk-Blog</title>
+    <meta property="og:title" content="Ext2文件系统 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-02-02T15:28:12&#43;08:00'>
+    <meta property="article:published_time" content='2020-07-14T22:12:20&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-02-02T15:28:12&#43;08:00'>
+    <meta property="article:modified_time" content='2020-07-14T22:12:20&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="新年开始浪">
+    <meta name="description" content="Ext2文件系统">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E6%96%B0%E5%B9%B4%E5%BC%80%E5%A7%8B%E6%B5%AA/">
+    <meta property="og:url" content="https://haillk.github.io/post/linux/ext2%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -73,19 +73,120 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#inodeblock">inode和block</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
     <article class="post">
         <header>
-            <h1 class="post-title">新年开始浪</h1>
+            <h1 class="post-title">Ext2文件系统</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年2月2日
+            2020年7月14日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94'>随笔</a></span>
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Linux'>Linux</a></span>
             
         </div>
         
@@ -97,7 +198,21 @@
         
         
         <div class="post-content">
-            <h1 id="heading">新年开始，开始浪</h1>
+            <p>与你常在</p>
+<p>有点枯燥，不确定今天晚上能不能看完。。</p>
+<p>常见的磁盘接口IDE接口(dev/hd[a-d])，SATA接口（dev/sd[a-p]）</p>
+<p>每个扇区512b,</p>
+<p>第一个扇区记录了两个重要信息：</p>
+<ol>
+<li>主引导分区MBR（安装引导加载程序的地方，446bytes）</li>
+<li>分区表（记录整块硬盘分区的状态,例子：400个柱面，分区规则p1:1-100柱面，p2:101-200柱面。。。默认4个分区），分为主分区表和扩展分区表，拓展分区表又可以划分为逻辑分区。主分区和逻辑分区可以被格式化，拓展分区不行。</li>
+</ol>
+<h3 id="inodeblock">inode和block</h3>
+<p>文件权限和文件属性放置到inode中（一个文件占用一个inode，同时记录文件数据所在的block编号），数据放到datablock中。superblock会记录整体信息，包括inode和block是使用量。</p>
+<p>inode和block关系图解：一个文件的属性放到inode4号，对应的数据放到了block2,7,13,15号中。称为索引式文件系统。</p>
+<p><img src="http://www.haillk.top:8888/images/2020/07/14/30137616figure_0213_0199.png" alt="30137616figure_0213_0199.png"></p>
+<p>ext2中创建目录：分配一个inode记录目录的属性，和至少一个blokc记录目录下的文件名和该文件名对应的inode.</p>
+<p>ls -i显示inode</p>
         </div>
 
         
@@ -109,15 +224,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/%E9%9A%8F%E7%AC%94/2020%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">2020新年快乐</a></li>
+        <li><a href="/post/GoLang/goModule%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/">GoModule模块的使用</a></li>
         
-        <li><a href="/post/Windows/%E7%99%BE%E5%BA%A6%E4%BA%91%E4%B8%8D%E9%99%90%E9%80%9F%E7%AC%AC%E4%B8%89%E6%96%B9%E5%AE%9E%E6%B5%8B5M%E9%80%9F20191231/">百度云不限速第三方实测5M速20191231</a></li>
+        <li><a href="/post/linux/docker%E9%85%8D%E7%BD%AEChevereto%E5%9B%BE%E5%BA%8A/">Docker配置Chevereto图床</a></li>
         
-        <li><a href="/post/Windows/taskkill%E5%85%B3%E9%97%AD%E8%BF%9B%E7%A8%8B/">Taskkill关闭进程</a></li>
+        <li><a href="/post/GoLang/%E5%8D%9A%E5%AE%A2%E8%84%9A%E6%9C%AC.md/">博客脚本</a></li>
         
-        <li><a href="/post/Python/yield%E5%AE%8C%E5%85%A8%E8%A7%A3%E8%AF%BB/">Yield完全解读</a></li>
+        <li><a href="/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/">Go_Context上下文</a></li>
         
-        <li><a href="/post/Python/python3%E9%87%8Cgbk%E7%9A%84encode%E9%94%99%E8%AF%AF/">Python3里gbk的encode错误</a></li>
+        <li><a href="/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/">一致性hash</a></li>
         
     </ul>
 </div>
@@ -127,7 +242,7 @@
             
             <ul class="clearfix">
                 
-                <li><a href='https://haillk.github.io/tags/2020%E5%B9%B42%E6%9C%882%E5%8F%B7'>2020年2月2号</a></li>
+                <li><a href='https://haillk.github.io/tags/'></a></li>
                 
             </ul>
             
