@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>PCB包含的内容 | Haillk-Blog</title>
-    <meta property="og:title" content="PCB包含的内容 - Haillk-Blog">
+    <title>Gdb学习 | Haillk-Blog</title>
+    <meta property="og:title" content="Gdb学习 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-04-02T15:00:30&#43;08:00'>
+    <meta property="article:published_time" content='2020-04-09T14:39:46&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-04-02T15:00:30&#43;08:00'>
+    <meta property="article:modified_time" content='2020-04-09T14:39:46&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="PCB包含的内容">
+    <meta name="description" content="Gdb学习">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/">
+    <meta property="og:url" content="https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdb%E5%AD%A6%E4%B9%A0/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -169,16 +169,16 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">PCB包含的内容</h1>
+            <h1 class="post-title">Gdb学习</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年4月2日
+            2020年4月9日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://haillk.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F'>操作系统</a></span>
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Linux'>Linux</a></span>
             
         </div>
         
@@ -190,22 +190,18 @@
         
         
         <div class="post-content">
-            <p>*每天都有新体验</p>
-<ul>
-<li>
-<p>存放晋升的管理和控制信息的数据结构成为进程控制块。每个进程都有一个PCB，创建进程时，建立PCB，伴随进程运行的全过程，直到进程撤销而撤销。</p>
-<blockquote>
-<p>1、进程标识符，PID，  和用户标识uid</p>
-<p>2、进程当前状态，（runable,runing,block,挂起，。。）</p>
-<p>3、进程相应的程序和数据地址</p>
-<p>4、进程优先级priority和进程调度策略</p>
-<p>5、CPU现场保护区cpustatus:当因为某些原因不能使用cpu时，需要把上下文保存起来</p>
-<p>6、进程同步与通信机制</p>
-<p>7、进程所在队列pcb的链接字，指出该队列下一个pcb地址</p>
-<p>8、</p>
-</blockquote>
-</li>
-</ul>
+            <p>前进！前进！！不择手段的前进！</p>
+<p>TUI界面，</p>
+<p><code>gdb -tui test</code></p>
+<p><code>gdb -q test</code>不打印gdb版本信息。</p>
+<p>list l 查看源码</p>
+<p>b 23 设置断点</p>
+<p>info breakpoints 显示断点信息</p>
+<p>s 单步操作，进入函数，fin  退出函数</p>
+<p>n 单步操作，不进入函数</p>
+<p>print 查看变量</p>
+<p>until 推出循环</p>
+<p>bt</p>
         </div>
 
         
@@ -217,15 +213,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/GoLang/Go_Channel%E8%AF%A6%E8%A7%A3/">Go_Channel详解</a></li>
+        <li><a href="/post/Git/git%E4%B8%8D%E8%83%BD%E9%94%81%E5%AE%9Aref/">Git不能锁定ref</a></li>
         
-        <li><a href="/post/GoLang/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/">Go运行时调度</a></li>
+        <li><a href="/post/GoLang/golang%E7%9A%84%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E6%98%AF%E4%BC%A0%E5%80%BC%E8%BF%98%E6%98%AF%E4%BC%A0%E5%BC%95%E7%94%A8/">Golang的参数传递是传值还是传引用</a></li>
         
-        <li><a href="/post/linux/%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E5%93%AA%E9%87%8C/">页表存在哪里</a></li>
+        <li><a href="/post/GoLang/Go%E9%80%83%E9%80%B8%E5%88%86%E6%9E%90/">Go逃逸分析</a></li>
         
-        <li><a href="/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E8%BF%99%E6%A8%A1%E5%BC%8F/">装饰这模式</a></li>
+        <li><a href="/post/linux/uptime%E5%91%BD%E4%BB%A4/">Uptime命令</a></li>
         
-        <li><a href="/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/AttentionGAN/">AttentionGAN</a></li>
+        <li><a href="/post/linux/find%E5%91%BD%E4%BB%A4/">Find命令</a></li>
         
     </ul>
 </div>
@@ -349,21 +345,19 @@
     
     <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Debian/">Debian (2)</a></li>
-    
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Git/">Git (2)</a></li>
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (27)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Linux/">Linux (16)</a></li>
+    <li><a href="https://haillk.github.io/categories/Linux/">Linux (17)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Python/">Python (16)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统 (1)</a></li>
     
@@ -375,7 +369,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (2)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (1)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (2)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式 (1)</a></li>
     

@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>apt-get update和upgrade和dist-upgrade的区别 | Haillk-Blog</title>
-    <meta property="og:title" content="apt-get update和upgrade和dist-upgrade的区别 - Haillk-Blog">
+    <title>Ginv1.4(一) | Haillk-Blog</title>
+    <meta property="og:title" content="Ginv1.4(一) - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2019-12-07T22:37:54&#43;08:00'>
+    <meta property="article:published_time" content='2019-11-29T00:16:08&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2019-12-07T22:37:54&#43;08:00'>
+    <meta property="article:modified_time" content='2019-11-29T00:16:08&#43;08:00'>
         
-    <meta name="Keywords" content="[apt-get]">
-    <meta name="description" content="apt-get update和upgrade和dist-upgrade的区别">
+    <meta name="Keywords" content="[gin]">
+    <meta name="description" content="Ginv1.4(一)">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/">
+    <meta property="og:url" content="https://haillk.github.io/post/GoLang/Ginv1.4/Ginv1.4%E4%B8%80/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -137,7 +137,12 @@
 <div class="post-toc" style="position: absolute; top: 188px;">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ginapi">Gin基础形式的API示例</a></li>
+    <li><a href="#heading">字符串参数</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 <script type="text/javascript">
@@ -169,16 +174,16 @@
 </script>
     <article class="post">
         <header>
-            <h1 class="post-title">apt-get update和upgrade和dist-upgrade的区别</h1>
+            <h1 class="post-title">Ginv1.4(一)</h1>
         </header>
         <date class="post-meta meta-date">
-            2019年12月7日
+            2019年11月29日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://haillk.github.io/categories/Debian'>Debian</a></span>
+            <span class="meta-category"><a href='https://haillk.github.io/categories/Gin'>Gin</a></span>
             
         </div>
         
@@ -190,40 +195,52 @@
         
         
         <div class="post-content">
-            <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+            <p>基础形式 ，参数获取</p>
+<h2 id="ginapi">Gin基础形式的API示例</h2>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">update
-      update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified <span style="color:#000;font-weight:bold">in</span> /etc/apt/sources.list. <span style="color:#000;font-weight:bold">For</span> example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be incorrect as the size of the package files cannot be known <span style="color:#000;font-weight:bold">in</span> advance.
-
-upgrade
-      upgrade is used to install the newest versions of all packages currently installed on the system from the sources enumerated <span style="color:#000;font-weight:bold">in</span> /etc/apt/sources.list. Packages currently installed with new versions available are retrieved and upgraded; under no circumstances are currently installed packages removed, or packages not already installed retrieved and installed. New versions of currently installed packages that cannot be upgraded without changing the install status of another package will be left at their current version. An update must be performed first so that apt-get knows that new versions of packages are available.
-
-dist-upgrade
-       dist-upgrade <span style="color:#000;font-weight:bold">in</span> addition to performing the <span style="color:#000;font-weight:bold">function</span> of upgrade,also intelligently handles changing dependencies with new versions of packages; apt-get has a <span style="color:#d14">&#34;</span><span style="color:#d14">smart</span><span style="color:#d14">&#34;</span> conflict resolution system, and it will attempt to upgrade the most important packages at the expense of less important ones <span style="color:#000;font-weight:bold">if</span> necessary. The dist-upgrade command may therefore remove some packages. The /etc/apt/sources.list file contains a list of locations from which to retrieve desired package files. See also apt_preferences(5) <span style="color:#000;font-weight:bold">for</span> a mechanism <span style="color:#000;font-weight:bold">for</span> overriding the general settings <span style="color:#000;font-weight:bold">for</span> individual packages.
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">func <span style="color:#900;font-weight:bold">main</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>  
+	<span style="color:#998;font-style:italic">// 使用默认中间件创建一个gin路由器:  
+</span><span style="color:#998;font-style:italic"></span>	router <span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">=</span> gin<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">Default</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+	<span style="color:#998;font-style:italic">// 路由映射
+</span><span style="color:#998;font-style:italic"></span>	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">GET</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someGet&#34;</span><span style="color:#000;font-weight:bold">,</span> getting<span style="color:#000;font-weight:bold">)</span>
+	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">POST</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/somePost&#34;</span><span style="color:#000;font-weight:bold">,</span> posting<span style="color:#000;font-weight:bold">)</span>
+	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">PUT</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/somePut&#34;</span><span style="color:#000;font-weight:bold">,</span> putting<span style="color:#000;font-weight:bold">)</span>
+	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">DELETE</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someDelete&#34;</span><span style="color:#000;font-weight:bold">,</span> deleting<span style="color:#000;font-weight:bold">)</span>
+	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">PATCH</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/somePatch&#34;</span><span style="color:#000;font-weight:bold">,</span> patching<span style="color:#000;font-weight:bold">)</span>
+	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">HEAD</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someHead&#34;</span><span style="color:#000;font-weight:bold">,</span> head<span style="color:#000;font-weight:bold">)</span>
+	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">OPTIONS</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someOptions&#34;</span><span style="color:#000;font-weight:bold">,</span> options<span style="color:#000;font-weight:bold">)</span>
+	<span style="color:#998;font-style:italic">// 启动，可设置端口
+</span><span style="color:#998;font-style:italic"></span>	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">Run</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+	<span style="color:#998;font-style:italic">// router.Run(&#34;:3000&#34;) for a hard coded port
+</span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>
-<p>update的作用是从/etc/apt/source.list文件中定义的源中去同步包的索引文件，</p>
-</li>
-<li>
-<p>upgrade则是更据update命令同步好了的包的索引文件，去真正地更新软件。</p>
-</li>
-<li>
-<p>dist-upgrade则是更聪明的upgrade，man文档中说它以更聪明的方式来解决更新过程中出现的软件依赖问题，它也是从/etc/apt/source.list文件中获得地址，然后从这些地址中检索需要更新的包。</p>
-</li>
-</ul>
-
+</div><h2 id="heading">字符串参数</h2>
+<ol>
+<li><strong>url : <a href="http://www.xxx.com/user?firstname=haillk">www.xxx.com/user?firstname=haillk</a></strong><br>
+获取方式：<br>
+c.DefaultQuery(&ldquo;firstname&rdquo;,&ldquo;guest&rdquo;) &mdash;&ndash;&gt;获取并设置默认值<br>
+c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
+<li></li>
+</ol>
         </div>
 
         
@@ -231,23 +248,14 @@ dist-upgrade
 
         
 
-<div class="post-archive">
-    <h2>See Also</h2>
-    <ul class="listing">
-        
-        <li><a href="/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/">Debian安装python38</a></li>
-        
-    </ul>
-</div>
-
 
         <div class="post-meta meta-tags">
             
             <ul class="clearfix">
                 
-                <li><a href='https://haillk.github.io/tags/apt-get'>apt-get</a></li>
+                <li><a href='https://haillk.github.io/tags/gin-Router'>gin Router</a></li>
                 
-                <li><a href='https://haillk.github.io/tags/debian'>debian</a></li>
+                <li><a href='https://haillk.github.io/tags/gin-%E5%8F%82%E6%95%B0%E8%8E%B7%E5%8F%96'>gin 参数获取</a></li>
                 
             </ul>
             
@@ -361,21 +369,19 @@ dist-upgrade
     
     <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Debian/">Debian (2)</a></li>
-    
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Git/">Git (2)</a></li>
     
     <li><a href="https://haillk.github.io/categories/GoLang/">GoLang (27)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/Linux/">Linux (16)</a></li>
+    <li><a href="https://haillk.github.io/categories/Linux/">Linux (17)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Python/">Python (16)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Windows/">Windows (8)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/">常用技术 (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统 (1)</a></li>
     
@@ -387,7 +393,7 @@ dist-upgrade
     
     <li><a href="https://haillk.github.io/categories/%E7%AE%97%E6%B3%95/">算法 (2)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (1)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E7%BD%91%E7%BB%9C/">网络 (2)</a></li>
     
     <li><a href="https://haillk.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式 (1)</a></li>
     

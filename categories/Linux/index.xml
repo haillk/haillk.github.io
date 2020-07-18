@@ -76,10 +76,10 @@
     
     <item>
       <title>Gdb学习</title>
-      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/gdb%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdb%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Thu, 09 Apr 2020 14:39:46 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/gdb%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdb%E5%AD%A6%E4%B9%A0/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
@@ -153,6 +153,15 @@
       
       <guid>https://haillk.github.io/post/linux/curl%E5%91%BD%E4%BB%A4/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>apt-get update和upgrade和dist-upgrade的区别</title>
+      <link>https://haillk.github.io/post/linux/apt-getupdategrade/</link>
+      <pubDate>Sat, 07 Dec 2019 22:37:54 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/linux/apt-getupdategrade/</guid>
+      <description>1 2 3 4 5 6 7 8 update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be</description>
     </item>
     
   </channel>

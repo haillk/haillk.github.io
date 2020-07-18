@@ -20,5 +20,14 @@
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Tls证书</title>
+      <link>https://haillk.github.io/post/%E7%BD%91%E7%BB%9C/tls%E8%AF%81%E4%B9%A6/</link>
+      <pubDate>Fri, 13 Mar 2020 01:19:56 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E7%BD%91%E7%BB%9C/tls%E8%AF%81%E4%B9%A6/</guid>
+      <description>基本概念 ​ 参考HTTPS精读TLS证书校验 ​ https比http多了一层安全层（Security Layer）&amp;ndash;TLS/SSl SSL是最早的安全层协议</description>
+    </item>
+    
   </channel>
 </rss>

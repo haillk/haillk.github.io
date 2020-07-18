@@ -220,19 +220,19 @@
     
     <item>
       <title>Gdb学习</title>
-      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/gdb%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdb%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Thu, 09 Apr 2020 14:39:46 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/gdb%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/gdb%E5%AD%A6%E4%B9%A0/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git不能锁定ref</title>
-      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/git%E4%B8%8D%E8%83%BD%E9%94%81%E5%AE%9Aref/</link>
+      <link>https://haillk.github.io/post/Git/git%E4%B8%8D%E8%83%BD%E9%94%81%E5%AE%9Aref/</link>
       <pubDate>Mon, 06 Apr 2020 16:16:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/git%E4%B8%8D%E8%83%BD%E9%94%81%E5%AE%9Aref/</guid>
+      <guid>https://haillk.github.io/post/Git/git%E4%B8%8D%E8%83%BD%E9%94%81%E5%AE%9Aref/</guid>
       <description>&lt;p&gt;前进！前进！！不择手段的前进！&lt;/p&gt;</description>
     </item>
     
@@ -328,10 +328,10 @@
     
     <item>
       <title>PCB包含的内容</title>
-      <link>https://haillk.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/</link>
+      <link>https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/</link>
       <pubDate>Thu, 02 Apr 2020 15:00:30 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/</guid>
+      <guid>https://haillk.github.io/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/</guid>
       <description>&lt;p&gt;*每天都有新体验&lt;/p&gt;</description>
     </item>
     
@@ -465,10 +465,10 @@
     
     <item>
       <title>Tls证书</title>
-      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/tls%E8%AF%81%E4%B9%A6/</link>
+      <link>https://haillk.github.io/post/%E7%BD%91%E7%BB%9C/tls%E8%AF%81%E4%B9%A6/</link>
       <pubDate>Fri, 13 Mar 2020 01:19:56 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/tls%E8%AF%81%E4%B9%A6/</guid>
+      <guid>https://haillk.github.io/post/%E7%BD%91%E7%BB%9C/tls%E8%AF%81%E4%B9%A6/</guid>
       <description>基本概念 ​ 参考HTTPS精读TLS证书校验 ​ https比http多了一层安全层（Security Layer）&amp;ndash;TLS/SSl SSL是最早的安全层协议</description>
     </item>
     
@@ -699,10 +699,10 @@
     
     <item>
       <title>Git常用命令</title>
-      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <link>https://haillk.github.io/post/Git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Sat, 21 Dec 2019 19:17:53 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://haillk.github.io/post/Git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description></description>
     </item>
     
@@ -735,37 +735,37 @@
     
     <item>
       <title>跟着无闻学Go Web应用开发 高级模板</title>
-      <link>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/</link>
+      <link>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/</link>
       <pubDate>Fri, 20 Dec 2019 16:55:01 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/</guid>
+      <guid>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/</guid>
       <description>&lt;p&gt;上一节学习了模板引擎的逻辑控制和空白符号处理用法。这一节学习一下，高级概念和用法，并将讯安然结果转换为html。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>跟着无闻学Go Web应用开发 进阶模板</title>
-      <link>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</link>
+      <link>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Thu, 19 Dec 2019 16:55:01 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</guid>
+      <guid>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/</guid>
       <description>&lt;p&gt;在Go 语言提供的模板引擎中进行条件判断和更加复杂的逻辑操作&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>跟着无闻学Go Web应用开发 简单模板</title>
-      <link>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</link>
+      <link>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</link>
       <pubDate>Wed, 18 Dec 2019 23:23:20 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</guid>
+      <guid>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>跟着无闻学Go Web应用开发-初窥http服务器</title>
-      <link>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+      <link>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
       <pubDate>Wed, 18 Dec 2019 21:45:23 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+      <guid>https://haillk.github.io/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
       <description></description>
     </item>
     
@@ -843,19 +843,19 @@
     
     <item>
       <title>apt-get update和upgrade和dist-upgrade的区别</title>
-      <link>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/</link>
+      <link>https://haillk.github.io/post/linux/apt-getupdategrade/</link>
       <pubDate>Sat, 07 Dec 2019 22:37:54 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/apt-getupdategrade/</guid>
+      <guid>https://haillk.github.io/post/linux/apt-getupdategrade/</guid>
       <description>1 2 3 4 5 6 7 8 update update is used to resynchronize the package index files from their sources. The indexes of available packages are fetched from the location(s) specified in /etc/apt/sources.list. For example, when using a Debian archive, this command retrieves and scans the Packages.gz files, so that information about new and updated packages is available. An update should always be performed before an upgrade or dist-upgrade. Please be aware that the overall progress meter will be</description>
     </item>
     
     <item>
       <title>Debian安装python38</title>
-      <link>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/</link>
+      <link>https://haillk.github.io/post/Python/debian%E5%AE%89%E8%A3%85python38/</link>
       <pubDate>Sat, 07 Dec 2019 22:19:52 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/debian%E5%AE%89%E8%A3%85python38/</guid>
+      <guid>https://haillk.github.io/post/Python/debian%E5%AE%89%E8%A3%85python38/</guid>
       <description>源码安装 1、安装依赖包 1 sudo apt-get install build-essential python-dev python-setuptools python-pip python-smbus build-essential libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev tk-dev libssl-dev openssl libffi-dev 2、下载python3.8源码 1 2 3 4 5 6 7 ##更新 sudo apt-get update ##下载 wget https://www.python.org/downloads/release/python-380/ ##解压 tar -xvf Python-3.8.0.tar.xz cd Python-3.8.0/ 3、配置，编</description>
     </item>
     
@@ -915,10 +915,10 @@
     
     <item>
       <title>Ginv1.4(一)</title>
-      <link>https://haillk.github.io/post/Ginv1.4/Ginv1.4%E4%B8%80/</link>
+      <link>https://haillk.github.io/post/GoLang/Ginv1.4/Ginv1.4%E4%B8%80/</link>
       <pubDate>Fri, 29 Nov 2019 00:16:08 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/Ginv1.4/Ginv1.4%E4%B8%80/</guid>
+      <guid>https://haillk.github.io/post/GoLang/Ginv1.4/Ginv1.4%E4%B8%80/</guid>
       <description>&lt;p&gt;基础形式 ，参数获取&lt;/p&gt;</description>
     </item>
     
