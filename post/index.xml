@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 17 Jul 2020 23:34:58 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2020 19:43:35 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Go代理和GO111MODULE设置</title>
+      <link>https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Sat, 18 Jul 2020 19:43:35 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/</guid>
+      <description>&lt;p&gt;与你常在&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Sudo切换用户</title>
@@ -717,10 +726,10 @@
     
     <item>
       <title>什么是闭包</title>
-      <link>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/</link>
+      <link>https://haillk.github.io/post/%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/</link>
       <pubDate>Fri, 20 Dec 2019 21:47:00 +0800</pubDate>
       
-      <guid>https://haillk.github.io/post/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/</guid>
+      <guid>https://haillk.github.io/post/%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/</guid>
       <description>&lt;p&gt;轮子哥的话**：闭包不是私有啊，闭的意思不是“封闭内部状态”，而是“封闭外部状态”啊。一个函数如何能封闭外部状态呢，当外部状态的scope失效的时候，还有一份留在内部状态里面……&lt;/p&gt;</description>
     </item>
     

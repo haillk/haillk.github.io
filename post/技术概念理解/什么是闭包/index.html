@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>位运算 | Haillk-Blog</title>
-    <meta property="og:title" content="位运算 - Haillk-Blog">
+    <title>什么是闭包 | Haillk-Blog</title>
+    <meta property="og:title" content="什么是闭包 - Haillk-Blog">
     <meta property="og:type" content="article">
         
-    <meta property="article:published_time" content='2020-04-02T17:02:18&#43;08:00'>
+    <meta property="article:published_time" content='2019-12-20T21:47:00&#43;08:00'>
         
         
-    <meta property="article:modified_time" content='2020-04-02T17:02:18&#43;08:00'>
+    <meta property="article:modified_time" content='2019-12-20T21:47:00&#43;08:00'>
         
     <meta name="Keywords" content="haillk">
-    <meta name="description" content="位运算">
+    <meta name="description" content="什么是闭包">
         
     <meta name="author" content="haillk">
-    <meta property="og:url" content="https://haillk.github.io/post/Python/%E4%BD%8D%E8%BF%90%E7%AE%97/">
+    <meta property="og:url" content="https://haillk.github.io/post/%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E7%90%86%E8%A7%A3/%E4%BB%80%E4%B9%88%E6%98%AF%E9%97%AD%E5%8C%85/">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href='/css/normalize.css'>
@@ -73,112 +73,19 @@
                 <div class="col-8" id="main">
                     
 <div class="res-cons">
-    <style type="text/css">
-    .post-toc {
-        position: fixed;
-        width: 200px;
-        margin-left: -210px;
-        padding: 5px 10px;
-        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
-        font-size: 12px;
-        border: 1px solid rgba(0, 0, 0, .07);
-        border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.98);
-        background-clip: padding-box;
-        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
-        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
-        word-wrap: break-word;
-        white-space: nowrap;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        z-index: 999;
-        cursor: pointer;
-        max-height: 70%;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-
-    .post-toc .post-toc-title {
-        width: 100%;
-        margin: 0 auto;
-        font-size: 20px;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: center;
-    }
-
-    .post-toc .post-toc-content {
-        font-size: 15px;
-    }
-
-    .post-toc .post-toc-content>nav>ul {
-        margin: 10px 0;
-    }
-
-    .post-toc .post-toc-content ul {
-        padding-left: 20px;
-        list-style: square;
-        margin: 0.5em;
-        line-height: 1.8em;
-    }
-
-    .post-toc .post-toc-content ul ul {
-        padding-left: 15px;
-        display: none;
-    }
-
-    @media print,
-    screen and (max-width:1057px) {
-        .post-toc {
-            display: none;
-        }
-    }
-</style>
-<div class="post-toc" style="position: absolute; top: 188px;">
-    <h2 class="post-toc-title">文章目录</h2>
-    <div class="post-toc-content">
-        <nav id="TableOfContents"></nav>
-    </div>
-</div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var postToc = $(".post-toc");
-        if (postToc.length) {
-            var leftPos = $("#main").offset().left;
-            if(leftPos<220){
-                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
-            }
-
-            var t = postToc.offset().top - 20,
-                a = {
-                    start: {
-                        position: "absolute",
-                        top: t
-                    },
-                    process: {
-                        position: "fixed",
-                        top: 20
-                    },
-                };
-            $(window).scroll(function () {
-                var e = $(window).scrollTop();
-                e < t ? postToc.css(a.start) : postToc.css(a.process)
-            })
-        }
-    })
-</script>
+    
     <article class="post">
         <header>
-            <h1 class="post-title">位运算</h1>
+            <h1 class="post-title">什么是闭包</h1>
         </header>
         <date class="post-meta meta-date">
-            2020年4月2日
+            2019年12月20日
         </date>
         
         <div class="post-meta">
             <span>|</span>
             
-            <span class="meta-category"><a href='https://haillk.github.io/categories/Python'>Python</a></span>
+            <span class="meta-category"><a href='https://haillk.github.io/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF'>常用技术</a></span>
             
         </div>
         
@@ -190,8 +97,105 @@
         
         
         <div class="post-content">
-            <p>*每天都有新体验</p>
-<p><code>  cnt += board[x][y] &amp; 1</code>只累加最低位</p>
+            <p>轮子哥的话**：闭包不是私有啊，闭的意思不是“封闭内部状态”，而是“封闭外部状态”啊。一个函数如何能封闭外部状态呢，当外部状态的scope失效的时候，还有一份留在内部状态里面……</p>
+<p><strong>轮子哥的话</strong>：闭包不是私有啊，闭的意思不是“封闭内部状态”，而是“封闭外部状态”啊。一个函数如何能封闭外部状态呢，当外部状态的scope失效的时候，还有一份留在内部状态里面……</p>
+<h2 id="ibm----httpswwwibmcomdeveloperworkscnlinuxlcnclosure">ibm文档    <a href="https://www.ibm.com/developerworks/cn/linux/l-cn-closure/">源文档</a></h2>
+<ol>
+<li>
+<h3 id="heading">概念：</h3>
+<p>​	闭包是由函数和与其相关的引用环境组合而成的实体</p>
+</li>
+<li>
+<h3 id="heading1">函数和闭包：</h3>
+<ul>
+<li>
+<p>函数是一些可执行的代码，这些代码在函数被定义后就确定了，不会在执行时发生变化，所以一个函数只有一个实例。</p>
+</li>
+<li>
+<p>闭包在运行时可以有多个实例，不同的引用环境和相同的函数组合可以产生不同的实例。</p>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="heading2">引用环境</h3>
+<ol>
+<li>引用环境是指在程序执行中的某个点所有处于活跃状态的约束所组成的集合。那么为什么要把引用环境与函数组合起来呢？这主要是因为在支持嵌套作用域的语言中，有时不能简单直接地确定函数的引用环境。这样的语言一般具有这样的特性：</li>
+</ol>
+<ul>
+<li>函数是一阶值（First-class value），即函数可以作为另一个函数的返回值或参数，还可以作为一个变量的值。</li>
+<li>函数可以嵌套定义，即在一个函数内部可以定义另一个函数。</li>
+</ul>
+<p>示例1：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">eg<span style="color:#099">.1</span>
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">out</span>() <span style="color:#000;font-weight:bold">func</span>() <span style="color:#458;font-weight:bold">int</span>{
+    num<span style="color:#000;font-weight:bold">:=</span><span style="color:#099">10</span>
+    <span style="color:#000;font-weight:bold">return</span> <span style="color:#000;font-weight:bold">func</span>() <span style="color:#458;font-weight:bold">int</span>{
+        <span style="color:#000;font-weight:bold">return</span> num<span style="color:#000;font-weight:bold">+</span><span style="color:#099">1</span>
+    }
+}
+</code></pre></td></tr></table>
+</div>
+</div><p>分析：在没有闭包的情况下，当调用out()函数时，匿名函数作为返回值被返回，此时的变量num还没有传递给匿名函数，但是当匿名函数被返回后，out()函数就执行结束了，函数栈和变量都被释放了那么匿名函数就访问不到num变量了。</p>
+<p>示例2：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">dot</span>(ft <span style="color:#000;font-weight:bold">func</span>(<span style="color:#458;font-weight:bold">int</span>)) {
+ <span style="color:#000;font-weight:bold">for</span> i <span style="color:#000;font-weight:bold">:=</span> <span style="color:#099">0</span>; i &lt; <span style="color:#099">10</span>; i<span style="color:#000;font-weight:bold">++</span> {
+     <span style="color:#900;font-weight:bold">ft</span>(i)
+ }
+}
+<span style="color:#000;font-weight:bold">var</span> sum <span style="color:#458;font-weight:bold">int</span> = <span style="color:#099">10</span>
+   
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">add</span>(i <span style="color:#458;font-weight:bold">int</span>) {
+ sum = sum <span style="color:#000;font-weight:bold">+</span> i
+}
+<span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
+ <span style="color:#900;font-weight:bold">dot</span>(add)
+ fmt.<span style="color:#900;font-weight:bold">Println</span>(sum)
+}
+   
+</code></pre></td></tr></table>
+</div>
+</div><p>分析：在没有闭包的情况下，dot访问不到sum变量，而add可以访问到sum变量。那么在dot函数中调用add方法，能不能访问到sum变量呢。</p>
+</li>
+<li>
+<h3 id="heading3">总结：</h3>
+<ol>
+<li>这样的语言中，如果按照作用域规则在执行时确定一个函数的引用环境，那么这个引用环境可能和函数定义时不同。</li>
+<li>要想使这两段程序正常执行，一个简单的办法是在函数定义时捕获当时的引用环境，并与函数代码组合成一个整体。</li>
+<li>当把这个整体当作函数调用时，先把其中的引用环境覆盖到当前的引用环境上，然后执行具体代码，并在调用结束后恢复原来的引用环境。这样就保证了函数定义和执行时的引用环境是相同的。</li>
+<li>这种由引用环境与函数代码组成的实体就是闭包。</li>
+</ol>
+</li>
+</ol>
         </div>
 
         
@@ -203,15 +207,15 @@
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/post/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/PCB%E5%8C%85%E5%90%AB%E7%9A%84%E5%86%85%E5%AE%B9/">PCB包含的内容</a></li>
+        <li><a href="/post/Python/%E5%AE%89%E8%A3%85%E6%9B%B4%E6%96%B0pip/">安装更新pip</a></li>
         
-        <li><a href="/post/GoLang/Go_Channel%E8%AF%A6%E8%A7%A3/">Go_Channel详解</a></li>
+        <li><a href="/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E9%AB%98%E7%BA%A7%E6%A8%A1%E6%9D%BF-/">跟着无闻学Go Web应用开发 高级模板</a></li>
         
-        <li><a href="/post/GoLang/Go%E8%BF%90%E8%A1%8C%E6%97%B6%E8%B0%83%E5%BA%A6/">Go运行时调度</a></li>
+        <li><a href="/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E8%BF%9B%E9%98%B6%E6%A8%A1%E6%9D%BF/">跟着无闻学Go Web应用开发 进阶模板</a></li>
         
-        <li><a href="/post/linux/%E9%A1%B5%E8%A1%A8%E5%AD%98%E5%9C%A8%E5%93%AA%E9%87%8C/">页表存在哪里</a></li>
+        <li><a href="/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E7%AE%80%E5%8D%95%E6%A8%A1%E6%9D%BF/">跟着无闻学Go Web应用开发 简单模板</a></li>
         
-        <li><a href="/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E8%BF%99%E6%A8%A1%E5%BC%8F/">装饰这模式</a></li>
+        <li><a href="/post/GoLang/unkown-web/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91-%E5%88%9D%E7%AA%A5http%E6%9C%8D%E5%8A%A1%E5%99%A8/">跟着无闻学Go Web应用开发-初窥http服务器</a></li>
         
     </ul>
 </div>
@@ -221,7 +225,9 @@
             
             <ul class="clearfix">
                 
-                <li><a href='https://haillk.github.io/tags/'></a></li>
+                <li><a href='https://haillk.github.io/tags/%E6%8A%80%E6%9C%AF%E7%90%86%E8%A7%A3'>技术理解</a></li>
+                
+                <li><a href='https://haillk.github.io/tags/%E9%97%AD%E5%8C%85'>闭包</a></li>
                 
             </ul>
             
