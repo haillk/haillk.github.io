@@ -199,7 +199,7 @@
         
         <div class="post-content">
             <p>map中value是否可寻址的问题，数组的比较和切片的比较，存在全局变量和局部变量时，调用方法会读取全局变量，for range的次数和副本问题</p>
-<h4 id="font-colorcc33001mapvaluefont"><!-- raw HTML omitted -->1、map中value是否可寻址的问题<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33001map中value是否可寻址的问题font"><!-- raw HTML omitted -->1、map中value是否可寻址的问题<!-- raw HTML omitted --></h4>
 <p>Eg.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -228,12 +228,12 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>​	对于 <code>map[string]Struct</code> 和 <code>map[string][]int</code>的问题，由于结构体struct是不可寻址的，虽然可以读取这个值，但是不能把值赋值给x。而[]int是可寻址的，不仅可以读取，也可以赋值。解决方法：使用临时变量或者使用可寻址value。</p>
-<h4 id="font-colorcc33002font"><!-- raw HTML omitted -->2、数组的比较和切片的比较<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33002数组的比较和切片的比较font"><!-- raw HTML omitted -->2、数组的比较和切片的比较<!-- raw HTML omitted --></h4>
 <blockquote>
 <p>1、go中不同类型不能相互比较，而数组长度是数组类型的一部分，所以不同长度的数组不能比较
 2、切片不能比较</p>
 </blockquote>
-<h4 id="font-colorcc33003font"><!-- raw HTML omitted -->3、存在全局变量和局部变量时，调用方法会读取全局变量<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33003存在全局变量和局部变量时调用方法会读取全局变量font"><!-- raw HTML omitted -->3、存在全局变量和局部变量时，调用方法会读取全局变量<!-- raw HTML omitted --></h4>
 <p>eg.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -260,7 +260,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>会输出 <code>extra 0 , main 3</code>，则调用的方法会使用全局变量</p>
-<h4 id="font-colorcc33004for-rangefont"><!-- raw HTML omitted -->4、for range的次数和副本问题<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33004for-range的次数和副本问题font"><!-- raw HTML omitted -->4、for range的次数和副本问题<!-- raw HTML omitted --></h4>
 <p>Eg. for rang的次数问题</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -310,7 +310,7 @@
 }
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="font-colorcc33005font"><!-- raw HTML omitted -->5、方法的值接受者和指针接受者<!-- raw HTML omitted --></h4>
+</div><h4 id="font-colorcc33005方法的值接受者和指针接受者font"><!-- raw HTML omitted -->5、方法的值接受者和指针接受者<!-- raw HTML omitted --></h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -462,6 +462,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -493,14 +501,6 @@
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -509,8 +509,6 @@
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -540,7 +538,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -572,7 +570,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

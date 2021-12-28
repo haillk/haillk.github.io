@@ -141,12 +141,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#channelgoroutine">使用channel控制goroutine</a></li>
-        <li><a href="#contextgoroutine">使用Context控制多个goroutine</a></li>
-        <li><a href="#context">Context接口</a></li>
-        <li><a href="#context1">Context衍生</a></li>
+        <li><a href="#使用channel控制goroutine">使用channel控制goroutine</a></li>
+        <li><a href="#使用context控制多个goroutine">使用Context控制多个goroutine</a></li>
+        <li><a href="#context接口">Context接口</a></li>
+        <li><a href="#context衍生">Context衍生</a></li>
         <li><a href="#contextvalue">Context.Value</a></li>
-        <li><a href="#heading">使用</a></li>
+        <li><a href="#使用">使用</a></li>
       </ul>
     </li>
   </ul>
@@ -204,7 +204,7 @@
         
         <div class="post-content">
             <p>佛门广大，岂不容一癫僧！</p>
-<h3 id="channelgoroutine">使用channel控制goroutine</h3>
+<h3 id="使用channel控制goroutine">使用channel控制goroutine</h3>
 <p>传统的使用channel控制goroutine的结束</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -223,7 +223,7 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
 </code></pre></td></tr></table>
 </div>
 </div><p>缺点：如果有很多个goroutine需要结束，或者很多嵌套goroutine。使用这种方法就很复杂了。</p>
-<h3 id="contextgoroutine">使用Context控制多个goroutine</h3>
+<h3 id="使用context控制多个goroutine">使用Context控制多个goroutine</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -347,7 +347,7 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
 </code></pre></td></tr></table>
 </div>
 </div><p>具体的就是使用ctx替换上文的channel</p>
-<h3 id="context">Context接口</h3>
+<h3 id="context接口">Context接口</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -366,7 +366,7 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
 }
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="context1">Context衍生</h3>
+</div><h3 id="context衍生">Context衍生</h3>
 <p>context包为我们提供了with系列的函数。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -402,11 +402,11 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
 	<span style="color:#998;font-style:italic">//附加值
 </span><span style="color:#998;font-style:italic"></span>	valueCtx<span style="color:#000;font-weight:bold">:=</span>context.<span style="color:#900;font-weight:bold">WithValue</span>(ctx,key,<span style="color:#d14">&#34;【监控1】&#34;</span>)
 	<span style="color:#000;font-weight:bold">go</span> <span style="color:#900;font-weight:bold">watch</span>(valueCtx)
- <span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span>
+ <span style="color:#a61717;background-color:#e3d2d2">………………</span>
     <span style="color:#0086b3">print</span>(ctx.<span style="color:#900;font-weight:bold">Value</span>(key))
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="heading">使用</h3>
+</div><h3 id="使用">使用</h3>
 <ol>
 <li>不要把Context放在结构体中，要以参数的方式传递</li>
 <li>以Context作为参数的函数方法，应该把Context作为第一个参数，放在第一位。</li>
@@ -507,6 +507,14 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -538,14 +546,6 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -554,8 +554,6 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -585,7 +583,7 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -617,7 +615,7 @@ ch<span style="color:#000;font-weight:bold">&lt;-</span><span style="color:#099"
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

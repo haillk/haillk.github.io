@@ -143,9 +143,9 @@
       <ul>
         <li><a href="#1go-tool-compile">1、go tool compile</a></li>
         <li><a href="#2go-tool-objdump">2、go tool objdump</a></li>
-        <li><a href="#3go-build-gcflag-s">3、go build -gcflag -S</a></li>
-        <li><a href="#heading">总结</a></li>
-        <li><a href="#heading1">实例：</a></li>
+        <li><a href="#3go-build--gcflag--s">3、go build -gcflag -S</a></li>
+        <li><a href="#总结">总结</a></li>
+        <li><a href="#实例">实例：</a></li>
       </ul>
     </li>
   </ul>
@@ -214,11 +214,11 @@
 <h3 id="2go-tool-objdump">2、go tool objdump</h3>
 <p>首先编译程序<code>go tool compile -N -l main.go</code></p>
 <p>使用<code>go tool objdump main.o</code>反汇编出代码。</p>
-<h3 id="3go-build-gcflag-s">3、go build -gcflag -S</h3>
+<h3 id="3go-build--gcflag--s">3、go build -gcflag -S</h3>
 <p><code>go build -gcflags -S main.go</code></p>
-<h3 id="heading">总结</h3>
+<h3 id="总结">总结</h3>
 <p>1和3生成的是过程中的汇编，最终的机器码的汇编可以用2生成。</p>
-<h3 id="heading1">实例：</h3>
+<h3 id="实例">实例：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -326,7 +326,7 @@ TEXT main.<span style="color:#900;font-weight:bold">main</span>(SB) H:<span styl
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a823</span>                <span style="color:#099">488</span>d0d560d0500                  LEAQ sync<span style="color:#000;font-weight:bold">/</span>atomic.CompareAndSwapUintptr.args_stackmap<span style="color:#000;font-weight:bold">+</span><span style="color:#099">376</span>(SB), CX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a82a</span>                <span style="color:#099">48898</span>c2408010000                MOVQ CX, <span style="color:#099">0x108</span>(SP)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a832</span>                c784249000000030000000          MOVL <span style="color:#a61717;background-color:#e3d2d2">$</span><span style="color:#099">0x30</span>, <span style="color:#099">0x90</span>(SP)
-  main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a83d</span>                <span style="color:#099">488</span>d0dccfb0300                  LEAQ <span style="color:#000;font-weight:bold">go</span>.<span style="color:#000;font-weight:bold">func</span>.<span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">+</span><span style="color:#099">10</span>(SB), CX
+  main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a83d</span>                <span style="color:#099">488</span>d0dccfb0300                  LEAQ <span style="color:#000;font-weight:bold">go</span>.<span style="color:#000;font-weight:bold">func</span>.<span style="color:#000;font-weight:bold">*+</span><span style="color:#099">10</span>(SB), CX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a844</span>                <span style="color:#099">48898</span>c24a8000000                MOVQ CX, <span style="color:#099">0xa8</span>(SP)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a84c</span>                <span style="color:#099">488</span>d942400010000                LEAQ <span style="color:#099">0x100</span>(SP), DX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a854</span>                <span style="color:#099">48899424</span>c0000000                MOVQ DX, <span style="color:#099">0xc0</span>(SP)
@@ -344,7 +344,7 @@ TEXT main.<span style="color:#900;font-weight:bold">main</span>(SB) H:<span styl
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8a7</span>                <span style="color:#099">488</span>d0de20c0500                  LEAQ sync<span style="color:#000;font-weight:bold">/</span>atomic.CompareAndSwapUintptr.args_stackmap<span style="color:#000;font-weight:bold">+</span><span style="color:#099">392</span>(SB), CX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8ae</span>                <span style="color:#099">48898</span>c24f8000000                MOVQ CX, <span style="color:#099">0xf8</span>(SP)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8b6</span>                c744243030000000                MOVL <span style="color:#a61717;background-color:#e3d2d2">$</span><span style="color:#099">0x30</span>, <span style="color:#099">0x30</span>(SP)
-  main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8be</span>                <span style="color:#099">488</span>d0d4bfb0300                  LEAQ <span style="color:#000;font-weight:bold">go</span>.<span style="color:#000;font-weight:bold">func</span>.<span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">+</span><span style="color:#099">10</span>(SB), CX
+  main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8be</span>                <span style="color:#099">488</span>d0d4bfb0300                  LEAQ <span style="color:#000;font-weight:bold">go</span>.<span style="color:#000;font-weight:bold">func</span>.<span style="color:#000;font-weight:bold">*+</span><span style="color:#099">10</span>(SB), CX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8c5</span>                <span style="color:#099">48894</span>c2448                      MOVQ CX, <span style="color:#099">0x48</span>(SP)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8ca</span>                <span style="color:#099">488</span>d8c24f0000000                LEAQ <span style="color:#099">0xf0</span>(SP), CX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8d2</span>                <span style="color:#099">48894</span>c2460                      MOVQ CX, <span style="color:#099">0x60</span>(SP)
@@ -487,6 +487,14 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -518,14 +526,6 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -534,8 +534,6 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -565,7 +563,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -597,7 +595,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

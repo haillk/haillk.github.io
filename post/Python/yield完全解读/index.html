@@ -139,10 +139,10 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#---httpsliampage20170630understandingyieldinpython">迭代   参考-较详细</a></li>
-    <li><a href="#heading">迭代器</a></li>
-    <li><a href="#heading1">生成器</a></li>
-    <li><a href="#yield">yield表达式</a></li>
+    <li><a href="#迭代---参考-较详细httpsliampage20170630understanding-yield-in-python">迭代   <a href="https://liam.page/2017/06/30/understanding-yield-in-python/">参考-较详细</a></a></li>
+    <li><a href="#迭代器">迭代器</a></li>
+    <li><a href="#生成器">生成器</a></li>
+    <li><a href="#yield表达式">yield表达式</a></li>
   </ul>
 </nav>
     </div>
@@ -203,11 +203,11 @@
         </div>
         
         <div class="post-content">
-            <h2 id="---httpsliampage20170630understandingyieldinpython">迭代   <a href="https://liam.page/2017/06/30/understanding-yield-in-python/">参考-较详细</a></h2>
+            <h2 id="迭代---参考-较详细httpsliampage20170630understanding-yield-in-python">迭代   <a href="https://liam.page/2017/06/30/understanding-yield-in-python/">参考-较详细</a></h2>
 <p>在实际使用list,tuple等容器时，容器中会保存容器中所有的数据。</p>
 <p>以list为例，如果list在内存中加载全部的数据会造成大量的 消耗，但是我们并不会同时使用全部的数据，这就需要一种更聪明的方法，类似sql底层的B+树，随取随用。</p>
 <p>这就是迭代要实现的功能： <strong>逐个获取元素</strong></p>
-<h2 id="heading">迭代器</h2>
+<h2 id="迭代器">迭代器</h2>
 <p>我们常用的list,tuple等都实现了迭代，我们自定义的类只要实现了_<em>iter_</em>()方法也是可以迭代的。</p>
 <p>迭代器和for循环的联系：</p>
 <p>​	Python 中的迭代器协议和 Python 中的 <code>for</code> 循环是紧密相连的。</p>
@@ -222,9 +222,9 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>Python 处理 <code>for</code> 循环时，首先会调用内建函数 <code>iter(something)</code>，它实际上会调用 <code>something.__iter__()</code>，返回 <code>something</code> 对应的迭代器。而后，<code>for</code> 循环会调用内建函数 <code>next()</code>，作用在迭代器上，获取迭代器的下一个元素，并赋值给 <code>x</code>。此后，Python 才开始执行循环体。</p>
-<h2 id="heading1">生成器</h2>
+<h2 id="生成器">生成器</h2>
 <p>生成器是特殊的迭代器。</p>
-<h2 id="yield">yield表达式</h2>
+<h2 id="yield表达式">yield表达式</h2>
 <p><a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/index.html">廖雪峰-利用斐波那契函数举例</a></p>
 <blockquote>
 <p>yield 的作用就是把一个函数变成一个 generator，带有 yield 的函数不再是一个普通函数，Python 解释器会将其视为一个 generator，调用 fab(5) 不会执行 fab 函数，而是返回一个 iterable 对象！在 for 循环执行时，每次循环都会执行 fab 函数内部的代码，执行到 yield b 时，fab 函数就返回一个迭代值，下次迭代时，代码从 yield b 的下一条语句继续执行，而函数的本地变量看起来和上次中断执行前是完全一样的，于是函数继续执行，直到再次遇到 yield。</p>
@@ -242,7 +242,7 @@
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">square</span>():
     <span style="color:#000;font-weight:bold">for</span> x <span style="color:#000;font-weight:bold">in</span> <span style="color:#0086b3">range</span>(<span style="color:#099">4</span>):
-        <span style="color:#000;font-weight:bold">yield</span> x <span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span> <span style="color:#099">2</span>
+        <span style="color:#000;font-weight:bold">yield</span> x <span style="color:#000;font-weight:bold">**</span> <span style="color:#099">2</span>
 square_gen <span style="color:#000;font-weight:bold">=</span> square()
 <span style="color:#000;font-weight:bold">for</span> x <span style="color:#000;font-weight:bold">in</span> square_gen:
     <span style="color:#000;font-weight:bold">print</span>(x)
@@ -357,6 +357,14 @@ square_gen <span style="color:#000;font-weight:bold">=</span> square()
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -388,14 +396,6 @@ square_gen <span style="color:#000;font-weight:bold">=</span> square()
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -404,8 +404,6 @@ square_gen <span style="color:#000;font-weight:bold">=</span> square()
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -435,7 +433,7 @@ square_gen <span style="color:#000;font-weight:bold">=</span> square()
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -467,7 +465,7 @@ square_gen <span style="color:#000;font-weight:bold">=</span> square()
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

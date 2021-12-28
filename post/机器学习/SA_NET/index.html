@@ -141,8 +141,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">论文内容：</a></li>
-        <li><a href="#heading1">项目分析：</a></li>
+        <li><a href="#论文内容">论文内容：</a></li>
+        <li><a href="#项目分析">项目分析：</a></li>
       </ul>
     </li>
   </ul>
@@ -199,10 +199,8 @@
         
         
         <div class="post-content">
-            <ul>
-<li></li>
-</ul>
-<h3 id="heading">论文内容：</h3>
+            <p>*</p>
+<h3 id="论文内容">论文内容：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -242,45 +240,45 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#a61717;background-color:#e3d2d2">使</span><span style="color:#a61717;background-color:#e3d2d2">用</span><span style="color:#999">self</span><span style="color:#000;font-weight:bold">-</span>attention的SANET实现风格迁移
+<span style="color:#a61717;background-color:#e3d2d2">使用</span><span style="color:#999">self</span><span style="color:#000;font-weight:bold">-</span>attention的SANET实现风格迁移
 
-<span style="color:#a61717;background-color:#e3d2d2">基</span><span style="color:#a61717;background-color:#e3d2d2">本</span><span style="color:#a61717;background-color:#e3d2d2">概</span><span style="color:#a61717;background-color:#e3d2d2">念</span><span style="color:#a61717;background-color:#e3d2d2">：</span>
+<span style="color:#a61717;background-color:#e3d2d2">基本概念：</span>
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>	<span style="color:#a61717;background-color:#e3d2d2">内</span><span style="color:#a61717;background-color:#e3d2d2">容</span><span style="color:#a61717;background-color:#e3d2d2">图</span><span style="color:#a61717;background-color:#e3d2d2">像</span>lc,   <span style="color:#a61717;background-color:#e3d2d2">风</span><span style="color:#a61717;background-color:#e3d2d2">格</span><span style="color:#a61717;background-color:#e3d2d2">图</span><span style="color:#a61717;background-color:#e3d2d2">像</span>ls   <span style="color:#a61717;background-color:#e3d2d2">并</span><span style="color:#a61717;background-color:#e3d2d2">根</span><span style="color:#a61717;background-color:#e3d2d2">据</span>lc的语义<span style="color:#a61717;background-color:#e3d2d2">，</span>ls的特征合成lcs
+<span style="color:#a61717;background-color:#e3d2d2">​</span>	<span style="color:#a61717;background-color:#e3d2d2">内容图像</span>lc,   <span style="color:#a61717;background-color:#e3d2d2">风格图像</span>ls   <span style="color:#a61717;background-color:#e3d2d2">并根据</span>lc的语义<span style="color:#a61717;background-color:#e3d2d2">，</span>ls的特征合成lcs
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>	<span style="color:#a61717;background-color:#e3d2d2">在</span><span style="color:#a61717;background-color:#e3d2d2">这</span><span style="color:#a61717;background-color:#e3d2d2">项</span><span style="color:#a61717;background-color:#e3d2d2">工</span><span style="color:#a61717;background-color:#e3d2d2">作</span><span style="color:#a61717;background-color:#e3d2d2">中</span><span style="color:#a61717;background-color:#e3d2d2">，</span>vgg19作为编码器和对称解码器
+<span style="color:#a61717;background-color:#e3d2d2">​</span>	<span style="color:#a61717;background-color:#e3d2d2">在这项工作中，</span>vgg19作为编码器和对称解码器
 
-<span style="color:#a61717;background-color:#e3d2d2">网</span><span style="color:#a61717;background-color:#e3d2d2">络</span><span style="color:#a61717;background-color:#e3d2d2">架</span><span style="color:#a61717;background-color:#e3d2d2">构</span><span style="color:#a61717;background-color:#e3d2d2">：</span>
+<span style="color:#a61717;background-color:#e3d2d2">网络架构：</span>
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>	<span style="color:#a61717;background-color:#e3d2d2">两</span><span style="color:#a61717;background-color:#e3d2d2">个</span>SANET:<span style="color:#a61717;background-color:#e3d2d2">为</span><span style="color:#a61717;background-color:#e3d2d2">了</span><span style="color:#a61717;background-color:#e3d2d2">充</span><span style="color:#a61717;background-color:#e3d2d2">分</span><span style="color:#a61717;background-color:#e3d2d2">结</span><span style="color:#a61717;background-color:#e3d2d2">合</span><span style="color:#a61717;background-color:#e3d2d2">全</span><span style="color:#a61717;background-color:#e3d2d2">局</span><span style="color:#a61717;background-color:#e3d2d2">样</span><span style="color:#a61717;background-color:#e3d2d2">式</span><span style="color:#a61717;background-color:#e3d2d2">和</span><span style="color:#a61717;background-color:#e3d2d2">部</span><span style="color:#a61717;background-color:#e3d2d2">分</span><span style="color:#a61717;background-color:#e3d2d2">样</span><span style="color:#a61717;background-color:#e3d2d2">式</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">我</span><span style="color:#a61717;background-color:#e3d2d2">们</span><span style="color:#a61717;background-color:#e3d2d2">通</span><span style="color:#a61717;background-color:#e3d2d2">过</span><span style="color:#a61717;background-color:#e3d2d2">将</span><span style="color:#a61717;background-color:#e3d2d2">来</span><span style="color:#a61717;background-color:#e3d2d2">自</span><span style="color:#a61717;background-color:#e3d2d2">不</span><span style="color:#a61717;background-color:#e3d2d2">同</span><span style="color:#a61717;background-color:#e3d2d2">层</span><span style="color:#a61717;background-color:#e3d2d2">编</span><span style="color:#a61717;background-color:#e3d2d2">码</span>(relu4<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span><span style="color:#a61717;background-color:#e3d2d2">和</span>relu5<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span>)<span style="color:#a61717;background-color:#e3d2d2">的</span>vgg特征图作为输入<span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">并</span><span style="color:#a61717;background-color:#e3d2d2">组</span><span style="color:#a61717;background-color:#e3d2d2">合</span><span style="color:#a61717;background-color:#e3d2d2">两</span><span style="color:#a61717;background-color:#e3d2d2">个</span><span style="color:#a61717;background-color:#e3d2d2">输</span><span style="color:#a61717;background-color:#e3d2d2">出</span><span style="color:#a61717;background-color:#e3d2d2">特</span><span style="color:#a61717;background-color:#e3d2d2">征</span><span style="color:#a61717;background-color:#e3d2d2">图</span>		<span style="color:#a61717;background-color:#e3d2d2">来</span><span style="color:#a61717;background-color:#e3d2d2">集</span><span style="color:#a61717;background-color:#e3d2d2">成</span><span style="color:#a61717;background-color:#e3d2d2">两</span><span style="color:#a61717;background-color:#e3d2d2">个</span>saNET<span style="color:#000;font-weight:bold">.</span>
+<span style="color:#a61717;background-color:#e3d2d2">​</span>	<span style="color:#a61717;background-color:#e3d2d2">两个</span>SANET:<span style="color:#a61717;background-color:#e3d2d2">为了充分结合全局样式和部分样式，我们通过将来自不同层编码</span>(relu4<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span><span style="color:#a61717;background-color:#e3d2d2">和</span>relu5<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span>)<span style="color:#a61717;background-color:#e3d2d2">的</span>vgg特征图作为输入<span style="color:#a61717;background-color:#e3d2d2">，并组合两个输出特征图</span>		<span style="color:#a61717;background-color:#e3d2d2">来集成两个</span>saNET<span style="color:#000;font-weight:bold">.</span>
 
-	<span style="color:#a61717;background-color:#e3d2d2">单</span><span style="color:#a61717;background-color:#e3d2d2">个</span>SANET中的操作<span style="color:#a61717;background-color:#e3d2d2">：</span>
+	<span style="color:#a61717;background-color:#e3d2d2">单个</span>SANET中的操作<span style="color:#a61717;background-color:#e3d2d2">：</span>
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>		<span style="color:#a61717;background-color:#e3d2d2">使</span><span style="color:#a61717;background-color:#e3d2d2">用</span>vgg在特定层提取各自的vgg特征图<span style="color:#a61717;background-color:#e3d2d2">。</span>Fc<span style="color:#000;font-weight:bold">=</span>E(Ic) <span style="color:#a61717;background-color:#e3d2d2">和</span> Fs<span style="color:#000;font-weight:bold">=</span>E(Is)
+<span style="color:#a61717;background-color:#e3d2d2">​</span>		<span style="color:#a61717;background-color:#e3d2d2">使用</span>vgg在特定层提取各自的vgg特征图<span style="color:#a61717;background-color:#e3d2d2">。</span>Fc<span style="color:#000;font-weight:bold">=</span>E(Ic) <span style="color:#a61717;background-color:#e3d2d2">和</span> Fs<span style="color:#000;font-weight:bold">=</span>E(Is)
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>		<span style="color:#a61717;background-color:#e3d2d2">在</span><span style="color:#a61717;background-color:#e3d2d2">对</span>lc和ls图像进行编码后<span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">我</span><span style="color:#a61717;background-color:#e3d2d2">们</span><span style="color:#a61717;background-color:#e3d2d2">将</span><span style="color:#a61717;background-color:#e3d2d2">两</span><span style="color:#a61717;background-color:#e3d2d2">个</span><span style="color:#a61717;background-color:#e3d2d2">特</span><span style="color:#a61717;background-color:#e3d2d2">征</span><span style="color:#a61717;background-color:#e3d2d2">图</span><span style="color:#a61717;background-color:#e3d2d2">放</span><span style="color:#a61717;background-color:#e3d2d2">置</span><span style="color:#a61717;background-color:#e3d2d2">到</span><span style="color:#a61717;background-color:#e3d2d2">一</span><span style="color:#a61717;background-color:#e3d2d2">个</span>SANET中<span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">从</span><span style="color:#a61717;background-color:#e3d2d2">而</span><span style="color:#a61717;background-color:#e3d2d2">生</span><span style="color:#a61717;background-color:#e3d2d2">成</span>Fcs
+<span style="color:#a61717;background-color:#e3d2d2">​</span>		<span style="color:#a61717;background-color:#e3d2d2">在对</span>lc和ls图像进行编码后<span style="color:#a61717;background-color:#e3d2d2">，我们将两个特征图放置到一个</span>SANET中<span style="color:#a61717;background-color:#e3d2d2">，从而生成</span>Fcs
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>		Fcs <span style="color:#000;font-weight:bold">=</span> SANet(Fc,Fs)<span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span>(<span style="color:#099">1</span>)
+<span style="color:#a61717;background-color:#e3d2d2">​</span>		Fcs <span style="color:#000;font-weight:bold">=</span> SANet(Fc,Fs)<span style="color:#000;font-weight:bold">..............</span>(<span style="color:#099">1</span>)
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>		<span style="color:#a61717;background-color:#e3d2d2">进</span><span style="color:#a61717;background-color:#e3d2d2">行</span><span style="color:#a61717;background-color:#e3d2d2">一</span><span style="color:#a61717;background-color:#e3d2d2">次</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">*</span><span style="color:#099">1</span><span style="color:#a61717;background-color:#e3d2d2">卷</span><span style="color:#a61717;background-color:#e3d2d2">积</span><span style="color:#a61717;background-color:#e3d2d2">后</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">得</span><span style="color:#a61717;background-color:#e3d2d2">到</span>Fcsc
+<span style="color:#a61717;background-color:#e3d2d2">​</span>		<span style="color:#a61717;background-color:#e3d2d2">进行一次</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">*</span><span style="color:#099">1</span><span style="color:#a61717;background-color:#e3d2d2">卷积后，得到</span>Fcsc
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>		Fcsc<span style="color:#000;font-weight:bold">=</span>Fc<span style="color:#000;font-weight:bold">+</span>WcsFcs<span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span>(<span style="color:#099">2</span>)
+<span style="color:#a61717;background-color:#e3d2d2">​</span>		Fcsc<span style="color:#000;font-weight:bold">=</span>Fc<span style="color:#000;font-weight:bold">+</span>WcsFcs<span style="color:#000;font-weight:bold">.................</span>(<span style="color:#099">2</span>)
 
-	<span style="color:#a61717;background-color:#e3d2d2">两</span><span style="color:#a61717;background-color:#e3d2d2">个</span>SANEt分别输出Fcsc4<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span><span style="color:#a61717;background-color:#e3d2d2">和</span>Fcsc5<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span>,<span style="color:#a61717;background-color:#e3d2d2">然</span><span style="color:#a61717;background-color:#e3d2d2">后</span><span style="color:#a61717;background-color:#e3d2d2">将</span><span style="color:#a61717;background-color:#e3d2d2">两</span><span style="color:#a61717;background-color:#e3d2d2">个</span>SANEt中的输出特征图租组合
+	<span style="color:#a61717;background-color:#e3d2d2">两个</span>SANEt分别输出Fcsc4<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span><span style="color:#a61717;background-color:#e3d2d2">和</span>Fcsc5<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span>,<span style="color:#a61717;background-color:#e3d2d2">然后将两个</span>SANEt中的输出特征图租组合
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>	Fmcsc<span style="color:#000;font-weight:bold">=</span>conv3<span style="color:#000;font-weight:bold">*</span><span style="color:#099">3</span>(Fcsc4<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">+</span>upsampling(Fcsc5<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span>))<span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span>(<span style="color:#099">3</span>)
+<span style="color:#a61717;background-color:#e3d2d2">​</span>	Fmcsc<span style="color:#000;font-weight:bold">=</span>conv3<span style="color:#000;font-weight:bold">*</span><span style="color:#099">3</span>(Fcsc4<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span><span style="color:#000;font-weight:bold">+</span>upsampling(Fcsc5<span style="color:#000;font-weight:bold">.</span><span style="color:#099">1</span>))<span style="color:#000;font-weight:bold">................</span>(<span style="color:#099">3</span>)
 
-	<span style="color:#a61717;background-color:#e3d2d2">最</span><span style="color:#a61717;background-color:#e3d2d2">后</span><span style="color:#a61717;background-color:#e3d2d2">送</span><span style="color:#a61717;background-color:#e3d2d2">入</span><span style="color:#a61717;background-color:#e3d2d2">解</span><span style="color:#a61717;background-color:#e3d2d2">码</span><span style="color:#a61717;background-color:#e3d2d2">器</span><span style="color:#a61717;background-color:#e3d2d2">，</span><span style="color:#a61717;background-color:#e3d2d2">生</span><span style="color:#a61717;background-color:#e3d2d2">成</span><span style="color:#a61717;background-color:#e3d2d2">风</span><span style="color:#a61717;background-color:#e3d2d2">格</span><span style="color:#a61717;background-color:#e3d2d2">图</span><span style="color:#a61717;background-color:#e3d2d2">像</span><span style="color:#a61717;background-color:#e3d2d2">：</span>
+	<span style="color:#a61717;background-color:#e3d2d2">最后送入解码器，生成风格图像：</span>
 
-<span style="color:#a61717;background-color:#e3d2d2">​</span>	Ics<span style="color:#000;font-weight:bold">=</span>D(Fmcsc)<span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000;font-weight:bold">.</span>(<span style="color:#099">4</span>)
-<span style="color:#a61717;background-color:#e3d2d2">嵌</span><span style="color:#a61717;background-color:#e3d2d2">入</span><span style="color:#999">self</span><span style="color:#000;font-weight:bold">-</span>attention
-<span style="color:#a61717;background-color:#e3d2d2">用</span><span style="color:#a61717;background-color:#e3d2d2">编</span><span style="color:#a61717;background-color:#e3d2d2">码</span><span style="color:#a61717;background-color:#e3d2d2">器</span>vgg19去计算训练sanet和decoder的损失
+<span style="color:#a61717;background-color:#e3d2d2">​</span>	Ics<span style="color:#000;font-weight:bold">=</span>D(Fmcsc)<span style="color:#000;font-weight:bold">..........................</span>(<span style="color:#099">4</span>)
+<span style="color:#a61717;background-color:#e3d2d2">嵌入</span><span style="color:#999">self</span><span style="color:#000;font-weight:bold">-</span>attention
+<span style="color:#a61717;background-color:#e3d2d2">用编码器</span>vgg19去计算训练sanet和decoder的损失
 </code></pre></td></tr></table>
 </div>
 </div><p><img src="SANETarchitecturet.jpg" alt="SANETarchitecturet"></p>
 <p><img src="attention.jpg" alt="attention"></p>
 <p>上横线表示归一化版本</p>
-<h3 id="heading1">项目分析：</h3>
+<h3 id="项目分析">项目分析：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -289,8 +287,8 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">decoder()       <span style="color:#099">512</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#099">64</span>
-vgg()           <span style="color:#099">62</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">-</span><span style="color:#000;font-weight:bold">&gt;</span><span style="color:#099">512</span>
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">decoder()       <span style="color:#099">512</span><span style="color:#000;font-weight:bold">---&gt;</span><span style="color:#099">64</span>
+vgg()           <span style="color:#099">62</span><span style="color:#000;font-weight:bold">----&gt;</span><span style="color:#099">512</span>
 <span style="color:#000;font-weight:bold">class</span> <span style="color:#458;font-weight:bold">SANet</span>():
     
 </code></pre></td></tr></table>
@@ -409,6 +407,14 @@ vgg()           <span style="color:#099">62</span><span style="color:#000;font-w
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -440,14 +446,6 @@ vgg()           <span style="color:#099">62</span><span style="color:#000;font-w
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -456,8 +454,6 @@ vgg()           <span style="color:#099">62</span><span style="color:#000;font-w
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -487,7 +483,7 @@ vgg()           <span style="color:#099">62</span><span style="color:#000;font-w
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -519,7 +515,7 @@ vgg()           <span style="color:#099">62</span><span style="color:#000;font-w
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

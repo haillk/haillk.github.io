@@ -141,8 +141,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#nagle">Nagle算法:</a></li>
-        <li><a href="#delay-ack-naglehttpsblogcsdnnetwdscq1234articledetails52432095depth1utmsourcedistributepcrelevantnonetaskblogblogcommendfrombaidu3utmsourcedistributepcrelevantnonetaskblogblogcommendfrombaidu3">Delay ACK和 NAgle:</a></li>
+        <li><a href="#nagle算法">Nagle算法:</a></li>
+        <li><a href="#delay-ack和-naglehttpsblogcsdnnetwdscq1234articledetails52432095depth_1-utm_sourcedistributepc_relevantnone-task-blog-blogcommendfrombaidu-3utm_sourcedistributepc_relevantnone-task-blog-blogcommendfrombaidu-3"><a href="https://blog.csdn.net/wdscq1234/article/details/52432095?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3&amp;utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3">Delay ACK和 NAgle</a>:</a></li>
       </ul>
     </li>
   </ul>
@@ -203,10 +203,10 @@
 <p>由于在有些使用TCp的场景中，会发送少量的数据字节，这量就会产生20个字节的IP,header和20个字节的TCPheader.</p>
 <p>加少量的数据字节，造成的巨额开销。会使这种small packet在广域网上增加拥塞。</p>
 <p><strong>Nagle算法</strong>就是一种通过减少需要通过网络发送包的数量来提高TCP/ip传输效率的算法。</p>
-<h3 id="nagle">Nagle算法:</h3>
+<h3 id="nagle算法">Nagle算法:</h3>
 <p>**基本定义：**在任意时刻，最多只能有一个未被确认的小段。有多个包，当小包1发送了，但是未接到ack之前，其他小包就先等待，并和其他小包整合为一个打包，直到第一个小包的ack回来，再把剩余整合到一起的包一起发送。</p>
 <p><strong>禁用nagle</strong>:设置TCP_NODELAY参数</p>
-<h3 id="delay-ack-naglehttpsblogcsdnnetwdscq1234articledetails52432095depth1utmsourcedistributepcrelevantnonetaskblogblogcommendfrombaidu3utmsourcedistributepcrelevantnonetaskblogblogcommendfrombaidu3"><a href="https://blog.csdn.net/wdscq1234/article/details/52432095?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3&amp;utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3">Delay ACK和 NAgle</a>:</h3>
+<h3 id="delay-ack和-naglehttpsblogcsdnnetwdscq1234articledetails52432095depth_1-utm_sourcedistributepc_relevantnone-task-blog-blogcommendfrombaidu-3utm_sourcedistributepc_relevantnone-task-blog-blogcommendfrombaidu-3"><a href="https://blog.csdn.net/wdscq1234/article/details/52432095?depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3&amp;utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-3">Delay ACK和 NAgle</a>:</h3>
 <blockquote>
 <p>Nagle指出Nagle算法与Delay ACK机制有共存的情况下会有一些非常糟糕的状况，比如举一个场景：PC1和PC2进行通信，PC1发数据给PC2，PC1使用Nagle算法，PC2有delay ACK机制</p>
 <ol>
@@ -312,6 +312,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -343,14 +351,6 @@
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -359,8 +359,6 @@
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -390,7 +388,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -422,7 +420,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

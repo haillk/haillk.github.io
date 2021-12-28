@@ -141,16 +141,16 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">配置包</a></li>
-        <li><a href="#dataroot">下载并检查数据集，根目录存在data_root中</a></li>
-        <li><a href="#heading2">加载和格式化图片</a></li>
+        <li><a href="#配置包">配置包</a></li>
+        <li><a href="#下载并检查数据集根目录存在data_root中">下载并检查数据集，根目录存在data_root中</a></li>
+        <li><a href="#加载和格式化图片">加载和格式化图片</a></li>
       </ul>
     </li>
-    <li><a href="#tfdatadataset">构建一个tf.data.Dataset</a>
+    <li><a href="#构建一个tfdatadataset">构建一个tf.data.Dataset</a>
       <ul>
-        <li><a href="#heading3">一个（图片，标签）对数据集</a></li>
-        <li><a href="#heading4">基本训练方法</a></li>
-        <li><a href="#heading5">传递数据集到模型：</a></li>
+        <li><a href="#一个图片标签对数据集">一个（图片，标签）对数据集</a></li>
+        <li><a href="#基本训练方法">基本训练方法</a></li>
+        <li><a href="#传递数据集到模型">传递数据集到模型：</a></li>
       </ul>
     </li>
   </ul>
@@ -208,7 +208,7 @@
         
         <div class="post-content">
             <p>使用tf.data进行图像预处理</p>
-<h3 id="heading">配置包</h3>
+<h3 id="配置包">配置包</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -229,8 +229,8 @@ AUTOTUNE <span style="color:#000;font-weight:bold">=</span> tf<span style="color
 <li>详见DCGAN的那篇文章</li>
 <li>:grey_question: 最后一行还不知道什么意思</li>
 </ul>
-<h3 id="dataroot">下载并检查数据集，根目录存在data_root中</h3>
-<h4 id="heading1">检索图片：</h4>
+<h3 id="下载并检查数据集根目录存在data_root中">下载并检查数据集，根目录存在data_root中</h3>
+<h4 id="检索图片">检索图片：</h4>
 <p>​			首先我们有一个储存这原始文件的文件夹。之后导入</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -242,8 +242,8 @@ AUTOTUNE <span style="color:#000;font-weight:bold">=</span> tf<span style="color
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">import</span> <span style="color:#555">pathlib</span>
-data_root_orig <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>utils<span style="color:#000;font-weight:bold">.</span>get_file(origin<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz</span><span style="color:#d14">&#39;</span>,
-                                         fname<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">flower_photos</span><span style="color:#d14">&#39;</span>, untar<span style="color:#000;font-weight:bold">=</span><span style="color:#999">True</span>)
+data_root_orig <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>utils<span style="color:#000;font-weight:bold">.</span>get_file(origin<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz&#39;</span>,
+                                         fname<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;flower_photos&#39;</span>, untar<span style="color:#000;font-weight:bold">=</span><span style="color:#999">True</span>)
 data_root <span style="color:#000;font-weight:bold">=</span> pathlib<span style="color:#000;font-weight:bold">.</span>Path(data_root_orig)
 <span style="color:#000;font-weight:bold">print</span>(data_root)
 </code></pre></td></tr></table>
@@ -267,7 +267,7 @@ data_root <span style="color:#000;font-weight:bold">=</span> pathlib<span style=
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">import</span> <span style="color:#555">random</span>
-all_image_paths <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">list</span>(data_root<span style="color:#000;font-weight:bold">.</span>glob(<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">*/*</span><span style="color:#d14">&#39;</span>))
+all_image_paths <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">list</span>(data_root<span style="color:#000;font-weight:bold">.</span>glob(<span style="color:#d14">&#39;*/*&#39;</span>))
 all_image_paths <span style="color:#000;font-weight:bold">=</span> [<span style="color:#0086b3">str</span>(path) <span style="color:#000;font-weight:bold">for</span> path <span style="color:#000;font-weight:bold">in</span> all_image_paths]
 random<span style="color:#000;font-weight:bold">.</span>shuffle(all_image_paths)
 
@@ -277,8 +277,8 @@ image_count <span style="color:#000;font-weight:bold">=</span> <span style="colo
 </div><ul>
 <li>这步将根目录下的文件的文件名都存到一个list中，并打乱顺序</li>
 </ul>
-<h4 id="allimagepaths">检查图片：文件名存在all_image_paths中</h4>
-<h4 id="allimagelabels">确定每张图片用的标签：标签存在all_image_labels中</h4>
+<h4 id="检查图片文件名存在all_image_paths中">检查图片：文件名存在all_image_paths中</h4>
+<h4 id="确定每张图片用的标签标签存在all_image_labels中">确定每张图片用的标签：标签存在all_image_labels中</h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -287,10 +287,10 @@ image_count <span style="color:#000;font-weight:bold">=</span> <span style="colo
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">label_names <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">sorted</span>(item<span style="color:#000;font-weight:bold">.</span>name <span style="color:#000;font-weight:bold">for</span> item <span style="color:#000;font-weight:bold">in</span> data_root<span style="color:#000;font-weight:bold">.</span>glob(<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">*/</span><span style="color:#d14">&#39;</span>) <span style="color:#000;font-weight:bold">if</span> item<span style="color:#000;font-weight:bold">.</span>is_dir())
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">label_names <span style="color:#000;font-weight:bold">=</span> <span style="color:#0086b3">sorted</span>(item<span style="color:#000;font-weight:bold">.</span>name <span style="color:#000;font-weight:bold">for</span> item <span style="color:#000;font-weight:bold">in</span> data_root<span style="color:#000;font-weight:bold">.</span>glob(<span style="color:#d14">&#39;*/&#39;</span>) <span style="color:#000;font-weight:bold">if</span> item<span style="color:#000;font-weight:bold">.</span>is_dir())
 label_names
 <span style="color:#998;font-style:italic">##out</span>
-[<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">daisy</span><span style="color:#d14">&#39;</span>, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">dandelion</span><span style="color:#d14">&#39;</span>, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">roses</span><span style="color:#d14">&#39;</span>, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">sunflowers</span><span style="color:#d14">&#39;</span>, <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">tulips</span><span style="color:#d14">&#39;</span>]
+[<span style="color:#d14">&#39;daisy&#39;</span>, <span style="color:#d14">&#39;dandelion&#39;</span>, <span style="color:#d14">&#39;roses&#39;</span>, <span style="color:#d14">&#39;sunflowers&#39;</span>, <span style="color:#d14">&#39;tulips&#39;</span>]
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -311,7 +311,7 @@ label_names
 all_image_labels <span style="color:#000;font-weight:bold">=</span> [label_to_index[pathlib<span style="color:#000;font-weight:bold">.</span>Path(path)<span style="color:#000;font-weight:bold">.</span>parent<span style="color:#000;font-weight:bold">.</span>name]
                     <span style="color:#000;font-weight:bold">for</span> path <span style="color:#000;font-weight:bold">in</span> all_image_paths]
 
-<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">First 10 labels indices: </span><span style="color:#d14">&#34;</span>, all_image_labels[:<span style="color:#099">10</span>])
+<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14">&#34;First 10 labels indices: &#34;</span>, all_image_labels[:<span style="color:#099">10</span>])
 <span style="color:#998;font-style:italic">##out</span>
 First <span style="color:#099">10</span> labels indices:  [<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>, <span style="color:#099">4</span>, <span style="color:#099">2</span>, <span style="color:#099">2</span>, <span style="color:#099">2</span>, <span style="color:#099">2</span>, <span style="color:#099">2</span>, <span style="color:#099">2</span>]
 </code></pre></td></tr></table>
@@ -319,7 +319,7 @@ First <span style="color:#099">10</span> labels indices:  [<span style="color:#0
 </div><ul>
 <li>然后为标签指定索引</li>
 </ul>
-<h3 id="heading2">加载和格式化图片</h3>
+<h3 id="加载和格式化图片">加载和格式化图片</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -333,7 +333,7 @@ First <span style="color:#099">10</span> labels indices:  [<span style="color:#0
 img_path <span style="color:#000;font-weight:bold">=</span> all_image_paths[<span style="color:#099">0</span>]
 <span style="color:#998;font-style:italic">#根据文件名读取文件，原始数据</span>
 img_raw <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#000;font-weight:bold">.</span>io<span style="color:#000;font-weight:bold">.</span>read_file(img_path)
-<span style="color:#000;font-weight:bold">print</span>(<span style="color:#0086b3">repr</span>(img_raw)[:<span style="color:#099">100</span>]<span style="color:#000;font-weight:bold">+</span><span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">...</span><span style="color:#d14">&#34;</span>)
+<span style="color:#000;font-weight:bold">print</span>(<span style="color:#0086b3">repr</span>(img_raw)[:<span style="color:#099">100</span>]<span style="color:#000;font-weight:bold">+</span><span style="color:#d14">&#34;...&#34;</span>)
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -356,7 +356,7 @@ img_raw <span style="color:#000;font-weight:bold">=</span> tf<span style="color:
 <span style="color:#000;font-weight:bold">print</span>(img_tensor<span style="color:#000;font-weight:bold">.</span>dtype)
 <span style="color:#998;font-style:italic">#out</span>
 (<span style="color:#099">266</span>, <span style="color:#099">320</span>, <span style="color:#099">3</span>)
-<span style="color:#000;font-weight:bold">&lt;</span>dtype: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">uint8</span><span style="color:#d14">&#39;</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span>dtype: <span style="color:#d14">&#39;uint8&#39;</span><span style="color:#000;font-weight:bold">&gt;</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -417,7 +417,7 @@ img_final <span style="color:#000;font-weight:bold">=</span> img_final<span styl
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">preprocess_image</span>(image):
   image <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#000;font-weight:bold">.</span>image<span style="color:#000;font-weight:bold">.</span>decode_jpeg(image, channels<span style="color:#000;font-weight:bold">=</span><span style="color:#099">3</span>)
   image <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#000;font-weight:bold">.</span>image<span style="color:#000;font-weight:bold">.</span>resize(image, [<span style="color:#099">192</span>, <span style="color:#099">192</span>])
-  image <span style="color:#000;font-weight:bold">/</span><span style="color:#000;font-weight:bold">=</span> <span style="color:#099">255.0</span>  <span style="color:#998;font-style:italic"># normalize to [0,1] range</span>
+  image <span style="color:#000;font-weight:bold">/=</span> <span style="color:#099">255.0</span>  <span style="color:#998;font-style:italic"># normalize to [0,1] range</span>
 
   <span style="color:#000;font-weight:bold">return</span> image
 <span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">load_and_preprocess_image</span>(path):
@@ -440,7 +440,7 @@ plt<span style="color:#000;font-weight:bold">.</span>title(label_names[label]<sp
 </div><ul>
 <li>最后包装一下</li>
 </ul>
-<h2 id="tfdatadataset">构建一个tf.data.Dataset</h2>
+<h2 id="构建一个tfdatadataset">构建一个tf.data.Dataset</h2>
 <blockquote>
 <p>构建tf.data.dataset的最简单方法就是使用from_tensor_slices方法</p>
 </blockquote>
@@ -497,7 +497,7 @@ plt<span style="color:#000;font-weight:bold">.</span>figure(figsize<span style="
 </div><ul>
 <li>测试验证一下</li>
 </ul>
-<h3 id="heading3">一个（图片，标签）对数据集</h3>
+<h3 id="一个图片标签对数据集">一个（图片，标签）对数据集</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -531,7 +531,7 @@ plt<span style="color:#000;font-weight:bold">.</span>figure(figsize<span style="
 </div><ul>
 <li>由于数据集顺序相同，可以把图片集和标签集打包，新的数据集同样是shape+type</li>
 </ul>
-<h3 id="heading4">基本训练方法</h3>
+<h3 id="基本训练方法">基本训练方法</h3>
 <p>要使用此数据集训练模型，你将会想要数据：</p>
 <ul>
 <li>
@@ -603,7 +603,7 @@ dataset <span style="color:#000;font-weight:bold">=</span> dataset<span style="c
 <p>顺序很重要</p>
 </li>
 </ul>
-<h3 id="heading5">传递数据集到模型：</h3>
+<h3 id="传递数据集到模型">传递数据集到模型：</h3>
 <p>为了测试，我们找一个内置的模型副本来feed我们的数据。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -668,7 +668,7 @@ feature_map_batch <span style="color:#000;font-weight:bold">=</span> mobile_net(
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>Sequential([
   mobile_net,
   tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>layers<span style="color:#000;font-weight:bold">.</span>GlobalAveragePooling2D(),
-  tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>layers<span style="color:#000;font-weight:bold">.</span>Dense(<span style="color:#0086b3">len</span>(label_names), activation <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">softmax</span><span style="color:#d14">&#39;</span>)])
+  tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>layers<span style="color:#000;font-weight:bold">.</span>Dense(<span style="color:#0086b3">len</span>(label_names), activation <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;softmax&#39;</span>)])
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -693,11 +693,11 @@ feature_map_batch <span style="color:#000;font-weight:bold">=</span> mobile_net(
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">logit_batch <span style="color:#000;font-weight:bold">=</span> model(image_batch)<span style="color:#000;font-weight:bold">.</span>numpy()
 
-<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">min logit:</span><span style="color:#d14">&#34;</span>, logit_batch<span style="color:#000;font-weight:bold">.</span>min())
-<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">max logit:</span><span style="color:#d14">&#34;</span>, logit_batch<span style="color:#000;font-weight:bold">.</span>max())
+<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14">&#34;min logit:&#34;</span>, logit_batch<span style="color:#000;font-weight:bold">.</span>min())
+<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14">&#34;max logit:&#34;</span>, logit_batch<span style="color:#000;font-weight:bold">.</span>max())
 <span style="color:#000;font-weight:bold">print</span>()
 
-<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">Shape:</span><span style="color:#d14">&#34;</span>, logit_batch<span style="color:#000;font-weight:bold">.</span>shape)
+<span style="color:#000;font-weight:bold">print</span>(<span style="color:#d14">&#34;Shape:&#34;</span>, logit_batch<span style="color:#000;font-weight:bold">.</span>shape)
 
 <span style="color:#998;font-style:italic">#out</span>
 <span style="color:#0086b3">min</span> logit: <span style="color:#099">0.004745514</span>
@@ -760,8 +760,8 @@ tensor <span style="color:#000;font-weight:bold">=</span> tf<span style="color:#
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#000;font-weight:bold">.</span>compile(optimizer<span style="color:#000;font-weight:bold">=</span>tf<span style="color:#000;font-weight:bold">.</span>keras<span style="color:#000;font-weight:bold">.</span>optimizers<span style="color:#000;font-weight:bold">.</span>Adam(),
-              loss<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">sparse_categorical_crossentropy</span><span style="color:#d14">&#39;</span>,
-              metrics<span style="color:#000;font-weight:bold">=</span>[<span style="color:#d14"></span><span style="color:#d14">&#34;</span><span style="color:#d14">accuracy</span><span style="color:#d14">&#34;</span>])
+              loss<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;sparse_categorical_crossentropy&#39;</span>,
+              metrics<span style="color:#000;font-weight:bold">=</span>[<span style="color:#d14">&#34;accuracy&#34;</span>])
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -906,6 +906,14 @@ steps_per_epoch
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -937,14 +945,6 @@ steps_per_epoch
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -953,8 +953,6 @@ steps_per_epoch
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -984,7 +982,7 @@ steps_per_epoch
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -1016,7 +1014,7 @@ steps_per_epoch
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

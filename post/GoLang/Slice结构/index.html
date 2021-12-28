@@ -141,14 +141,14 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#slice--slicehttpshalfrostcomgoslice">Slice的数据结构  参考slice</a></li>
-        <li><a href="#slice">Slice指针:</a></li>
-        <li><a href="#cap">cap函数</a></li>
-        <li><a href="#heading">扩容</a></li>
-        <li><a href="#heading1">修改</a></li>
-        <li><a href="#heading2">函数传参和赋值</a></li>
-        <li><a href="#heading3">空切片</a></li>
-        <li><a href="#nil">nil切片</a></li>
+        <li><a href="#slice的数据结构--参考slicehttpshalfrostcomgo_slice">Slice的数据结构  <a href="https://halfrost.com/go_slice/">参考slice</a></a></li>
+        <li><a href="#slice指针">Slice指针:</a></li>
+        <li><a href="#cap函数">cap函数</a></li>
+        <li><a href="#扩容">扩容</a></li>
+        <li><a href="#修改">修改</a></li>
+        <li><a href="#函数传参和赋值">函数传参和赋值</a></li>
+        <li><a href="#空切片">空切片</a></li>
+        <li><a href="#nil切片">nil切片</a></li>
       </ul>
     </li>
   </ul>
@@ -206,7 +206,7 @@
         
         <div class="post-content">
             <p>前进！前进！！不择手段的前进！</p>
-<h3 id="slice--slicehttpshalfrostcomgoslice">Slice的数据结构  <a href="https://halfrost.com/go_slice/">参考slice</a></h3>
+<h3 id="slice的数据结构--参考slicehttpshalfrostcomgo_slice">Slice的数据结构  <a href="https://halfrost.com/go_slice/">参考slice</a></h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -226,7 +226,7 @@
 </div><p>整体的结构是这样的</p>
 <p><img src="https://pic.downk.cc/item/5e92c26ec2a9a83be513a679.jpg" alt=""></p>
 <p>这个还比较好理解：如图所示。。</p>
-<h3 id="slice">Slice指针:</h3>
+<h3 id="slice指针">Slice指针:</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -239,22 +239,22 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:
 </div>
 </div><p>&amp;s取到的是Slice结构体的指针。使用uintptr操作的话，下一个取到的是cap和len</p>
 <p>&amp;s[0]取道德是s[0]的指针。使用uintptr取到的是s[1]</p>
-<h3 id="cap">cap函数</h3>
+<h3 id="cap函数">cap函数</h3>
 <p>对切片使用cap函数，取到的是从切片头开始到原始数组的末尾</p>
-<h3 id="heading">扩容</h3>
+<h3 id="扩容">扩容</h3>
 <p>如果slice的容量小于1024,则直接翻倍</p>
 <p>如果超过1024个元素，增长因子编程1.25</p>
 <p>如果新的容量在旧的容量两个以上，则会直接扩容到新容量大小</p>
-<h3 id="heading1">修改</h3>
+<h3 id="修改">修改</h3>
 <p>对slice的修改会直接作用在原始数组上。</p>
-<h3 id="heading2">函数传参和赋值</h3>
+<h3 id="函数传参和赋值">函数传参和赋值</h3>
 <p>函数传参和赋值都是浅拷贝</p>
 <p>公用一个底层数组，但是len和cap是各自独立的。</p>
 <p>问题，如果多个slice对同时对底层数组进行操作，只有最后一个会生效。</p>
-<h3 id="heading3">空切片</h3>
+<h3 id="空切片">空切片</h3>
 <p><code>s:=make([]int ,0,0)</code></p>
 <p>空切片中指针指向了一个zerobase的特殊指针。</p>
-<h3 id="nil">nil切片</h3>
+<h3 id="nil切片">nil切片</h3>
 <p><code>var s []int</code></p>
 <p>指针指向了nil</p>
         </div>
@@ -350,6 +350,14 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -381,14 +389,6 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -397,8 +397,6 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -428,7 +426,7 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -460,7 +458,7 @@ ptr<span style="color:#000;font-weight:bold">:=</span>unsafe.<span style="color:
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

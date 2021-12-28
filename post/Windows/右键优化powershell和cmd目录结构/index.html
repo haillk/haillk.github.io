@@ -98,7 +98,7 @@
         
         <div class="post-content">
             <p>实现在空白处直接右键打开powshell和cmd &mdash;&mdash;&mdash;-和shift+右键打开管理员权限</p>
-<h3 id="font-colorcc3300font"><!-- raw HTML omitted -->实现效果<!-- raw HTML omitted --></h3>
+<h3 id="font-colorcc3300实现效果font"><!-- raw HTML omitted -->实现效果<!-- raw HTML omitted --></h3>
 <ul>
 <li>右键</li>
 </ul>
@@ -113,7 +113,7 @@
 <p>在此处打开Cmd窗口(admin)</p>
 <p>在此处打开powershell窗口(admin)</p>
 </blockquote>
-<h3 id="font-colorcc3300font1"><!-- raw HTML omitted -->打开注册表编辑器<!-- raw HTML omitted --></h3>
+<h3 id="font-colorcc3300打开注册表编辑器font"><!-- raw HTML omitted -->打开注册表编辑器<!-- raw HTML omitted --></h3>
 <p>编辑右键菜单肯定是要用注册表编辑器</p>
 <p>​	<strong>win+R 打开运行&ndash;&gt;regedit打开注册表编辑器</strong></p>
 <p>在该目录下编辑注册表</p>
@@ -125,8 +125,8 @@
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">计算机\HKEY_CLASSES_ROOT\Directory\Background\shell
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="font-colorcc3300cmdpowershellfont"><!-- raw HTML omitted -->右键菜单添加cmd和powershell<!-- raw HTML omitted --></h3>
-<h4 id="cmd">添加cmd</h4>
+</div><h3 id="font-colorcc3300右键菜单添加cmd和powershellfont"><!-- raw HTML omitted -->右键菜单添加cmd和powershell<!-- raw HTML omitted --></h3>
+<h4 id="添加cmd">添加cmd</h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -137,23 +137,23 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCmdHere]
-@=<span style="color:#d14">&#34;</span><span style="color:#d14">在此处打开命令行窗口</span><span style="color:#d14">&#34;</span>
+@=<span style="color:#d14">&#34;在此处打开命令行窗口&#34;</span>
  
 [HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCmdHere\command]
-@=<span style="color:#d14">&#34;</span><span style="color:#d14">cmd.exe -noexit -command Set-Location -literalPath \</span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">%</span>V\<span style="color:#d14">&#34;</span><span style="color:#d14">&#34;</span> 
+@=<span style="color:#d14">&#34;cmd.exe -noexit -command Set-Location -literalPath \&#34;</span><span style="color:#000;font-weight:bold">%</span>V\<span style="color:#d14">&#34;&#34;</span> 
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>上述代码的含义是在响应目录下创建项，并设置默认值</p>
 </blockquote>
-<h4 id="powershell">移动powershell到右键菜单</h4>
+<h4 id="移动powershell到右键菜单">移动powershell到右键菜单</h4>
 <p>​	<strong>删除<code>计算机\HKEY_CLASSES_ROOT\Directory\Background\shell\Powershell</code>下的Extended字符串值</strong></p>
 <blockquote>
 <p>Extended 就是控制是否在右键还是在shift+右键下的。</p>
 </blockquote>
 <p><strong>没有权限不要紧，文后有获取权限的方法。</strong></p>
-<h3 id="font-colorcc3300shiftcmdpowershellfont"><!-- raw HTML omitted -->Shift+右键菜单添加管理员权限的cmd和powershell<!-- raw HTML omitted --></h3>
-<h4 id="cmdadmin">添加cmd(admin)</h4>
+<h3 id="font-colorcc3300shift右键菜单添加管理员权限的cmd和powershellfont"><!-- raw HTML omitted -->Shift+右键菜单添加管理员权限的cmd和powershell<!-- raw HTML omitted --></h3>
+<h4 id="添加cmdadmin">添加cmd(admin)</h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -165,14 +165,14 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">[HKEY_CLASSES_ROOT\Directory\Background\shell\runas]
-@=<span style="color:#d14">&#34;</span><span style="color:#d14">在此处打开命令行窗口(管理员)</span><span style="color:#d14">&#34;</span>
-<span style="color:#d14">&#34;</span><span style="color:#d14">ShowBasedOnVelocityId</span><span style="color:#d14">&#34;</span>=dword<span style="color:#a61717;background-color:#e3d2d2">:</span>00639bc8
- <span style="color:#d14">&#34;</span><span style="color:#d14">Extended</span><span style="color:#d14">&#34;</span>=<span style="color:#d14">&#34;</span><span style="color:#d14">&#34;</span>
+@=<span style="color:#d14">&#34;在此处打开命令行窗口(管理员)&#34;</span>
+<span style="color:#d14">&#34;ShowBasedOnVelocityId&#34;</span>=dword<span style="color:#a61717;background-color:#e3d2d2">:</span>00639bc8
+ <span style="color:#d14">&#34;Extended&#34;</span>=<span style="color:#d14">&#34;&#34;</span>
 [HKEY_CLASSES_ROOT\Directory\Background\shell\runas\command]
-@=<span style="color:#d14">&#34;</span><span style="color:#d14">cmd.exe /s /k pushd \</span><span style="color:#d14">&#34;</span><span style="color:#000;font-weight:bold">%</span>V\<span style="color:#d14">&#34;</span><span style="color:#d14">&#34;</span>
+@=<span style="color:#d14">&#34;cmd.exe /s /k pushd \&#34;</span><span style="color:#000;font-weight:bold">%</span>V\<span style="color:#d14">&#34;&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="powershelladmin">添加powershell(admin)</h4>
+</div><h4 id="添加powershelladmin">添加powershell(admin)</h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -185,15 +185,15 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">[HKEY_CLASSES_ROOT\Directory\Background\shell\PowershellAdmin]
-@=<span style="color:#d14">&#34;</span><span style="color:#d14">在此处打开 Powershell 窗口(管理员)</span><span style="color:#d14">&#34;</span>
-<span style="color:#d14">&#34;</span><span style="color:#d14">Extended</span><span style="color:#d14">&#34;</span>=<span style="color:#d14">&#34;</span><span style="color:#d14">&#34;</span>
+@=<span style="color:#d14">&#34;在此处打开 Powershell 窗口(管理员)&#34;</span>
+<span style="color:#d14">&#34;Extended&#34;</span>=<span style="color:#d14">&#34;&#34;</span>
  
 [HKEY_CLASSES_ROOT\Directory\Background\shell\PowershellAdmin\command]
-@=<span style="color:#d14">&#34;</span><span style="color:#d14">\</span><span style="color:#d14">&#34;</span>C<span style="color:#a61717;background-color:#e3d2d2">:</span>\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\<span style="color:#d14">&#34;</span><span style="color:#d14"> -windowstyle hidden -Command </span><span style="color:#d14">$</span><span style="color:#d14">stpath = pwd; Start-Process PowerShell -ArgumentList \\\</span><span style="color:#d14">&#34;</span>-NoExit\\\<span style="color:#d14">&#34;</span><span style="color:#d14">, \\\</span><span style="color:#d14">&#34;</span>-Command <span style="color:#0086b3">Set-Location</span> -literalPath <span style="color:#d14">&#39;%V&#39;</span>\\\<span style="color:#d14">&#34;</span><span style="color:#d14"> -verb RunAs</span><span style="color:#d14">&#34;</span>
+@=<span style="color:#d14">&#34;\&#34;</span>C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\<span style="color:#d14">&#34; -windowstyle hidden -Command $stpath = pwd; Start-Process PowerShell -ArgumentList \\\&#34;</span>-NoExit\\\<span style="color:#d14">&#34;, \\\&#34;</span>-Command <span style="color:#0086b3">Set-Location</span> -literalPath <span style="color:#d14">&#39;%V&#39;</span>\\\<span style="color:#d14">&#34; -verb RunAs&#34;</span>
  
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="font-colorcc3300font2"><!-- raw HTML omitted -->获取权限的方法<!-- raw HTML omitted --></h3>
+</div><h3 id="font-colorcc3300获取权限的方法font"><!-- raw HTML omitted -->获取权限的方法<!-- raw HTML omitted --></h3>
 <p>参考 <a href="https://blog.csdn.net/yongshi6/article/details/50607493">scdn链接</a></p>
 <ol>
 <li>在项上右键&mdash;&ndash;&gt;选择权限&mdash;&ndash;&gt;高级</li>
@@ -298,6 +298,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -329,14 +337,6 @@
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -345,8 +345,6 @@
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -376,7 +374,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -408,7 +406,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

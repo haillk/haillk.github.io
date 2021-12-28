@@ -139,8 +139,8 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#ginapi">Gin基础形式的API示例</a></li>
-    <li><a href="#heading">字符串参数</a></li>
+    <li><a href="#gin基础形式的api示例">Gin基础形式的API示例</a></li>
+    <li><a href="#字符串参数">字符串参数</a></li>
   </ul>
 </nav>
     </div>
@@ -196,7 +196,7 @@
         
         <div class="post-content">
             <p>基础形式 ，参数获取</p>
-<h2 id="ginapi">Gin基础形式的API示例</h2>
+<h2 id="gin基础形式的api示例">Gin基础形式的API示例</h2>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -216,9 +216,9 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">func <span style="color:#900;font-weight:bold">main</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>  
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">func <span style="color:#900;font-weight:bold">main</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>  
 	<span style="color:#998;font-style:italic">// 使用默认中间件创建一个gin路由器:  
-</span><span style="color:#998;font-style:italic"></span>	router <span style="color:#000;font-weight:bold">:</span><span style="color:#000;font-weight:bold">=</span> gin<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">Default</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+</span><span style="color:#998;font-style:italic"></span>	router <span style="color:#000;font-weight:bold">:=</span> gin<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">Default</span><span style="color:#000;font-weight:bold">()</span>
 	<span style="color:#998;font-style:italic">// 路由映射
 </span><span style="color:#998;font-style:italic"></span>	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">GET</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someGet&#34;</span><span style="color:#000;font-weight:bold">,</span> getting<span style="color:#000;font-weight:bold">)</span>
 	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">POST</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/somePost&#34;</span><span style="color:#000;font-weight:bold">,</span> posting<span style="color:#000;font-weight:bold">)</span>
@@ -228,12 +228,12 @@
 	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">HEAD</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someHead&#34;</span><span style="color:#000;font-weight:bold">,</span> head<span style="color:#000;font-weight:bold">)</span>
 	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">OPTIONS</span><span style="color:#000;font-weight:bold">(</span><span style="color:#d14">&#34;/someOptions&#34;</span><span style="color:#000;font-weight:bold">,</span> options<span style="color:#000;font-weight:bold">)</span>
 	<span style="color:#998;font-style:italic">// 启动，可设置端口
-</span><span style="color:#998;font-style:italic"></span>	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">Run</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span>
+</span><span style="color:#998;font-style:italic"></span>	router<span style="color:#000;font-weight:bold">.</span><span style="color:#008080">Run</span><span style="color:#000;font-weight:bold">()</span>
 	<span style="color:#998;font-style:italic">// router.Run(&#34;:3000&#34;) for a hard coded port
 </span><span style="color:#998;font-style:italic"></span><span style="color:#000;font-weight:bold">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="heading">字符串参数</h2>
+</div><h2 id="字符串参数">字符串参数</h2>
 <ol>
 <li><strong>url : <a href="http://www.xxx.com/user?firstname=haillk">www.xxx.com/user?firstname=haillk</a></strong><br>
 获取方式：<br>
@@ -319,6 +319,14 @@ c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -350,14 +358,6 @@ c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -366,8 +366,6 @@ c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -397,7 +395,7 @@ c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -429,7 +427,7 @@ c.Query(&ldquo;firstname&rdquo;)&mdash;&ndash;&gt;获取参数</li>
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

@@ -139,8 +139,8 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-colorcc3300font">注册服务</a></li>
-    <li><a href="#font-colorcc3300nssmfont">安装nssm</a></li>
+    <li><a href="#font-colorcc3300注册服务font"><!-- raw HTML omitted -->注册服务<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300安装nssmfont"><!-- raw HTML omitted -->安装nssm<!-- raw HTML omitted --></a></li>
   </ul>
 </nav>
     </div>
@@ -201,7 +201,7 @@
         </div>
         
         <div class="post-content">
-            <h2 id="font-colorcc3300font"><!-- raw HTML omitted -->注册服务<!-- raw HTML omitted --></h2>
+            <h2 id="font-colorcc3300注册服务font"><!-- raw HTML omitted -->注册服务<!-- raw HTML omitted --></h2>
 <ol>
 <li><strong>使用installutil.exe</strong></li>
 </ol>
@@ -219,11 +219,11 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#0086b3">New-Service</span> -Name <span style="color:#d14">&#34;</span><span style="color:#d14">YourServiceName</span><span style="color:#d14">&#34;</span> -BinaryPathName &lt;yourproject&gt;.exe
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#0086b3">New-Service</span> -Name <span style="color:#d14">&#34;YourServiceName&#34;</span> -BinaryPathName &lt;yourproject&gt;.exe
 <span style="color:#998;font-style:italic">##卸载-----官方文档里是这样写的，但是我试着不管用，</span>
-<span style="color:#0086b3">Remove-Service</span> -Name <span style="color:#d14">&#34;</span><span style="color:#d14">YourServiceName</span><span style="color:#d14">&#34;</span>
+<span style="color:#0086b3">Remove-Service</span> -Name <span style="color:#d14">&#34;YourServiceName&#34;</span>
 <span style="color:#998;font-style:italic">##还是这样卸载吧</span>
-sc.exe delete <span style="color:#d14">&#34;</span><span style="color:#d14">YourServiceName</span><span style="color:#d14">&#34;</span>
+sc.exe delete <span style="color:#d14">&#34;YourServiceName&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><ol start="3">
@@ -236,9 +236,9 @@ sc.exe delete <span style="color:#d14">&#34;</span><span style="color:#d14">Your
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> sc create 服务名 binPath= <span style="color:#d14">&#34;</span><span style="color:#d14">路径</span><span style="color:#d14">&#34;</span> start= auto type= share
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"> <span style="color:#0086b3">sc </span>create 服务名 binPath= <span style="color:#d14">&#34;路径&#34;</span> start= auto type= share
  <span style="color:#998;font-style:italic">##例子</span>
- sc create Frpc binPath= <span style="color:#d14">&#34;</span><span style="color:#d14">C:/frpc/windows/start.bat</span><span style="color:#d14">&#34;</span> start= auto type= share
+ <span style="color:#0086b3">sc </span>create Frpc binPath= <span style="color:#d14">&#34;C:/frpc/windows/start.bat&#34;</span> start= auto type= share
 </code></pre></td></tr></table>
 </div>
 </div><hr>
@@ -248,7 +248,7 @@ sc.exe delete <span style="color:#d14">&#34;</span><span style="color:#d14">Your
 <p>因为不是所有的exe都可以作为服务，需要使用服务封装器，比如srvany,nssm</p>
 </blockquote>
 <p><strong>解决办法</strong>：微软有一个srvany.exe可以解决此问题，不过nssm是更好的选择，这里推荐nssm</p>
-<h2 id="font-colorcc3300nssmfont"><!-- raw HTML omitted -->安装nssm<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300安装nssmfont"><!-- raw HTML omitted -->安装nssm<!-- raw HTML omitted --></h2>
 <p>​	官网一直访问不进去，目前找到的一个可用的下载<a href="https://www.mypcrun.com/file-download-for-windows/3/8a874af5c543a7fa5a4bef61e7a1c842/692e0dfb2e973ee38a173e77e1dda958/">链接</a></p>
 <p>​	之后就添加进path里去。</p>
 <p><strong>命令列表</strong></p>
@@ -264,7 +264,7 @@ sc.exe delete <span style="color:#d14">&#34;</span><span style="color:#d14">Your
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">nssm install &lt;servicename&gt;
 nssm remove &lt;servicename&gt;
-nssm start &lt;servicename&gt;(可能需要管理员权限)
+nssm <span style="color:#0086b3">start </span>&lt;servicename&gt;(可能需要管理员权限)
 nssm stop &lt;servicename&gt;
 nssm restart &lt;servicename&gt;
 nssm edit &lt;servicename&gt;
@@ -282,9 +282,9 @@ nssm edit &lt;servicename&gt;
     <h2>See Also</h2>
     <ul class="listing">
         
-        <li><a href="/tools/">常用工具</a></li>
-        
         <li><a href="/about/">About</a></li>
+        
+        <li><a href="/tools/">常用工具</a></li>
         
         <li><a href="/archives/">归档</a></li>
         
@@ -366,6 +366,14 @@ nssm edit &lt;servicename&gt;
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -397,14 +405,6 @@ nssm edit &lt;servicename&gt;
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -413,8 +413,6 @@ nssm edit &lt;servicename&gt;
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -444,7 +442,7 @@ nssm edit &lt;servicename&gt;
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -476,7 +474,7 @@ nssm edit &lt;servicename&gt;
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

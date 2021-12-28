@@ -141,16 +141,16 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">要求</a></li>
-        <li><a href="#goroutine">goroutine结构</a></li>
-        <li><a href="#mg">M:G结构：</a></li>
-        <li><a href="#goroutine1">阻塞的goroutine在什么位置呢：</a></li>
-        <li><a href="#p">P:处理器，可以讲其视为在线程上运行的本地调度程序。</a></li>
-        <li><a href="#heading2">使用固定逻辑处理器的系统调用。</a></li>
-        <li><a href="#heading3">流程：</a></li>
-        <li><a href="#channelnetwork-io">channel阻塞或network I/O情况下的调度</a></li>
-        <li><a href="#system-call">system call阻塞情况下的调度</a></li>
-        <li><a href="#heading4">并发和并行：</a></li>
+        <li><a href="#要求">要求</a></li>
+        <li><a href="#goroutine结构">goroutine结构</a></li>
+        <li><a href="#mg结构">M:G结构：</a></li>
+        <li><a href="#阻塞的goroutine在什么位置呢">阻塞的goroutine在什么位置呢：</a></li>
+        <li><a href="#p处理器可以讲其视为在线程上运行的本地调度程序">P:处理器，可以讲其视为在线程上运行的本地调度程序。</a></li>
+        <li><a href="#使用固定逻辑处理器的系统调用">使用固定逻辑处理器的系统调用。</a></li>
+        <li><a href="#流程">流程：</a></li>
+        <li><a href="#channel阻塞或network-io情况下的调度">channel阻塞或network I/O情况下的调度</a></li>
+        <li><a href="#system-call阻塞情况下的调度">system call阻塞情况下的调度</a></li>
+        <li><a href="#并发和并行">并发和并行：</a></li>
       </ul>
     </li>
   </ul>
@@ -208,7 +208,7 @@
         
         <div class="post-content">
             <p>*每天都有新体验</p>
-<h3 id="heading">要求</h3>
+<h3 id="要求">要求</h3>
 <p>对与Go中协程的要求要在这些需求之内</p>
 <ol>
 <li>应该是并行、可扩展且公平的。</li>
@@ -216,15 +216,15 @@
 <li>内存利用率高。（RAM很便宜，但不是免费的。）</li>
 <li>系统调用不应导致性能下降。（最大化吞吐量，最小化等待时间）</li>
 </ol>
-<h3 id="goroutine">goroutine结构</h3>
+<h3 id="goroutine结构">goroutine结构</h3>
 <p>GO的做法是将N个goroutines映射到M个内核线程上去。Goroutines是go代码，因此我们可以完全控制他，他在用户空间汇总，创建起来很便宜。</p>
 <p>并且goroute也有相应的状态，来帮助调度器很据goroutines状态知道该调用那一个goroutines.</p>
 <p>与内核线程的状态信息相比，goroutine的状态信息很小，因此goroutine的上下问切换很快。</p>
 <p>goroutine的状态有（running,runnable,blocked）</p>
-<h3 id="mg">M:G结构：</h3>
+<h3 id="mg结构">M:G结构：</h3>
 <p>在简单的M:N调度器中，有一个全局运行队列。某些操作讲一个新的goroutine放入队列。</p>
 <p>每个M线程通过互斥锁来同步对该运行队列的访问。</p>
-<h3 id="goroutine1">阻塞的goroutine在什么位置呢：</h3>
+<h3 id="阻塞的goroutine在什么位置呢">阻塞的goroutine在什么位置呢：</h3>
 <p>goroutine可能会阻塞的情况：</p>
 <ol>
 <li>在channel上发送和接收</li>
@@ -233,25 +233,25 @@
 <li>使用定时器</li>
 <li>使用互斥锁</li>
 </ol>
-<h4 id="channelgoroutine">channel操作期间阻塞的goroutine：</h4>
+<h4 id="channel操作期间阻塞的goroutine">channel操作期间阻塞的goroutine：</h4>
 <p>每个channel都有一个<strong>recvq(waitq)</strong>，用于存储试图从该channel读取数据而阻塞的goroutine。</p>
 <p>**Sendq(waitq)**存储试图将数据发送到channel而被阻止的goroutine 。（channel实现原理:-https://codeburst.io/diving-deep-into-the-golang-channels-549fd4ed21a8）</p>
 <p>channel本身会将channel操作后未阻塞的goroutine的放入运行队列（runqueue）</p>
 <p>Sendq(waitq)存储视图将数据发送到channel而被阻止</p>
-<h4 id="heading1">系统调用：</h4>
+<h4 id="系统调用">系统调用：</h4>
 <p>系统调用会阻塞底层内核线程，因此无法再在阻塞的M线程上安排其他的Goroutine。</p>
 <p>但是有超额的goroutine未完成，我们将它放在运行队列中（runqueue）.而不是返回调用。</p>
-<h3 id="p">P:处理器，可以讲其视为在线程上运行的本地调度程序。</h3>
+<h3 id="p处理器可以讲其视为在线程上运行的本地调度程序">P:处理器，可以讲其视为在线程上运行的本地调度程序。</h3>
 <blockquote>
 <p>逻辑进程P的数量始终是固定的。（默认为当前进程可以使用的逻辑cpu数量）</p>
 <p>然后将本地运行队列放入固定数量的逻辑处理器（P）中。</p>
 </blockquote>
-<h3 id="heading2">使用固定逻辑处理器的系统调用。</h3>
+<h3 id="使用固定逻辑处理器的系统调用">使用固定逻辑处理器的系统调用。</h3>
 <blockquote>
 <p>go通过将他们包装在运行时中来优化系统调用。从字面上看，某些逻辑在进入系统调用之前被执行，而某些逻辑在系统调用返回之后执行。<strong>进行阻塞的系统调用时</strong>，此包装器将自动将P与线程M(即将执行阻塞系统调用的线程)解绑，并允许另一个线程在其上运行</p>
 </blockquote>
 <p><!-- raw HTML omitted --></p>
-<h3 id="heading3">流程：</h3>
+<h3 id="流程">流程：</h3>
 <p>（1）创建一个<strong>goroutine</strong>，它会放在<strong>全局运行队列</strong>中，等待调度器调度</p>
 <p>（2）<strong>调度器</strong>将这个goroutine 分配给一个<strong>逻辑处理器A</strong>，将它放到了这个逻辑处理器的<strong>本地队列</strong>中，这个goroutine就会<strong>等待</strong>逻辑处理器A<strong>执行</strong>它</p>
 <p>（3）每个逻辑处理器默认<strong>绑定了一个线程</strong>，它是在线程中去<strong>执行自己本地队列</strong>中的goroutine。</p>
@@ -263,13 +263,13 @@
 <p>（6）之前的线程目前没有goroutine了，但是它会被保存，以备之后使用。</p>
 <p><strong>Note</strong>:第（4）（5）步，如果goroutine 是在执行网络io的操作，这个goroutine就不一定就回到这个逻辑处理器了。它实际上会先从逻辑处理器分离，移到集成了网络轮询器的运行时 ，一旦该轮询器指示某个网络读或者写操作已经就绪，对应的 goroutine 就会<strong>重新分配</strong>到逻辑处理器上来完成操作 。</p>
 <blockquote>
-<h3 id="channelnetwork-io">channel阻塞或network I/O情况下的调度</h3>
+<h3 id="channel阻塞或network-io情况下的调度">channel阻塞或network I/O情况下的调度</h3>
 <p>如果G被阻塞在某个channel操作或network I/O操作上时，G会被放置到某个wait队列中，而M会尝试运行下一个runnable的G；如果此时没有runnable的G供m运行，那么m将解绑P，并进入sleep状态。当I/O available或channel操作完成，在wait队列中的G会被唤醒，标记为runnable，放入到某P的队列中，绑定一个M继续执行。</p>
-<h3 id="system-call">system call阻塞情况下的调度</h3>
+<h3 id="system-call阻塞情况下的调度">system call阻塞情况下的调度</h3>
 <p>如果G被阻塞在某个system call操作上，那么不光G会阻塞，执行该G的M也会解绑P(实质是被sysmon抢走了)，与G一起进入sleep状态。如果此时有idle的M，则P与其绑定继续执行其他G；如果没有idle M，但仍然有其他G要去执行，那么就会创建一个新M。</p>
 <p>当阻塞在syscall上的G完成syscall调用后，G会去尝试获取一个可用的P，如果没有可用的P，那么G会被标记为runnable，之前的那个sleep的M将再次进入sleep</p>
 </blockquote>
-<h3 id="heading4">并发和并行：</h3>
+<h3 id="并发和并行">并发和并行：</h3>
 <p>go语言实现并发，创建多个goroutine，调度器会将goroutine分配到逻辑处理器的本地运行队列，逻辑处理器去运行goroutine。如果只有一个逻辑处理器，只会实现并发，不会实现并行。</p>
 <p>要实现并行，就需要多个逻辑处理器，在不同的cpu上，然后调度器会平等的将goroutine分配到每个逻辑处理器，这样多个线程多个goroutine就实现了并行和并发。 至于这些算法怎么调度，我们根本不需要关心，我们只要记住goroutine是我们进行并发编程的一个独立单元就可以了。</p>
         </div>
@@ -365,6 +365,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -396,14 +404,6 @@
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -412,8 +412,6 @@
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -443,7 +441,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -475,7 +473,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

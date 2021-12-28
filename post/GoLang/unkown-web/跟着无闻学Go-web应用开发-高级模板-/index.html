@@ -139,14 +139,14 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-colorcc3300font">模板中的作用域</a></li>
-    <li><a href="#font-colorcc3300font1">模板函数</a></li>
-    <li><a href="#font-colorcc3300font2">模板中的管道操作</a></li>
-    <li><a href="#font-colorcc3300font3">模板复用</a></li>
-    <li><a href="#font-colorcc3300font4">从本地文件加载模板</a></li>
-    <li><a href="#font-colorcc3300htmltemplate--texttemplate-font">html/template 与 text/template 的关联与不同</a></li>
-    <li><a href="#font-colorcc3300font5">反转义</a></li>
-    <li><a href="#font-colorcc3300font6">修改分隔符</a></li>
+    <li><a href="#font-colorcc3300模板中的作用域font"><!-- raw HTML omitted -->模板中的作用域<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300模板函数font"><!-- raw HTML omitted -->模板函数<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300模板中的管道操作font"><!-- raw HTML omitted -->模板中的管道操作<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300模板复用font"><!-- raw HTML omitted -->模板复用<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300从本地文件加载模板font"><!-- raw HTML omitted -->从本地文件加载模板<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300htmltemplate-与-texttemplate-的关联与不同font"><!-- raw HTML omitted --><code>html/template</code> 与 <code>text/template</code> 的关联与不同<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300反转义font"><!-- raw HTML omitted -->反转义<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300修改分隔符font"><!-- raw HTML omitted -->修改分隔符<!-- raw HTML omitted --></a></li>
   </ul>
 </nav>
     </div>
@@ -208,7 +208,7 @@
         
         <div class="post-content">
             <p>上一节学习了模板引擎的逻辑控制和空白符号处理用法。这一节学习一下，高级概念和用法，并将讯安然结果转换为html。</p>
-<h2 id="font-colorcc3300font"><!-- raw HTML omitted -->模板中的作用域<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300模板中的作用域font"><!-- raw HTML omitted -->模板中的作用域<!-- raw HTML omitted --></h2>
 <p>之前提到的with语句就有作用域的概念，先看一个例子。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -224,7 +224,7 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">:=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;alice&#34;</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">name1: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">    </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">with</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
@@ -233,7 +233,7 @@
 </span><span style="color:#d14">        name2: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name2<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">    </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">end</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">name1 after with: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 </code></pre></td></tr></table>
 </div>
 </div><p>输出结果</p>
@@ -272,7 +272,7 @@ name1 after with: alice2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">..
-		tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+		tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">:=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;alice&#34;</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">name1: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">with</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
@@ -283,7 +283,7 @@ name1 after with: alice2
 </span><span style="color:#d14">name1 after with: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">//额外添加这一句
 </span><span style="color:#d14">name2 after with: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name2<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 <span style="color:#000;font-weight:bold">...</span>
 </code></pre></td></tr></table>
 </div>
@@ -318,7 +318,7 @@ name1 after with: alice2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">...</span>
-		tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+		tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">:=</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;alice&#34;</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">name1: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">with</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">true</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
@@ -328,7 +328,7 @@ name1 after with: alice2
 </span><span style="color:#d14">	name2: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name2<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">end</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">name1 after with: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>$name1<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 <span style="color:#000;font-weight:bold">...</span>
 </code></pre></td></tr></table>
 </div>
@@ -339,7 +339,7 @@ name1 in with: alice2
 name2: bob
 name1 after with: alice
 </code></pre><p><strong>结果分析：当我们在模板中使用 <code>:=</code> 的时候，模板引擎会在当前作用域内新建一个同名的模板变量（等同于程序代码中本地变量和全局变量的区别），在同个作用域内对这个模板变量的操作都不会影响到其它作用域。</strong></p>
-<h2 id="font-colorcc3300font1"><!-- raw HTML omitted -->模板函数<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300模板函数font"><!-- raw HTML omitted -->模板函数<!-- raw HTML omitted --></h2>
 <p>模板函数，顾名思义，就是像在程序代码中的函数那样，用于在运行时调用的数据结构。</p>
 <p>如果想要自定义模板函数并加入到模板对象中，可以通过 <code>Funcs</code> 方法：</p>
 <p>实例：</p>
@@ -386,9 +386,9 @@ name1 after with: alice
 		})
 
 		<span style="color:#998;font-style:italic">// 解析模板内容
-</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14">result: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>add<span style="color:#bbb"> </span>1<span style="color:#bbb"> </span>2<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 		<span style="color:#000;font-weight:bold">if</span> err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
 			fmt.<span style="color:#900;font-weight:bold">Fprintf</span>(w, <span style="color:#d14">&#34;Parse: %v&#34;</span>, err)
 			<span style="color:#000;font-weight:bold">return</span>
@@ -408,7 +408,7 @@ name1 after with: alice
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>分析：通过在模板上调用funcs方法添加一个funcmap，之后在解析时就能调用设定好的方法。</strong></p>
-<h2 id="font-colorcc3300font2"><!-- raw HTML omitted -->模板中的管道操作<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300模板中的管道操作font"><!-- raw HTML omitted -->模板中的管道操作<!-- raw HTML omitted --></h2>
 <p>和linux中的管道符概念类似，先看代码：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -434,9 +434,9 @@ name1 after with: alice
 		})
 
 		<span style="color:#998;font-style:italic">// 解析模板内容
-</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14">result: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>add2<span style="color:#bbb"> </span>0<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">|</span><span style="color:#bbb"> </span>add2<span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">|</span><span style="color:#bbb"> </span>add2<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 <span style="color:#000;font-weight:bold">...</span>
 </code></pre></td></tr></table>
 </div>
@@ -452,7 +452,7 @@ name1 after with: alice
 </code></pre></td></tr></table>
 </div>
 </div><p>这点也很好理解。</p>
-<h2 id="font-colorcc3300font3"><!-- raw HTML omitted -->模板复用<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300模板复用font"><!-- raw HTML omitted -->模板复用<!-- raw HTML omitted --></h2>
 <p>先看代码：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -492,12 +492,12 @@ name1 after with: alice
 		})
 
 		<span style="color:#998;font-style:italic">// 解析模板内容
-</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>define<span style="color:#bbb"> </span><span style="color:#d14">&#34;list&#34;</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">    </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span>join<span style="color:#bbb"> </span><span style="color:#008080">.</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;, &#34;</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14"></span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">end</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
 </span><span style="color:#d14">Names: </span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#000;font-weight:bold">template</span><span style="color:#bbb"> </span><span style="color:#d14">&#34;list&#34;</span><span style="color:#bbb"> </span><span style="color:#008080">.names</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 		<span style="color:#000;font-weight:bold">if</span> err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
 			fmt.<span style="color:#900;font-weight:bold">Fprintf</span>(w, <span style="color:#d14">&#34;Parse: %v&#34;</span>, err)
 			<span style="color:#000;font-weight:bold">return</span>
@@ -536,7 +536,7 @@ name1 after with: alice
 </span><span style="color:#998;font-style:italic"></span>Names: Alice, Bob, Cindy, David
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="font-colorcc3300font4"><!-- raw HTML omitted -->从本地文件加载模板<!-- raw HTML omitted --></h2>
+</div><h2 id="font-colorcc3300从本地文件加载模板font"><!-- raw HTML omitted -->从本地文件加载模板<!-- raw HTML omitted --></h2>
 <p>代码实例：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -629,7 +629,7 @@ name1 after with: alice
 <span style="color:#000;font-weight:bold">...</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="font-colorcc3300htmltemplate--texttemplate-font"><!-- raw HTML omitted --><code>html/template</code> 与 <code>text/template</code> 的关联与不同<!-- raw HTML omitted --></h2>
+</div><h2 id="font-colorcc3300htmltemplate-与-texttemplate-的关联与不同font"><!-- raw HTML omitted --><code>html/template</code> 与 <code>text/template</code> 的关联与不同<!-- raw HTML omitted --></h2>
 <p>使用<code>text/template</code>包输出html</p>
 <p>实例代码：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -684,14 +684,14 @@ name1 after with: alice
 <span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
 	http.<span style="color:#900;font-weight:bold">HandleFunc</span>(<span style="color:#d14">&#34;/&#34;</span>, <span style="color:#000;font-weight:bold">func</span>(w http.ResponseWriter, r <span style="color:#000;font-weight:bold">*</span>http.Request) {
 		<span style="color:#998;font-style:italic">// 创建模板对象并解析模板内容
-</span><span style="color:#998;font-style:italic"></span>		tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+</span><span style="color:#998;font-style:italic"></span>		tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14">&lt;html&gt;
 </span><span style="color:#d14">&lt;body&gt;
 </span><span style="color:#d14">	&lt;h2&gt;Heading 2&lt;/h2&gt;
 </span><span style="color:#d14">	&lt;p&gt;Paragraph&lt;/p&gt;
 </span><span style="color:#d14">&lt;/boyd&gt;
 </span><span style="color:#d14">&lt;/html&gt;
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 		<span style="color:#000;font-weight:bold">if</span> err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
 			fmt.<span style="color:#900;font-weight:bold">Fprintf</span>(w, <span style="color:#d14">&#34;Parse: %v&#34;</span>, err)
 			<span style="color:#000;font-weight:bold">return</span>
@@ -734,14 +734,14 @@ name1 after with: alice
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a61717;background-color:#e3d2d2">·</span><span style="color:#a61717;background-color:#e3d2d2">·</span><span style="color:#a61717;background-color:#e3d2d2">·</span>
-tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#a61717;background-color:#e3d2d2">···</span>
+tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14">&lt;html&gt;
 </span><span style="color:#d14">&lt;body&gt;
 </span><span style="color:#d14">	&lt;p&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#008080">.content</span><span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">&lt;/p&gt;
 </span><span style="color:#d14">&lt;/boyd&gt;
 </span><span style="color:#d14">&lt;/html&gt;
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 		<span style="color:#000;font-weight:bold">if</span> err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
 			fmt.<span style="color:#900;font-weight:bold">Fprintf</span>(w, <span style="color:#d14">&#34;Parse: %v&#34;</span>, err)
 			<span style="color:#000;font-weight:bold">return</span>
@@ -751,7 +751,7 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
 </span><span style="color:#998;font-style:italic"></span>		err = tmpl.<span style="color:#900;font-weight:bold">Execute</span>(w, <span style="color:#000;font-weight:bold">map</span>[<span style="color:#458;font-weight:bold">string</span>]<span style="color:#000;font-weight:bold">interface</span>{}{
 			<span style="color:#d14">&#34;content&#34;</span>: <span style="color:#d14">&#34;&lt;script&gt;alert(&#39;you have been pwned&#39;)&lt;/script&gt;&#34;</span>,
 		})
-<span style="color:#a61717;background-color:#e3d2d2">·</span><span style="color:#a61717;background-color:#e3d2d2">·</span><span style="color:#a61717;background-color:#e3d2d2">·</span>
+<span style="color:#a61717;background-color:#e3d2d2">···</span>
 </code></pre></td></tr></table>
 </div>
 </div><blockquote>
@@ -759,7 +759,7 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
 <p>如果想要避免此类攻击，只需要将导入的包从 <code>text/template</code> 改成 <code>html/template</code> 就可以了。修改完成后，再运行程序的话，我们只会看到被转义之后的 JavaScript 脚本内容，成功地避免了此类安全漏洞。</p>
 </blockquote>
 <p><strong>结论：http/template提供安全保障和对文本进行了转义处理。</strong></p>
-<h2 id="font-colorcc3300font5"><!-- raw HTML omitted -->反转义<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300反转义font"><!-- raw HTML omitted -->反转义<!-- raw HTML omitted --></h2>
 <p><code>http/template</code>可以为我们对可以内容进行转义，但是有些时候确实需要动态生成html。这时候，可以借助模板函数，将文本转换为一个特殊类型template.Html</p>
 <p>实例：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -829,13 +829,13 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
 		})
 
 		<span style="color:#998;font-style:italic">// 解析模板内容
-</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">
+</span><span style="color:#998;font-style:italic"></span>		_, err <span style="color:#000;font-weight:bold">:=</span> tmpl.<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`
 </span><span style="color:#d14">&lt;html&gt;
 </span><span style="color:#d14">&lt;body&gt;
 </span><span style="color:#d14">	&lt;p&gt;</span><span style="color:#999;font-weight:bold;font-style:italic">{{</span><span style="color:#008080">.content</span><span style="color:#bbb"> </span><span style="color:#000;font-weight:bold">|</span><span style="color:#bbb"> </span>safe<span style="color:#999;font-weight:bold;font-style:italic">}}</span><span style="color:#d14">&lt;/p&gt;
 </span><span style="color:#d14">&lt;/boyd&gt;
 </span><span style="color:#d14">&lt;/html&gt;
-</span><span style="color:#d14"></span><span style="color:#d14">`</span>)
+</span><span style="color:#d14">`</span>)
 		<span style="color:#000;font-weight:bold">if</span> err <span style="color:#000;font-weight:bold">!=</span> <span style="color:#000;font-weight:bold">nil</span> {
 			fmt.<span style="color:#900;font-weight:bold">Fprintf</span>(w, <span style="color:#d14">&#34;Parse: %v&#34;</span>, err)
 			<span style="color:#000;font-weight:bold">return</span>
@@ -858,14 +858,14 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
 </div>
 </div><p>当然也有第三方的包，可以帮助我们在渲染html时过滤调不安全内容，而非无脑的转义</p>
 <p>例如（&ldquo;github.com/microcosm-cc/bluemonday）</p>
-<h2 id="font-colorcc3300font6"><!-- raw HTML omitted -->修改分隔符<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300修改分隔符font"><!-- raw HTML omitted -->修改分隔符<!-- raw HTML omitted --></h2>
 <p>我们来快速学习一下如何修改模板的分隔符，因为标准库的模板引擎使用的花括号 <code>{{</code> 和 <code>}}</code> 和许多流行的前端框架有冲突（如 VueJS 和 AngularJS），所以知道怎么修改它们是非常有用的。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Delims</span>(<span style="color:#d14">&#34;[[&#34;</span>, <span style="color:#d14">&#34;]]&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`</span><span style="color:#d14">[[.content]]</span><span style="color:#d14">`</span>)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span style="color:#900;font-weight:bold">New</span>(<span style="color:#d14">&#34;test&#34;</span>).<span style="color:#900;font-weight:bold">Delims</span>(<span style="color:#d14">&#34;[[&#34;</span>, <span style="color:#d14">&#34;]]&#34;</span>).<span style="color:#900;font-weight:bold">Parse</span>(<span style="color:#d14">`[[.content]]`</span>)
 </code></pre></td></tr></table>
 </div>
 </div><p>我们通过 <code>Delims</code> 方法将它们分别修改为方括号 <code>[[</code> 和 <code>]]</code>。</p>
@@ -964,6 +964,14 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -995,14 +1003,6 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -1011,8 +1011,6 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -1042,7 +1040,7 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -1074,7 +1072,7 @@ tmpl, err <span style="color:#000;font-weight:bold">:=</span> template.<span sty
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

@@ -6,10 +6,28 @@
     <description>Recent content in 随笔 on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 02 Feb 2020 15:28:12 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Dec 2021 23:11:26 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>测试</title>
+      <link>https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 28 Dec 2021 23:11:26 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/</guid>
+      <description>&lt;p&gt;与你常在&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>疫情一周了</title>
+      <link>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/</link>
+      <pubDate>Tue, 28 Dec 2021 21:47:41 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/</guid>
+      <description>&lt;p&gt;与你常在&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>新年开始浪</title>

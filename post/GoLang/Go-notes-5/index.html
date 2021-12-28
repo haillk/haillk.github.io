@@ -139,9 +139,9 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-colorcc33008font">进制数，零开头的数字会被识别为8进制</a></li>
-    <li><a href="#font-colorcc3300error-errnilerrorfont">返回error类型时 err==nil?吗error也属于接口值的判断</a></li>
-    <li><a href="#font-colorcc3300named-type-unnamed-typefont">Named type 和 UnNamed Type(具名类型和非具名类型)</a>
+    <li><a href="#font-colorcc3300进制数零开头的数字会被识别为8进制font"><!-- raw HTML omitted -->进制数，零开头的数字会被识别为8进制<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300返回error类型时-errnil吗---error也属于接口值的判断font"><!-- raw HTML omitted -->返回error类型时 err==nil?吗&mdash;error也属于接口值的判断<!-- raw HTML omitted --></a></li>
+    <li><a href="#font-colorcc3300named-type和-unnamed-type具名类型和非具名类型font"><!-- raw HTML omitted -->Named type 和 UnNamed Type(具名类型和非具名类型)<!-- raw HTML omitted --></a>
       <ul>
         <li></li>
       </ul>
@@ -206,7 +206,7 @@
         </div>
         
         <div class="post-content">
-            <h2 id="font-colorcc33008font"><!-- raw HTML omitted -->进制数，零开头的数字会被识别为8进制<!-- raw HTML omitted --></h2>
+            <h2 id="font-colorcc3300进制数零开头的数字会被识别为8进制font"><!-- raw HTML omitted -->进制数，零开头的数字会被识别为8进制<!-- raw HTML omitted --></h2>
 <p>示例</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -237,7 +237,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>结果是 8    虽然十个小知识点，有时候还是会记不住。</p>
-<h2 id="font-colorcc3300error-errnilerrorfont"><!-- raw HTML omitted -->返回error类型时 err==nil?吗&mdash;error也属于接口值的判断<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300返回error类型时-errnil吗---error也属于接口值的判断font"><!-- raw HTML omitted -->返回error类型时 err==nil?吗&mdash;error也属于接口值的判断<!-- raw HTML omitted --></h2>
 <p>问题：下列代码输出什么？</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -292,12 +292,12 @@
 
 	<span style="color:#000;font-weight:bold">return</span> err
 }
-<span style="color:#a61717;background-color:#e3d2d2">·</span><span style="color:#a61717;background-color:#e3d2d2">·</span><span style="color:#a61717;background-color:#e3d2d2">·</span>
+<span style="color:#a61717;background-color:#e3d2d2">···</span>
 fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="color:#000;font-weight:bold">==</span> <span style="color:#000;font-weight:bold">nil</span>)
 </code></pre></td></tr></table>
 </div>
 </div><p>直接声明返回值的类型为errror就能直接判断了</p>
-<h2 id="font-colorcc3300named-type-unnamed-typefont"><!-- raw HTML omitted -->Named type 和 UnNamed Type(具名类型和非具名类型)<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300named-type和-unnamed-type具名类型和非具名类型font"><!-- raw HTML omitted -->Named type 和 UnNamed Type(具名类型和非具名类型)<!-- raw HTML omitted --></h2>
 <p>先看一个现象：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -342,19 +342,19 @@ fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="co
 </blockquote>
 <p>所以只要有一个不是具名变量，那么底层类型相同的变量就能相互赋值了。</p>
 <p>所以在第二个程序中  虽然T是具名类型的变量，但是[]int不是，这才能相互赋值。</p>
-<h4 id="heading">那么哪些才是具名类型呢。</h4>
+<h4 id="那么哪些才是具名类型呢">那么哪些才是具名类型呢。</h4>
 <blockquote>
 <ul>
 <li>内置类型，比如int int64 float string bool等</li>
 <li>使用type声明的类型</li>
 </ul>
 </blockquote>
-<h4 id="unnamed-type">什么有是UnNamed Type呢</h4>
+<h4 id="什么有是unnamed-type呢">什么有是UnNamed Type呢</h4>
 <blockquote>
 <p>基于已有的Named type组合在一起的类型，比如strcut{}, []string ,interface{} ,map等</p>
 </blockquote>
 <hr>
-<h4 id="heading1">类型添加方法</h4>
+<h4 id="类型添加方法">类型添加方法</h4>
 <p>再思考一个问题，在为类型添加方法的时候，Unnamed Type和Named Type有什么区别吗。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -476,6 +476,14 @@ fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="co
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -507,14 +515,6 @@ fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="co
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -523,8 +523,6 @@ fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="co
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -554,7 +552,7 @@ fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="co
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -586,7 +584,7 @@ fmt.<span style="color:#900;font-weight:bold">Println</span>(err <span style="co
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

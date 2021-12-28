@@ -141,10 +141,10 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">显示进程</a></li>
-        <li><a href="#heading1">切换线程</a></li>
-        <li><a href="#heading2">线程锁</a></li>
-        <li><a href="#nonstop">non-stop模式</a></li>
+        <li><a href="#显示进程">显示进程</a></li>
+        <li><a href="#切换线程">切换线程</a></li>
+        <li><a href="#线程锁">线程锁</a></li>
+        <li><a href="#non-stop模式">non-stop模式</a></li>
       </ul>
     </li>
   </ul>
@@ -202,7 +202,7 @@
         
         <div class="post-content">
             <p>前进！前进！！不择手段的前进！</p>
-<h3 id="heading">显示进程</h3>
+<h3 id="显示进程">显示进程</h3>
 <p><strong>info threads</strong></p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -218,15 +218,15 @@
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#000;font-weight:bold">(</span>gdb<span style="color:#000;font-weight:bold">)</span> info threads
   Id   Target Id         Frame
 * <span style="color:#099">1</span>    LWP <span style="color:#099">32630</span> <span style="color:#d14">&#34;test&#34;</span>  main.f0 <span style="color:#000;font-weight:bold">(</span><span style="color:#008080">ch</span><span style="color:#000;font-weight:bold">=</span>0xc000042070<span style="color:#000;font-weight:bold">)</span> at /root/gowork/src/test_gdb/test.go:7
-  <span style="color:#099">2</span>    LWP <span style="color:#099">32634</span> <span style="color:#d14">&#34;test&#34;</span>  runtime.usleep <span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> at /usr/local/go/src/runtime/sys_linux_amd64.s:146
-  <span style="color:#099">3</span>    LWP <span style="color:#099">32635</span> <span style="color:#d14">&#34;test&#34;</span>  runtime.futex <span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> at /usr/local/go/src/runtime/sys_linux_amd64.s:568
-  <span style="color:#099">4</span>    LWP <span style="color:#099">32636</span> <span style="color:#d14">&#34;test&#34;</span>  runtime.futex <span style="color:#000;font-weight:bold">(</span><span style="color:#000;font-weight:bold">)</span> at /usr/local/go/src/runtime/sys_linux_amd64.s:568
+  <span style="color:#099">2</span>    LWP <span style="color:#099">32634</span> <span style="color:#d14">&#34;test&#34;</span>  runtime.usleep <span style="color:#000;font-weight:bold">()</span> at /usr/local/go/src/runtime/sys_linux_amd64.s:146
+  <span style="color:#099">3</span>    LWP <span style="color:#099">32635</span> <span style="color:#d14">&#34;test&#34;</span>  runtime.futex <span style="color:#000;font-weight:bold">()</span> at /usr/local/go/src/runtime/sys_linux_amd64.s:568
+  <span style="color:#099">4</span>    LWP <span style="color:#099">32636</span> <span style="color:#d14">&#34;test&#34;</span>  runtime.futex <span style="color:#000;font-weight:bold">()</span> at /usr/local/go/src/runtime/sys_linux_amd64.s:568
 
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="heading1">切换线程</h3>
+</div><h3 id="切换线程">切换线程</h3>
 <pre><code>thread ID
-</code></pre><h3 id="heading2">线程锁</h3>
+</code></pre><h3 id="线程锁">线程锁</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -239,7 +239,7 @@
 <p><strong>off</strong>:不锁定任何线程，当程序继续运行的时候如果有断点，那么就把所有的线程都暂停下来，直到你指定某个线程继续执行，如果在当前线程下使用continue的话那么会启动所有线程（GDB默认）；
 <strong>on</strong>:打开线程锁，锁定其他线程，只有当前线程执行。</p>
 </blockquote>
-<h3 id="nonstop">non-stop模式</h3>
+<h3 id="non-stop模式">non-stop模式</h3>
 <blockquote>
 <p>当某个或多个线程在一个断点上，其他线程仍会并行运行
 \2. 你可以选择某个被中断的线程，只让他运行。</p>
@@ -341,6 +341,14 @@ set non-stop on
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -372,14 +380,6 @@ set non-stop on
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -388,8 +388,6 @@ set non-stop on
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -419,7 +417,7 @@ set non-stop on
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -451,7 +449,7 @@ set non-stop on
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

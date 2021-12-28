@@ -141,9 +141,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">可变参数和关键字参数</a></li>
-        <li><a href="#heading3">命名关键字参数</a></li>
-        <li><a href="#heading4">参数顺序</a></li>
+        <li><a href="#可变参数和关键字参数">可变参数和关键字参数</a></li>
+        <li><a href="#命名关键字参数">命名关键字参数</a></li>
+        <li><a href="#参数顺序">参数顺序</a></li>
       </ul>
     </li>
   </ul>
@@ -201,8 +201,8 @@
         
         <div class="post-content">
             <p>*每天都有新体验</p>
-<h3 id="heading">可变参数和关键字参数</h3>
-<h4 id="heading1">可变参数：</h4>
+<h3 id="可变参数和关键字参数">可变参数和关键字参数</h3>
+<h4 id="可变参数">可变参数：</h4>
 <p>对于需要多个参数的函数，可以使用可变参数</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -229,7 +229,7 @@ clac(<span style="color:#000;font-weight:bold">*</span>list_test)
 </code></pre></td></tr></table>
 </div>
 </div><p>可变参数还是很好理解的，这些参数在函数调用时自动组装成了一个元组。</p>
-<h4 id="heading2">关键字参数</h4>
+<h4 id="关键字参数">关键字参数</h4>
 <p>关键字参数允许你传入任意个含有参数名的参数。这些参数自动组装为一个字典。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -240,14 +240,14 @@ clac(<span style="color:#000;font-weight:bold">*</span>list_test)
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">person</span>(name,age,<span style="color:#000;font-weight:bold">*</span><span style="color:#000;font-weight:bold">*</span>kw):
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">def</span> <span style="color:#900;font-weight:bold">person</span>(name,age,<span style="color:#000;font-weight:bold">**</span>kw):
     <span style="color:#000;font-weight:bold">print</span>(name,age,kw)
-person(<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">bob</span><span style="color:#d14">&#39;</span>,<span style="color:#099">14</span>,city<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">beijing</span><span style="color:#d14">&#39;</span>)
+person(<span style="color:#d14">&#39;bob&#39;</span>,<span style="color:#099">14</span>,city<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;beijing&#39;</span>)
 <span style="color:#998;font-style:italic">#out</span>
-name: Bob age: <span style="color:#099">14</span> other: {<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">city</span><span style="color:#d14">&#39;</span>: <span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Beijing</span><span style="color:#d14">&#39;</span>}
+name: Bob age: <span style="color:#099">14</span> other: {<span style="color:#d14">&#39;city&#39;</span>: <span style="color:#d14">&#39;Beijing&#39;</span>}
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="heading3">命名关键字参数</h3>
+</div><h3 id="命名关键字参数">命名关键字参数</h3>
 <p>如果要限制关键字参数的名字，可以用命名关键字参数。如</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -266,12 +266,12 @@ name: Bob age: <span style="color:#099">14</span> other: {<span style="color:#d1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">&gt;&gt;</span><span style="color:#000;font-weight:bold">&gt;</span> person(<span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Jack</span><span style="color:#d14">&#39;</span>, <span style="color:#099">24</span>, city<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Beijing</span><span style="color:#d14">&#39;</span>, job<span style="color:#000;font-weight:bold">=</span><span style="color:#d14"></span><span style="color:#d14">&#39;</span><span style="color:#d14">Engineer</span><span style="color:#d14">&#39;</span>)
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#000;font-weight:bold">&gt;&gt;&gt;</span> person(<span style="color:#d14">&#39;Jack&#39;</span>, <span style="color:#099">24</span>, city<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;Beijing&#39;</span>, job<span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#39;Engineer&#39;</span>)
 Jack <span style="color:#099">24</span> Beijing Engineer
 </code></pre></td></tr></table>
 </div>
 </div><p>命名关键字必须传入。</p>
-<h3 id="heading4">参数顺序</h3>
+<h3 id="参数顺序">参数顺序</h3>
 <p>必选参数，默认参数，可变参数，关键字参数，明明关键字参数可以组合使用，但是要遵循一定的规律</p>
 <p>顺序就是如上的顺序。</p>
         </div>
@@ -367,6 +367,14 @@ Jack <span style="color:#099">24</span> Beijing Engineer
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -398,14 +406,6 @@ Jack <span style="color:#099">24</span> Beijing Engineer
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -414,8 +414,6 @@ Jack <span style="color:#099">24</span> Beijing Engineer
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -445,7 +443,7 @@ Jack <span style="color:#099">24</span> Beijing Engineer
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -477,7 +475,7 @@ Jack <span style="color:#099">24</span> Beijing Engineer
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

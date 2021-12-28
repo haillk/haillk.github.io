@@ -199,9 +199,9 @@
         
         <div class="post-content">
             <p>nil channel和已经关闭的channel,常量寻址，断言，cap,不能使用短变量声明设置结构体字段值，slice</p>
-<h4 id="font-colorcc33001ifont"><!-- raw HTML omitted -->1、i++是语句，不是表达式<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33001i是语句不是表达式font"><!-- raw HTML omitted -->1、i++是语句，不是表达式<!-- raw HTML omitted --></h4>
 <p>​		i++ 和 i&ndash; 在 Go 语言中是语句，不是表达式，因此不能赋值给另外的变量,j = 		i++是错误的</p>
-<h4 id="font-colorcc33002nil-channelchannelfont"><!-- raw HTML omitted -->2、nil channel和已经关闭的channel<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33002nil-channel和已经关闭的channelfont"><!-- raw HTML omitted -->2、nil channel和已经关闭的channel<!-- raw HTML omitted --></h4>
 <ol>
 <li>
 <p>在nil channel 接受或者发送数据都会造成阻塞</p>
@@ -210,11 +210,11 @@
 <p>给一个已经关闭的channel发送数据，引起panic ,从一个已经关闭的channel接收数据，如果缓冲区为空，返回零值。</p>
 </li>
 </ol>
-<h4 id="font-colorcc33003font"><!-- raw HTML omitted -->3、常量寻址问题<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33003常量寻址问题font"><!-- raw HTML omitted -->3、常量寻址问题<!-- raw HTML omitted --></h4>
 <p>​	1. 常量通常会被编译器在预处理阶段直接展开，作为指令数据使用，所以无法寻址。</p>
 <pre><code>2. 变量在运行期间分配内存。
 </code></pre>
-<h4 id="font-colorcc33004font"><!-- raw HTML omitted -->4、各种知识点<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33004各种知识点font"><!-- raw HTML omitted -->4、各种知识点<!-- raw HTML omitted --></h4>
 <ul>
 <li>
 <p>只接受的 channel 不可以被关闭，发送的channel可以被关闭。</p>
@@ -238,7 +238,7 @@
 <p>x[2:] ,对于[i:j]j省略的时候，默认为len而不是cap</p>
 </li>
 </ul>
-<h4 id="font-colorcc33005font"><!-- raw HTML omitted -->5、不能使用短变量声明设置结构体字段值<!-- raw HTML omitted --></h4>
+<h4 id="font-colorcc33005不能使用短变量声明设置结构体字段值font"><!-- raw HTML omitted -->5、不能使用短变量声明设置结构体字段值<!-- raw HTML omitted --></h4>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -250,9 +250,9 @@
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">var</span> data Struct<span style="color:#998;font-style:italic">//声明一个结构体
-</span><span style="color:#998;font-style:italic"></span><span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#a61717;background-color:#e3d2d2">#</span> 错误
+</span><span style="color:#998;font-style:italic"></span><span style="color:#a61717;background-color:#e3d2d2">##</span> 错误
 data.re,err <span style="color:#000;font-weight:bold">:=</span> <span style="color:#099">12</span>,<span style="color:#000;font-weight:bold">nil</span>
-<span style="color:#a61717;background-color:#e3d2d2">#</span><span style="color:#a61717;background-color:#e3d2d2">#</span> 正确
+<span style="color:#a61717;background-color:#e3d2d2">##</span> 正确
 <span style="color:#000;font-weight:bold">var</span> err <span style="color:#458;font-weight:bold">error</span>
 date.re,err = <span style="color:#099">12</span>,<span style="color:#000;font-weight:bold">nil</span>
 </code></pre></td></tr></table>
@@ -345,6 +345,14 @@ date.re,err = <span style="color:#099">12</span>,<span style="color:#000;font-we
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -376,14 +384,6 @@ date.re,err = <span style="color:#099">12</span>,<span style="color:#000;font-we
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -392,8 +392,6 @@ date.re,err = <span style="color:#099">12</span>,<span style="color:#000;font-we
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -423,7 +421,7 @@ date.re,err = <span style="color:#099">12</span>,<span style="color:#000;font-we
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -455,7 +453,7 @@ date.re,err = <span style="color:#099">12</span>,<span style="color:#000;font-we
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

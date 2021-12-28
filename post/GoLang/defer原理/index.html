@@ -141,13 +141,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#defer1defer">defer规则1：再defer声明时，其参数已经被加载</a></li>
-        <li><a href="#defer2defer">defer规则2：defer声明和返回值的加载顺序</a></li>
-        <li><a href="#heading">从实例分析原理：</a></li>
-        <li><a href="#heading1">编译调用源码：</a></li>
-        <li><a href="#defer">defer结构体源码：</a></li>
-        <li><a href="#newdefer">newdefer源码：</a></li>
-        <li><a href="#heading2">总结</a></li>
+        <li><a href="#defer规则1再defer声明时其参数已经被加载">defer规则1：再defer声明时，其参数已经被加载</a></li>
+        <li><a href="#defer规则2defer声明和返回值的加载顺序">defer规则2：defer声明和返回值的加载顺序</a></li>
+        <li><a href="#从实例分析原理">从实例分析原理：</a></li>
+        <li><a href="#编译调用源码">编译调用源码：</a></li>
+        <li><a href="#defer结构体源码">defer结构体源码：</a></li>
+        <li><a href="#newdefer源码">newdefer源码：</a></li>
+        <li><a href="#总结">总结</a></li>
       </ul>
     </li>
   </ul>
@@ -205,7 +205,7 @@
         
         <div class="post-content">
             <p>佛门广大，岂不容一癫僧！</p>
-<h3 id="defer1defer">defer规则1：再defer声明时，其参数已经被加载</h3>
+<h3 id="defer规则1再defer声明时其参数已经被加载">defer规则1：再defer声明时，其参数已经被加载</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -243,7 +243,7 @@ in mainin func3
 </div><ul>
 <li>defer后a的更改并没有影响到defer中a的值。</li>
 </ul>
-<h3 id="defer2defer">defer规则2：defer声明和返回值的加载顺序</h3>
+<h3 id="defer规则2defer声明和返回值的加载顺序">defer规则2：defer声明和返回值的加载顺序</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -279,7 +279,7 @@ in mainin func3
 </div><ul>
 <li>先计算return 的值RET，再计算defer，最后返回RET</li>
 </ul>
-<h3 id="heading">从实例分析原理：</h3>
+<h3 id="从实例分析原理">从实例分析原理：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -352,21 +352,21 @@ TEXT main.<span style="color:#900;font-weight:bold">main</span>(SB) H:<span styl
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a809</span>                <span style="color:#099">0</span>f57c0                          XORPS X0, X0
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a80c</span>                <span style="color:#099">0</span>f11842400010000                MOVUPS X0, <span style="color:#099">0x100</span>(SP)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a814</span>                <span style="color:#099">488</span>d0525280100                  LEAQ 
-<span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span>
+<span style="color:#a61717;background-color:#e3d2d2">………………</span>
 runtime.<span style="color:#900;font-weight:bold">deferprocStack</span>(SB)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a885</span>                <span style="color:#099">85</span>c0                            TESTL AX, AX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">8</span>             <span style="color:#099">0x49a887</span>                <span style="color:#099">0</span>f85e6000000                    JNE <span style="color:#099">0x49a973</span>
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a88d</span>                <span style="color:#099">0</span>f57c0                          XORPS X0, X0
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a890</span>                <span style="color:#099">0</span>f118424f0000000                MOVUPS X0, <span style="color:#099">0xf0</span>(SP)
-  main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a898</span>                <span style="color:#099">488</span>d05a1270100                  LEAQ <span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span>
-<span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span>
+  main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a898</span>                <span style="color:#099">488</span>d05a1270100                  LEAQ <span style="color:#a61717;background-color:#e3d2d2">…………</span>
+<span style="color:#a61717;background-color:#e3d2d2">………………</span>
 runtime.<span style="color:#900;font-weight:bold">deferprocStack</span>(SB)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8f7</span>                <span style="color:#099">85</span>c0                            TESTL AX, AX
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">9</span>             <span style="color:#099">0x49a8f9</span>                <span style="color:#099">7562</span>                            JNE <span style="color:#099">0x49a95d</span>
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">10</span>            <span style="color:#099">0x49a8fb</span>                <span style="color:#099">0</span>f57c0                          XORPS X0, X0
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">10</span>            <span style="color:#099">0x49a8fe</span>                <span style="color:#099">0</span>f11842410010000                MOVUPS X0, <span style="color:#099">0x110</span>(SP)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">10</span>            <span style="color:#099">0x49a906</span>                <span style="color:#099">488</span>d0533270100                  LEAQ 
-<span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span>
+<span style="color:#a61717;background-color:#e3d2d2">………………</span>
 runtime.<span style="color:#900;font-weight:bold">deferreturn</span>(SB)
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">11</span>            <span style="color:#099">0x49a94d</span>                <span style="color:#099">488</span>bac2420010000                MOVQ <span style="color:#099">0x120</span>(SP), BP
   main.<span style="color:#000;font-weight:bold">go</span>:<span style="color:#099">11</span>            <span style="color:#099">0x49a955</span>                <span style="color:#099">4881</span>c428010000                  ADDQ <span style="color:#a61717;background-color:#e3d2d2">$</span><span style="color:#099">0x128</span>, SP
@@ -395,7 +395,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 </div><p>代码中使用了两次defer. 汇编代码中也就使用了两次deferproc和deferreturn</p>
 <p><a href="https://github.com/golang/go/blob/release-branch.go1.12/src/runtime/panic.go#L229">源码地址</a></p>
 <p><a href="https://zhuanlan.zhihu.com/p/99303379">参考</a></p>
-<h3 id="heading1">编译调用源码：</h3>
+<h3 id="编译调用源码">编译调用源码：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -408,7 +408,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">deferproc</span>(){
     获取当前goroutine
     申请一个结构体存放defer相关数据
-    <span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span><span style="color:#a61717;background-color:#e3d2d2">…</span>
+    <span style="color:#a61717;background-color:#e3d2d2">…………</span>
 }
 </code></pre></td></tr></table>
 </div>
@@ -446,7 +446,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 }
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="defer">defer结构体源码：</h3>
+</div><h3 id="defer结构体源码">defer结构体源码：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -481,7 +481,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 }
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="newdefer">newdefer源码：</h3>
+</div><h3 id="newdefer源码">newdefer源码：</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -506,7 +506,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 }
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="heading2">总结</h3>
+</div><h3 id="总结">总结</h3>
 <p>defer对象是以链表的的形式关联到goroutine上的，每添加一个defer，就在链表顶端添加这个defer.</p>
         </div>
 
@@ -601,6 +601,14 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -632,14 +640,6 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -648,8 +648,6 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -679,7 +677,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -711,7 +709,7 @@ H:<span style="color:#a61717;background-color:#e3d2d2">\</span>GoProgramming<spa
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

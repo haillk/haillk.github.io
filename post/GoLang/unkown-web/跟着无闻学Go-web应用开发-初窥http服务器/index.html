@@ -141,13 +141,13 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#font-colorcc3300font">三个主要函数的简单分析</a></li>
-        <li><a href="#font-colorcc3300httphandlefunc-font">http.handlefunc() 函数分析</a></li>
+        <li><a href="#font-colorcc3300三个主要函数的简单分析font"><!-- raw HTML omitted -->三个主要函数的简单分析<!-- raw HTML omitted --></a></li>
+        <li><a href="#font-colorcc3300httphandlefunc-函数分析font"><!-- raw HTML omitted -->http.handlefunc() 函数分析<!-- raw HTML omitted --></a></li>
       </ul>
     </li>
-    <li><a href="#font-colorcc3300httplistrenandserve4000nilfont">Http.ListrenAndServe(":4000,nil)函数分析</a></li>
-    <li><a href="#font-colorcc3300httpservemuxfonthttphandle">http.ServeMux函数分析对http.Handle剖析</a></li>
-    <li><a href="#font-colorcc3300listenandservedefaultservemuxfont">ListenAndServe是否也是对DefaultServeMux对象的封装呢</a></li>
+    <li><a href="#font-colorcc3300httplistrenandserve4000nilfont函数分析"><!-- raw HTML omitted -->Http.ListrenAndServe(&quot;:4000&rdquo;,nil)<!-- raw HTML omitted -->函数分析</a></li>
+    <li><a href="#font-colorcc3300httpservemux函数分析font---对httphandle剖析"><!-- raw HTML omitted -->http.ServeMux函数分析<!-- raw HTML omitted -->&mdash;对http.Handle剖析</a></li>
+    <li><a href="#font-colorcc3300listenandserve是否也是对defaultservemux对象的封装呢font"><!-- raw HTML omitted -->ListenAndServe是否也是对DefaultServeMux对象的封装呢<!-- raw HTML omitted --></a></li>
   </ul>
 </nav>
     </div>
@@ -246,7 +246,7 @@
 }
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="font-colorcc3300font"><!-- raw HTML omitted -->三个主要函数的简单分析<!-- raw HTML omitted --></h3>
+</div><h3 id="font-colorcc3300三个主要函数的简单分析font"><!-- raw HTML omitted -->三个主要函数的简单分析<!-- raw HTML omitted --></h3>
 <ol>
 <li>
 <p><!-- raw HTML omitted --><strong>http.handleFunc()</strong> <!-- raw HTML omitted -->函数的作用是建立路由映射。包含两个参数，第一个参数是指定的路由规则。第二个参数是，要调用的响应函数（这个函数必须符合函数签名<code>func(http.ResponseWriter, *http.Request)</code>）。</p>
@@ -259,7 +259,7 @@
 <p><strong><!-- raw HTML omitted --><code>http.ListenAndServe</code><!-- raw HTML omitted --></strong>的作用是启动http服务器，并监听发送到指定地址和端口号的http请求。包含两个参数，第一个参数就是地址和端口号。第二个参数</p>
 </li>
 </ol>
-<h3 id="font-colorcc3300httphandlefunc-font"><!-- raw HTML omitted -->http.handlefunc() 函数分析<!-- raw HTML omitted --></h3>
+<h3 id="font-colorcc3300httphandlefunc-函数分析font"><!-- raw HTML omitted -->http.handlefunc() 函数分析<!-- raw HTML omitted --></h3>
 <p>​	实际上<code>http.HandleFunc</code>是标准库提供的一种简便写法，他的第二个参数必须为指定格式，是因为在<code>http.HandleFunc</code>函数内部会将传入的绑定函数转化为类型<!-- raw HTML omitted --><code>http.Handler</code>,<!-- raw HTML omitted --></p>
 <p>​	而这个对象是go标准中的http请求处理器对象，该对象实现了<code>http.Handler</code>接口：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -320,7 +320,7 @@
 }
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="font-colorcc3300httplistrenandserve4000nilfont"><!-- raw HTML omitted -->Http.ListrenAndServe(&quot;:4000&rdquo;,nil)<!-- raw HTML omitted -->函数分析</h2>
+</div><h2 id="font-colorcc3300httplistrenandserve4000nilfont函数分析"><!-- raw HTML omitted -->Http.ListrenAndServe(&quot;:4000&rdquo;,nil)<!-- raw HTML omitted -->函数分析</h2>
 <p>​	首先来分析一下第二个参数nil，根据函数声明表示，nil代替的是一个实现了<code>http.Handler</code>接口的对象。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -373,7 +373,7 @@
 </div>
 </div><p>这个代码运行起来跟前面的是一样的，不过<strong>不能方便的将路由规则和函数进行绑定。</strong></p>
 <p><strong>结论一</strong>： <strong>ListenAndServe（）的第二个参数就是一个handler,能直接用但是不能提供路由绑定。</strong></p>
-<h2 id="font-colorcc3300httpservemuxfonthttphandle"><!-- raw HTML omitted -->http.ServeMux函数分析<!-- raw HTML omitted -->&mdash;对http.Handle剖析</h2>
+<h2 id="font-colorcc3300httpservemux函数分析font---对httphandle剖析"><!-- raw HTML omitted -->http.ServeMux函数分析<!-- raw HTML omitted -->&mdash;对http.Handle剖析</h2>
 <p>通过对Hande的源码分析，Handle 是对<code>http.ServeMux</code>对象(<code>http.DefaultServeMux</code>)封装了一层。</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -434,7 +434,7 @@
 </div>
 </div><p><strong>结论</strong>：<strong><code>http.Handle</code>方法，本质上是对<code>DefaultServeMux</code>这个对象的操作。</strong></p>
 <p><strong>那么我们就可以，自己创建一个<code>http.NewServeMux</code>方法来对<code>DefaultServeMux</code>操作。</strong></p>
-<h2 id="font-colorcc3300listenandservedefaultservemuxfont"><!-- raw HTML omitted -->ListenAndServe是否也是对DefaultServeMux对象的封装呢<!-- raw HTML omitted --></h2>
+<h2 id="font-colorcc3300listenandserve是否也是对defaultservemux对象的封装呢font"><!-- raw HTML omitted -->ListenAndServe是否也是对DefaultServeMux对象的封装呢<!-- raw HTML omitted --></h2>
 <p>源码</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -520,9 +520,9 @@
         
         <li><a href="/post/Windows/%E4%BD%BF%E7%94%A8nssm%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/">使用nssm创建自定义服务</a></li>
         
-        <li><a href="/tools/">常用工具</a></li>
-        
         <li><a href="/about/">About</a></li>
+        
+        <li><a href="/tools/">常用工具</a></li>
         
         <li><a href="/archives/">归档</a></li>
         
@@ -602,6 +602,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -633,14 +641,6 @@
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -649,8 +649,6 @@
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -680,7 +678,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -712,7 +710,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

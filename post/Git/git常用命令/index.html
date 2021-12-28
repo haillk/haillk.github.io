@@ -139,12 +139,12 @@
     <div class="post-toc-content">
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">基础命令：</a>
+    <li><a href="#基础命令">基础命令：</a>
       <ul>
-        <li><a href="#1">问题1：发现提交错了，要回退版本</a></li>
-        <li><a href="#2">问题2：想改个小东西，但是代码已经提交了</a></li>
-        <li><a href="#3commit">问题3：上次commit的记录写得不够好，要重写一下。</a></li>
-        <li><a href="#4">问题4：代码提交到错误的分支上了</a></li>
+        <li><a href="#问题1发现提交错了要回退版本">问题1：发现提交错了，要回退版本</a></li>
+        <li><a href="#问题2想改个小东西但是代码已经提交了">问题2：想改个小东西，但是代码已经提交了</a></li>
+        <li><a href="#问题3上次commit的记录写得不够好要重写一下">问题3：上次commit的记录写得不够好，要重写一下。</a></li>
+        <li><a href="#问题4代码提交到错误的分支上了">问题4：代码提交到错误的分支上了</a></li>
       </ul>
     </li>
   </ul>
@@ -207,7 +207,7 @@
         </div>
         
         <div class="post-content">
-            <h2 id="heading">基础命令：</h2>
+            <h2 id="基础命令">基础命令：</h2>
 <p>branch相关</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -240,7 +240,7 @@
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">git remote add origin github.com///
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="1">问题1：发现提交错了，要回退版本</h3>
+</div><h3 id="问题1发现提交错了要回退版本">问题1：发现提交错了，要回退版本</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -261,13 +261,13 @@
 5488a92 HEAD@{21}<span style="color:#a61717;background-color:#e3d2d2">:</span> commit<span style="color:#a61717;background-color:#e3d2d2">:</span> love2
 753ec32 HEAD@{22}<span style="color:#a61717;background-color:#e3d2d2">:</span> commit<span style="color:#a61717;background-color:#e3d2d2">:</span> love it
 bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> commit<span style="color:#a61717;background-color:#e3d2d2">:</span> e
-8fa2f36 HEAD@{24}<span style="color:#a61717;background-color:#e3d2d2">:</span> commit<span style="color:#a61717;background-color:#e3d2d2">:</span> rm modules
+8fa2f36 HEAD@{24}<span style="color:#a61717;background-color:#e3d2d2">:</span> commit<span style="color:#a61717;background-color:#e3d2d2">:</span> <span style="color:#0086b3">rm </span>modules
 96b103b HEAD@{25}<span style="color:#a61717;background-color:#e3d2d2">:</span> commit<span style="color:#a61717;background-color:#e3d2d2">:</span> theme3
 <span style="color:#998;font-style:italic">##然后选择想会退的版本，回退。</span>
 <span style="color:#008080">$git</span> reset HEAD@{index}
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="2">问题2：想改个小东西，但是代码已经提交了</h3>
+</div><h3 id="问题2想改个小东西但是代码已经提交了">问题2：想改个小东西，但是代码已经提交了</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -282,7 +282,7 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
 <span style="color:#008080">$git</span> commit --amend
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="3commit">问题3：上次commit的记录写得不够好，要重写一下。</h3>
+</div><h3 id="问题3上次commit的记录写得不够好要重写一下">问题3：上次commit的记录写得不够好，要重写一下。</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -291,7 +291,7 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#008080">$git</span> commit --amend
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="4">问题4：代码提交到错误的分支上了</h3>
+</div><h3 id="问题4代码提交到错误的分支上了">问题4：代码提交到错误的分支上了</h3>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -315,7 +315,7 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
 <span style="color:#998;font-style:italic">##释放本地修改</span>
 <span style="color:#008080">$git</span> pop stash pop
 <span style="color:#008080">$git</span> add .
-<span style="color:#008080">$git</span> commit -m <span style="color:#d14">&#34;</span><span style="color:#d14">message</span><span style="color:#d14">&#34;</span>
+<span style="color:#008080">$git</span> commit -m <span style="color:#d14">&#34;message&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>当然也有逼格高一点的方式。</p>
@@ -433,6 +433,14 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -464,14 +472,6 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -480,8 +480,6 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -511,7 +509,7 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -543,7 +541,7 @@ bc372b2 HEAD@{23}<span style="color:#a61717;background-color:#e3d2d2">:</span> c
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>

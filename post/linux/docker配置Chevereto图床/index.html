@@ -141,9 +141,9 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#heading">环境配置</a></li>
-        <li><a href="#dockercomposeyamldocker">新建docker-compose.yaml文件用来构建docker</a></li>
-        <li><a href="#heading1">启动服务</a></li>
+        <li><a href="#环境配置">环境配置</a></li>
+        <li><a href="#新建docker-composeyaml文件用来构建docker">新建docker-compose.yaml文件用来构建docker</a></li>
+        <li><a href="#启动服务">启动服务</a></li>
       </ul>
     </li>
   </ul>
@@ -201,15 +201,15 @@
         
         <div class="post-content">
             <p>与你常在</p>
-<h3 id="heading">环境配置</h3>
+<h3 id="环境配置">环境配置</h3>
 <p>debian服务器安装docker-ce和dockers-Compose</p>
-<h5 id="dockerdockercomposehttpsdocsdockercomengineinstalldebian">安装docker和docker-Compose<a href="https://docs.docker.com/engine/install/debian/">官方文档</a></h5>
+<h5 id="安装docker和docker-compose官方文档httpsdocsdockercomengineinstalldebian">安装docker和docker-Compose<a href="https://docs.docker.com/engine/install/debian/">官方文档</a></h5>
 <blockquote>
 <p>包括设置docker储存库</p>
 <p>添加docker官方gpg密钥</p>
 <p>设置存储库</p>
 </blockquote>
-<h3 id="dockercomposeyamldocker">新建docker-compose.yaml文件用来构建docker</h3>
+<h3 id="新建docker-composeyaml文件用来构建docker">新建docker-compose.yaml文件用来构建docker</h3>
 <p>参考<a href="https://hub.docker.com/r/nmtan/chevereto/">dockerhub</a></p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -254,50 +254,50 @@
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">version:<span style="color:#bbb"> </span><span style="color:#d14">&#39;3&#39;</span><span style="color:#bbb">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#000;font-weight:bold">version</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#39;3&#39;</span><span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb"></span>services:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>db:<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>image:<span style="color:#bbb"> </span>mariadb<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>volumes:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>database:/var/lib/mysql:rw<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>restart:<span style="color:#bbb"> </span>always<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>networks:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>private<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>environment:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>MYSQL_ROOT_PASSWORD:<span style="color:#bbb"> </span>chevereto_root<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>MYSQL_DATABASE:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>MYSQL_USER:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>MYSQL_PASSWORD:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">services</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">db</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">image</span>:<span style="color:#bbb"> </span>mariadb<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">volumes</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>- database:/var/lib/mysql:rw<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">restart</span>:<span style="color:#bbb"> </span>always<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">networks</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>- private<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">environment</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">MYSQL_ROOT_PASSWORD</span>:<span style="color:#bbb"> </span>chevereto_root<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">MYSQL_DATABASE</span>:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">MYSQL_USER</span>:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">MYSQL_PASSWORD</span>:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb">  </span>chevereto:<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>depends_on:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>db<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>image:<span style="color:#bbb"> </span>nmtan/chevereto<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>restart:<span style="color:#bbb"> </span>always<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>networks:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>private<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>environment:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>CHEVERETO_DB_HOST:<span style="color:#bbb"> </span>db<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>CHEVERETO_DB_USERNAME:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>CHEVERETO_DB_PASSWORD:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>CHEVERETO_DB_NAME:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>CHEVERETO_DB_PREFIX:<span style="color:#bbb"> </span>chv_<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>volumes:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span>chevereto_images:/var/www/html/images:rw<span style="color:#bbb">
-</span><span style="color:#bbb">    </span>ports:<span style="color:#bbb">
-</span><span style="color:#bbb">      </span>-<span style="color:#bbb"> </span><span style="color:#099">8080</span>:<span style="color:#099">80</span><span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">chevereto</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">depends_on</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>- db<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">image</span>:<span style="color:#bbb"> </span>nmtan/chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">restart</span>:<span style="color:#bbb"> </span>always<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">networks</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>- private<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">environment</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">CHEVERETO_DB_HOST</span>:<span style="color:#bbb"> </span>db<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">CHEVERETO_DB_USERNAME</span>:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">CHEVERETO_DB_PASSWORD</span>:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">CHEVERETO_DB_NAME</span>:<span style="color:#bbb"> </span>chevereto<span style="color:#bbb">
+</span><span style="color:#bbb">      </span><span style="color:#000;font-weight:bold">CHEVERETO_DB_PREFIX</span>:<span style="color:#bbb"> </span>chv_<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">volumes</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>- chevereto_images:/var/www/html/images:rw<span style="color:#bbb">
+</span><span style="color:#bbb">    </span><span style="color:#000;font-weight:bold">ports</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">      </span>- <span style="color:#099">8080</span>:<span style="color:#099">80</span><span style="color:#bbb">
 </span><span style="color:#bbb">
-</span><span style="color:#bbb"></span>networks:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>private:<span style="color:#bbb">
-</span><span style="color:#bbb"></span>volumes:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>database:<span style="color:#bbb">
-</span><span style="color:#bbb">  </span>chevereto_images:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">networks</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">private</span>:<span style="color:#bbb">
+</span><span style="color:#bbb"></span><span style="color:#000;font-weight:bold">volumes</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">database</span>:<span style="color:#bbb">
+</span><span style="color:#bbb">  </span><span style="color:#000;font-weight:bold">chevereto_images</span>:<span style="color:#bbb">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>ps:端口设置（主机端口：docker端口）</p>
 <p>volumes:图片存储位置</p>
-<h3 id="heading1">启动服务</h3>
+<h3 id="启动服务">启动服务</h3>
 <p><code>docker-compose up -d</code></p>
         </div>
 
@@ -392,6 +392,14 @@
 <ul class="widget-list">
     
     <li>
+        <a href="https://haillk.github.io/post/GoLang/%E6%B5%8B%E8%AF%95/" title="测试">测试</a>
+    </li>
+    
+    <li>
+        <a href="https://haillk.github.io/post/%E9%9A%8F%E7%AC%94/%E7%96%AB%E6%83%85%E8%AE%B0%E4%BA%8B/" title="疫情一周了">疫情一周了</a>
+    </li>
+    
+    <li>
         <a href="https://haillk.github.io/post/GoLang/Go%E4%BB%A3%E7%90%86%E5%92%8CGO111MODULE%E8%AE%BE%E7%BD%AE/" title="Go代理和GO111MODULE设置">Go代理和GO111MODULE设置</a>
     </li>
     
@@ -423,14 +431,6 @@
         <a href="https://haillk.github.io/post/GoLang/Go_Context%E4%B8%8A%E4%B8%8B%E6%96%87/" title="Go_Context上下文">Go_Context上下文</a>
     </li>
     
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E4%B8%80%E8%87%B4%E6%80%A7hash/" title="一致性hash">一致性hash</a>
-    </li>
-    
-    <li>
-        <a href="https://haillk.github.io/post/%E7%AE%97%E6%B3%95/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a>
-    </li>
-    
 </ul>
     </section>
 
@@ -439,8 +439,6 @@
     <section class="widget">
         <h3 class="widget-title">分类</h3>
 <ul class="widget-list">
-    
-    <li><a href="https://haillk.github.io/categories/">Categories (1)</a></li>
     
     <li><a href="https://haillk.github.io/categories/Gin/">Gin (1)</a></li>
     
@@ -470,7 +468,7 @@
     
     <li><a href="https://haillk.github.io/categories/%E8%B7%9F%E7%9D%80%E6%97%A0%E9%97%BB%E5%AD%A6Go-web%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">跟着无闻学Go-web应用开发 (4)</a></li>
     
-    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (2)</a></li>
+    <li><a href="https://haillk.github.io/categories/%E9%9A%8F%E7%AC%94/">随笔 (4)</a></li>
     
 </ul>
     </section>
@@ -502,7 +500,7 @@
     </div>
     <footer id="footer">
     <div class="container">
-        &copy; 2020 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
+        &copy; 2021 <a href="https://haillk.github.io">Haillk-Blog By haillk</a>.
         Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
         <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
 		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
