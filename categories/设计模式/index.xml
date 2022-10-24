@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>设计模式 on Haillk-Blog</title>
+    <title>‘设计模式’ on Haillk-Blog</title>
     <link>https://haillk.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-    <description>Recent content in 设计模式 on Haillk-Blog</description>
+    <description>Recent content in ‘设计模式’ on Haillk-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 10 Apr 2020 15:58:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Oct 2022 23:29:59 +0800</lastBuildDate>
     
 	<atom:link href="https://haillk.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>工具化思维</title>
+      <link>https://haillk.github.io/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%85%B7%E5%8C%96%E6%80%9D%E7%BB%B4/</link>
+      <pubDate>Mon, 24 Oct 2022 23:29:59 +0800</pubDate>
+      
+      <guid>https://haillk.github.io/post/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%85%B7%E5%8C%96%E6%80%9D%E7%BB%B4/</guid>
+      <description>&lt;p&gt;与你常在&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>生产者消费者</title>
